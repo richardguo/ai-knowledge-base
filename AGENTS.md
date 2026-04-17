@@ -20,6 +20,9 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
 - 运行python时，始终激活指定的环境 (已安装Langgraph): 
   D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
 
+## Windows平台注意事项
+- **中文编码处理**: 在Windows平台的cmd中运行任何脚本前，先执行 `chcp 65001` 命令，将控制台代码页设置为UTF-8，避免中文输出乱码。
+
 ## 编码规范
 
 ### 核心原则
@@ -134,4 +137,4 @@ opencode-test/
 
 
 ---
-*文档版本：v0.1 · 对齐项目愿景v0.1所有条款*
+*文档版本：v0.1.1 · 增加Windows平台中文编码处理说明*
