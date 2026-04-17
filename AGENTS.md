@@ -21,11 +21,34 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
   D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
 
 ## 编码规范
+
+### 核心原则
 1. 严格遵循 PEP 8 规范
 2. 全量类型注解（Type Hints）
 3. snake_case 命名规则
 4. Google 风格 docstring
 5. 禁止使用裸 print()
+
+### 新增规范
+6. Python 代码使用 black 格式化（所有文件）
+7. TypeScript 启用 strict 模式（允许特定情况使用 `any`）
+8. 禁止使用魔法字符串（配置项除外）
+9. 禁止提交 TODO/FIXME 注释到 main 分支
+
+### 质量保证
+10. 单元测试覆盖率 ≥80%（使用 pytest-cov 收集）
+11. 所有公开函数/类方法必须包含文档：
+    - 功能简介
+    - 参数说明
+    - 返回值
+    - 异常说明
+12. 使用静态分析工具验证文档完整性
+
+### 工具链
+13. Lint 工具：
+    - Python: pylint + black
+    - TypeScript: ESLint + Prettier
+14. 本地执行测试命令：`pytest --cov=src tests/`
 
 ### 文件命名
 - 原始数据：`knowledge/raw/{source}-{YYYY-MM-DD}.json`
