@@ -45,7 +45,8 @@ python .opencode/skills/github-collector/scripts/github_search.py --output-dir k
 | 参数 | 必填 | 说明 |
 |------|------|------|
 | `--output-dir` | 否 | 输出目录，默认 `knowledge/raw` |
-| `--top` | 否 | 取 Top N 项目，默认 50 |
+| `--top` | 否 | 取 Top N 项目，默认 50，最大 100 |
+| `--resume_run` | 否 | 继续未完成的任务，从断点续传 |
 
 脚本实现细节：
 - 调用 GitHub Search API (`https://api.github.com/search/repositories`)
@@ -59,8 +60,8 @@ python .opencode/skills/github-collector/scripts/github_search.py --output-dir k
 #### 步骤 2: Agent 生成中文摘要
 
 1. 读取中间文件 `github-search-{YYYY-MM-DD-HHMMSS}-raw.json`
-2. 对每个项目，基于 `summary`（description）和 `readme` 内容生成 50-200 字中文摘要
-3. 移除 `readme` 字段
+2. 对每个项目，基于 `description` 和 `readme` 内容生成 50-200 字中文摘要
+3. 移除 `readme` 和 `description` 字段
 4. 写入最终文件 `github-search-{YYYY-MM-DD-HHMMSS}.json`（格式符合 Agent 定义）
 5. 中间文件 `-raw.json` 保留不删除
 
@@ -78,6 +79,7 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
 | `--since` | 否 | 时间范围：`daily`（默认）、`weekly`、`monthly`。Agent 根据用户指令决定传值 |
 | `--output-dir` | 否 | 输出目录，默认 `knowledge/raw` |
 | `--top` | 否 | 取 Top N 项目，默认值随 `--since` 变化：daily=20, weekly=25, monthly=30 |
+| `--resume_run` | 否 | 继续未完成的任务，从断点续传 |
 
 脚本实现细节：
 - 抓取 GitHub Trending 页面 HTML 并解析项目列表
@@ -99,14 +101,14 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
 #### 步骤 2: Agent 生成中文摘要
 
 1. 读取中间文件 `github-trending-{YYYY-MM-DD-HHMMSS}-raw.json`
-2. 对每个项目，基于 `summary`（description）和 `readme` 内容生成 50-200 字中文摘要
-3. 移除 `readme` 字段
+2. 对每个项目，基于 `description` 和 `readme` 内容生成 50-200 字中文摘要
+3. 移除 `readme` 和 `description` 字段
 4. 写入最终文件 `github-trending-{YYYY-MM-DD-HHMMSS}.json`（格式符合 Agent 定义）
 5. 中间文件 `-raw.json` 保留不删除
 
 ## 中间文件格式
 
-中间文件是脚本的直接输出，包含 `readme` 字段供 Agent 生成摘要使用。最终输出格式（不含 `readme`）由 Agent 定义。
+中间文件是脚本的直接输出，包含 `readme` 和 `description` 字段供 Agent 生成摘要使用。最终输出格式（不含 `readme` 和 `description`）由 Agent 定义。
 
 ### 仓库搜索中间文件 (`github-search-{YYYY-MM-DD-HHMMSS}-raw.json`)
 ```json
@@ -125,7 +127,7 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
       "updated_at": "2026-04-20T05:27:45+08:00",
       "language": "Python",
       "topics": ["ai", "ml", "pytorch"],
-      "summary": "API 返回的 description 原文",
+      "description": "API 返回的 description 原文",
       "readme": "README 原文内容"
     }
   ]
@@ -150,7 +152,7 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
       "updated_at": "2026-04-20T05:27:45+08:00",
       "language": "Python",
       "topics": ["ai", "agent"],
-      "summary": "页面 description 原文",
+      "description": "页面 description 原文",
       "readme": "README 原文内容"
     }
   ]

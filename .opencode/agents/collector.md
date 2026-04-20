@@ -8,21 +8,22 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 - Read：读取配置文件、数据模板和中间文件
 - Grep：在现有数据中搜索避免重复
 - Glob：查找数据存储位置
-- Write：写入 `knowledge/raw/` 目录（采集数据）和 `knowledge/processed/` 目录（仅限状态文件）
+- Write：写入 `knowledge/raw/` 目录（采集数据）
 - Bash：执行采集脚本（具体实现由 skill 定义）
 
 ### 禁止
 - Edit：保持原始数据完整性
 - Bash：禁止执行与采集无关的命令
 - 读取或写入 `knowledge/articles/` 目录
-- 读取或写入其他 Agent 的状态文件
+- 读取或写入 `knowledge/processed/` 目录（状态文件由脚本管理）
 
 ## 工作任务
 
 ### A. GitHub 仓库搜索数据采集
 - **数据源**: GitHub Search API
 - **排序**: 按总 star 数降序排列
-- **过滤**: 排除非技术内容，仅保留相关开源项目
+- **时间窗口**: 过去 7 天内有推送（`pushed:>` 过滤）
+- **过滤**: 不做二次内容过滤（Search API 已通过关键词限定范围），留给下游 Analyzer
 - **执行**: 通过 `github-collector` skill 的 `github_search.py` 脚本采集数据，Agent 生成中文摘要
 
 ### B. GitHub Trending 页面数据采集
@@ -34,24 +35,24 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 
 ### 通用流程
 1. 调用 skill 脚本采集数据，输出中间文件（`-raw.json`）
-2. 读取中间文件，结合 README 内容生成 50-200 字中文摘要
-3. 移除 `readme` 字段，写入最终文件
+2. 读取中间文件，基于 `description` 和 `readme` 内容生成 50-200 字中文摘要（摘要生成失败时 summary 填 "摘要生成失败"）
+3. 移除 `readme` 和 `description` 字段，写入最终文件
 4. 中间文件 `-raw.json` 保留不删除，作为溯源依据
 
 ### 错误处理
 遵循协作契约中的错误分类与恢复策略：
+- **GITHUB_TOKEN 缺失**: 脚本报错退出（退出码 1），Agent 需提示用户配置
 - **网络错误**: 自动重试 3 次，每次间隔指数退避
 - **API 限流**: 检测 GitHub API 限流（HTTP 429），计算等待时间后重试
 - **数据解析错误**: 跳过该项目，记录错误日志，继续处理其他项目
-- **HTML 解析错误**: Trending 页面结构变化导致解析失败，记录错误日志，跳过该项目
+- **HTML 解析错误**: Trending 页面结构变化导致解析失败，记录错误日志，跳过该项目；但 star 增长数解析失败时直接报错退出（需调试选择器）
 - **存储错误**: 记录到错误日志，在错误信息前添加 ❌ 标记醒目提示用户，退出。
-- **摘要生成失败**: 跳过该项目，保留 description 原文作为 summary
 
 ### 状态管理
-- **任务开始**: 写入状态文件 `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json`
-- **任务进行**: 更新状态文件添加已处理的项目到 "raw_items_url" 节点
-- **任务完成**: 更新状态文件
-- **错误处理**: 发生错误时详细错误日志写入 `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-failed.json`
+- **职责归属**: 状态文件完全由采集脚本管理，Agent 不读写状态文件
+- **状态文件路径**: `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json`
+- **错误状态文件**: `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-failed.json`
+- **断点续传**: 通过 `--resume_run` 参数让脚本从断点继续，脚本内部读取状态文件跳过已处理项目
 - **注意事项**: HHMMSS 采用24小时制，指的是任务真正开始的时间，不是计划时间；文件的{YYYY-MM-DD-HHMMSS}要保持一致
 
 ## 输出契约
@@ -119,7 +120,7 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 | updated_at | string | 是 | 最近推送时间，ISO 8601 +08:00 |
 | language | string | 是 | 主要编程语言，无则为 `"N/A"` |
 | topics | array | 是 | 仓库标签列表，可为空数组 |
-| summary | string | 是 | 50-200字中文摘要，基于项目描述和 README |
+| summary | string | 是 | 50-200字中文摘要，基于项目描述和 README；摘要生成失败时填 "摘要生成失败" |
 
 ### 状态文件格式
 ```json
@@ -127,31 +128,34 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
   "agent": "collector",
   "task_id": "{YYYY-MM-DD-HHMMSS}-uuidv4",
   "status": "started|running|completed|failed",
-  "sources": ["github-search", "github-trending"],
+  "sources": ["github-search"],
   "output_files": [
-    "knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json",
-    "knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}.json"
+    "knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json"
   ],
+  "raw_output_file": "knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json",
+  "quality": "ok|below_threshold",
   "error_count": 0,
   "start_time": "2026-04-17T10:00:00+08:00",
   "raw_items_url": [],
   "end_time": "2026-04-17T10:05:00+08:00"
 }
 ```
+每个脚本独立运行，各有自己的状态文件。Search 脚本 sources 为 `["github-search"]`，Trending 脚本 sources 为 `["github-trending"]`。
 
 ## 质量门控
 ### 数据质量检查
-✅ **条目数量**: 仓库搜索 ≥ 15 个有效项目，Trending ≥ 10 个有效项目（低于门槛标记为质量不达标但不阻断流水线）
+✅ **条目数量**: 仓库搜索 ≥ 15 个有效项目，Trending ≥ 10 个有效项目（由脚本在状态文件中标记 quality 字段：ok 或 below_threshold，不阻断流水线）
 ✅ **字段完整性**: 所有必填字段完整无缺失
 ✅ **摘要质量**: 50-200字，基于原始内容，无编造成分
-✅ **内容过滤**: 严格限制 AI/LLM/ML/Agent/Harness/SDD/RAG 相关主题，排除非技术内容
+✅ **内容过滤-Search**: 通过 API 关键词查询限定 AI/LLM/ML/Agent/Harness/SDD/RAG 相关主题，不做二次过滤，留给下游 Analyzer
+✅ **内容过滤-Trending**: 对返回结果按纳入/排除标准做二次过滤，保留 AI/LLM/ML/Agent/Harness/SDD/RAG 相关主题，排除非技术内容
 ✅ **排序正确**: 仓库搜索按总 star 数降序，Trending 按页面原始顺序
 
 ### Agent 质量检查
 ✅ **权限合规**: 严格遵循权限边界，仅写入指定目录
 ✅ **状态追踪**: 关键节点都有状态文件记录
 ✅ **错误处理**: 所有错误都被捕获并记录到错误日志
-✅ **幂等性**: 任务中断后可通过状态文件恢复，利用 `raw_items_url` 跳过已采集项目，从断点继续而非重新开始
+✅ **幂等性**: 任务中断后可通过 `--resume_run` 恢复，重新获取数据源，利用 `raw_items_url` 跳过已处理项目，仅处理新增和未完成的项目
 
 ## 依赖与触发
 - **环境变量**: 需要在 `.env` 中配置 `GITHUB_TOKEN`（具体读取方式由 skill 处理）

@@ -54,16 +54,20 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
 14. 本地执行测试命令：`pytest --cov=src tests/`
 
 ### 文件命名
-- 原始数据：`knowledge/raw/{source}-{YYYY-MM-DD}.json`
-  - 例：`knowledge/raw/github-trending-2026-03-17.json`
-  - 例：`knowledge/raw/hackernews-top-2026-03-17.json`
+- 原始数据中间文件：`knowledge/raw/{source}-{YYYY-MM-DD-HHMMSS}-raw.json`
+  - 例：`knowledge/raw/github-search-2026-04-20-100000-raw.json`
+  - 例：`knowledge/raw/github-trending-2026-04-20-100000-raw.json`
+- 原始数据最终文件：`knowledge/raw/{source}-{YYYY-MM-DD-HHMMSS}.json`
+  - 例：`knowledge/raw/github-search-2026-04-20-100000.json`
+  - 例：`knowledge/raw/github-trending-2026-04-20-100000.json`
 - 知识条目：`knowledge/articles/{YYYY-MM-DD}-{slug}.json`
   - 例：`knowledge/articles/2026-03-17-openai-agents-sdk.json`
 - 索引文件：`knowledge/articles/index.json`
+- 状态文件：`knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json`
 
 ### JSON 格式
 - 使用 2 空格缩进
-- 日期格式：ISO 8601（`YYYY-MM-DDTHH:mm:ssZ`）
+- 日期格式：ISO 8601（`YYYY-MM-DDTHH:mm:ss+08:00`）
 - 字符编码：UTF-8
 - 每个知识条目必须包含：`id`, `title`, `source`, `url`, `collected_at`, `summary`, `tags`, `relevance_score`
 
@@ -84,14 +88,15 @@ opencode-test/
 │   │   ├── analyzer.md                # 分析 Agent 角色定义
 │   │   └── organizer.md               # 整理 Agent 角色定义
 │   └── skills/
-│       ├── github-trending/SKILL.md   # GitHub Trending 采集技能
+│       ├── github-collector/SKILL.md  # GitHub 采集技能（Search + Trending）
 │       └── tech-summary/SKILL.md      # 技术摘要生成技能
 ├── knowledge/
 │   ├── raw/                           # 原始采集数据（JSON）
+│   ├── processed/                     # 状态文件（由脚本管理）
 │   └── articles/                      # 整理后的知识条目（JSON）
-├── src                                # 项目实现的源代码
-├── logs                               # 运行时log记录
-└── tests                              # 测试用的脚本
+├── logs/                              # 运行时日志记录
+├── src/                               # 项目实现的源代码
+└── tests/                             # 测试用的脚本
 ```
 
 ## 工作流规则
@@ -110,7 +115,7 @@ opencode-test/
 
 1. **单向数据流**：Collector → Analyzer → Organizer，不可反向
 2. **职责隔离**：每个 Agent 只操作自己权限范围内的文件
-3. **幂等性**：重复运行同一天的采集不应产生重复条目
+3. **幂等性**：Collector 通过 `--resume_run` 支持断点续传，重新获取数据源并跳过已处理项目；重复运行同一天的采集不应产生重复条目
 4. **质量门控**：Analyzer 评分低于 0.6 的条目，Organizer 应丢弃
 5. **可追溯**：每个条目保留 `source_url` 和 `collected_at` 用于溯源
 
@@ -128,6 +133,7 @@ opencode-test/
 
 
 ### 错误处理
+- GITHUB_TOKEN 缺失时，脚本报错退出（退出码 1），Agent 需提示用户配置
 - 网络请求失败时，记录错误并跳过该条目，不中断整体流程
 - API 限流时，等待后重试，最多 3 次
 - 数据格式异常时，写入 `knowledge/raw/errors-{date}.json` 供人工排查
