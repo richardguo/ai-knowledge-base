@@ -120,7 +120,7 @@ deep learning, nlp, language model, ml
 
 ```bash
 # 方式一：直接运行脚本
-python .opencode/skills/github-trending/scripts/scrape_github_trending.py
+python .opencode/skills/github-trending/scripts/github_trending.py
 
 # 方式二：通过 Agent 调用
 @collector 采集今天的 GitHub Trending 数据

@@ -57,7 +57,7 @@ ai-knowledge-base/
 
 ```bash
 # 方式一：运行采集脚本
-python .opencode/skills/github-trending/scripts/scrape_github_trending.py
+python .opencode/skills/github-trending/scripts/github_trending.py
 
 # 方式二：通过 Agent 调用
 @collector 采集今天的 GitHub Trending 数据
@@ -136,7 +136,7 @@ chcp 65001
 
 ```bash
 # 1. 采集
-python .opencode/skills/github-trending/scripts/scrape_github_trending.py
+python .opencode/skills/github-trending/scripts/github_trending.py
 
 # 2. 分析（通过 Agent 调用）
 @analyzer 分析 knowledge/raw/github-trending-YYYY-MM-DD.json

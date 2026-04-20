@@ -77,7 +77,7 @@ allowed-tools: Read, Grep, Glob, WebFetch
 
 ### 步骤 4: 输出分析结果
 - 生成完整的分析报告 JSON
-- 保存到 `knowledge/processed/tech-analysis-YYYY-MM-DD.json`
+- 保存到 `knowledge/articles/tech-analysis-YYYY-MM-DD.json`
 - 确保 JSON 格式规范（UTF-8编码，2空格缩进）
 - 包含完整的元数据和分析时间戳
 
@@ -171,8 +171,8 @@ allowed-tools: Read, Grep, Glob, WebFetch
 | `recommendations` | string | 是 | 基于分析的技术建议 |
 
 ### 文件命名规范
-- **路径**: `knowledge/processed/tech-analysis-YYYY-MM-DD.json`
-- **示例**: `knowledge/processed/tech-analysis-2026-04-17.json`
+- **路径**: `knowledge/articles/tech-analysis-YYYY-MM-DD.json`
+- **示例**: `knowledge/articles/tech-analysis-2026-04-17.json`
 - **日期**: 使用分析当天的日期（UTC+8）
 
 
