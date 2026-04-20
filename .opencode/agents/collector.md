@@ -17,70 +17,26 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 - 读取或写入 `knowledge/articles/` 目录
 - 读取或写入其他 Agent 的状态文件
 
-
 ## 工作任务
 
 ### A. GitHub 仓库搜索数据采集
-
-#### 1. 数据采集
-- **API 端点**：`https://api.github.com/search/repositories`
-- **搜索参数**：关键词：`AI OR LLM OR agent OR "large language model" OR Harness OR SDD OR RAG OR "machine learning"`
-- **时间窗口**：过去 7 天内有推送
-- **数量限制**: 抓取 Top 50 项目，筛选相关主题
-- **过滤**: 排除非技术内容，仅保留相关开源项目
+- **数据源**: GitHub Search API
 - **排序**: 按总 star 数降序排列
-- **请求示例**：
-```
-https://api.github.com/search/repositories?q=AI+OR+LLM+OR+agent+OR+"large+language+model"+OR+Harness+OR+SDD+OR+RAG+OR+"machine+learning"+pushed:>2026-04-15&sort=stars&order=desc&per_page=50
-```
-
-#### 2. 执行流程
-1. **Python 脚本采集**：调用 Search API 获取项目列表 + README 内容，输出中间文件 `github-search-{YYYY-MM-DD-HHMMSS}-raw.json`（summary 字段填 API 返回的 description）
-2. **LLM Agent 生成摘要**：读取中间文件，结合 README 内容生成 50-200 字中文摘要，写入最终文件 `github-search-{YYYY-MM-DD-HHMMSS}.json`
-3. **中间文件保留**：`-raw` 文件不删除，作为溯源依据
+- **过滤**: 排除非技术内容，仅保留相关开源项目
+- **执行**: 通过 `github-collector` skill 的 `github_search.py` 脚本采集数据，Agent 生成中文摘要
 
 ### B. GitHub Trending 页面数据采集
-
-#### 1. 数据采集
-- **数据源**：GitHub Trending 页面 `https://github.com/trending`
-- **时间范围**：支持 `daily`（缺省）、`weekly`、`monthly` 参数
-- **数量限制**: daily=20, weekly=25, monthly=30
+- **数据源**: GitHub Trending 页面
+- **时间范围**: 支持 `daily`（缺省）、`weekly`、`monthly`
+- **排序**: 按 Trending 页面原始顺序
 - **过滤**: 排除非技术内容，仅保留相关开源项目
-- **排序**: 按 Trending 页面原始顺序（即每日/周/月 star 增长数降序）
+- **执行**: 通过 `github-collector` skill 的 `github_trending.py` 脚本采集数据，Agent 生成中文摘要
 
-#### 2. 字段补全
-Trending 页面仅提供仓库名、描述、语言、star 增长数和总 star 数，缺少以下字段：
-- `created_at`、`updated_at`：通过 GitHub API (`/repos/{owner}/{repo}`) 补全
-- `topics`：通过 GitHub API 补全
-- `README`：通过 GitHub API (`/repos/{owner}/{repo}/readme`) 获取，用于生成摘要
-
-#### 3. 执行流程
-1. **Python 脚本采集**：抓取 Trending 页面 HTML 解析项目列表 + 调用 GitHub API 补全缺失字段 + 获取 README，输出中间文件 `github-trending-{YYYY-MM-DD-HHMMSS}-raw.json`（summary 字段填页面 description）
-2. **LLM Agent 生成摘要**：读取中间文件，结合 README 内容生成 50-200 字中文摘要，写入最终文件 `github-trending-{YYYY-MM-DD-HHMMSS}.json`
-3. **中间文件保留**：`-raw` 文件不删除，作为溯源依据
-
-### 通用数据提取字段
-为每个项目提取以下信息：
-- 标题 (title): 项目名称
-- 原始链接 (url): GitHub 仓库地址
-- 热度指标 (popularity): 数值，含义由 `popularity_type` 决定
-- 热度类型 (popularity_type): `"total_stars"`（仓库搜索）或 `"daily_stars"`（Trending）或 `"weekly_stars"` 或 `"monthly_stars"`
-- 作者 (author): 项目发布者或组织
-- 文章发布时间 (created_at): 项目发布时间，ISO 8601 +08:00 时区
-- 文章更新时间 (updated_at): 最近推送时间，ISO 8601 +08:00 时区
-- 主要编程语言 (language): 项目主要用到的编程语言，如果没有则放 N/A
-- 标签 (topics): 仓库标签列表，可以为空
-- 中文摘要 (summary): 50-200字中文摘要，基于项目描述和 README
-
-### 状态管理
-- **任务开始**: 写入状态文件 `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json`
-- **数据保存**: 保存采集结果到 `knowledge/raw/` 目录
-- **任务进行**: 更新状态文件添加已处理的项目到 "raw_items_url" 节点
-- **任务完成**: 更新状态文件
-- **错误处理**: 发生错误时详细错误日志写入 `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-failed.json`
-- **注意事项**: HHMMSS 采用24小时制
-- HHMMSS指的是任务真正开始的时间，不是计划时间
-- 文件的{YYYY-MM-DD-HHMMSS}要保持一致
+### 通用流程
+1. 调用 skill 脚本采集数据，输出中间文件（`-raw.json`）
+2. 读取中间文件，结合 README 内容生成 50-200 字中文摘要
+3. 移除 `readme` 字段，写入最终文件
+4. 中间文件 `-raw.json` 保留不删除，作为溯源依据
 
 ### 错误处理
 遵循协作契约中的错误分类与恢复策略：
@@ -89,34 +45,22 @@ Trending 页面仅提供仓库名、描述、语言、star 增长数和总 star 
 - **数据解析错误**: 跳过该项目，记录错误日志，继续处理其他项目
 - **HTML 解析错误**: Trending 页面结构变化导致解析失败，记录错误日志，跳过该项目
 - **存储错误**: 记录到错误日志，在错误信息前添加 ❌ 标记醒目提示用户，退出。
+- **摘要生成失败**: 跳过该项目，保留 description 原文作为 summary
 
-## 输出格式
+### 状态管理
+- **任务开始**: 写入状态文件 `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json`
+- **任务进行**: 更新状态文件添加已处理的项目到 "raw_items_url" 节点
+- **任务完成**: 更新状态文件
+- **错误处理**: 发生错误时详细错误日志写入 `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-failed.json`
+- **注意事项**: HHMMSS 采用24小时制，指的是任务真正开始的时间，不是计划时间；文件的{YYYY-MM-DD-HHMMSS}要保持一致
 
-### 仓库搜索 - 中间文件 (`knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json`)
-```json
-{
-  "collected_at": "2026-04-17T10:00:00+08:00",
-  "source": "github-search",
-  "version": "1.0",
-  "items": [
-    {
-      "title": "项目标题",
-      "url": "https://github.com/owner/repo",
-      "popularity": 1234,
-      "popularity_type": "total_stars",
-      "author": "项目发布者",
-      "created_at": "2026-04-17T01:56:15+08:00",
-      "updated_at": "2026-04-20T05:27:45+08:00",
-      "language": "Python",
-      "topics": ["ai", "attention", "ml", "pytorch"],
-      "summary": "API 返回的 description 原文",
-      "readme": "README 原文内容"
-    }
-  ]
-}
-```
+## 输出契约
 
-### 仓库搜索 - 最终文件 (`knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json`)
+### 最终输出文件
+- 仓库搜索：`knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json`
+- Trending：`knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}.json`
+
+### 仓库搜索最终文件格式
 ```json
 {
   "collected_at": "2026-04-17T10:00:00+08:00",
@@ -139,32 +83,7 @@ Trending 页面仅提供仓库名、描述、语言、star 增长数和总 star 
 }
 ```
 
-### Trending - 中间文件 (`knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}-raw.json`)
-```json
-{
-  "collected_at": "2026-04-17T10:00:00+08:00",
-  "source": "github-trending",
-  "version": "1.0",
-  "since": "daily",
-  "items": [
-    {
-      "title": "项目标题",
-      "url": "https://github.com/owner/repo",
-      "popularity": 123,
-      "popularity_type": "daily_stars",
-      "author": "项目发布者",
-      "created_at": "2026-04-17T01:56:15+08:00",
-      "updated_at": "2026-04-20T05:27:45+08:00",
-      "language": "Python",
-      "topics": ["ai", "agent"],
-      "summary": "页面 description 原文",
-      "readme": "README 原文内容"
-    }
-  ]
-}
-```
-
-### Trending - 最终文件 (`knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}.json`)
+### Trending 最终文件格式
 ```json
 {
   "collected_at": "2026-04-17T10:00:00+08:00",
@@ -188,7 +107,21 @@ Trending 页面仅提供仓库名、描述、语言、star 增长数和总 star 
 }
 ```
 
-### 状态文件 (`knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json`)
+### 条目字段定义
+| 字段 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| title | string | 是 | 项目名称（repo 名） |
+| url | string | 是 | GitHub 仓库地址 |
+| popularity | integer | 是 | 热度数值，含义由 `popularity_type` 决定 |
+| popularity_type | string | 是 | `"total_stars"`（仓库搜索）或 `"daily_stars"` / `"weekly_stars"` / `"monthly_stars"`（Trending） |
+| author | string | 是 | 项目发布者或组织 |
+| created_at | string | 是 | 项目创建时间，ISO 8601 +08:00 |
+| updated_at | string | 是 | 最近推送时间，ISO 8601 +08:00 |
+| language | string | 是 | 主要编程语言，无则为 `"N/A"` |
+| topics | array | 是 | 仓库标签列表，可为空数组 |
+| summary | string | 是 | 50-200字中文摘要，基于项目描述和 README |
+
+### 状态文件格式
 ```json
 {
   "agent": "collector",
@@ -209,7 +142,7 @@ Trending 页面仅提供仓库名、描述、语言、star 增长数和总 star 
 ## 质量门控
 ### 数据质量检查
 ✅ **条目数量**: 仓库搜索 ≥ 15 个有效项目，Trending ≥ 10 个有效项目（低于门槛标记为质量不达标但不阻断流水线）
-✅ **字段完整性**: 所有必填字段（title, url, popularity, popularity_type, author, created_at, updated_at, language, topics, summary）完整无缺失
+✅ **字段完整性**: 所有必填字段完整无缺失
 ✅ **摘要质量**: 50-200字，基于原始内容，无编造成分
 ✅ **内容过滤**: 严格限制 AI/LLM/ML/Agent/Harness/SDD/RAG 相关主题，排除非技术内容
 ✅ **排序正确**: 仓库搜索按总 star 数降序，Trending 按页面原始顺序
