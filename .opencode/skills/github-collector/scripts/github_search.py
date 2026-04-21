@@ -28,11 +28,17 @@ from common import (
 )
 
 
-def build_search_query(top: int) -> str:
+DEFAULT_KEYWORDS = [
+    "AI", "LLM", "agent", "large language model",
+    "Harness", "SDD", "RAG", "machine learning",
+]
+
+
+def build_search_query(keywords: list[str]) -> str:
     """构建 GitHub Search API 查询字符串。
 
     Args:
-        top: 返回结果数量。
+        keywords: 搜索关键词列表。
 
     Returns:
         查询字符串。
@@ -40,18 +46,16 @@ def build_search_query(top: int) -> str:
     now = datetime.now(GMT8)
     pushed_after = (now - timedelta(days=7)).strftime("%Y-%m-%d")
 
-    keywords = [
-        "AI", "LLM", "agent",
-        "Harness", "SDD", "RAG"
-    ]
-
-    query = f"{' OR '.join(keywords)} pushed:>{pushed_after}"
+    # 限制查询长度，只使用前3个关键词
+    limited_keywords = keywords[:3]
+    query = f"{' OR '.join(limited_keywords)} pushed:>{pushed_after}"
     return query
 
 
 def search_repositories(
     token: str,
     top: int,
+    keywords: list[str],
     logger
 ) -> list[dict] | None:
     """调用 GitHub Search API 搜索仓库。
@@ -59,6 +63,7 @@ def search_repositories(
     Args:
         token: GitHub token。
         top: 返回结果数量。
+        keywords: 搜索关键词列表。
         logger: 日志记录器。
 
     Returns:
@@ -66,7 +71,7 @@ def search_repositories(
     """
     import requests
 
-    query = build_search_query(top)
+    query = build_search_query(keywords)
     url = "https://api.github.com/search/repositories"
 
     headers = {
@@ -184,6 +189,7 @@ def process_repository(
         "topics": topics,
         "description": description,
         "readme": readme,
+        "summary": "",
     }
 
 
@@ -202,6 +208,12 @@ def main():
         help="取 Top N 项目，默认 20，最大 50"
     )
     parser.add_argument(
+        "--keywords",
+        type=str,
+        default=None,
+        help="搜索关键词，逗号分隔，默认 AI,LLM,agent,large language model,Harness,SDD,RAG,machine learning"
+    )
+    parser.add_argument(
         "--resume_run",
         action="store_true",
         help="继续未完成的任务"
@@ -212,6 +224,10 @@ def main():
     if args.top > 50:
         print("错误: --top 最大值为 50", file=sys.stderr)
         sys.exit(1)
+
+    keywords = DEFAULT_KEYWORDS
+    if args.keywords:
+        keywords = [kw.strip() for kw in args.keywords.split(",") if kw.strip()]
 
     project_root = find_project_root()
     config = load_env()
@@ -242,9 +258,9 @@ def main():
 
         task_id = status_data.get("task_id", generate_task_id())
         raw_items_url = status_data.get("raw_items_url", [])
-        raw_output_file = status_data.get("raw_output_file", "")
-        if raw_output_file:
-            raw_path = project_root / raw_output_file
+        output_files = status_data.get("output_files", [])
+        if output_files:
+            raw_path = project_root / output_files[0]
 
         logger = setup_logger("github-search", str(logs_dir), timestamp)
         logger.info(f"恢复任务: {task_id}")
@@ -258,7 +274,7 @@ def main():
 
         logger.info(f"开始新任务: {task_id}")
 
-        raw_filename = f"github-search-{timestamp}-raw.json"
+        raw_filename = f"github-search-{timestamp}.json"
         raw_path = output_dir / raw_filename
         status_filename = f"collector-search-{timestamp}-status.json"
         status_path = processed_dir / status_filename
@@ -274,7 +290,7 @@ def main():
 
     collected_at = generate_collected_at()
 
-    items = search_repositories(token, args.top, logger)
+    items = search_repositories(token, args.top, keywords, logger)
     if items is None:
         update_status_file(status_path, status_data, status="failed")
         logger.error("Search API 请求失败")

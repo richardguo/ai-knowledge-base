@@ -1,195 +1,176 @@
 ---
 name: tech-summary
-description: 当需要对采集的技术内容进行深度分析总结时使用此技能
-allowed-tools: Read, Grep, Glob, WebFetch
+description: |
+  读取 Collector 采集的数据，调用 LLM 生成中文摘要和深度分析。
+  当需要对采集的技术内容进行分析总结时使用此技能。
+allowed-tools: [Bash, Read, Grep, Glob]
 ---
 
 # 技术摘要分析技能
 
 ## 使用场景
 
-当需要对采集的技术项目进行深度分析和趋势总结时，使用此技能。适用于：
+- 读取 Collector 输出的最终文件
+- 基于 `description` 和 `readme` 生成中文摘要
+- 调用 LLM 进行深度分析，输出结构化结果
 
-- GitHub Trending 采集数据的后续分析
-- AI/LLM/Agent 技术项目评估
-- 技术趋势识别与报告生成
-- 知识库内容质量提升
-- 技术投资决策支持
+## 环境准备
 
-## 执行步骤（4步流程）
+运行脚本前必须激活 Python 环境：
 
-### 步骤 1: 读取最新采集数据
-- 读取 `knowledge/raw/` 目录中最新的采集文件（按日期排序）
-- 优先处理 `github-trending-YYYY-MM-DD.json` 格式的文件
-- 验证文件格式和完整性，确保包含有效的项目数据
-- 记录分析开始时间，用于后续的时间戳
+**Windows**:
+```bash
+D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
+```
 
-### 步骤 2: 逐条深度分析
-对每个技术项目进行以下维度的深度分析：
+**Linux**:
+```bash
+source D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate
+```
 
-#### 2.1 技术摘要（≤50字）
-- 基于项目描述、README、代码结构和实际功能
-- 格式：`[项目名称] 是 [技术类型]，用于 [核心功能]。[关键创新/技术特点]。`
-- 要求：简洁准确，突出技术本质，避免营销语言
+## 执行流程
 
-#### 2.2 技术亮点（2-3个）
-- 基于事实的技术优势或创新点
-- 每个亮点必须是可验证的技术事实
-- 示例格式：
-  - "采用 [技术架构] 实现 [性能优势]"
-  - "创新性地解决了 [具体技术问题]"
-  - "在 [特定场景] 中表现出 [具体优势]"
+**通过脚本执行，不要自行逐条分析。** 脚本已内置：输入发现、LLM 并发调用（5 并发）、去重合并、状态管理、检查点续传、进度回显。
 
-#### 2.3 质量评分（1-10分）
-**评分标准**：
-- **9-10分**（改变技术格局）: 技术突破、行业标准改变、重大创新
-- **7-8分**（对当前工作有直接帮助）: 实用工具、生产效率提升、问题解决方案
-- **5-6分**（值得了解的技术动态）: 技术更新、改进版本、趋势方向
-- **1-4分**（可略过的内容）: 重复工作、技术含量低、应用场景有限
+### 运行分析脚本
 
-**评分要求**：
-- 必须附有明确的评分理由
-- 基于客观技术指标，而非主观感受
-- 15个项目中，9-10分项目不超过2个（强制约束）
+```bash
+python .opencode/skills/tech-summary/scripts/analyze.py [选项]
+```
 
-#### 2.4 标签建议
-- 建议1-3个技术标签，英文小写，连字符分隔
-- 反映项目的核心技术特性
-- 示例：`large-language-model`, `agent-framework`, `code-generation`
+### 选项
 
-### 步骤 3: 趋势发现与归纳
-基于所有项目的分析结果，识别技术趋势：
+| 选项 | 说明 |
+|------|------|
+| （无参数） | 自动发现：从 `knowledge/processed/` 查找最新 `status=completed` 的 Collector 数据 |
+| `--input FILE [FILE ...]` | 指定 1-2 个输入文件路径（流水线模式下由主 Agent 传递） |
+| `--source search\|trending` | 仅处理指定数据源（自动发现模式下） |
+| `--resume_run` | 从断点续传 |
 
-#### 3.1 共同主题识别
-- 分析项目间的技术共性
-- 识别重复出现的技术模式或架构
-- 归纳当前技术热点领域
+### 运行模式
 
-#### 3.2 新概念发现
-- 识别新兴技术概念或术语
-- 分析技术演进的趋势方向
-- 发现可能的技术突破点
+**模式一：流水线模式**（推荐）
+- 主 Agent 调用 Collector 后，传递输出文件路径给 Analyzer
+- Analyzer 通过 `--input` 接收文件路径
 
-#### 3.3 技术趋势总结
-- 总结当前技术发展阶段
-- 预测未来技术发展方向
-- 提供技术投资或学习建议
+**模式二：独立运行**
+- 无上游传递文件路径时，Analyzer 自动发现已完成的 Collector 数据
+- 通过状态文件 `collector-*-status.json` 定位输入文件
 
-### 步骤 4: 输出分析结果
-- 生成完整的分析报告 JSON
-- 保存到 `knowledge/articles/tech-analysis-YYYY-MM-DD.json`
-- 确保 JSON 格式规范（UTF-8编码，2空格缩进）
-- 包含完整的元数据和分析时间戳
+### 典型用法
 
-## 注意事项
+```bash
+# 自动发现最新采集数据（推荐）
+python .opencode/skills/tech-summary/scripts/analyze.py
 
-### 分析质量
-1. **客观事实优先**: 所有分析必须基于可验证的技术事实
-2. **避免主观评价**: 区分技术事实和个人偏好
-3. **深度与广度平衡**: 既要深入分析单个项目，也要把握整体趋势
-4. **评分一致性**: 确保评分标准在不同项目间保持一致
+# 仅分析 search 数据源
+python .opencode/skills/tech-summary/scripts/analyze.py --source search
 
-### 技术约束
-1. **数据源验证**: 确保分析基于准确的原始数据
-2. **信息补充**: 对于信息不全的项目，使用 WebFetch 获取补充资料
-3. **技术准确性**: 对于不确定的技术细节，注明信息来源或假设
-4. **更新频率**: 考虑技术发展的时效性，标注分析的时效范围
+# 指定输入文件
+python .opencode/skills/tech-summary/scripts/analyze.py --input knowledge/raw/github-search-2026-04-21-100000.json knowledge/raw/github-trending-2026-04-21-100000.json
 
-### 性能考虑
-1. **批量处理优化**: 合理组织分析流程，避免重复工作
-2. **资源控制**: 控制 WebFetch 请求频率，避免服务压力
-3. **错误恢复**: 单个项目分析失败不应影响整体流程
-4. **缓存利用**: 可缓存已分析的项目信息，提高效率
+# 任务中断后续传
+python .opencode/skills/tech-summary/scripts/analyze.py --resume_run
+```
 
-### 合规与伦理
-1. **尊重知识产权**: 仅分析公开技术信息，不涉及商业机密
-2. **技术中立**: 避免对特定技术栈或公司的偏向性
-3. **负责任分析**: 考虑技术的社会影响和伦理问题
-4. **透明可追溯**: 所有分析结论应有明确的推理过程
+### 脚本未找到数据时
 
-## 输出格式
+输出 `❌ 找不到已完成的 Collector 数据` → 提示用户先运行 Collector。
 
-### JSON 文件结构
+## 输入文件格式
+
+输入文件由 Collector 生成，包含以下字段：
+- `description`: 项目描述原文
+- `readme`: README 内容
+- `summary`: 空字符串（由本脚本填充）
+
+## 输出文件
+
+### 分析结果文件
+`knowledge/processed/analyzer-{YYYY-MM-DD-HHMMSS}.json`
+
 ```json
 {
-  "source": "github",
-  "skill": "tech-summary",
-  "analyzed_at": "2026-04-17T11:00:00Z",
-  "input_file": "knowledge/raw/github-trending-2026-04-17.json",
-  "items_analyzed": 15,
+  "analyzed_at": "2026-04-17T10:30:00+08:00",
+  "version": "1.0",
+  "input_files": ["knowledge/raw/github-search-2026-04-17-100000.json"],
   "items": [
     {
-      "name": "owner/repository-name",
-      "url": "https://github.com/owner/repository-name",
-      "summary": "≤50字中文技术摘要，突出技术本质",
-      "highlights": [
-        "技术亮点1（基于事实）",
-        "技术亮点2（基于事实）"
-      ],
-      "score": 7,
-      "score_reason": "详细的评分理由，说明为何给予此分数",
-      "tags": ["tag1", "tag2"]
+      "title": "项目标题",
+      "url": "https://github.com/owner/repo",
+      "source": "github-search",
+      "popularity": 1234,
+      "popularity_type": "total_stars",
+      "author": "项目发布者",
+      "created_at": "2026-04-17T01:56:15+08:00",
+      "updated_at": "2026-04-20T05:27:45+08:00",
+      "language": "Python",
+      "topics": ["ai", "ml"],
+      "description": "项目描述原文",
+      "readme": "README 内容",
+      "summary": "200-300字中文深度技术摘要，基于 description 和 readme 生成",
+      "analysis": {
+        "summary": "200-300字中文深度技术摘要",
+        "highlights": ["核心亮点1", "核心亮点2", "核心亮点3"],
+        "relevance_score": 7,
+        "tags": ["large-language-model", "agent-framework"],
+        "category": "框架",
+        "maturity": "生产"
+      }
     }
-  ],
-  "trends": {
-    "common_themes": ["共同主题1", "共同主题2"],
-    "new_concepts": ["新概念1", "新概念2"],
-    "technology_trends": "整体技术趋势总结文字描述",
-    "recommendations": "基于分析的技术建议"
-  }
+  ]
 }
 ```
 
-### 字段说明
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `source` | string | 是 | 数据来源，如 "github" |
-| `skill` | string | 是 | 技能名称，固定为 "tech-summary" |
-| `analyzed_at` | string | 是 | 分析时间，ISO 8601 格式 |
-| `input_file` | string | 是 | 输入数据文件路径 |
-| `items_analyzed` | number | 是 | 分析的项目数量 |
-| `items` | array | 是 | 项目分析结果数组 |
-| `trends` | object | 是 | 趋势发现与归纳 |
+**说明**：
+- 输出保留输入文件的所有字段（description, readme 等）
+- `summary` 字段填充为中文摘要（从 analysis.summary 复制）
+- `analysis` 对象包含完整的分析结果
 
-#### items 数组字段
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `name` | string | 是 | 项目名称，格式为 "owner/repo" |
-| `url` | string | 是 | 完整的项目 URL |
-| `summary` | string | 是 | ≤50字中文技术摘要 |
-| `highlights` | array | 是 | 2-3个技术亮点，基于事实 |
-| `score` | number | 是 | 质量评分（1-10） |
-| `score_reason` | string | 是 | 详细的评分理由 |
-| `tags` | array | 是 | 1-3个技术标签建议 |
+### 状态文件
+`knowledge/processed/analyzer-{YYYY-MM-DD-HHMMSS}-status.json`
 
-#### trends 对象字段
-| 字段名 | 类型 | 必填 | 说明 |
-|--------|------|------|------|
-| `common_themes` | array | 是 | 共同技术主题列表 |
-| `new_concepts` | array | 是 | 新兴技术概念列表 |
-| `technology_trends` | string | 是 | 整体技术趋势文字描述 |
-| `recommendations` | string | 是 | 基于分析的技术建议 |
+脚本自动管理状态文件（started → running → completed/failed），agent 无需手动操作。
 
-### 文件命名规范
-- **路径**: `knowledge/articles/tech-analysis-YYYY-MM-DD.json`
-- **示例**: `knowledge/articles/tech-analysis-2026-04-17.json`
-- **日期**: 使用分析当天的日期（UTC+8）
+## 分析维度
 
+### summary（中文摘要）
+- 200-300字深度技术摘要
+- 基于 `description` 和 `readme` 生成
+- 突出技术本质，避免营销语言
 
+### highlights（技术亮点）
+- 2-3个基于事实的技术优势或创新点
 
-### 质量检查清单
-✅ **分析完整性**: 所有项目都经过深度分析  
-✅ **摘要长度**: 所有摘要 ≤50字，简洁准确  
-✅ **亮点质量**: 每个项目有2-3个基于事实的技术亮点  
-✅ **评分合理**: 评分符合标准，9-10分项目不超过2个  
-✅ **标签建议**: 每个项目有1-3个准确的技术标签  
-✅ **趋势发现**: 包含有效的共同主题、新概念和趋势总结  
-✅ **格式规范**: JSON 格式正确，编码 UTF-8，字段完整  
-✅ **时间戳有效**: analyzed_at 为有效的 ISO 8601 时间戳  
-✅ **数据可追溯**: 包含 input_file 字段，可追溯原始数据  
-✅ **约束遵守**: 严格遵循9-10分项目数量限制（≤2个）  
+### relevance_score（相关性评分）
+- **9-10分**：改变技术格局，重大创新
+- **7-8分**：对当前工作有直接帮助
+- **5-6分**：值得了解的技术动态
+- **1-4分**：可略过的内容
+
+### tags（标签）
+- 1-3个英文小写标签，连字符分隔
+- 示例：`large-language-model`, `agent-framework`, `code-generation`
+
+### category（分类）
+- 框架 / 工具 / 论文 / 实践
+
+### maturity（成熟度）
+- 实验 / 测试 / 生产
+
+## 质量门控
+
+- ✅ relevance_score < 6 的条目，Organizer 应丢弃
+- ✅ 输出保留输入的所有元数据字段，不丢失 Collector 采集的信息
+
+## 环境变量
+
+需在 `.env` 中配置：
+- `LLM_API_BASE`: LLM API 地址
+- `LLM_API_KEY`: API 密钥
+- `LLM_MODEL_ID`: 模型 ID
 
 ---
-*技能版本: v1.0*  
-*最后更新: 2026-04-17*  
-*适用场景: AI 知识库技术内容深度分析与趋势总结*
+*技能版本: v2.0*
+*最后更新: 2026-04-21*
+*适用场景: AI 知识库技术内容深度分析与摘要生成*

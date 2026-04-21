@@ -292,6 +292,7 @@ def parse_trending_html(
                 "readme": "",
                 "created_at": "",
                 "updated_at": "",
+                "summary": "",
             }
 
             repos.append(repo_data)
@@ -409,9 +410,9 @@ def main():
 
         task_id = status_data.get("task_id", generate_task_id())
         raw_items_url = status_data.get("raw_items_url", [])
-        raw_output_file = status_data.get("raw_output_file", "")
-        if raw_output_file:
-            raw_path = project_root / raw_output_file
+        output_files = status_data.get("output_files", [])
+        if output_files:
+            raw_path = project_root / output_files[0]
 
         logger = setup_logger("github-trending", str(logs_dir), timestamp)
         logger.info(f"恢复任务: {task_id}")
@@ -425,7 +426,7 @@ def main():
 
         logger.info(f"开始新任务: {task_id}")
 
-        raw_filename = f"github-trending-{timestamp}-raw.json"
+        raw_filename = f"github-trending-{timestamp}.json"
         raw_path = output_dir / raw_filename
         status_filename = f"collector-trending-{timestamp}-status.json"
         status_path = processed_dir / status_filename

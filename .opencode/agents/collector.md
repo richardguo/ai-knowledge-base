@@ -5,7 +5,7 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 
 ## 权限
 ### 允许
-- Read：读取配置文件、数据模板和中间文件
+- Read：读取配置文件和数据模板
 - Grep：在现有数据中搜索避免重复
 - Glob：查找数据存储位置
 - Write：写入 `knowledge/raw/` 目录（采集数据）
@@ -23,21 +23,21 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 - **数据源**: GitHub Search API
 - **排序**: 按总 star 数降序排列
 - **时间窗口**: 过去 7 天内有推送（`pushed:>` 过滤）
+- **关键词**: 默认 `AI,LLM,agent,large language model,Harness,SDD,RAG,machine learning`，可通过 `--keywords` 参数自定义
 - **过滤**: 不做二次内容过滤（Search API 已通过关键词限定范围），留给下游 Analyzer
-- **执行**: 通过 `github-collector` skill 的 `github_search.py` 脚本采集数据，再调用 `generate_summary.py` 生成中文摘要
+- **执行**: 通过 `github-collector` skill 的 `github_search.py` 脚本采集数据，输出包含 `description`、`readme` 和空 `summary` 字段的最终文件
 
 ### B. GitHub Trending 页面数据采集
 - **数据源**: GitHub Trending 页面
 - **时间范围**: 支持 `daily`（缺省）、`weekly`、`monthly`
 - **排序**: 按 Trending 页面原始顺序
 - **过滤**: 排除非技术内容，仅保留相关开源项目
-- **执行**: 通过 `github-collector` skill 的 `github_trending.py` 脚本采集数据，再调用 `generate_summary.py` 生成中文摘要
+- **执行**: 通过 `github-collector` skill 的 `github_trending.py` 脚本采集数据，输出包含 `description`、`readme` 和空 `summary` 字段的最终文件
 
 ### 通用流程
-1. 调用采集脚本采集数据，输出中间文件（`-raw.json`）
-2. 调用 `generate_summary.py` 脚本，基于 `description` 和 `readme` 内容生成 50-200 字中文摘要
-3. 脚本自动移除 `readme` 和 `description` 字段，输出最终文件
-4. 中间文件 `-raw.json` 保留不删除，作为溯源依据
+1. 调用采集脚本采集数据，直接输出最终文件（`.json`），包含 `description`、`readme` 和空的 `summary` 字段
+2. 中间文件不再生成，简化流程
+3. `summary` 字段留空，由下游 Analyzer 基于原始内容生成中文摘要
 
 ### 错误处理
 遵循协作契约中的错误分类与恢复策略：
@@ -64,8 +64,6 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 ### 最终输出文件
 - 仓库搜索：`knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json`
 - Trending：`knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}.json`
-
-### 仓库搜索最终文件格式
 ```json
 {
   "collected_at": "2026-04-17T10:00:00+08:00",
@@ -82,7 +80,9 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
       "updated_at": "2026-04-20T05:27:45+08:00",
       "language": "Python",
       "topics": ["ai", "attention", "ml", "pytorch"],
-      "summary": "50-200字中文摘要，基于项目描述和README内容。"
+      "description": "项目描述原文",
+      "readme": "README 内容",
+      "summary": ""
     }
   ]
 }
@@ -106,7 +106,9 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
       "updated_at": "2026-04-20T05:27:45+08:00",
       "language": "Python",
       "topics": ["ai", "agent"],
-      "summary": "50-200字中文摘要，基于项目描述和README内容。"
+      "description": "项目描述原文",
+      "readme": "README 内容",
+      "summary": ""
     }
   ]
 }
@@ -124,7 +126,9 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 | updated_at | string | 是 | 最近推送时间，ISO 8601 +08:00 |
 | language | string | 是 | 主要编程语言，无则为 `"N/A"` |
 | topics | array | 是 | 仓库标签列表，可为空数组 |
-| summary | string | 是 | 50-200字中文摘要，基于项目描述和 README；摘要生成失败时填 "摘要生成失败" |
+| description | string | 是 | 项目描述原文，可为空字符串 |
+| readme | string | 是 | README 内容，截断到 5000 字符，可为空字符串 |
+| summary | string | 是 | 留空，由 Analyzer 基于 description 和 readme 生成中文摘要 |
 
 ### 状态文件格式
 ```json
@@ -136,7 +140,6 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
   "output_files": [
     "knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json"
   ],
-  "raw_output_file": "knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json",
   "quality": "ok|below_threshold",
   "error_count": 0,
   "start_time": "2026-04-17T10:00:00+08:00",
@@ -150,7 +153,7 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 ### 数据质量检查
 ✅ **条目数量**: 仓库搜索 ≥ 15 个有效项目，Trending ≥ 10 个有效项目（由脚本在状态文件中标记 quality 字段：ok 或 below_threshold，不阻断流水线）
 ✅ **字段完整性**: 所有必填字段完整无缺失
-✅ **摘要质量**: 50-200字，基于原始内容，无编造成分
+✅ **原始内容保留**: `description` 和 `readme` 字段正确保留原始内容
 ✅ **内容过滤-Search**: 通过 API 关键词查询限定 AI/LLM/ML/Agent/Harness/SDD/RAG 相关主题，不做二次过滤，留给下游 Analyzer
 ✅ **内容过滤-Trending**: 对返回结果按纳入/排除标准做二次过滤，保留 AI/LLM/ML/Agent/Harness/SDD/RAG 相关主题，排除非技术内容
 ✅ **排序正确**: 仓库搜索按总 star 数降序，Trending 按页面原始顺序
@@ -170,10 +173,8 @@ Collector 任务完成后，必须向主 Agent 传递以下信息：
 
 1. **采集状态**: 成功/失败/部分成功
 2. **输出文件路径**（用于传递给 Analyzer）:
-   - 仓库搜索 Raw 中间文件：`knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json`
-   - Trending Raw 中间文件：`knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}-raw.json`
-   - 仓库搜索最终文件：`knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json`
-   - Trending 最终文件：`knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}.json`
+   - 仓库搜索：`knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json`
+   - Trending：`knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}.json`
 3. **状态文件路径**（供 Analyzer 自动发现时使用）:
    - 仓库搜索：`knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-status.json`
    - Trending：`knowledge/processed/collector-trending-{YYYY-MM-DD-HHMMSS}-status.json`
@@ -181,9 +182,9 @@ Collector 任务完成后，必须向主 Agent 传递以下信息：
 5. **质量状态**: `ok` 或 `below_threshold`
 
 ### 推荐的主 Agent 调度方式
-Collector 完成后，主 Agent 应将 Raw 中间文件路径传递给 Analyzer（Raw 文件包含 `description` 和 `readme`，比最终文件更适合深度分析）：
+Collector 完成后，主 Agent 应将最终文件路径传递给 Analyzer（最终文件包含 `description`、`readme` 和空的 `summary` 字段，供 Analyzer 生成中文摘要）：
 ```
-@analyzer 分析 knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json, knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}-raw.json
+@analyzer 分析 knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json, knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}.json
 ```
 
 如果只采集了单个数据源，则只传递对应的文件路径。

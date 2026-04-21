@@ -35,8 +35,6 @@ source D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activa
 
 ### A. GitHub 仓库搜索
 
-#### 步骤 1: 运行采集脚本
-
 ```bash
 python .opencode/skills/github-collector/scripts/github_search.py --output-dir knowledge/raw --top 20
 ```
@@ -46,58 +44,28 @@ python .opencode/skills/github-collector/scripts/github_search.py --output-dir k
 |------|------|------|
 | `--output-dir` | 否 | 输出目录，默认 `knowledge/raw` |
 | `--top` | 否 | 取 Top N 项目，默认 20，最大 50 |
+| `--keywords` | 否 | 搜索关键词，逗号分隔，默认 `AI,LLM,agent,large language model,Harness,SDD,RAG,machine learning` |
 | `--resume_run` | 否 | 继续未完成的任务，从断点续传 |
 
 脚本实现细节：
 - 调用 GitHub Search API (`https://api.github.com/search/repositories`)
-- 搜索关键词：`AI OR LLM OR agent OR "large language model" OR Harness OR SDD OR RAG OR "machine learning"`
+- 搜索关键词：默认为 AI/LLM/agent 等，可通过 `--keywords` 自定义
 - 时间窗口：过去 7 天内有推送（`pushed:>` 过滤）
 - 按 `sort=stars&order=desc` 排序
 - 对每个项目获取 README 内容（GitHub API `/repos/{owner}/{repo}/readme`）
 - 从 `.env` 读取 `GITHUB_TOKEN` 用于 API 认证
-- 输出中间文件 `github-search-{YYYY-MM-DD-HHMMSS}-raw.json`
+- 输出最终文件 `github-search-{YYYY-MM-DD-HHMMSS}.json`，包含 `description`、`readme` 和空的 `summary` 字段
 
-#### 步骤 2: 调用摘要生成脚本
-
-**重要：获取正确的文件路径**
-
-从状态文件中获取实际生成的 raw 文件路径：
+**自定义搜索关键词示例**：
 ```bash
-# 查看最新状态文件中的 raw_output_file 字段
-cat knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-status.json
+# 搜索 RAG 相关项目
+python .opencode/skills/github-collector/scripts/github_search.py --keywords "RAG,retrieval,augmented generation"
+
+# 搜索 Agent 框架
+python .opencode/skills/github-collector/scripts/github_search.py --keywords "agent framework,autonomous,AI agent"
 ```
-
-**调用脚本生成摘要**：
-
-使用 `--input` 参数（推荐）：
-```bash
-python .opencode/skills/github-collector/scripts/generate_summary.py --input knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json
-```
-
-或使用位置参数：
-```bash
-python .opencode/skills/github-collector/scripts/generate_summary.py knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json
-```
-
-脚本会自动：
-1. 读取中间文件
-2. 调用 LLM API 批量生成 50-200 字中文摘要
-3. 移除 `readme` 和 `description` 字段
-4. 输出最终文件 `github-search-{YYYY-MM-DD-HHMMSS}.json`
-
-**注意**：需在 `.env` 中配置 LLM 相关环境变量：
-- `LLM_API_BASE`: LLM API 地址
-- `LLM_API_KEY`: API 密钥
-- `LLM_MODEL_ID`: 模型 ID
-
-**常见问题排查**：
-- ❌ 错误 "文件不存在"：请检查步骤 1 的输出，使用正确的文件名（包含正确的时间戳）
-- ❌ 错误 "LLM 配置缺失"：请在 `.env` 中配置 LLM 相关环境变量
-- ❌ 脚本执行卡住：LLM API 可能响应慢，请等待或检查网络连接
 
 ### B. GitHub Trending 页面
-
-#### 步骤 1: 运行采集脚本
 
 ```bash
 python .opencode/skills/github-collector/scripts/github_trending.py --since daily --output-dir knowledge/raw --top 20
@@ -119,7 +87,7 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
   - 调用 `/repos/{owner}/{repo}` 一次，同时获取 `created_at`、`updated_at`、`topics`
   - 调用 `/repos/{owner}/{repo}/readme` 获取 README 内容
 - 从 `.env` 读取 `GITHUB_TOKEN` 用于 API 认证
-- 输出中间文件 `github-trending-{YYYY-MM-DD-HHMMSS}-raw.json`
+- 输出最终文件 `github-trending-{YYYY-MM-DD-HHMMSS}.json`，包含 `description`、`readme` 和空的 `summary` 字段
 
 内容过滤配置：
 - **纳入标准**（符合任意一项）：
@@ -128,31 +96,9 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
 - **排除标准**（符合任意一项）：
   - 仓库名称或描述含：awesome-、curated list、book、course、roadmap、interview、cheatsheet
 
-#### 步骤 2: 调用摘要生成脚本
+## 输出文件格式
 
-**使用 --input 参数（推荐）**：
-```bash
-python .opencode/skills/github-collector/scripts/generate_summary.py --input knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}-raw.json
-```
-
-**或使用位置参数**：
-```bash
-python .opencode/skills/github-collector/scripts/generate_summary.py knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}-raw.json
-```
-
-脚本会自动：
-1. 读取中间文件
-2. 调用 LLM API 批量生成 50-200 字中文摘要
-3. 移除 `readme` 和 `description` 字段
-4. 输出最终文件 `github-trending-{YYYY-MM-DD-HHMMSS}.json`
-
-**注意**：需在 `.env` 中配置 LLM 相关环境变量（同上）。
-
-## 中间文件格式
-
-中间文件是采集脚本的直接输出，包含 `readme` 和 `description` 字段。摘要生成脚本读取中间文件，调用 LLM API 生成摘要后移除这两个字段，输出最终文件。
-
-### 仓库搜索中间文件 (`github-search-{YYYY-MM-DD-HHMMSS}-raw.json`)
+### 仓库搜索文件格式 (`github-search-{YYYY-MM-DD-HHMMSS}.json`)
 ```json
 {
   "collected_at": "2026-04-17T10:00:00+08:00",
@@ -170,13 +116,14 @@ python .opencode/skills/github-collector/scripts/generate_summary.py knowledge/r
       "language": "Python",
       "topics": ["ai", "ml", "pytorch"],
       "description": "API 返回的 description 原文",
-      "readme": "README 原文内容"
+      "readme": "README 原文内容",
+      "summary": ""
     }
   ]
 }
 ```
 
-### Trending 中间文件 (`github-trending-{YYYY-MM-DD-HHMMSS}-raw.json`)
+### Trending 文件格式 (`github-trending-{YYYY-MM-DD-HHMMSS}.json`)
 ```json
 {
   "collected_at": "2026-04-17T10:00:00+08:00",
@@ -195,11 +142,29 @@ python .opencode/skills/github-collector/scripts/generate_summary.py knowledge/r
       "language": "Python",
       "topics": ["ai", "agent"],
       "description": "页面 description 原文",
-      "readme": "README 原文内容"
+      "readme": "README 原文内容",
+      "summary": ""
     }
   ]
 }
 ```
+
+## 字段说明
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| title | string | 项目名称（repo 名） |
+| url | string | GitHub 仓库地址 |
+| popularity | integer | 热度数值，含义由 `popularity_type` 决定 |
+| popularity_type | string | `total_stars`（搜索）或 `daily_stars`/`weekly_stars`/`monthly_stars`（Trending） |
+| author | string | 项目发布者或组织 |
+| created_at | string | 项目创建时间，ISO 8601 +08:00 |
+| updated_at | string | 最近推送时间，ISO 8601 +08:00 |
+| language | string | 主要编程语言，无则为 `"N/A"` |
+| topics | array | 仓库标签列表，可为空数组 |
+| description | string | 项目描述原文，可为空字符串 |
+| readme | string | README 内容，截断到 5000 字符，可为空字符串 |
+| summary | string | 留空，由 Analyzer 基于原始内容生成中文摘要 |
 
 ## 脚本错误处理
 
@@ -210,6 +175,6 @@ python .opencode/skills/github-collector/scripts/generate_summary.py knowledge/r
 - **GITHUB_TOKEN 缺失**: 脚本报错退出，Agent 需提示用户配置
 
 ---
-*技能版本: v2.2*
+*技能版本: v2.3*
 *最后更新: 2026-04-21*
 *适用场景: GitHub 仓库搜索 + Trending 页面采集*

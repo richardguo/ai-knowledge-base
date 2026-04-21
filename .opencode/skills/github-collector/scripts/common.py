@@ -366,7 +366,7 @@ def create_status_file(
     status_path: Path,
     task_id: str,
     source: str,
-    raw_output_file: str,
+    output_file: str,
     status: str = "started"
 ) -> dict[str, Any]:
     """创建状态文件。
@@ -375,7 +375,7 @@ def create_status_file(
         status_path: 状态文件路径。
         task_id: 任务 ID。
         source: 数据源名称。
-        raw_output_file: 中间文件路径。
+        output_file: 输出文件路径。
         status: 初始状态。
 
     Returns:
@@ -386,8 +386,7 @@ def create_status_file(
         "task_id": task_id,
         "status": status,
         "sources": [source],
-        "output_files": [],
-        "raw_output_file": raw_output_file,
+        "output_files": [output_file],
         "quality": "ok",
         "error_count": 0,
         "start_time": generate_collected_at(),

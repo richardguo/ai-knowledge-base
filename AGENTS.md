@@ -54,9 +54,6 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
 14. 本地执行测试命令：`pytest --cov=src tests/`
 
 ### 文件命名
-- 原始数据中间文件：`knowledge/raw/{source}-{YYYY-MM-DD-HHMMSS}-raw.json`
-  - 例：`knowledge/raw/github-search-2026-04-20-100000-raw.json`
-  - 例：`knowledge/raw/github-trending-2026-04-20-100000-raw.json`
 - 原始数据最终文件：`knowledge/raw/{source}-{YYYY-MM-DD-HHMMSS}.json`
   - 例：`knowledge/raw/github-search-2026-04-20-100000.json`
   - 例：`knowledge/raw/github-trending-2026-04-20-100000.json`
@@ -106,9 +103,9 @@ opencode-test/
 ### 三阶段流水线
 
 ```
-[Collector] ──采集──→ knowledge/raw/
+[Collector] ──采集──→ knowledge/raw/ (description, readme, summary="")
                           │
-[Analyzer]  ──分析──→ knowledge/raw/ (enriched)
+[Analyzer]  ──分析──→ knowledge/processed/ (生成 summary，深度分析)
                           │
 [Organizer] ──整理──→ knowledge/articles/
 ```
@@ -118,8 +115,9 @@ opencode-test/
 1. **单向数据流**：Collector → Analyzer → Organizer，不可反向
 2. **职责隔离**：每个 Agent 只操作自己权限范围内的文件
 3. **幂等性**：Collector 通过 `--resume_run` 支持断点续传，重新获取数据源并跳过已处理项目；重复运行同一天的采集不应产生重复条目
-4. **质量门控**：Analyzer 评分低于 0.6 的条目，Organizer 应丢弃
+4. **质量门控**：Analyzer 评分低于 6 的条目，Organizer 应丢弃
 5. **可追溯**：每个条目保留 `source_url` 和 `collected_at` 用于溯源
+6. **摘要生成**：Collector 保留 `description` 和 `readme` 字段，`summary` 置空；由 Analyzer 基于原始内容生成中文摘要
 
 ### Agent 调用方式
 

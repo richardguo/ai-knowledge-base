@@ -168,13 +168,13 @@ def discover_input_files(
         if source_name in by_source:
             continue
 
-        raw_file = data.get("raw_output_file", "")
-        if not raw_file:
+        output_files = data.get("output_files", [])
+        if not output_files:
             if logger:
-                logger.warning(f"状态文件缺少 raw_output_file: {status_file.name}")
+                logger.warning(f"状态文件缺少 output_files: {status_file.name}")
             continue
 
-        raw_path = Path(raw_file)
+        raw_path = Path(output_files[0])
         if not raw_path.is_absolute():
             raw_path = PROJECT_ROOT / raw_path
 
@@ -649,6 +649,9 @@ def process_items(
                 "updated_at": item.get("updated_at", ""),
                 "language": item.get("language", ""),
                 "topics": item.get("topics", []),
+                "description": item.get("description", ""),
+                "readme": item.get("readme", ""),
+                "summary": analysis.get("summary", ""),
                 "analysis": analysis,
             }
             results[i] = result_item

@@ -16,10 +16,10 @@
 |---|---|---|
 | 字段名 | name, stars | title, popularity, popularity_type, author |
 | 时间格式 | UTC + Z | GMT+8 + +08:00 |
-| 文件名 | github-trending-YYYY-MM-DD.json | github-trending-YYYY-MM-DD-HHMMSS-raw.json |
+| 文件名 | github-trending-YYYY-MM-DD.json | github-trending-YYYY-MM-DD-HHMMSS.json |
 | 字段补全 | 无 | GitHub API 补全 created_at, updated_at, topics, readme |
 | 认证 | 无 | GITHUB_TOKEN |
-| description | 留空 | 填 description 原文（中间文件），最终文件由 Agent 生成 summary |
+| description | 留空 | 填 description 原文，最终文件保留 description/readme，summary 置空 |
 | 排序 | 按 stars 降序 | 保持页面原始顺序 |
 | 超时 | 9.5s 退出 | Trending 页面抓取 15s 超时，API 请求由重试机制管理 |
 | 命令行参数 | 无 | --since, --output-dir, --top, --resume_run |
@@ -58,7 +58,7 @@
 
 ### 日志通道
 - **stderr**：运行时日志（进度、警告、错误），Agent 通过 Bash 工具捕获
-- **stdout**：脚本正式输出（中间文件路径），Agent 读取后知道去哪里找 -raw.json
+- **stdout**：脚本正式输出（输出文件路径），Agent 读取后知道去哪里找 .json
 - **日志文件**：持久化日志，供事后排查
 
 ### 日志文件路径
@@ -98,7 +98,6 @@ logs/collector-{YYYY-MM-DD-HHMMSS}.log
   "output_files": [
     "knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json"
   ],
-  "raw_output_file": "knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json",
   "quality": "ok|below_threshold",
   "error_count": 0,
   "start_time": "2026-04-17T10:00:00+08:00",
@@ -130,11 +129,11 @@ logs/collector-{YYYY-MM-DD-HHMMSS}.log
    - 取最新（按文件修改时间排序）的一个
 3. 从状态文件名解析 HHMMSS（保持文件名一致）
 4. 读取 raw_items_url，跳过已处理项目（仅跳过 README 获取+写入，仍需重新获取数据源）
-5. 从状态文件的 raw_output_file 字段读取已有 -raw.json 中间文件，先读旧内容再合并新结果后写入
+5. 从状态文件的 output_files 字段读取已有 .json 文件，先读旧内容再合并新结果后写入
 6. 继续处理剩余项目，更新 raw_items_url
 
-### 中间文件写入策略
-- 每处理完一个项目，先读已有 -raw.json，按 URL 去重合并新条目（新数据覆盖旧数据），再写入完整文件
+### 输出文件写入策略
+- 每处理完一个项目，先读已有 .json 文件，按 URL 去重合并新条目（新数据覆盖旧数据），再写入完整文件
 - 保证文件始终是合法 JSON，支持中断后继续
 
 ---
@@ -146,7 +145,7 @@ logs/collector-{YYYY-MM-DD-HHMMSS}.log
 | 正常完成（包括部分项目失败） | 0 |
 | GITHUB_TOKEN 缺失 | 1 |
 | 主 API 请求失败（Search API / Trending 页面） | 1 |
-| 中间文件写入失败 | 1 |
+| 输出文件写入失败 | 1 |
 | --top 超过 100 | 1 |
 | --resume_run 找不到未完成的状态文件 | 1 |
 | Trending star 增长数解析失败 | 1 |
@@ -269,7 +268,7 @@ eural
 1. **初始化**：调用 common.load_env() 获取 token，创建 logger
 2. **Continue 模式判断**
    - 若 --resume_run：在 knowledge/processed/ 下查找未完成的状态文件（source 含 github-search）
-   - 找到：解析 HHMMSS，读取 raw_items_url（跳过已处理项目的 README 获取+写入），从状态文件的 raw_output_file 读取已有 -raw.json
+   - 找到：解析 HHMMSS，读取 raw_items_url（跳过已处理项目的 README 获取+写入），从状态文件的 output_files 读取已有 .json
    - 未找到：sys.exit(1) 并提示无未完成任务
    - 若非 resume_run：生成新的 HHMMSS，创建状态文件（status=started）
 3. **构建搜索请求**（无论是否 resume_run 都重新调用 API，因为搜索结果可能已变化）
@@ -293,14 +292,14 @@ eural
       - description：item.get("description", "") 或 ""
    - 不做二次内容过滤，留给下游 Analyzer
 6. **获取 README**：对每个项目，若 URL 在 raw_items_url 中（resume_run 模式）则跳过，否则调用 common.fetch_readme()（截断到 5000 字符）
-7. **逐条写入中间文件**：每处理完一个项目，先读已有 -raw.json，按 URL 去重合并新条目（新数据覆盖旧数据），再写入完整文件
-8. **更新状态文件**：每处理完一个项目，追加 URL 到 aw_items_url
-9. **完成**：状态文件 status=completed，写入 end_time，根据条目数量判定 quality（Search ≥ 15 为 ok，否则 below_threshold），stdout 输出中间文件路径
+7. **逐条写入输出文件**：每处理完一个项目，先读已有 .json，按 URL 去重合并新条目（新数据覆盖旧数据），再写入完整文件
+8. **更新状态文件**：每处理完一个项目，追加 URL 到 raw_items_url
+9. **完成**：状态文件 status=completed，写入 end_time，根据条目数量判定 quality（Search ≥ 15 为 ok，否则 below_threshold），stdout 输出文件路径
 
 #### 错误处理
 - Search API 调用失败：logger.error + stderr，status=failed，sys.exit(1)
 - 单个项目 README 获取失败：readme 字段填空字符串，logger.warning，继续处理
-- 中间文件写入失败：logger.error + stderr，status=failed，sys.exit(1)
+- 输出文件写入失败：logger.error + stderr，status=failed，sys.exit(1)
 - 输出目录不存在：自动创建
 - --top > 100：报错退出
 
@@ -310,28 +309,28 @@ eural
 - 	est_search_api_basic：正常搜索返回正确结构
 - 	est_search_readme_failure：README 获取失败时不阻断
 - 	est_search_readme_truncation：README 截断到 5000 字符
-- 	est_search_output_format：中间文件 JSON 格式符合规范
+- 	est_search_output_format：输出文件 JSON 格式符合规范
 - 	est_search_cli_args：命令行参数解析
 - 	est_search_top_limit：--top > 100 报错
 - 	est_search_status_file：状态文件创建和更新
 - 	est_search_continue：--resume_run 跳过已处理项目
-- 	est_search_incremental_write：逐条写入中间文件
-- 	est_search_stdout_output：stdout 输出中间文件路径
+- 	est_search_incremental_write：逐条写入输出文件
+- 	est_search_stdout_output：stdout 输出文件路径
 
 ### 验证
-`ash
+`bash
 chcp 65001
 D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
 python .opencode/skills/github-collector/scripts/github_search.py --output-dir knowledge/raw --top 10
 `
-- 确认 knowledge/raw/ 下生成 github-search-*-raw.json
+- 确认 knowledge/raw/ 下生成 github-search-*.json
 - 确认 knowledge/processed/ 下生成状态文件
 - 确认 logs/ 下生成日志文件
 - 确认 JSON 格式正确，字段完整
 - 确认 readme 字段有内容且不超过 5000 字符
 - 确认 description 字段为 description 原文
 - 确认时间格式为 +08:00
-- 确认 stdout 输出中间文件路径
+- 确认 stdout 输出文件路径
 - pytest tests/test_github_search.py 全部通过
 
 ---
@@ -353,7 +352,7 @@ python .opencode/skills/github-collector/scripts/github_search.py --output-dir k
 1. **初始化**：调用 common.load_env() 获取 token，创建 logger
 2. **Continue 模式判断**
    - 若 --resume_run：在 knowledge/processed/ 下查找未完成的状态文件（source 含 github-trending）
-   - 找到：解析 HHMMSS，读取 raw_items_url（跳过已处理项目的 API 补全+写入），从状态文件的 raw_output_file 读取已有 -raw.json
+   - 找到：解析 HHMMSS，读取 raw_items_url（跳过已处理项目的 API 补全+写入），从状态文件的 output_files 读取已有 .json
    - 未找到：sys.exit(1) 并提示无未完成任务
    - 若非 resume_run：生成新的 HHMMSS，创建状态文件（status=started）
 3. **计算 --top 默认值**：若为 None，按 --since 设定：daily=20, weekly=25, monthly=30（无论是否 resume_run 都重新抓取页面，因为 Trending 列表可能已变化）
@@ -362,12 +361,12 @@ python .opencode/skills/github-collector/scripts/github_search.py --output-dir k
    - User-Agent 伪装浏览器
    - 超时 15s
 5. **解析 HTML**
-   - 选择器：rticle.Box-row
+   - 选择器：article.Box-row
    - 提取：
      - title：从 h2 a 的 href 中取 repo 名部分（如 /pytorch/pytorch -> pytorch）
      - author：从 href 中取 owner 部分（如 /pytorch/pytorch -> pytorch）
      - url：https://github.com/{owner}/{repo}
-     - description：rticle.select_one("p") 的文本
+     - description：article.select_one("p") 的文本
       - language：从 HTML 中提取编程语言（优先 `[itemprop='programmingLanguage']` 选择器，降级尝试 `span.d-inline-block.ml-0.mr-3`，再降级扫描 `div.d-inline-flex` 下的 span）
       - topics：降级策略——依次尝试选择器 `a.topic-tag`、`a[data-ga-click*='topic']`、`a[href*='topics']`、`div.tags a`、`span.Label--topic`，取首个命中结果；若 HTML 无 topics 且有 description，则从 description 中匹配 TARGET_TOPICS 关键词（最多 5 个）
       - star 增长数：解析页面上的 "xxx stars today/this week/this month"（解析失败则报错退出，需调试选择器直到正确）
@@ -379,16 +378,16 @@ python .opencode/skills/github-collector/scripts/github_search.py --output-dir k
     - common.fetch_repo_details() -> created_at, updated_at, topics（若防误杀步骤已调用过，复用结果）
     - common.fetch_readme() -> README 内容（截断到 5000 字符）
     - 注意：API 返回的 topics 优先使用，覆盖 HTML 解析值
-7. **逐条写入中间文件**：每处理完一个项目，先读已有 -raw.json，按 URL 去重合并新条目（新数据覆盖旧数据），再写入完整文件
-8. **更新状态文件**：每处理完一个项目，追加 URL 到 aw_items_url
-9. **完成**：状态文件 status=completed，写入 end_time，根据条目数量判定 quality（Trending ≥ 10 为 ok，否则 below_threshold），stdout 输出中间文件路径
+ 7. **逐条写入输出文件**：每处理完一个项目，先读已有 .json，按 URL 去重合并新条目（新数据覆盖旧数据），再写入完整文件
+ 8. **更新状态文件**：每处理完一个项目，追加 URL 到 raw_items_url
+ 9. **完成**：状态文件 status=completed，写入 end_time，根据条目数量判定 quality（Trending ≥ 10 为 ok，否则 below_threshold），stdout 输出文件路径
 
 #### 错误处理
 - Trending 页面抓取失败：logger.error + stderr，status=failed，sys.exit(1)
 - 单个项目 API 补全失败：缺失字段填默认值（created_at/updated_at 填当前时间），logger.warning，继续处理
 - HTML 解析失败（页面结构变化）：logger.warning，跳过该项目
 - star 增长数解析失败：logger.error + stderr，sys.exit(1)（需调试选择器）
-- 中间文件写入失败：logger.error + stderr，status=failed，sys.exit(1)
+- 输出文件写入失败：logger.error + stderr，status=failed，sys.exit(1)
 - 输出目录不存在：自动创建
 - --resume_run 找不到未完成的状态文件：报错退出
 
@@ -403,21 +402,21 @@ python .opencode/skills/github-collector/scripts/github_search.py --output-dir k
 - 	est_trending_preserve_order：保持页面原始顺序
 - 	est_trending_since_param：--since 参数影响 popularity_type 和 URL
 - 	est_trending_top_default：--top 默认值随 --since 变化
-- 	est_trending_output_format：中间文件 JSON 格式符合规范
+- 	est_trending_output_format：输出文件 JSON 格式符合规范
 - 	est_trending_star_growth_parse：star 增长数解析（失败报错）
 - 	est_trending_readme_truncation：README 截断到 5000 字符
 - 	est_trending_status_file：状态文件创建和更新
 - 	est_trending_continue：--resume_run 跳过已处理项目
-- 	est_trending_incremental_write：逐条写入中间文件
-- 	est_trending_stdout_output：stdout 输出中间文件路径
+- 	est_trending_incremental_write：逐条写入输出文件
+- 	est_trending_stdout_output：stdout 输出文件路径
 
 ### 验证
-`ash
+`bash
 chcp 65001
 D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
 python .opencode/skills/github-collector/scripts/github_trending.py --since daily --output-dir knowledge/raw
 `
-- 确认 knowledge/raw/ 下生成 github-trending-*-raw.json
+- 确认 knowledge/raw/ 下生成 github-trending-*.json
 - 确认 knowledge/processed/ 下生成状态文件
 - 确认 logs/ 下生成日志文件
 - 确认 JSON 格式正确，字段完整
@@ -427,7 +426,7 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
 - 确认 created_at/updated_at 有值（API 补全成功）
 - 确认保持页面原始顺序（非按 stars 排序）
 - 确认时间格式为 +08:00
-- 确认 stdout 输出中间文件路径
+- 确认 stdout 输出文件路径
 - pytest tests/test_github_trending.py 全部通过
 
 ---
@@ -439,17 +438,17 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
 1. 激活 Python 环境
 2. 运行 github_search.py --top 10
 3. 运行 github_trending.py --since daily
-4. 检查两个中间文件的 JSON 格式和字段完整性
+4. 检查两个输出文件的 JSON 格式和字段完整性
 5. 检查状态文件的 raw_items_url 与实际条目一致
 6. 检查 logs/ 下日志文件内容
-7. 模拟 Agent 步骤 2：手动读取中间文件，确认 description 和 readme 字段可供摘要生成使用
+7. 确认 description 和 readme 字段可供 Analyzer 使用
 
 ### 任务 5.2：Continue run 验证
 
 1. 运行 github_trending.py --top 5，手动中断（Ctrl+C）
 2. 运行 github_trending.py --resume_run
 3. 确认跳过已处理的 5 个项目，继续处理剩余项目
-4. 确认中间文件包含所有项目（已处理 + 新处理）
+4. 确认输出文件包含所有项目（已处理 + 新处理）
 5. 确认状态文件 raw_items_url 包含所有 URL
 
 ### 任务 5.3：边界场景验证
@@ -494,7 +493,7 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
 1. **Python 环境**：所有脚本运行前必须激活 python312_opencode 环境，如需安装依赖也在此环境下
 2. **编码**：Windows 下先执行 chcp 65001 设置 UTF-8 代码页
 3. **依赖**：requests, beautifulsoup4, python-dotenv 需已安装在 python312_opencode 环境中
-4. **不实现 Agent 步骤 2**（摘要生成）：本计划只覆盖脚本层面，摘要生成由 LLM Agent 在运行时完成
+4. **摘要生成由 Analyzer 负责**：Collector 输出的最终文件保留 `description` 和 `readme` 字段，`summary` 置空，由下游 Analyzer 基于原始内容生成中文摘要
 5. **common.py 无副作用**：纯函数和 I/O 最小化的工具函数，状态管理逻辑由各脚本自行实现
 6. **Agent 与脚本通信**：stdout 输出文件路径，stderr 输出运行日志，日志文件持久化
 7. **状态管理由脚本负责**：Agent 不读写状态文件

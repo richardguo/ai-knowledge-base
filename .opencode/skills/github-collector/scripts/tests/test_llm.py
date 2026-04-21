@@ -3,7 +3,7 @@ import requests
 import os
 from dotenv import load_dotenv
 
-load_dotenv('D:/Development/PythonProject/Practice_workspace/ai-knowledge-base_v2/.env')
+load_dotenv('/.env')
 
 api_base = os.getenv('LLM_API_BASE', '')
 api_key = os.getenv('LLM_API_KEY', '')
