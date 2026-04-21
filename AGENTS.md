@@ -63,7 +63,9 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
 - 知识条目：`knowledge/articles/{YYYY-MM-DD}-{slug}.json`
   - 例：`knowledge/articles/2026-03-17-openai-agents-sdk.json`
 - 索引文件：`knowledge/articles/index.json`
-- 状态文件：`knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json`
+- 状态文件：
+  - 仓库搜索：`knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-status.json`
+  - Trending：`knowledge/processed/collector-trending-{YYYY-MM-DD-HHMMSS}-status.json`
 
 ### JSON 格式
 - 使用 2 空格缩进

@@ -85,7 +85,8 @@ logs/collector-{YYYY-MM-DD-HHMMSS}.log
 脚本负责状态文件的完整生命周期，Agent 不读写状态文件。
 
 ### 状态文件路径
-knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json
+- 仓库搜索：`knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-status.json`
+- Trending：`knowledge/processed/collector-trending-{YYYY-MM-DD-HHMMSS}-status.json`
 
 ### 状态文件格式
 `json
@@ -118,12 +119,12 @@ knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json
 2. **Resume run（--resume_run）**：读取已有状态文件，重新获取数据源，跳过已处理项目
 3. **每处理完一个项目**：追加 URL 到 raw_items_url
 4. **开始/结束**：写入 start_time / end_time
-5. **失败时**：写入 knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-failed.json
+5. **失败时**：写入 knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-failed.json 或 collector-trending-{YYYY-MM-DD-HHMMSS}-failed.json
 
 ### Continue run 机制
 1. 传入 --resume_run 参数
 2. 脚本在 knowledge/processed/ 下查找状态文件：
-   - 文件名匹配 collector-*-status.json
+   - 文件名匹配 collector-search-*-status.json 或 collector-trending-*-status.json
    - sources 包含当前脚本对应的 source（如 github-search 或 github-trending）
    - status 不是 completed
    - 取最新（按文件修改时间排序）的一个

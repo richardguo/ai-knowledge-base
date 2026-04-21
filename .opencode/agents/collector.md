@@ -24,19 +24,19 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 - **排序**: 按总 star 数降序排列
 - **时间窗口**: 过去 7 天内有推送（`pushed:>` 过滤）
 - **过滤**: 不做二次内容过滤（Search API 已通过关键词限定范围），留给下游 Analyzer
-- **执行**: 通过 `github-collector` skill 的 `github_search.py` 脚本采集数据，Agent 生成中文摘要
+- **执行**: 通过 `github-collector` skill 的 `github_search.py` 脚本采集数据，再调用 `generate_summary.py` 生成中文摘要
 
 ### B. GitHub Trending 页面数据采集
 - **数据源**: GitHub Trending 页面
 - **时间范围**: 支持 `daily`（缺省）、`weekly`、`monthly`
 - **排序**: 按 Trending 页面原始顺序
 - **过滤**: 排除非技术内容，仅保留相关开源项目
-- **执行**: 通过 `github-collector` skill 的 `github_trending.py` 脚本采集数据，Agent 生成中文摘要
+- **执行**: 通过 `github-collector` skill 的 `github_trending.py` 脚本采集数据，再调用 `generate_summary.py` 生成中文摘要
 
 ### 通用流程
-1. 调用 skill 脚本采集数据，输出中间文件（`-raw.json`）
-2. 读取中间文件，基于 `description` 和 `readme` 内容生成 50-200 字中文摘要（摘要生成失败时 summary 填 "摘要生成失败"）
-3. 移除 `readme` 和 `description` 字段，写入最终文件
+1. 调用采集脚本采集数据，输出中间文件（`-raw.json`）
+2. 调用 `generate_summary.py` 脚本，基于 `description` 和 `readme` 内容生成 50-200 字中文摘要
+3. 脚本自动移除 `readme` 和 `description` 字段，输出最终文件
 4. 中间文件 `-raw.json` 保留不删除，作为溯源依据
 
 ### 错误处理
@@ -50,8 +50,12 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 
 ### 状态管理
 - **职责归属**: 状态文件完全由采集脚本管理，Agent 不读写状态文件
-- **状态文件路径**: `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-status.json`
-- **错误状态文件**: `knowledge/processed/collector-{YYYY-MM-DD-HHMMSS}-failed.json`
+- **状态文件路径**:
+  - 仓库搜索：`knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-status.json`
+  - Trending：`knowledge/processed/collector-trending-{YYYY-MM-DD-HHMMSS}-status.json`
+- **错误状态文件**:
+  - 仓库搜索：`knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-failed.json`
+  - Trending：`knowledge/processed/collector-trending-{YYYY-MM-DD-HHMMSS}-failed.json`
 - **断点续传**: 通过 `--resume_run` 参数让脚本从断点继续，脚本内部读取状态文件跳过已处理项目
 - **注意事项**: HHMMSS 采用24小时制，指的是任务真正开始的时间，不是计划时间；文件的{YYYY-MM-DD-HHMMSS}要保持一致
 

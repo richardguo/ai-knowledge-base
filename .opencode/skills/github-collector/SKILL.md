@@ -45,7 +45,7 @@ python .opencode/skills/github-collector/scripts/github_search.py --output-dir k
 | 参数 | 必填 | 说明 |
 |------|------|------|
 | `--output-dir` | 否 | 输出目录，默认 `knowledge/raw` |
-| `--top` | 否 | 取 Top N 项目，默认 50，最大 100 |
+| `--top` | 否 | 取 Top N 项目，默认 20，最大 50 |
 | `--resume_run` | 否 | 继续未完成的任务，从断点续传 |
 
 脚本实现细节：
@@ -57,13 +57,43 @@ python .opencode/skills/github-collector/scripts/github_search.py --output-dir k
 - 从 `.env` 读取 `GITHUB_TOKEN` 用于 API 认证
 - 输出中间文件 `github-search-{YYYY-MM-DD-HHMMSS}-raw.json`
 
-#### 步骤 2: Agent 生成中文摘要
+#### 步骤 2: 调用摘要生成脚本
 
-1. 读取中间文件 `github-search-{YYYY-MM-DD-HHMMSS}-raw.json`
-2. 对每个项目，基于 `description` 和 `readme` 内容生成 50-200 字中文摘要
+**重要：获取正确的文件路径**
+
+从状态文件中获取实际生成的 raw 文件路径：
+```bash
+# 查看最新状态文件中的 raw_output_file 字段
+cat knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-status.json
+```
+
+**调用脚本生成摘要**：
+
+使用 `--input` 参数（推荐）：
+```bash
+python .opencode/skills/github-collector/scripts/generate_summary.py --input knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json
+```
+
+或使用位置参数：
+```bash
+python .opencode/skills/github-collector/scripts/generate_summary.py knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json
+```
+
+脚本会自动：
+1. 读取中间文件
+2. 调用 LLM API 批量生成 50-200 字中文摘要
 3. 移除 `readme` 和 `description` 字段
-4. 写入最终文件 `github-search-{YYYY-MM-DD-HHMMSS}.json`（格式符合 Agent 定义）
-5. 中间文件 `-raw.json` 保留不删除
+4. 输出最终文件 `github-search-{YYYY-MM-DD-HHMMSS}.json`
+
+**注意**：需在 `.env` 中配置 LLM 相关环境变量：
+- `LLM_API_BASE`: LLM API 地址
+- `LLM_API_KEY`: API 密钥
+- `LLM_MODEL_ID`: 模型 ID
+
+**常见问题排查**：
+- ❌ 错误 "文件不存在"：请检查步骤 1 的输出，使用正确的文件名（包含正确的时间戳）
+- ❌ 错误 "LLM 配置缺失"：请在 `.env` 中配置 LLM 相关环境变量
+- ❌ 脚本执行卡住：LLM API 可能响应慢，请等待或检查网络连接
 
 ### B. GitHub Trending 页面
 
@@ -98,17 +128,29 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
 - **排除标准**（符合任意一项）：
   - 仓库名称或描述含：awesome-、curated list、book、course、roadmap、interview、cheatsheet
 
-#### 步骤 2: Agent 生成中文摘要
+#### 步骤 2: 调用摘要生成脚本
 
-1. 读取中间文件 `github-trending-{YYYY-MM-DD-HHMMSS}-raw.json`
-2. 对每个项目，基于 `description` 和 `readme` 内容生成 50-200 字中文摘要
+**使用 --input 参数（推荐）**：
+```bash
+python .opencode/skills/github-collector/scripts/generate_summary.py --input knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}-raw.json
+```
+
+**或使用位置参数**：
+```bash
+python .opencode/skills/github-collector/scripts/generate_summary.py knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}-raw.json
+```
+
+脚本会自动：
+1. 读取中间文件
+2. 调用 LLM API 批量生成 50-200 字中文摘要
 3. 移除 `readme` 和 `description` 字段
-4. 写入最终文件 `github-trending-{YYYY-MM-DD-HHMMSS}.json`（格式符合 Agent 定义）
-5. 中间文件 `-raw.json` 保留不删除
+4. 输出最终文件 `github-trending-{YYYY-MM-DD-HHMMSS}.json`
+
+**注意**：需在 `.env` 中配置 LLM 相关环境变量（同上）。
 
 ## 中间文件格式
 
-中间文件是脚本的直接输出，包含 `readme` 和 `description` 字段供 Agent 生成摘要使用。最终输出格式（不含 `readme` 和 `description`）由 Agent 定义。
+中间文件是采集脚本的直接输出，包含 `readme` 和 `description` 字段。摘要生成脚本读取中间文件，调用 LLM API 生成摘要后移除这两个字段，输出最终文件。
 
 ### 仓库搜索中间文件 (`github-search-{YYYY-MM-DD-HHMMSS}-raw.json`)
 ```json
@@ -168,6 +210,6 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
 - **GITHUB_TOKEN 缺失**: 脚本报错退出，Agent 需提示用户配置
 
 ---
-*技能版本: v2.0*
-*最后更新: 2026-04-20*
+*技能版本: v2.2*
+*最后更新: 2026-04-21*
 *适用场景: GitHub 仓库搜索 + Trending 页面采集*
