@@ -1,5 +1,5 @@
 """
-GitHub Trending 采集脚本 - 抓取热门 AI/LLM/Agent 仓库并输出结构化 JSON
+GitHub Trending 采集脚本 - 使用 Playwright 无头浏览器抓取热门仓库并输出结构化 JSON
 """
 
 import argparse
@@ -7,8 +7,8 @@ import re
 import sys
 from pathlib import Path
 
-import requests
 from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
 
 from common import (
     create_status_file,
@@ -33,52 +33,62 @@ from common import (
 
 SINCE_DEFAULTS = {
     "daily": 20,
-    "weekly": 25,
-    "monthly": 30,
+    "weekly": 20,
+    "monthly": 20,
 }
 
+TOP_MAX = 30
 
-def scrape_trending_page(since: str, logger) -> str | None:
-    """抓取 GitHub Trending 页面 HTML。
+LOAD_MORE_MAX_CLICKS = 5
+
+
+def scrape_trending_page(since: str, min_items: int, logger) -> str | None:
+    """使用 Playwright 抓取 GitHub Trending 页面完整 HTML。
+
+    自动滚动加载更多内容，直到条目数达到 min_items 或无更多内容。
 
     Args:
         since: 时间范围 (daily/weekly/monthly)。
+        min_items: 期望获取的最小条目数。
         logger: 日志记录器。
 
     Returns:
         HTML 字符串，失败返回 None。
     """
     url = f"https://github.com/trending?since={since}"
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/120.0.0.0 Safari/537.36"
-        )
-    }
+    logger.info(f"Playwright 抓取 Trending 页面: {url}")
 
-    logger.info(f"抓取 Trending 页面: {url}")
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.set_default_timeout(60000)
 
-    max_retries = 5
-    for attempt in range(max_retries):
-        try:
-            response = requests.get(url, headers=headers, timeout=30)
-            response.raise_for_status()
-            response.encoding = "utf-8"
-            logger.info(f"Trending 页面响应: HTTP {response.status_code}")
-            return response.text
-        except Exception as e:
-            import time
-            wait = 2 ** attempt
-            logger.warning(f"页面抓取失败: {e}，{wait}秒后重试 (尝试 {attempt + 1}/{max_retries})")
-            if attempt < max_retries - 1:
-                time.sleep(wait)
-                continue
-            else:
-                logger.error(f"Trending 页面抓取失败，已达到最大重试次数")
-                return None
+            page.goto(url, wait_until="networkidle")
+            logger.info("页面初始加载完成")
 
-    return None
+            for click_num in range(1, LOAD_MORE_MAX_CLICKS + 1):
+                article_count = page.locator("article.Box-row").count()
+                logger.info(f"当前条目数: {article_count} (第 {click_num} 次检查)")
+                if article_count >= min_items:
+                    break
+
+                load_more_btn = page.locator("button:has-text('Load more')")
+                if load_more_btn.count() == 0:
+                    logger.info("未找到 Load more 按钮，已加载全部内容")
+                    break
+
+                load_more_btn.first.click()
+                page.wait_for_load_state("networkidle")
+                logger.info(f"点击 Load more (第 {click_num} 次)")
+
+            html = page.content()
+            browser.close()
+            return html
+
+    except Exception as e:
+        logger.error(f"Playwright 抓取失败: {e}")
+        return None
 
 
 def extract_topics_from_html(article, description: str) -> list[str]:
@@ -355,7 +365,7 @@ def main():
         "--top",
         type=int,
         default=None,
-        help="取 Top N 项目，默认随 since 变化: daily=20, weekly=25, monthly=30"
+        help=f"取 Top N 项目，默认 20，最大 {TOP_MAX}"
     )
     parser.add_argument(
         "--resume_run",
@@ -366,6 +376,9 @@ def main():
     args = parser.parse_args()
 
     top = args.top if args.top is not None else SINCE_DEFAULTS.get(args.since, 20)
+    if top > TOP_MAX:
+        print(f"错误: --top 最大值为 {TOP_MAX}", file=sys.stderr)
+        sys.exit(1)
 
     project_root = find_project_root()
     config = load_env()
@@ -428,7 +441,7 @@ def main():
 
     collected_at = generate_collected_at()
 
-    html = scrape_trending_page(args.since, logger)
+    html = scrape_trending_page(args.since, top, logger)
     if html is None:
         update_status_file(status_path, status_data, status="failed")
         logger.error("Trending 页面抓取失败")

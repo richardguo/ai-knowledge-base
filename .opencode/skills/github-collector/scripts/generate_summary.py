@@ -4,12 +4,14 @@
 
 import json
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import requests
 
-MAX_CONCURRENT = 5
+MAX_CONCURRENT = 3
+LLM_MAX_RETRIES = 3
 
 
 def load_config():
@@ -77,31 +79,48 @@ README 内容（前3000字）：
         }
 
         url = config["api_base"].rstrip("/") + "/chat/completions"
-        response = requests.post(
-            url,
-            headers=headers,
-            json=payload,
-            timeout=60
-        )
 
-        if response.status_code == 200:
-            data = response.json()
-            choices = data.get("choices", [])
-            if choices:
-                msg = choices[0].get("message", {})
-                result = msg.get("content", "")
-                if not result:
-                    result = msg.get("reasoning_content", "")
-                result = result.strip() if result else ""
-            else:
-                result = ""
-            if not result:
-                print(f"LLM 返回空内容: {data}", file=sys.stderr)
-            return result if result else "摘要生成失败"
-        else:
-            print(f"LLM API 错误: HTTP {response.status_code}", file=sys.stderr)
-            print(f"Response: {response.text[:500]}", file=sys.stderr)
-            return "摘要生成失败"
+        for attempt in range(LLM_MAX_RETRIES):
+            try:
+                response = requests.post(
+                    url,
+                    headers=headers,
+                    json=payload,
+                    timeout=60
+                )
+
+                if response.status_code == 200:
+                    data = response.json()
+                    choices = data.get("choices", [])
+                    if choices:
+                        msg = choices[0].get("message", {})
+                        result = msg.get("content", "")
+                        if not result:
+                            result = msg.get("reasoning_content", "")
+                        result = result.strip() if result else ""
+                    else:
+                        result = ""
+                    if not result:
+                        print(f"LLM 返回空内容: {data}", file=sys.stderr)
+                    return result if result else "摘要生成失败"
+                else:
+                    print(f"LLM API 错误: HTTP {response.status_code}", file=sys.stderr)
+                    print(f"Response: {response.text[:500]}", file=sys.stderr)
+                    return "摘要生成失败"
+
+            except requests.exceptions.RequestException as e:
+                wait = 2 ** attempt
+                print(
+                    f"摘要生成请求异常 (尝试 {attempt + 1}/{LLM_MAX_RETRIES}): {e}，{wait}秒后重试",
+                    file=sys.stderr,
+                )
+                if attempt < LLM_MAX_RETRIES - 1:
+                    time.sleep(wait)
+                    continue
+                else:
+                    return "摘要生成失败"
+
+        return "摘要生成失败"
 
     except Exception as e:
         print(f"摘要生成异常: {e}", file=sys.stderr)
