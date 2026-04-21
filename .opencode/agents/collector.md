@@ -161,6 +161,33 @@ AI 知识库助手的采集 Agent，负责从 GitHub 仓库搜索和 GitHub Tren
 ✅ **错误处理**: 所有错误都被捕获并记录到错误日志
 ✅ **幂等性**: 任务中断后可通过 `--resume_run` 恢复，重新获取数据源，利用 `raw_items_url` 跳过已处理项目，仅处理新增和未完成的项目
 
+## 交接契约
+
+Collector 完成采集后，需向主 Agent 汇报结果，主 Agent 据此调度 Analyzer。
+
+### 汇报内容
+Collector 任务完成后，必须向主 Agent 传递以下信息：
+
+1. **采集状态**: 成功/失败/部分成功
+2. **输出文件路径**（用于传递给 Analyzer）:
+   - 仓库搜索 Raw 中间文件：`knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json`
+   - Trending Raw 中间文件：`knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}-raw.json`
+   - 仓库搜索最终文件：`knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json`
+   - Trending 最终文件：`knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}.json`
+3. **状态文件路径**（供 Analyzer 自动发现时使用）:
+   - 仓库搜索：`knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-status.json`
+   - Trending：`knowledge/processed/collector-trending-{YYYY-MM-DD-HHMMSS}-status.json`
+4. **条目数量**: 各数据源的有效条目数
+5. **质量状态**: `ok` 或 `below_threshold`
+
+### 推荐的主 Agent 调度方式
+Collector 完成后，主 Agent 应将 Raw 中间文件路径传递给 Analyzer（Raw 文件包含 `description` 和 `readme`，比最终文件更适合深度分析）：
+```
+@analyzer 分析 knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}-raw.json, knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}-raw.json
+```
+
+如果只采集了单个数据源，则只传递对应的文件路径。
+
 ## 依赖与触发
 - **环境变量**: 需要在 `.env` 中配置 `GITHUB_TOKEN`（具体读取方式由 skill 处理）
 - **触发方式**: 每天 GMT+8 10:00 AM 由调度器自动触发，或通过手动命令触发

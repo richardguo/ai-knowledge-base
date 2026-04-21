@@ -38,7 +38,7 @@ source D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activa
 #### 步骤 1: 运行采集脚本
 
 ```bash
-python .opencode/skills/github-collector/scripts/github_search.py --output-dir knowledge/raw --top 50
+python .opencode/skills/github-collector/scripts/github_search.py --output-dir knowledge/raw --top 20
 ```
 
 参数说明：
@@ -108,11 +108,11 @@ python .opencode/skills/github-collector/scripts/github_trending.py --since dail
 |------|------|------|
 | `--since` | 否 | 时间范围：`daily`（默认）、`weekly`、`monthly`。Agent 根据用户指令决定传值 |
 | `--output-dir` | 否 | 输出目录，默认 `knowledge/raw` |
-| `--top` | 否 | 取 Top N 项目，默认值随 `--since` 变化：daily=20, weekly=25, monthly=30 |
-| `--resume_run` | 否 | 继续未完成的任务，从断点续传 |
+| `--top` | 否 | 取 Top N 项目，默认 20，最大 30 |
 
 脚本实现细节：
-- 抓取 GitHub Trending 页面 HTML 并解析项目列表
+- 使用 Playwright 无头浏览器渲染 GitHub Trending 页面，确保 JS 动态内容完整加载
+- 自动点击 Load more 按钮加载更多条目（最多 5 次），直到条目数满足 --top 需求
 - 页面 URL：`https://github.com/trending?since={daily|weekly|monthly}`
 - 保持 Trending 页面原始顺序
 - 对每个项目调用 GitHub API 补全缺失字段：
