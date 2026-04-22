@@ -2,11 +2,12 @@
 
 ## 项目概述
 AI知识库助手是一个自动化技术情报收集与分析系统。
-基于GitHub Trending, Hacker News, arXiv, Google Research等开源情报，将分散的技术资讯转化为结构化、可检索的知识条目。
+基于 GitHub Search API 和 GitHub Trending 等开源情报，将分散的技术资讯转化为结构化、可检索的知识条目。
 
 ### 项目细节
-- 每日自动采集的AI/LLM/Agent相关的技术动态
+- 每日自动采集的AI/LLM/Agent相关的技术动态（GitHub Search + GitHub Trending 双数据源）
 - 通过多Agent协作完成 **采集 → 分析 → 整理** 三阶段流水线
+- 每个 Agent 通过专属 Skill 的 Python 脚本执行，禁止 LLM 自行逐条处理
 - 输出格式为统一的 JSON 知识条目，便于下游应用消费
 
 ## 技术栈
@@ -203,6 +204,8 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
+## 5. lesson and learn
+- Windows PowerShell 不支持 && 语法
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
