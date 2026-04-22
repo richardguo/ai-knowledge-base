@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "analyzer-output.json",
+  "title": "Analyzer Output",
+  "description": "Analyzer 产出数据的 JSON Schema，覆盖 knowledge/processed/analyzer-*.json",
+  "type": "object",
+  "required": ["analyzed_at", "version", "input_files", "items"],
+  "properties": {
+    "analyzed_at": {
+      "type": "string",
+      "description": "分析完成时间，ISO 8601 格式"
+    },
+    "version": {
+      "type": "string",
+      "description": "数据格式版本"
+    },
+    "input_files": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "collected_ats": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/analyzerItem"
+      }
+    }
+  },
+  "$defs": {
+    "analyzerItem": {
+      "type": "object",
+      "required": [
+        "title", "url", "source", "popularity", "popularity_type",
+        "author", "created_at", "updated_at", "language", "topics",
+        "analysis"
+      ],
+      "properties": {
+        "title": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "source": { "type": "string" },
+        "popularity": { "type": "integer", "minimum": 0 },
+        "popularity_type": { "type": "string" },
+        "author": { "type": "string" },
+        "created_at": { "type": "string" },
+        "updated_at": { "type": "string" },
+        "language": { "type": "string" },
+        "topics": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "description": { "type": "string", "default": "" },
+        "readme": { "type": "string", "default": "" },
+        "summary": { "type": "string", "default": "" },
+        "collected_at": { "type": "string", "default": "" },
+        "analysis": {
+          "$ref": "#/$defs/analysis"
+        }
+      },
+      "additionalProperties": true
+    },
+    "analysis": {
+      "type": "object",
+      "required": ["summary", "highlights", "relevance_score", "tags", "category", "maturity"],
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "highlights": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "relevance_score": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "category": {
+          "type": "string",
+          "enum": ["框架", "工具", "论文", "实践"]
+        },
+        "maturity": {
+          "type": "string",
+          "enum": ["实验", "测试", "生产"]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

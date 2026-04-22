@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "to-issues": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "computedHash": "8af055921fd37e0899835f414b5275e39d75bb7eac2e93ca0f5982732b0319ba"
+    }
+  }
+}

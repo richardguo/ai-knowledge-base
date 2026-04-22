@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge-article.json",
+  "title": "Knowledge Article",
+  "description": "知识条目的 JSON Schema，覆盖 knowledge/articles/*.json",
+  "type": "object",
+  "required": ["id", "title", "source", "url", "collected_at", "summary", "tags", "relevance_score"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "知识条目唯一标识"
+    },
+    "title": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "collected_at": {
+      "type": "string",
+      "description": "采集时间，ISO 8601 格式"
+    },
+    "processed_at": {
+      "type": "string",
+      "description": "处理时间"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "highlights": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "relevance_score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "category": {
+      "type": "string",
+      "enum": ["框架", "工具", "论文", "实践"]
+    },
+    "maturity": {
+      "type": "string",
+      "enum": ["实验", "测试", "生产"]
+    },
+    "metadata": {
+      "type": "object",
+      "description": "附加元数据（organizer 脚本产出的条目包含此字段）",
+      "properties": {
+        "author": { "type": "string" },
+        "language": { "type": "string" },
+        "popularity": { "type": "integer", "minimum": 0 },
+        "popularity_type": { "type": "string" },
+        "topics": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "created_at": { "type": "string" },
+        "updated_at": { "type": "string" },
+        "category": {
+          "type": "string",
+          "enum": ["框架", "工具", "论文", "实践"]
+        },
+        "maturity": {
+          "type": "string",
+          "enum": ["实验", "测试", "生产"]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

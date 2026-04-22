@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "collector-output.json",
+  "title": "Collector Output",
+  "description": "Collector 产出数据的 JSON Schema，覆盖 knowledge/raw/*.json",
+  "type": "object",
+  "required": ["collected_at", "source", "version", "items"],
+  "properties": {
+    "collected_at": {
+      "type": "string",
+      "description": "采集时间，ISO 8601 格式"
+    },
+    "source": {
+      "type": "string",
+      "enum": ["github-search", "github-trending"],
+      "description": "数据源类型"
+    },
+    "version": {
+      "type": "string",
+      "description": "数据格式版本"
+    },
+    "since": {
+      "type": "string",
+      "description": "Trending 时间范围，github-trending 数据源必填"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/collectorItem"
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "source": { "const": "github-trending" }
+    }
+  },
+  "then": {
+    "required": ["since"]
+  },
+  "$defs": {
+    "collectorItem": {
+      "type": "object",
+      "required": [
+        "title", "url", "author", "language",
+        "popularity", "popularity_type", "topics",
+        "created_at", "updated_at"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "description": {
+          "type": "string",
+          "default": ""
+        },
+        "author": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "popularity": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "popularity_type": {
+          "type": "string"
+        },
+        "topics": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "readme": {
+          "type": "string",
+          "default": ""
+        },
+        "summary": {
+          "type": "string",
+          "default": ""
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        },
+        "collected_at": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

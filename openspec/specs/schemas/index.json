@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "index.json",
+  "title": "Knowledge Article Index",
+  "description": "索引文件的 JSON Schema，覆盖 knowledge/articles/index.json",
+  "type": "object",
+  "required": ["version", "entries"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "索引格式版本"
+    },
+    "last_updated": {
+      "type": "string",
+      "description": "最后更新时间"
+    },
+    "total_entries": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/indexEntry"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "indexEntry": {
+      "type": "object",
+      "required": ["id", "title", "url"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "source": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "relevance_score": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "json_path": {
+          "type": "string"
+        },
+        "md_path": {
+          "type": "string"
+        },
+        "file_path": {
+          "type": "string"
+        },
+        "collected_at": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}
