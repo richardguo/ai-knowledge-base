@@ -14,7 +14,6 @@ from typing import Any
 from common import (
     GMT8,
     generate_collected_at,
-    generate_timestamp,
     setup_logger,
     find_project_root,
 )

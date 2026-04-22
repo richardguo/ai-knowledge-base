@@ -104,6 +104,9 @@ python .opencode/skills/tech-summary/scripts/analyze.py --resume_run
   "analyzed_at": "2026-04-17T10:30:00+08:00",
   "version": "1.0",
   "input_files": ["knowledge/raw/github-search-2026-04-17-100000.json"],
+  "collected_ats": {
+    "github-search": "2026-04-17T10:00:00+08:00"
+  },
   "items": [
     {
       "title": "项目标题",

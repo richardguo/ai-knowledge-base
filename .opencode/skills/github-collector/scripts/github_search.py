@@ -33,61 +33,63 @@ DEFAULT_KEYWORDS = [
     "Harness", "SDD", "RAG", "machine learning",
 ]
 
+BATCH_SIZE = 3
 
-def build_search_query(keywords: list[str]) -> str:
-    """构建 GitHub Search API 查询字符串。
+
+def build_batch_queries(keywords: list[str]) -> list[str]:
+    """将关键词分批构建 GitHub Search API 查询字符串。
+
+    每 BATCH_SIZE 个关键词组成一个查询，避免查询字符串过长被 API 拒绝。
 
     Args:
         keywords: 搜索关键词列表。
 
     Returns:
-        查询字符串。
+        查询字符串列表，每批一个。
     """
     now = datetime.now(GMT8)
     pushed_after = (now - timedelta(days=7)).strftime("%Y-%m-%d")
 
-    # 限制查询长度，只使用前3个关键词
-    limited_keywords = keywords[:3]
-    query = f"{' OR '.join(limited_keywords)} pushed:>{pushed_after}"
-    return query
+    queries = []
+    for i in range(0, len(keywords), BATCH_SIZE):
+        batch = keywords[i : i + BATCH_SIZE]
+        query = f"{' OR '.join(batch)} pushed:>{pushed_after}"
+        queries.append(query)
+
+    return queries
 
 
-def search_repositories(
+def _call_search_api(
     token: str,
-    top: int,
-    keywords: list[str],
-    logger
+    query: str,
+    per_page: int,
+    logger,
 ) -> list[dict] | None:
-    """调用 GitHub Search API 搜索仓库。
+    """调用单次 GitHub Search API 请求。
 
     Args:
         token: GitHub token。
-        top: 返回结果数量。
-        keywords: 搜索关键词列表。
+        query: 查询字符串。
+        per_page: 每页返回数量。
         logger: 日志记录器。
 
     Returns:
         仓库列表，失败返回 None。
     """
     import requests
+    import time
 
-    query = build_search_query(keywords)
     url = "https://api.github.com/search/repositories"
-
     headers = {
         "Authorization": f"token {token}",
         "Accept": "application/vnd.github.v3+json",
     }
-
     params = {
         "q": query,
         "sort": "stars",
         "order": "desc",
-        "per_page": top,
+        "per_page": per_page,
     }
-
-    logger.info(f"搜索查询: {query}")
-    logger.info(f"请求参数: per_page={top}, sort=stars, order=desc")
 
     max_retries = 3
     for attempt in range(max_retries):
@@ -99,7 +101,6 @@ def search_repositories(
             logger.info(f"Search API 响应: HTTP {response.status_code}")
 
             if response.status_code == 429:
-                import time
                 reset_time = int(response.headers.get("X-RateLimit-Reset", 0))
                 current_time = int(time.time())
                 wait_seconds = max(reset_time - current_time, 60)
@@ -108,9 +109,10 @@ def search_repositories(
                 continue
 
             if response.status_code >= 500:
-                import time
                 wait = 2 ** attempt
-                logger.warning(f"服务器错误，{wait}秒后重试 (尝试 {attempt + 1}/{max_retries})")
+                logger.warning(
+                    f"服务器错误，{wait}秒后重试 (尝试 {attempt + 1}/{max_retries})"
+                )
                 time.sleep(wait)
                 continue
 
@@ -120,22 +122,78 @@ def search_repositories(
 
             data = response.json()
             items = data.get("items", [])
-            logger.info(f"搜索返回 {len(items)} 个仓库")
+            logger.info(f"查询 [{query[:50]}...] 返回 {len(items)} 个仓库")
             return items
 
         except Exception as e:
-            import time
             wait = 2 ** attempt
-            logger.warning(f"请求异常: {e}，{wait}秒后重试 (尝试 {attempt + 1}/{max_retries})")
+            logger.warning(
+                f"请求异常: {e}，{wait}秒后重试 (尝试 {attempt + 1}/{max_retries})"
+            )
             if attempt < max_retries - 1:
                 time.sleep(wait)
                 continue
             else:
-                logger.error(f"Search API 请求失败，已达到最大重试次数")
+                logger.error("Search API 请求失败，已达到最大重试次数")
                 return None
 
     logger.error("Search API 请求失败，已达到最大重试次数")
     return None
+
+
+def search_repositories(
+    token: str,
+    top: int,
+    keywords: list[str],
+    logger,
+) -> list[dict] | None:
+    """分批调用 GitHub Search API，合并去重后返回结果。
+
+    关键词按 BATCH_SIZE 分组，每批独立查询，结果按 URL 去重（保留 star 数更高的），
+    最终按 star 数降序排列并截取 top N。
+
+    Args:
+        token: GitHub token。
+        top: 返回结果数量。
+        keywords: 搜索关键词列表。
+        logger: 日志记录器。
+
+    Returns:
+        仓库列表，失败返回 None。
+    """
+    queries = build_batch_queries(keywords)
+    logger.info(f"分批查询: {len(keywords)} 个关键词分为 {len(queries)} 批")
+
+    merged: dict[str, dict] = {}
+    any_success = False
+
+    for batch_idx, query in enumerate(queries, 1):
+        logger.info(f"第 {batch_idx}/{len(queries)} 批查询: {query}")
+
+        items = _call_search_api(token, query, min(top, 100), logger)
+        if items is None:
+            logger.warning(f"第 {batch_idx} 批查询失败，跳过")
+            continue
+
+        any_success = True
+        for item in items:
+            item_url = item.get("html_url", "")
+            item_stars = item.get("stargazers_count", 0)
+            existing = merged.get(item_url)
+            if existing is None or item_stars > existing.get("stargazers_count", 0):
+                merged[item_url] = item
+
+    if not any_success:
+        return None
+
+    sorted_items = sorted(
+        merged.values(), key=lambda x: x.get("stargazers_count", 0), reverse=True
+    )
+    result = sorted_items[:top]
+    logger.info(
+        f"合并去重后: {len(merged)} 个唯一仓库，取 Top {len(result)}"
+    )
+    return result
 
 
 def process_repository(

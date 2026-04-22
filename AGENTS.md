@@ -12,7 +12,7 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
 
 ## 技术栈
 - **运行时**：OpenCode + LLM（DeepSeek / Qwen / GLM）
-- **数据源**：GitHub API v3、Hacker News API (firebase)
+- **数据源**：GitHub API v3
 - **输出格式**：JSON
 - **版本管理**：Git
 - Python 3.12
@@ -60,6 +60,7 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
   - 例：`knowledge/raw/github-trending-2026-04-20-100000.json`
 - 知识条目：`knowledge/articles/{YYYY-MM-DD}-{slug}.json`
   - 例：`knowledge/articles/2026-03-17-openai-agents-sdk.json`
+  - 设计决策：知识条目仅保留摘要级字段（id, title, url, source, collected_at, processed_at, summary, highlights, relevance_score, tags, category, maturity），不保留采集级元数据（popularity, author, language, topics, description, readme）。如需获取完整元数据，请回溯 Analyzer 输出文件。
 - 索引文件：`knowledge/articles/index.json`
 - 状态文件：
   - 仓库搜索：`knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-status.json`
@@ -134,7 +135,7 @@ ai-knowledge-base_v2/
 2. **职责隔离**：每个 Agent 只操作自己权限范围内的文件
 3. **幂等性**：Collector 通过 `--resume_run` 支持断点续传，重新获取数据源并跳过已处理项目；重复运行同一天的采集不应产生重复条目
 4. **质量门控**：Analyzer 评分低于 6 的条目，Organizer 应丢弃
-5. **可追溯**：每个条目保留 `source_url` 和 `collected_at` 用于溯源
+5. **可追溯**：每个条目保留 `url` 和 `collected_at` 用于溯源
 6. **摘要生成**：Collector 保留 `description` 和 `readme` 字段，`summary` 置空；由 Analyzer 基于原始内容生成中文摘要
 
 ### Agent 调用方式
@@ -154,7 +155,7 @@ ai-knowledge-base_v2/
 - GITHUB_TOKEN 缺失时，脚本报错退出（退出码 1），Agent 需提示用户配置
 - 网络请求失败时，记录错误并跳过该条目，不中断整体流程
 - API 限流时，等待后重试，最多 3 次
-- 数据格式异常时，写入 `knowledge/raw/errors-{date}.json` 供人工排查
+- 数据格式异常时，记录错误并标记 status=failed，供人工排查
 
 ## 红线条款
 1. 禁止LLM编造非来源内容

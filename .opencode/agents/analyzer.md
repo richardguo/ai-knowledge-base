@@ -59,7 +59,7 @@ python .opencode/skills/tech-summary/scripts/analyze.py --resume_run
 ## 权限
 ### 允许
 - Bash：执行 `.opencode/skills/tech-summary/scripts/analyze.py`
-- Read：读取 `knowledge/processed/` 下的输出结果
+- Read：读取 `knowledge/raw/` 和 `knowledge/processed/` 下的数据
 
 ### 禁止
 - 读取或写入 `knowledge/articles/` 目录
@@ -76,6 +76,9 @@ python .opencode/skills/tech-summary/scripts/analyze.py --resume_run
   "analyzed_at": "2026-04-17T10:30:00+08:00",
   "version": "1.0",
   "input_files": ["knowledge/raw/github-search-2026-04-17-100000.json"],
+  "collected_ats": {
+    "github-search": "2026-04-17T10:00:00+08:00"
+  },
   "items": [
     {
       "title": "项目标题",

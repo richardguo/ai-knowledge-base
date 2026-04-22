@@ -35,10 +35,11 @@ python .opencode/skills/github-organizer/scripts/organize.py --input knowledge/p
 - Grep：在现有知识库中检查重复条目
 - Glob：查找存储位置和相关文件
 - Write：写入 `knowledge/articles/` 目录（知识条目和索引）
+- Bash：执行 `.opencode/skills/github-organizer/scripts/organize.py`
 
 ### 禁止
 - WebFetch：避免引入外部干扰
-- Bash：避免执行系统命令
+- Bash：禁止执行与整理无关的命令
 - 读取或写入 `knowledge/raw/` 目录
 - 修改其他 Agent 的状态文件
 
@@ -61,8 +62,9 @@ python .opencode/skills/github-organizer/scripts/organize.py --input knowledge/p
 - **ID 生成**: 为每个知识条目生成全局唯一的 UUIDv4
 - **时间戳整合**: 使用原始数据中的 `collected_at`（采集时间）和当前时间作为 `processed_at`
 - **字段映射**: 将 Analyzer 的输出转换为标准知识条目格式，包括：
-  - 直接复制字段：`title`, `url`, `source`, `language`, `topics`
+  - 直接复制字段：`title`, `url`, `source`
   - 从 `analysis` 对象提取：`summary`, `highlights`, `relevance_score`, `tags`, `category`, `maturity`
+- **元数据精简**: 知识条目不保留采集级元数据（popularity, author, language, topics, description, readme），如需获取完整元数据，请回溯 Analyzer 输出文件
 - **去重检查**: 基于 URL 和标题相似度检查重复，保留最高评分版本
 - **质量过滤**: 过滤 `relevance_score` 低于 6 的条目（质量门控）
 
@@ -73,11 +75,11 @@ python .opencode/skills/github-organizer/scripts/organize.py --input knowledge/p
 - **索引更新**: 自动更新全局索引文件 `knowledge/articles/index.json`
 
 ### 4. 状态管理
-- **任务开始**: 写入状态文件 `knowledge/processed/{YYYY-MM-DD}-organizer.json`
+- **任务开始**: 写入状态文件 `knowledge/processed/organizer-{YYYY-MM-DD-HHMMSS}-status.json`
 - **条目生成**: 为每个知识条目生成对应的 JSON 和 Markdown 文件
 - **索引更新**: 更新全局索引文件
-- **任务完成**: 更新状态文件 `knowledge/processed/{YYYY-MM-DD}-organizer.json`
-- **错误处理**: 发生错误时写入 `knowledge/processed/{YYYY-MM-DD}-organizer-failed.json` 和详细错误日志
+- **任务完成**: 更新状态文件 `knowledge/processed/organizer-{YYYY-MM-DD-HHMMSS}-status.json`
+- **错误处理**: 发生错误时更新状态文件 status=failed，记录详细错误日志
 
 ### 5. 错误处理与恢复
 遵循协作契约中的错误分类与恢复策略：
@@ -123,7 +125,7 @@ python .opencode/skills/github-organizer/scripts/organize.py --input knowledge/p
 }
 ```
 
-### 输出文件 - JSON 格式 (`knowledge/articles/{YYYY-MM-DD}-{source}-{slug}.json`)
+### 输出文件 - JSON 格式 (`knowledge/articles/{YYYY-MM-DD}-{slug}.json`)
 ```json
 {
   "id": "uuidv4",
@@ -155,8 +157,8 @@ relevance_score: 7
 **分类**: 框架 | **成熟度**: 生产  
 **标签**: tag1, tag2
 
-**采集时间**: 2026-04-17T10:00:00Z  
-**处理时间**: 2026-04-17T10:45:00Z
+**采集时间**: 2026-04-17T10:00:00+08:00  
+**处理时间**: 2026-04-17T10:45:00+08:00
 
 ## 摘要
 技术摘要
@@ -171,7 +173,7 @@ relevance_score: 7
 ### 索引文件 (`knowledge/articles/index.json`)
 ```json
 {
-  "last_updated": "2026-04-17T10:45:00Z",
+  "last_updated": "2026-04-17T10:45:00+08:00",
   "total_entries": 15,
   "entries": [
     {

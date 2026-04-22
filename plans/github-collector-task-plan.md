@@ -1,5 +1,7 @@
 # GitHub Collector 实现计划
 
+> ⚠️ 本文档为实现计划，部分内容可能与最终实现有偏差，以 SKILL.md 和实际脚本为准。
+
 ## 概述
 
 基于 collector.md (Agent) 和 github-collector SKILL.md，实现 GitHub 采集技能的两个 Python 脚本和相关基础设施。

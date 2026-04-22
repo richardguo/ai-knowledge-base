@@ -33,8 +33,8 @@ from common import (
 
 SINCE_DEFAULTS = {
     "daily": 20,
-    "weekly": 20,
-    "monthly": 20,
+    "weekly": 25,
+    "monthly": 30,
 }
 
 TOP_MAX = 30
@@ -194,8 +194,8 @@ def extract_star_growth(article, since: str, logger) -> int | None:
                 num_str = match.group(1).replace(",", "")
                 return int(num_str)
 
-        logger.warning("star 增长数解析失败，使用 0")
-        return 0
+        logger.warning("star 增长数解析失败")
+        return None
 
     except Exception as e:
         logger.error(f"star 增长数解析异常: {e}")

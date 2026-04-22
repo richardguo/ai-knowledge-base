@@ -74,29 +74,67 @@
    }
    ```
 
-2. **状态文件** (`knowledge/processed/`)
-   ```json
-   {
-     "agent": "collector|analyzer|organizer",
-     "task_id": "{YYYY-MM-DD-HHMMSS}-uuidv4",
-     "status": "started|running|completed|failed",
-     "sources": ["github-search"],
-     "output_files": ["knowledge/raw/github-search-*.json"],
-     "quality": "ok|below_threshold",
-     "error_count": 0,
-     "start_time": "2026-04-17T10:00:00+08:00",
-     "raw_items_url": [],
-     "end_time": "2026-04-17T10:05:00+08:00"
-   }
-   ```
+2. **Collector 状态文件** (`knowledge/processed/`)
+    ```json
+    {
+      "agent": "collector",
+      "task_id": "{YYYY-MM-DD-HHMMSS}-uuidv4",
+      "status": "started|running|completed|failed",
+      "sources": ["github-search"],
+      "output_files": ["knowledge/raw/github-search-*.json"],
+      "quality": "ok|below_threshold",
+      "error_count": 0,
+      "start_time": "2026-04-17T10:00:00+08:00",
+      "raw_items_url": [],
+      "end_time": "2026-04-17T10:05:00+08:00"
+    }
+    ```
 
-3. **分析结果** (`knowledge/processed/`)
-   ```json
-   {
-     "analyzed_at": "2026-04-17T10:30:00+08:00",
-     "version": "1.0",
-     "input_files": ["knowledge/raw/github-search-*.json"],
-     "items": [
+3. **Analyzer 状态文件** (`knowledge/processed/`)
+    ```json
+    {
+      "agent": "analyzer",
+      "task_id": "{YYYY-MM-DD-HHMMSS}-uuidv4",
+      "status": "started|running|completed|failed",
+      "input_files": ["knowledge/raw/github-search-*.json"],
+      "output_file": "knowledge/processed/analyzer-*.json",
+      "items_total": 30,
+      "items_processed": 30,
+      "items_failed": 0,
+      "items_deduplicated": 0,
+      "error_count": 0,
+      "start_time": "2026-04-17T10:20:00+08:00",
+      "processed_urls": [],
+      "end_time": "2026-04-17T10:30:00+08:00"
+    }
+    ```
+
+4. **Organizer 状态文件** (`knowledge/processed/`)
+    ```json
+    {
+      "agent": "organizer",
+      "task_id": "uuidv4",
+      "status": "started|running|completed|failed",
+      "input_file": "knowledge/processed/analyzer-*.json",
+      "output_file": "knowledge/articles/index.json",
+      "entries_created": 15,
+      "entries_skipped": 0,
+      "processed_urls": [],
+      "start_time": "2026-04-17T10:35:00+08:00",
+      "end_time": "2026-04-17T10:45:00+08:00"
+    }
+    ```
+
+5. **分析结果** (`knowledge/processed/`)
+    ```json
+    {
+      "analyzed_at": "2026-04-17T10:30:00+08:00",
+      "version": "1.0",
+      "input_files": ["knowledge/raw/github-search-*.json"],
+      "collected_ats": {
+        "github-search": "2026-04-17T10:00:00+08:00"
+      },
+      "items": [
        {
          "title": "项目标题",
          "url": "https://github.com/owner/repo",
@@ -124,7 +162,7 @@
    }
    ```
 
-4. **知识条目** (`knowledge/articles/`)
+6. **知识条目** (`knowledge/articles/`)
    ```json
    {
      "id": "uuidv4",
@@ -162,9 +200,9 @@
 | 数据解析错误 | JSON/HTML 解析失败 | 跳过条目，记录错误日志 | 0次 |
 | LLM API 错误 | HTTP 非 200 | 重试 | 3次 |
 
-#### 错误状态文件
-- 失败时写入 `knowledge/processed/{agent}-{YYYY-MM-DD-HHMMSS}-failed.json`
-- 包含详细错误信息供排查
+#### 错误状态处理
+- 失败时状态文件的 `status` 字段标记为 `"failed"`，`error_count` 递增
+- 状态文件本身包含足够信息供排查，不额外生成 failed.json
 
 ### 断点续传
 - **Collector**: `--resume_run` 参数从状态文件读取已处理 URL，跳过已处理项目
