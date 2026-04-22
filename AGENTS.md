@@ -64,12 +64,16 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
 - 状态文件：
   - 仓库搜索：`knowledge/processed/collector-search-{YYYY-MM-DD-HHMMSS}-status.json`
   - Trending：`knowledge/processed/collector-trending-{YYYY-MM-DD-HHMMSS}-status.json`
+  - 分析器：`knowledge/processed/analyzer-{YYYY-MM-DD-HHMMSS}-status.json`
+  - 整理器：`knowledge/processed/organizer-{YYYY-MM-DD-HHMMSS}-status.json`
+- 分析结果：`knowledge/processed/analyzer-{YYYY-MM-DD-HHMMSS}.json`
 
 ### JSON 格式
 - 使用 2 空格缩进
 - 日期格式：ISO 8601（`YYYY-MM-DDTHH:mm:ss+08:00`）
 - 字符编码：UTF-8
 - 每个知识条目必须包含：`id`, `title`, `source`, `url`, `collected_at`, `summary`, `tags`, `relevance_score`
+- 原始采集条目必须包含：`title`, `url`, `popularity`, `popularity_type`, `author`, `created_at`, `updated_at`, `language`, `topics`, `description`, `readme`, `summary`
 
 ### 语言约定
 - 代码、JSON 键名、文件名：英文
@@ -78,7 +82,7 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
 
 ## 项目结构
 ```
-opencode-test/
+ai-knowledge-base_v2/
 ├── AGENTS.md                          # 项目记忆文件（本文件）
 ├── .env                              # 环境变量
 ├── README.md                          # 使用说明
@@ -88,15 +92,28 @@ opencode-test/
 │   │   ├── analyzer.md                # 分析 Agent 角色定义
 │   │   └── organizer.md               # 整理 Agent 角色定义
 │   └── skills/
-│       ├── github-collector/SKILL.md  # GitHub 采集技能（Search + Trending）
-│       └── tech-summary/SKILL.md      # 技术摘要生成技能
+│       ├── github-collector/          # GitHub 采集技能
+│       │   ├── SKILL.md               # 技能定义
+│       │   └── scripts/
+│       │       ├── common.py          # 公共模块
+│       │       ├── github_search.py   # Search API 采集脚本
+│       │       └── github_trending.py # Trending 页面采集脚本
+│       ├── tech-summary/              # 技术摘要分析技能
+│       │   ├── SKILL.md               # 技能定义
+│       │   └── scripts/
+│       │       └── analyze.py         # LLM 分析脚本
+│       └── github-organizer/          # 知识条目整理技能
+│           ├── SKILL.md               # 技能定义
+│           └── scripts/
+│               ├── common.py          # 公共模块
+│               └── organize.py        # 整理脚本
 ├── knowledge/
 │   ├── raw/                           # 原始采集数据（JSON）
-│   ├── processed/                     # 状态文件（由脚本管理）
-│   └── articles/                      # 整理后的知识条目（JSON）
+│   ├── processed/                     # 状态文件与分析结果（JSON）
+│   └── articles/                      # 整理后的知识条目（JSON + MD）
 ├── logs/                              # 运行时日志记录
-├── src/                               # 项目实现的源代码
-└── tests/                             # 测试用的脚本
+├── specs/                             # 规格文档
+└── plans/                             # 实现计划
 ```
 
 ## 工作流规则
@@ -211,4 +228,4 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
 ---
-*文档版本：v0.1.2 · 增加karpathy-skills*
+*文档版本：v0.2.0 · 同步Agent/Skill实现状态*

@@ -1,151 +1,224 @@
-# AI 知识库 · 三 Agent 协作规格 v1.0
+# AI 知识库 · 三 Agent 协作规格 v2.0
 
 ## 总流程
 - **触发时间**: 每天 GMT+8 10:00 AM 自动触发
 - **执行顺序**: collector → analyzer → organizer · 严格串行
 - **数据流向**: 单向流动，不可逆流
+- **执行方式**: 每个 Agent 通过专属 Skill 的 Python 脚本执行，禁止 LLM 自行逐条处理
 
 ## Agent 职责与权限边界
 
 ### collector (采集 Agent)
-- **输入**: GitHub Trending API / 页面
-- **处理**: 抓取 Top 50 项目 · 筛选 AI/LLM/Agent 相关主题
-- **输出**: 保存到 `knowledge/raw/github-trending-{YYYY-MM-DD}.json`
+- **数据源**: 
+  - GitHub Search API（过去7天活跃项目，按stars排序）
+  - GitHub Trending 页面（daily/weekly/monthly）
+- **处理**: 
+  - Search: 搜索 AI/LLM/Agent/Harness/SDD/RAG 相关仓库，获取 README
+  - Trending: 使用 Playwright 渲染页面，解析热门项目，API 补全缺失字段
+- **输出**: 
+  - `knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json`
+  - `knowledge/raw/github-trending-{YYYY-MM-DD-HHMMSS}.json`
 - **权限**: 仅可写入 `knowledge/raw/` 目录
+- **脚本**: `.opencode/skills/github-collector/scripts/github_search.py` 和 `github_trending.py`
 
 ### analyzer (分析 Agent)
-- **输入**: `knowledge/raw/github-trending-{YYYY-MM-DD}.json`
-- **处理**: 每条打 3 维度标签（技术分类/成熟度/相关性评分）
-- **输出**: 保存到 `knowledge/processed/{YYYY-MM-DD}-analyzer-completed.json`
+- **输入**: `knowledge/raw/github-search-*.json` 和 `knowledge/raw/github-trending-*.json`
+- **处理**: 调用 LLM 对每个项目进行深度分析（摘要、亮点、评分、标签、分类、成熟度）
+- **输出**: `knowledge/processed/analyzer-{YYYY-MM-DD-HHMMSS}.json`
 - **权限**: 可读 `knowledge/raw/`，可写 `knowledge/processed/`
+- **脚本**: `.opencode/skills/tech-summary/scripts/analyze.py`
+- **并发**: 最大 5 并发 LLM 调用
 
 ### organizer (整理 Agent)
-- **输入**: `knowledge/processed/{YYYY-MM-DD}-analyzer-completed.json`
-- **处理**: 整理为结构化知识条目
+- **输入**: `knowledge/processed/analyzer-{YYYY-MM-DD-HHMMSS}.json`
+- **处理**: 过滤低评分条目（relevance_score < 6），生成 JSON + Markdown 双格式
 - **输出**: 
-  - JSON: `knowledge/articles/{YYYY-MM-DD}-{source}-{slug}.json`
-  - Markdown: `knowledge/articles/{YYYY-MM-DD}-{source}-{slug}.md`
+  - JSON: `knowledge/articles/{YYYY-MM-DD}-{slug}.json`
+  - Markdown: `knowledge/articles/{YYYY-MM-DD}-{slug}.md`
   - 索引: `knowledge/articles/index.json` (自动更新)
 - **权限**: 可读 `knowledge/processed/`，可写 `knowledge/articles/`
+- **脚本**: `.opencode/skills/github-organizer/scripts/organize.py`
 
 ## 协作契约
 
 ### 数据交换方式
 - **介质**: 文件系统（非内存消息）
 - **格式**: UTF-8 编码的 JSON
-- **时间戳**: ISO 8601 格式 (`YYYY-MM-DDTHH:mm:ssZ`)
+- **时间戳**: ISO 8601 +08:00 格式 (`YYYY-MM-DDTHH:mm:ss+08:00`)
 - **ID 生成**: UUIDv4，确保全局唯一性
 
 #### 数据文件规范
-1. **原始数据** (`knowledge/raw/`)
-   ```
-   github-trending-{YYYY-MM-DD}.json
-   ├── collected_at: "2026-04-17T10:00:00Z"
-   ├── source: "github"
-   ├── version: "1.0"
-   └── items: [ { title, url, popularity, summary } ]
+
+1. **原始采集数据** (`knowledge/raw/`)
+   ```json
+   {
+     "collected_at": "2026-04-17T10:00:00+08:00",
+     "source": "github-search",
+     "version": "1.0",
+     "items": [
+       {
+         "title": "项目名称",
+         "url": "https://github.com/owner/repo",
+         "popularity": 1234,
+         "popularity_type": "total_stars",
+         "author": "owner",
+         "created_at": "2026-04-17T01:56:15+08:00",
+         "updated_at": "2026-04-20T05:27:45+08:00",
+         "language": "Python",
+         "topics": ["ai", "ml"],
+         "description": "项目描述原文",
+         "readme": "README 内容（截断到 5000 字符）",
+         "summary": ""
+       }
+     ]
+   }
    ```
 
-2. **处理状态** (`knowledge/processed/`)
-   ```
-   {YYYY-MM-DD}-{agent}-{status}.json
-   ├── agent: "collector|analyzer|organizer"
-   ├── task_id: "uuidv4"
-   ├── status: "started|completed|failed"
-   ├── input_file: "path/to/input.json"
-   ├── output_file: "path/to/output.json"
-   └── error_count: 0
+2. **状态文件** (`knowledge/processed/`)
+   ```json
+   {
+     "agent": "collector|analyzer|organizer",
+     "task_id": "{YYYY-MM-DD-HHMMSS}-uuidv4",
+     "status": "started|running|completed|failed",
+     "sources": ["github-search"],
+     "output_files": ["knowledge/raw/github-search-*.json"],
+     "quality": "ok|below_threshold",
+     "error_count": 0,
+     "start_time": "2026-04-17T10:00:00+08:00",
+     "raw_items_url": [],
+     "end_time": "2026-04-17T10:05:00+08:00"
+   }
    ```
 
-3. **知识条目** (`knowledge/articles/`)
+3. **分析结果** (`knowledge/processed/`)
+   ```json
+   {
+     "analyzed_at": "2026-04-17T10:30:00+08:00",
+     "version": "1.0",
+     "input_files": ["knowledge/raw/github-search-*.json"],
+     "items": [
+       {
+         "title": "项目标题",
+         "url": "https://github.com/owner/repo",
+         "source": "github-search",
+         "popularity": 1234,
+         "popularity_type": "total_stars",
+         "author": "项目发布者",
+         "created_at": "2026-04-17T01:56:15+08:00",
+         "updated_at": "2026-04-20T05:27:45+08:00",
+         "language": "Python",
+         "topics": ["ai", "ml"],
+         "description": "项目描述原文",
+         "readme": "README 内容",
+         "summary": "200-300字中文深度技术摘要",
+         "analysis": {
+           "summary": "200-300字中文深度技术摘要",
+           "highlights": ["核心亮点1", "核心亮点2", "核心亮点3"],
+           "relevance_score": 7,
+           "tags": ["large-language-model", "agent-framework"],
+           "category": "框架",
+           "maturity": "生产"
+         }
+       }
+     ]
+   }
    ```
-   {YYYY-MM-DD}-{source}-{slug}.json
-   ├── id: "uuidv4"
-   ├── title: "项目标题"
-   ├── url: "https://github.com/..."
-   ├── source: "github"
-   ├── collected_at: "2026-04-17T10:00:00Z"
-   ├── processed_at: "2026-04-17T10:30:00Z"
-   ├── summary: "技术摘要"
-   ├── highlights: ["核心亮点1", "核心亮点2"]
-   ├── relevance_score: 7.5
-   ├── tags: ["tag1", "tag2"]
-   ├── category: "框架|工具|论文|实践"
-   └── maturity: "实验|测试|生产"
+
+4. **知识条目** (`knowledge/articles/`)
+   ```json
+   {
+     "id": "uuidv4",
+     "title": "项目标题",
+     "url": "https://github.com/owner/repo",
+     "source": "github-search",
+     "collected_at": "2026-04-17T10:00:00+08:00",
+     "processed_at": "2026-04-17T10:45:00+08:00",
+     "summary": "200-300字中文深度技术摘要",
+     "highlights": ["核心亮点1", "核心亮点2", "核心亮点3"],
+     "relevance_score": 7,
+     "tags": ["large-language-model", "agent-framework"],
+     "category": "框架",
+     "maturity": "生产"
+   }
    ```
+
+### 文件命名规范
+| 类型 | 格式 | 示例 |
+|------|------|------|
+| 原始采集数据 | `{source}-{YYYY-MM-DD-HHMMSS}.json` | `github-search-2026-04-20-100000.json` |
+| 状态文件 | `{agent}-{YYYY-MM-DD-HHMMSS}-status.json` | `collector-search-2026-04-20-100000-status.json` |
+| 分析结果 | `analyzer-{YYYY-MM-DD-HHMMSS}.json` | `analyzer-2026-04-20-103000.json` |
+| 知识条目 | `{YYYY-MM-DD}-{slug}.json` | `2026-04-20-openai-agents-sdk.json` |
+| 日志文件 | `{agent}-{YYYY-MM-DD-HHMMSS}.log` | `collector-2026-04-20-100000.log` |
 
 ### 错误处理策略
-#### 上游失败下游怎么办？
-- **检测机制**: 下游 Agent 通过状态文件检查上游完成状态
-- **处理策略**:
-  1. **网络错误**: 自动重试 3 次，每次间隔指数退避
-  2. **API 限流**: 等待后重试（GitHub API 60次/小时限制）
-  3. **数据解析错误**: 跳过该条目，记录到错误日志，继续处理其他
-  4. **存储错误**: 检查磁盘空间，尝试备用存储位置
-- **错误日志**: `knowledge/errors/{YYYY-MM-DD}-{agent}.json`
-- **继续运行**: 单个条目失败不中断整体流程
 
 #### 错误分类与恢复
 | 错误类型 | 检测方式 | 恢复动作 | 重试次数 |
 |----------|----------|----------|----------|
-| 网络错误 | HTTP 状态码 ≠ 2xx | 等待重试 | 3次 |
-| API 限流 | HTTP 429 / X-RateLimit | 计算等待时间 | 1次 |
-| 数据格式 | JSON 解析失败 | 跳过条目 | 0次 |
-| 磁盘空间 | IOError / OSError | 清理旧文件 | 1次 |
+| GITHUB_TOKEN 缺失 | 环境变量检查 | 脚本报错退出，提示用户配置 | 0次 |
+| 网络错误 | HTTP 状态码 ≠ 2xx | 指数退避重试 | 3次 |
+| API 限流 | HTTP 429 / X-RateLimit | 计算等待时间后重试 | 1次 |
+| 数据解析错误 | JSON/HTML 解析失败 | 跳过条目，记录错误日志 | 0次 |
+| LLM API 错误 | HTTP 非 200 | 重试 | 3次 |
 
-### 重跑策略
-#### 手动重跑
-- **命令格式**: `python run_pipeline.py --date 2026-04-17 --agent analyzer`
-- **依赖检查**: 自动检查上游 Agent 是否已完成
-- **幂等性**: 通过状态文件判断，避免重复处理
+#### 错误状态文件
+- 失败时写入 `knowledge/processed/{agent}-{YYYY-MM-DD-HHMMSS}-failed.json`
+- 包含详细错误信息供排查
 
-#### 自动重试
-- **调度器重试**: 失败任务加入重试队列，最多重试 3 次
-- **时间窗口**: 当天任务失败，在 24 小时内可自动重试
-- **人工干预**: 超过重试次数或时间窗口，需要人工介入
+### 断点续传
+- **Collector**: `--resume_run` 参数从状态文件读取已处理 URL，跳过已处理项目
+- **Analyzer**: 检查点机制，每处理 5 条保存进度，支持中断后恢复
+- **Organizer**: `--resume_run` 参数跳过已生成的知识条目
 
-### 进度追踪
-#### 状态文件系统
-每个 Agent 在执行关键节点时写入状态文件：
-1. **开始**: `{date}-{agent}-started.json`
-2. **成功**: `{date}-{agent}-completed.json`
-3. **失败**: `{date}-{agent}-failed.json`
+### 质量门控
+1. **Collector 质量检查**:
+   - Search 条目数 ≥ 15 → quality: ok
+   - Trending 条目数 ≥ 10 → quality: ok
+   - 低于阈值不阻断流水线，仅标记
 
-#### 状态聚合与查询
-- **聚合服务**: 扫描 `knowledge/processed/` 生成全局状态视图
-- **CLI 工具**: `python status.py --date 2026-04-17 --agent collector`
-- **可视化**: 控制台状态报告或 HTML 状态页面
+2. **Analyzer 质量检查**:
+   - relevance_score < 6 的条目，Organizer 应丢弃
+   - 所有条目保留原始元数据字段
 
-#### 监控指标
-- **成功率**: 任务成功完成比例
-- **处理延迟**: 从采集到入库的时间差
-- **错误率**: 各类错误的发生频率
-- **人工干预**: 每周需要人工处理的次数
+3. **Organizer 质量检查**:
+   - 所有必填字段完整
+   - UUIDv4 全局唯一
+   - 索引与实际文件一致
 
-### 调度与触发
-#### 自动调度
-- **触发时间**: 每天 GMT+8 10:00 AM
-- **依赖检查**: 检查前一日任务是否完成
-- **并发控制**: 串行执行，避免资源竞争
+## 运行命令
 
-#### 手动触发
-- **重跑特定日期**: `python scheduler.py --rerun --date 2026-04-17`
-- **重跑特定 Agent**: `python scheduler.py --rerun --date 2026-04-17 --agent analyzer`
-- **紧急任务**: 支持插队执行，暂停常规调度
+### Collector
+```bash
+# 激活环境
+D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
+chcp 65001
 
-## 质量门控
-### 数据质量检查
-1. **完整性**: 所有必填字段必须存在
-2. **准确性**: 摘要基于原始内容，无编造成分
-3. **一致性**: 相同来源数据格式统一
-4. **时效性**: 数据采集后 24 小时内完成处理
+# GitHub Search
+python .opencode/skills/github-collector/scripts/github_search.py --top 20
 
-### Agent 质量检查
-1. **权限合规**: 严格遵循权限边界，无越权操作
-2. **错误处理**: 所有错误都被捕获和记录
-3. **状态追踪**: 关键节点都有状态文件
-4. **资源清理**: 正确处理临时文件和资源
+# GitHub Trending
+python .opencode/skills/github-collector/scripts/github_trending.py --since daily --top 20
+```
+
+### Analyzer
+```bash
+# 自动发现最新采集数据
+python .opencode/skills/tech-summary/scripts/analyze.py
+
+# 指定输入文件
+python .opencode/skills/tech-summary/scripts/analyze.py --input knowledge/raw/github-search-*.json
+
+# 断点续传
+python .opencode/skills/tech-summary/scripts/analyze.py --resume_run
+```
+
+### Organizer
+```bash
+python .opencode/skills/github-organizer/scripts/organize.py --input knowledge/processed/analyzer-*.json
+```
 
 ## 版本历史
-- **v1.0** (2026-04-17): 基于 prd-to-plan 细化协作契约，明确数据交换、错误处理、重跑策略、进度追踪
+- **v2.0** (2026-04-21): 完整同步实际 Agent/Skill 实现，更新数据格式和协作契约
+- **v1.0** (2026-04-17): 基于 prd-to-plan 细化协作契约
 - **v0.1** (初始版本): 基础流程和职责定义

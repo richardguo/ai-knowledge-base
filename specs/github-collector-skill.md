@@ -1,37 +1,70 @@
-# skill: github-trending · 需求规格
+# Skill: github-collector · 需求规格 v2.0
 
 ## 功能概述
 
-采集 GitHub Trending 热门开源项目，过滤 AI/LLM/Agent/ML 相关仓库，输出结构化 JSON 并自动保存到 `knowledge/raw/`。
+采集 GitHub 热门 AI/LLM/Agent 仓库并输出结构化 JSON。支持两种数据源：
+- **GitHub Search API**: 搜索过去 7 天活跃的相关仓库
+- **GitHub Trending 页面**: 抓取当日/周/月热门项目
 
-## 要做什么
+## 数据源
 
-### 数据采集
-- 抓取 https://github.com/trending 页面（HTML 解析，不调 GitHub API）
-- 解析全部 trending 仓库条目
-- 为每个仓库提取以下信息：
+### A. GitHub Search API
 
-| 字段 | 说明 | 提取方式 |
-|------|------|----------|
-| name | 仓库名称，格式 owner/repo | `article.select_one("h2 a")` 的 href |
-| url | 完整 GitHub 仓库 URL | 拼接 `https://github.com/{name}` |
-| description | 项目原始描述 | `article.select_one("p")` 的文本 |
-| stars | 当前 star 总数 | `[href$='stargazers']` 元素解析数字 |
-| language | 主要编程语言 | `[itemprop='programmingLanguage']` 等备选选择器 |
-| topics | 主题标签列表 | 多选择器降级 + 描述关键词回退（见 Topics 提取策略） |
+#### 搜索参数
+| 参数 | 默认值 | 说明 |
+|------|--------|------|
+| `--keywords` | AI,LLM,agent,large language model,Harness,SDD,RAG,machine learning | 搜索关键词，逗号分隔 |
+| `--top` | 20 | 取 Top N 项目，最大 50 |
+| `--output-dir` | knowledge/raw | 输出目录 |
+| `--resume_run` | False | 断点续传 |
 
-### 内容过滤
+#### 搜索逻辑
+- 时间窗口：过去 7 天内有推送（`pushed:>` 过滤）
+- 排序：按总 star 数降序（`sort=stars&order=desc`）
+- 过滤：不做二次内容过滤，留给下游 Analyzer
 
-**纳入标准**（符合任意一项即保留）：
+#### 执行流程
+1. 构建 GitHub Search API 查询
+2. 调用 API 获取仓库列表
+3. 对每个仓库调用 `/repos/{owner}/{repo}/readme` 获取 README（截断到 5000 字符）
+4. 输出最终文件，包含 `description`、`readme` 和空的 `summary` 字段
+
+### B. GitHub Trending 页面
+
+#### 搜索参数
+| 参数 | 默认值 | 说明 |
+|------|--------|------|
+| `--since` | daily | 时间范围：daily/weekly/monthly |
+| `--top` | 20 | 取 Top N 项目，最大 30 |
+| `--output-dir` | knowledge/raw | 输出目录 |
+| `--resume_run` | False | 断点续传 |
+
+#### 抓取逻辑
+- 使用 Playwright 无头浏览器渲染页面
+- 自动点击 Load more 按钮加载更多条目（最多 5 次）
+- 保持 Trending 页面原始顺序
+
+#### 内容过滤
+
+**纳入标准**（符合任意一项）：
 - 仓库 topics 命中 TARGET_TOPICS 集合
 - 项目描述命中 DESC_KEYWORDS 关键词
 
-**排除标准**（符合任意一项即丢弃）：
-- 仓库名称或描述含 EXCLUDE_PATTERNS 中的模式（awesome-、curated list、book、course、tutorial、roadmap、interview、cheatsheet）
+**排除标准**（符合任意一项）：
+- 仓库名称或描述含：awesome-、curated list、book、course、roadmap、interview、cheatsheet
 
-### 关键词扩展
+#### 执行流程
+1. Playwright 抓取 Trending 页面 HTML
+2. 解析 HTML 提取基本信息（title, url, description, language, topics, star 增长数）
+3. 应用内容过滤
+4. 对每个通过过滤的项目调用 GitHub API 补全缺失字段：
+   - `/repos/{owner}/{repo}` 获取 created_at, updated_at, topics
+   - `/repos/{owner}/{repo}/readme` 获取 README（截断到 5000 字符）
+5. 输出最终文件，包含 `description`、`readme` 和空的 `summary` 字段
 
-TARGET_TOPICS 包含 23 个扩展词，覆盖主词及变体：
+## 关键词配置
+
+### TARGET_TOPICS (23 个)
 ```
 ai, llm, agent, ml, machine-learning, large-language-model,
 generative-ai, deeplearning, deep-learning, transformer,
@@ -40,101 +73,149 @@ artificial-intelligence, language-model, openai, anthropic,
 claude, chatgpt, gpt, huggingface, transformers
 ```
 
-DESC_KEYWORDS 用于描述文本匹配：
+### DESC_KEYWORDS (8 个)
 ```
-ai, llm, agent, machine learning, neural,
+ai, llm, agent, machine learning,
 deep learning, nlp, language model, ml
 ```
 
-### Topics 提取策略
+### EXCLUDE_PATTERNS (7 个)
+```
+awesome-, curated list, book, course, roadmap,
+interview, cheatsheet
+```
 
-1. 依次尝试多个 CSS 选择器：`a.topic-tag` → `a[data-ga-click*='topic']` → `a[href*='topics']` → `div.tags a` → `span.Label--topic`
-2. 若均未命中，则从 description 中提取 TARGET_TOPICS 匹配词（最多 5 个）
+## 输出文件格式
 
-### 排序与截取
-- 按 star 数降序排列
-- 取 Top 15 条目
-
-### 去重
-- 基于仓库 URL 去重
-- 检查 `knowledge/raw/` 是否已有当日数据文件，避免重复采集
-
-### 输出
-- 自动保存到 `knowledge/raw/github-trending-YYYY-MM-DD.json`（详见文件命名规范）
-- 同时输出到 stdout
-
-## 不做什么
-- 不调 GitHub API（rate limit 太紧）· 走 HTML 解析
-- 不存数据库
-- 不做中文摘要生成（summary 字段留空，由下游 Agent 处理）
-
-## 输出格式
-
+### Search 文件格式 (`github-search-{YYYY-MM-DD-HHMMSS}.json`)
 ```json
 {
-  "source": "github",
-  "skill": "github-trending",
-  "collected_at": "2026-04-18T03:49:08Z",
+  "collected_at": "2026-04-17T10:00:00+08:00",
+  "source": "github-search",
+  "version": "1.0",
   "items": [
     {
-      "name": "owner/repo",
+      "title": "项目名称",
       "url": "https://github.com/owner/repo",
-      "summary": "",
-      "stars": 1234,
+      "popularity": 1234,
+      "popularity_type": "total_stars",
+      "author": "owner",
+      "created_at": "2026-04-17T01:56:15+08:00",
+      "updated_at": "2026-04-20T05:27:45+08:00",
       "language": "Python",
-      "topics": ["ai", "llm"]
+      "topics": ["ai", "ml", "pytorch"],
+      "description": "项目描述原文",
+      "readme": "README 内容（截断到 5000 字符）",
+      "summary": ""
     }
   ]
 }
 ```
 
-### 字段说明
+### Trending 文件格式 (`github-trending-{YYYY-MM-DD-HHMMSS}.json`)
+```json
+{
+  "collected_at": "2026-04-17T10:00:00+08:00",
+  "source": "github-trending",
+  "version": "1.0",
+  "since": "daily",
+  "items": [
+    {
+      "title": "项目名称",
+      "url": "https://github.com/owner/repo",
+      "popularity": 123,
+      "popularity_type": "daily_stars",
+      "author": "owner",
+      "created_at": "2026-04-17T01:56:15+08:00",
+      "updated_at": "2026-04-20T05:27:45+08:00",
+      "language": "Python",
+      "topics": ["ai", "agent"],
+      "description": "项目描述原文",
+      "readme": "README 内容（截断到 5000 字符）",
+      "summary": ""
+    }
+  ]
+}
+```
+
+## 字段说明
 
 | 字段 | 类型 | 必填 | 说明 |
 |------|------|------|------|
-| source | string | 是 | 固定值 "github" |
-| skill | string | 是 | 固定值 "github-trending" |
-| collected_at | string | 是 | ISO 8601 采集时间戳 |
-| items | array | 是 | 最多 15 个条目 |
-| items[].name | string | 是 | owner/repo 格式 |
-| items[].url | string | 是 | 完整 GitHub 仓库 URL |
-| items[].summary | string | 是 | 留空，由下游 Analyzer Agent 填充 |
-| items[].stars | integer | 是 | 当前 star 总数 |
-| items[].language | string | 否 | 主要编程语言，可能为空字符串 |
-| items[].topics | array | 是 | 主题标签列表，英文小写 |
+| title | string | 是 | 项目名称（repo 名） |
+| url | string | 是 | GitHub 仓库地址 |
+| popularity | integer | 是 | 热度数值，含义由 `popularity_type` 决定 |
+| popularity_type | string | 是 | `total_stars`（Search）或 `daily_stars`/`weekly_stars`/`monthly_stars`（Trending） |
+| author | string | 是 | 项目发布者或组织 |
+| created_at | string | 是 | 项目创建时间，ISO 8601 +08:00 |
+| updated_at | string | 是 | 最近推送时间，ISO 8601 +08:00 |
+| language | string | 是 | 主要编程语言，无则为 `"N/A"` |
+| topics | array | 是 | 仓库标签列表，可为空数组 |
+| description | string | 是 | 项目描述原文，可为空字符串 |
+| readme | string | 是 | README 内容，截断到 5000 字符，可为空字符串 |
+| summary | string | 是 | 留空，由 Analyzer 基于原始内容生成中文摘要 |
 
-### 文件命名规范
-- **路径**：`knowledge/raw/github-trending-YYYY-MM-DD.json`
-- **示例**：`knowledge/raw/github-trending-2026-04-18.json`
-- **编码**：UTF-8，2 空格缩进，ensure_ascii=False
+## 状态文件格式
 
-## 边界 & 验收
-
-- 单次执行 < 10s（超过 9.5s 返回空数组）
-- 失败时返回空数组，不抛异常
-- 错误分类：网络错误（RequestException）、解析错误（ValueError/TypeError）、未知错误
-- 单个项目解析失败跳过，不影响整体流程
-- GitHub HTML 结构变化时，通过多备选 CSS 选择器容错
-
-## 怎么验证
-
-```bash
-# 方式一：直接运行脚本
-python .opencode/skills/github-trending/scripts/github_trending.py
-
-# 方式二：通过 Agent 调用
-@collector 采集今天的 GitHub Trending 数据
+```json
+{
+  "agent": "collector",
+  "task_id": "{YYYY-MM-DD-HHMMSS}-uuidv4",
+  "status": "started|running|completed|failed",
+  "sources": ["github-search"],
+  "output_files": ["knowledge/raw/github-search-{YYYY-MM-DD-HHMMSS}.json"],
+  "quality": "ok|below_threshold",
+  "error_count": 0,
+  "start_time": "2026-04-17T10:00:00+08:00",
+  "raw_items_url": [],
+  "end_time": "2026-04-17T10:05:00+08:00"
+}
 ```
 
-验证项：
-- 输出是合法 JSON 且 items 数组字段完整
-- 文件已保存到 `knowledge/raw/github-trending-YYYY-MM-DD.json`
-- 执行时间 < 10s
-- 条目均为 AI/LLM/Agent 相关，无非技术内容
+### 质量判定
+- Search: 条目数 ≥ 15 → `ok`，否则 `below_threshold`
+- Trending: 条目数 ≥ 10 → `ok`，否则 `below_threshold`
+
+## 运行命令
+
+```bash
+# 激活环境
+D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
+chcp 65001
+
+# GitHub Search
+python .opencode/skills/github-collector/scripts/github_search.py --top 20
+
+# GitHub Trending
+python .opencode/skills/github-collector/scripts/github_trending.py --since daily --top 20
+
+# 自定义关键词
+python .opencode/skills/github-collector/scripts/github_search.py --keywords "RAG,retrieval,augmented generation"
+
+# 断点续传
+python .opencode/skills/github-collector/scripts/github_trending.py --resume_run
+```
+
+## 错误处理
+
+| 错误类型 | 处理方式 |
+|----------|----------|
+| GITHUB_TOKEN 缺失 | 脚本报错退出（退出码 1），提示用户配置 |
+| 网络错误 | 自动重试 3 次，指数退避 |
+| API 限流 | 检测 HTTP 429，计算等待时间后重试 |
+| 单个项目解析失败 | 跳过该项目，记录错误日志，继续处理其他项目 |
+| 输出文件写入失败 | 记录错误并退出 |
 
 ## 实现文件
 
 | 文件 | 说明 |
 |------|------|
-| `.opencode/skills/github-trending/SKILL.md` | 技能定义 |
-| `.opencode/skills/github-trending/scripts/scrape_github_trending.py` | 采集脚本 |
+| `.opencode/skills/github-collector/SKILL.md` | 技能定义 |
+| `.opencode/skills/github-collector/scripts/common.py` | 公共模块（配置、工具函数） |
+| `.opencode/skills/github-collector/scripts/github_search.py` | Search API 采集脚本 |
+| `.opencode/skills/github-collector/scripts/github_trending.py` | Trending 页面采集脚本 |
+
+---
+*规格版本: v2.0*
+*最后更新: 2026-04-21*
+*适用场景: GitHub 仓库搜索 + Trending 页面采集*
