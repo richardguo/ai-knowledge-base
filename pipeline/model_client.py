@@ -15,14 +15,17 @@
 """
 
 import logging
-import math
 import os
 import time
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any
 
 import httpx
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).parent.parent / ".env")
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
