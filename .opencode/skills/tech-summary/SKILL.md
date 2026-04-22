@@ -2,7 +2,7 @@
 name: tech-summary
 description: |
   读取 Collector 采集的数据，调用 LLM 生成中文摘要和深度分析。
-  当需要对采集的技术内容进行分析总结时使用此技能。
+  当 Collector 采集完成、需要生成中文摘要、或流水线进入分析阶段时触发。
 allowed-tools: [Bash, Read, Grep, Glob]
 ---
 
@@ -16,16 +16,26 @@ allowed-tools: [Bash, Read, Grep, Glob]
 
 ## 环境准备
 
-运行脚本前必须激活 Python 环境：
+### Python 环境
+- **版本**: Python 3.12
+- **激活命令**:
+  - Windows: `D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat`
+  - Linux: `source D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate`
 
-**Windows**:
-```bash
-D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
-```
+### 依赖库
+- requests
+- python-dotenv
 
-**Linux**:
+### 环境变量
+需在 `.env` 中配置：
+- `LLM_API_BASE`: LLM API 地址（必须）
+- `LLM_API_KEY`: API 密钥（必须）
+- `LLM_MODEL_ID`: 模型 ID（可选）
+
+### Windows 编码
+执行脚本前先运行：
 ```bash
-source D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate
+chcp 65001
 ```
 
 ## 执行流程

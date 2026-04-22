@@ -19,16 +19,26 @@ allowed-tools: [Bash, Read, Grep, Glob, Write]
 
 ## 环境准备
 
-运行脚本前必须激活 Python 环境：
+### Python 环境
+- **版本**: Python 3.12
+- **激活命令**:
+  - Windows: `D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat`
+  - Linux: `source D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate`
 
-**Windows**:
-```bash
-D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
-```
+### 依赖库
+- requests
+- beautifulsoup4
+- python-dotenv
+- playwright
 
-**Linux**:
+### 环境变量
+需在 `.env` 中配置：
+- `GITHUB_TOKEN`: GitHub API 认证令牌（必须）
+
+### Windows 编码
+执行脚本前先运行：
 ```bash
-source D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate
+chcp 65001
 ```
 
 ## 执行流程

@@ -224,6 +224,9 @@ def load_input_data(
             logger.warning(f"items 为空: {raw_path}")
         return None
 
+    if "collected_at" not in data:
+        data["collected_at"] = _now_gmt8()
+
     return data
 
 
@@ -652,6 +655,7 @@ def process_items(
                 "description": item.get("description", ""),
                 "readme": item.get("readme", ""),
                 "summary": analysis.get("summary", ""),
+                "collected_at": item.get("collected_at", ""),
                 "analysis": analysis,
             }
             results[i] = result_item
@@ -767,6 +771,7 @@ def main() -> None:
 
     all_items: list[dict[str, Any]] = []
     input_file_paths: list[str] = []
+    collected_ats: dict[str, str] = {}
 
     for raw_path, status_data in input_files:
         data = load_input_data(raw_path, logger)
@@ -776,12 +781,15 @@ def main() -> None:
 
         items = data["items"]
         source = data.get("source", "unknown")
+        collected_at = data.get("collected_at", _now_gmt8())
         logger.info(f"📋 {source}: {len(items)} 条")
 
         for item in items:
             item["source"] = source
+            item["collected_at"] = collected_at
         all_items.extend(items)
         input_file_paths.append(str(raw_path))
+        collected_ats[source] = collected_at
 
     if not all_items:
         logger.error("❌ 无有效数据可分析")
@@ -849,6 +857,7 @@ def main() -> None:
             "analyzed_at": _now_gmt8(),
             "version": "1.0",
             "input_files": input_file_paths,
+            "collected_ats": collected_ats,
             "items": merged_items,
         }
         output_path.write_text(
@@ -874,6 +883,8 @@ def main() -> None:
             f"{failed} 失败 → 输出: {output_path}",
             file=sys.stderr,
         )
+
+        print(str(output_path))
 
     except Exception as e:
         logger.error(f"❌ 分析任务失败: {e}")
