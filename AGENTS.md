@@ -224,6 +224,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ## 5. lesson and learn
 - Windows PowerShell 不支持 && 语法
+- 创建目录/文件前，必须先验证该路径是否被框架支持。不确定时问用户，不要假设"其他项目可能有这个模式"
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
