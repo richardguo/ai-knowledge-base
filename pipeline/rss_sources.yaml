@@ -42,7 +42,7 @@ sources:
   - name: "OpenAI Blog"
     url: "https://openai.com/rss.xml"
     category: "公司博客"
-    enabled: true
+    enabled: false
 
   - name: "Anthropic Research"
     url: "https://www.anthropic.com/research/rss.xml"
