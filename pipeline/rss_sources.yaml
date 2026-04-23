@@ -47,7 +47,7 @@ sources:
   - name: "Anthropic Research"
     url: "https://www.anthropic.com/research/rss.xml"
     category: "公司博客"
-    enabled: true
+    enabled: false
 
   - name: "Hugging Face Blog"
     url: "https://huggingface.co/blog/feed.xml"
@@ -55,9 +55,9 @@ sources:
     enabled: true
 
   - name: "Google AI Blog"
-    url: "[https://blog.google/technology/ai/rss/"
+    url: "https://blog.google/technology/ai/rss/"
     category: "industry"
-    enabled: true
+    enabled: false
   # ============================
   # 中文社区 (Chinese Community)
   # ============================
