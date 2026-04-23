@@ -1,0 +1,79 @@
+sources:
+  # ============================
+  # 综合技术 (General Tech)
+  # ============================
+  - name: "Hacker News Best"
+    url: "https://hnrss.org/best"
+    category: "综合技术"
+    enabled: true
+    # NOTE: 该源为 HN 热门条目，需在后处理阶段过滤 AI 相关内容
+
+  - name: "Lobsters AI"
+    url: "https://lobste.rs/t/ai.rss"
+    category: "综合技术"
+    enabled: true
+
+  - name: "Reddit r/MachineLearning"
+    url: "https://www.reddit.com/r/MachineLearning/hot.rss"
+    category: "research"
+    enabled: true
+
+  - name: "Reddit r/LocalLLaMA"
+    url: "https://www.reddit.com/r/LocalLLaMA/hot.rss"
+    category: "open-source"
+    enabled: true
+
+  # ============================
+  # AI 研究 (AI Research)
+  # ============================
+  - name: "arXiv cs.AI"
+    url: "http://export.arxiv.org/rss/cs.AI"
+    category: "AI 研究"
+    enabled: false
+    # NOTE: 每日更新量极大，建议按需手动开启或配合强过滤规则使用
+
+  - name: "The Verge (AI)"
+    url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+    category: "news"
+    enabled: true
+  # ============================
+  # 公司博客 (Company Blogs)
+  # ============================
+  - name: "OpenAI Blog"
+    url: "https://openai.com/rss.xml"
+    category: "公司博客"
+    enabled: true
+
+  - name: "Anthropic Research"
+    url: "https://www.anthropic.com/research/rss.xml"
+    category: "公司博客"
+    enabled: true
+
+  - name: "Hugging Face Blog"
+    url: "https://huggingface.co/blog/feed.xml"
+    category: "公司博客"
+    enabled: true
+
+  - name: "Google AI Blog"
+    url: "[https://blog.google/technology/ai/rss/"
+    category: "industry"
+    enabled: true
+  # ============================
+  # 中文社区 (Chinese Community)
+  # ============================
+  - name: "机器之心"
+    url: "https://www.jiqizhixin.com/rss"
+    category: "中文社区"
+    enabled: true
+
+  - name: "量子位"
+    url: "https://www.qbitai.com/feed/"
+    category: "中文社区"
+    enabled: false
+    # NOTE: RSS 可用性待确认，确认后请手动开启
+
+  - name: "CSDN AI"
+    url: "https://www.csdn.net/nav/ai"
+    category: "中文社区"
+    enabled: false
+    # NOTE: CSDN 无稳定公开 RSS，当前 URL 为频道页面；如需接入建议改用爬虫或确认具体 RSS 地址
