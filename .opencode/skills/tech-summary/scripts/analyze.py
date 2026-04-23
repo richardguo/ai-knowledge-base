@@ -14,6 +14,7 @@ import json
 import logging
 import re
 import sys
+import threading
 import time
 import uuid
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -25,8 +26,10 @@ import requests
 from dotenv import load_dotenv
 
 MAX_CONCURRENT = 5
-LLM_MAX_RETRIES = 3
+MIN_CONCURRENT = 1
+LLM_MAX_RETRIES = 5
 CHECKPOINT_INTERVAL = 5
+RATE_LIMIT_BACKOFF = [5, 10, 20, 40, 80]
 
 GMT8 = timezone(timedelta(hours=8))
 
@@ -230,16 +233,101 @@ def load_input_data(
     return data
 
 
-def call_llm(item: dict[str, Any], config: dict[str, str]) -> dict[str, Any]:
+class RateLimitController:
+    """动态并发控制器：检测到限流时自动降低并发，成功后逐步恢复。"""
+
+    def __init__(self, max_concurrent: int = MAX_CONCURRENT, min_concurrent: int = MIN_CONCURRENT):
+        self.max_concurrent = max_concurrent
+        self.min_concurrent = min_concurrent
+        self._current_concurrent = max_concurrent
+        self._lock = threading.Lock()
+        self._success_streak = 0
+        self._semaphore = threading.Semaphore(max_concurrent)
+
+    def acquire(self, timeout: float | None = None) -> bool:
+        """获取执行槽位。"""
+        return self._semaphore.acquire(timeout=timeout)
+
+    def release(self) -> None:
+        """释放执行槽位。"""
+        self._semaphore.release()
+
+    def report_rate_limited(self) -> None:
+        """报告遇到限流，降低并发。"""
+        with self._lock:
+            self._success_streak = 0
+            if self._current_concurrent > self.min_concurrent:
+                old_val = self._current_concurrent
+                self._current_concurrent = max(
+                    self.min_concurrent,
+                    self._current_concurrent - 1
+                )
+                self._semaphore.acquire(blocking=False)
+                print(
+                    f"  ⚠️ 限流检测，降低并发: {old_val} → {self._current_concurrent}",
+                    file=sys.stderr,
+                )
+
+    def report_success(self) -> None:
+        """报告调用成功，连续成功后恢复并发。"""
+        with self._lock:
+            self._success_streak += 1
+            if self._success_streak >= 3 and self._current_concurrent < self.max_concurrent:
+                old_val = self._current_concurrent
+                self._current_concurrent = min(
+                    self.max_concurrent,
+                    self._current_concurrent + 1
+                )
+                self._success_streak = 0
+                self._semaphore.release()
+                print(
+                    f"  ✅ 连续成功，恢复并发: {old_val} → {self._current_concurrent}",
+                    file=sys.stderr,
+                )
+
+    @property
+    def current_concurrent(self) -> int:
+        with self._lock:
+            return self._current_concurrent
+
+    def get_backoff_time(self, attempt: int) -> float:
+        """获取限流退避时间。"""
+        if attempt < len(RATE_LIMIT_BACKOFF):
+            return RATE_LIMIT_BACKOFF[attempt]
+        return RATE_LIMIT_BACKOFF[-1]
+
+
+def call_llm(
+    item: dict[str, Any],
+    config: dict[str, str],
+    rate_limiter: RateLimitController | None = None,
+) -> dict[str, Any]:
     """调用 LLM 对单个项目进行深度分析。
 
     Args:
         item: 项目数据字典。
         config: LLM 配置。
+        rate_limiter: 限流控制器。
 
     Returns:
         analysis 字典，失败时返回带默认值的字典。
     """
+    if rate_limiter:
+        rate_limiter.acquire()
+
+    try:
+        return _call_llm_internal(item, config, rate_limiter)
+    finally:
+        if rate_limiter:
+            rate_limiter.release()
+
+
+def _call_llm_internal(
+    item: dict[str, Any],
+    config: dict[str, str],
+    rate_limiter: RateLimitController | None = None,
+) -> dict[str, Any]:
+    """call_llm 的内部实现。"""
     prompt = ANALYSIS_PROMPT.format(
         title=item.get("title", ""),
         author=item.get("author", ""),
@@ -271,6 +359,10 @@ def call_llm(item: dict[str, Any], config: dict[str, str]) -> dict[str, Any]:
                 result = response.json()
                 choices = result.get("choices", [])
                 if not choices:
+                    print(
+                        f"  ⚠️ HTTP 200 但 choices 为空 (attempt {attempt + 1}/{LLM_MAX_RETRIES})",
+                        file=sys.stderr,
+                    )
                     continue
                 msg = choices[0].get("message", {})
                 content = msg.get("content", "")
@@ -278,27 +370,42 @@ def call_llm(item: dict[str, Any], config: dict[str, str]) -> dict[str, Any]:
                     content = msg.get("reasoning_content", "")
                 content = content.strip()
                 if not content:
+                    print(
+                        f"  ⚠️ HTTP 200 但 content 为空 (attempt {attempt + 1}/{LLM_MAX_RETRIES})",
+                        file=sys.stderr,
+                    )
                     continue
+                if rate_limiter:
+                    rate_limiter.report_success()
                 return _parse_llm_response(content)
             if response.status_code == 429:
-                wait = 2 ** (attempt + 1)
-                print(f"  API 限流，{wait}s 后重试", file=sys.stderr)
+                wait = rate_limiter.get_backoff_time(attempt) if rate_limiter else RATE_LIMIT_BACKOFF[min(attempt, len(RATE_LIMIT_BACKOFF) - 1)]
+                if rate_limiter:
+                    rate_limiter.report_rate_limited()
+                print(
+                    f"  ⏳ API 限流 (attempt {attempt + 1}/{LLM_MAX_RETRIES})，{wait}s 后重试",
+                    file=sys.stderr,
+                )
                 time.sleep(wait)
                 continue
             print(
-                f"  LLM API 错误: HTTP {response.status_code}",
+                f"  ❌ LLM API 错误: HTTP {response.status_code} (attempt {attempt + 1}/{LLM_MAX_RETRIES})",
                 file=sys.stderr,
             )
             continue
         except requests.exceptions.RequestException as e:
             wait = 2 ** attempt
             print(
-                f"  请求异常 ({attempt + 1}/{LLM_MAX_RETRIES}): {e}，{wait}s 后重试",
+                f"  ❌ 请求异常 ({attempt + 1}/{LLM_MAX_RETRIES}): {e}，{wait}s 后重试",
                 file=sys.stderr,
             )
             if attempt < LLM_MAX_RETRIES - 1:
                 time.sleep(wait)
 
+    print(
+        f"  ❌ {item.get('title', 'unknown')} 分析失败，{LLM_MAX_RETRIES} 次重试耗尽",
+        file=sys.stderr,
+    )
     return _default_analysis()
 
 
@@ -595,6 +702,7 @@ def process_items(
     results: dict[int, dict[str, Any]] = {}
     checkpoint_num = 0
     items_since_checkpoint = 0
+    rate_limiter = RateLimitController()
 
     resume_checkpoint = find_latest_checkpoint(processed_dir, timestamp)
     if resume_checkpoint:
@@ -616,12 +724,12 @@ def process_items(
         logger.info("所有条目已处理完毕（来自检查点）")
         return [results[i] for i in sorted(results.keys())]
 
-    logger.info(f"待分析: {len(pending_indices)}/{total} 条（并发 {MAX_CONCURRENT}）")
+    logger.info(f"待分析: {len(pending_indices)}/{total} 条（初始并发 {MAX_CONCURRENT}）")
 
     with ThreadPoolExecutor(max_workers=MAX_CONCURRENT) as executor:
         future_to_index = {}
         for i in pending_indices:
-            future = executor.submit(call_llm, items[i], config)
+            future = executor.submit(call_llm, items[i], config, rate_limiter)
             future_to_index[future] = i
 
         for future in as_completed(future_to_index):
