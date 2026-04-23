@@ -2,7 +2,7 @@
 MCP Knowledge Server - 为 AI 工具提供本地知识库搜索能力
 
 提供三个工具：
-- search_articles: 按关键词搜索文章
+- search_articles: 按关键词/来源/标签/评分搜索文章
 - get_article: 按 ID 获取文章详情
 - knowledge_stats: 获取知识库统计信息
 """
@@ -52,13 +52,25 @@ async def list_tools() -> list[Tool]:
     return [
         Tool(
             name="search_articles",
-            description="按关键词搜索知识库文章，搜索标题和摘要内容",
+            description="搜索知识库文章，支持按关键词、来源、标签、最低评分过滤，各参数可组合使用，至少提供一个过滤条件",
             inputSchema={
                 "type": "object",
                 "properties": {
                     "keyword": {
                         "type": "string",
-                        "description": "搜索关键词"
+                        "description": "搜索关键词，匹配标题、摘要、标签"
+                    },
+                    "source": {
+                        "type": "string",
+                        "description": "按来源过滤，可选值: github-search, github-trending, rss"
+                    },
+                    "tag": {
+                        "type": "string",
+                        "description": "按标签过滤，精确匹配标签名，如 agent-framework, python, llm"
+                    },
+                    "min_score": {
+                        "type": "integer",
+                        "description": "最低相关度评分过滤，只返回 relevance_score >= min_score 的文章，取值 1-10"
                     },
                     "limit": {
                         "type": "integer",
@@ -66,7 +78,7 @@ async def list_tools() -> list[Tool]:
                         "default": 10
                     }
                 },
-                "required": ["keyword"]
+                "required": []
             }
         ),
         Tool(
@@ -111,36 +123,67 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
 
 def _search_articles(articles: list[dict], arguments: dict) -> list[TextContent]:
     """搜索文章"""
-    keyword = arguments.get("keyword", "").lower()
+    keyword = arguments.get("keyword", "")
+    source_filter = arguments.get("source", "")
+    tag_filter = arguments.get("tag", "")
+    min_score = arguments.get("min_score")
     limit = arguments.get("limit", 10)
 
-    if not keyword:
-        return [TextContent(type="text", text="请提供搜索关键词")]
+    has_filter = keyword or source_filter or tag_filter or min_score is not None
+    if not has_filter:
+        return [TextContent(type="text", text="请至少提供一个过滤条件: keyword, source, tag, min_score")]
 
-    pattern = re.compile(re.escape(keyword), re.IGNORECASE)
+    pattern = re.compile(re.escape(keyword), re.IGNORECASE) if keyword else None
     results = []
 
     for article in articles:
-        title = article.get("title", "")
-        summary = article.get("summary", "")
-        tags = article.get("tags", [])
+        if source_filter:
+            if article.get("source", "").lower() != source_filter.lower():
+                continue
 
-        if (pattern.search(title) or
-            pattern.search(summary) or
-            any(pattern.search(tag) for tag in tags)):
-            results.append({
-                "id": article.get("id"),
-                "title": title,
-                "source": article.get("source"),
-                "summary": summary[:200] + "..." if len(summary) > 200 else summary,
-                "score": article.get("score"),
-                "tags": tags
-            })
+        if tag_filter:
+            article_tags = [t.lower() for t in article.get("tags", [])]
+            if tag_filter.lower() not in article_tags:
+                continue
+
+        if min_score is not None:
+            score = article.get("relevance_score")
+            if score is None or score < min_score:
+                continue
+
+        if pattern:
+            title = article.get("title", "")
+            summary = article.get("summary", "")
+            tags = article.get("tags", [])
+
+            if not (pattern.search(title) or
+                    pattern.search(summary) or
+                    any(pattern.search(tag) for tag in tags)):
+                continue
+
+        summary_text = article.get("summary", "") or ""
+        results.append({
+            "id": article.get("id"),
+            "title": article.get("title", ""),
+            "source": article.get("source"),
+            "relevance_score": article.get("relevance_score"),
+            "tags": article.get("tags", []),
+            "summary": summary_text[:200] + "..." if len(summary_text) > 200 else summary_text
+        })
 
     results = results[:limit]
 
     if not results:
-        return [TextContent(type="text", text=f"未找到包含 '{keyword}' 的文章")]
+        parts = []
+        if keyword:
+            parts.append(f"关键词='{keyword}'")
+        if source_filter:
+            parts.append(f"来源='{source_filter}'")
+        if tag_filter:
+            parts.append(f"标签='{tag_filter}'")
+        if min_score is not None:
+            parts.append(f"最低评分={min_score}")
+        return [TextContent(type="text", text=f"未找到匹配 [{', '.join(parts)}] 的文章")]
 
     return [TextContent(
         type="text",

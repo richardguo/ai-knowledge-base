@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "knowledge": {
+      "type": "local",
+      "command": ["D:\\Development\\PythonProject\\Shared_Env\\python312_opencode\\Scripts\\python.exe", "utils/mcp_knowledge_server.py", "--transport", "stdio"],
+      "enabled": true
+    }
+  }
+}
