@@ -6,9 +6,42 @@ Usage:
 """
 
 import json
+import logging
 import re
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+GMT8 = timezone(timedelta(hours=8))
+
+
+def setup_logger(name: str) -> logging.Logger:
+    """创建同时输出到 stderr 和日志文件的 logger。"""
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG)
+    logger.handlers.clear()
+
+    formatter = logging.Formatter(
+        "%(asctime)s [%(levelname)s] %(message)s",
+        datefmt="%Y-%m-%dT%H:%M:%S%z"
+    )
+
+    stderr_handler = logging.StreamHandler(sys.stderr)
+    stderr_handler.setLevel(logging.INFO)
+    stderr_handler.setFormatter(formatter)
+    logger.addHandler(stderr_handler)
+
+    log_dir = Path("logs")
+    log_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now(GMT8).strftime("%Y-%m-%d-%H%M%S")
+    log_path = log_dir / f"validate_json-{timestamp}.log"
+
+    file_handler = logging.FileHandler(log_path, encoding="utf-8")
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+
+    return logger
 
 REQUIRED_FIELDS: dict[str, type] = {
     "id": str,
@@ -110,10 +143,14 @@ def collect_targets(args: list[str]) -> list[Path]:
 
 def main() -> None:
     """入口函数。"""
+    logger = setup_logger("validate_json")
+    logger.info("开始 JSON 格式校验")
+
     targets = collect_targets(sys.argv[1:])
 
     if not targets:
         print("未找到待校验的 JSON 文件", file=sys.stderr)
+        logger.warning("未找到待校验的 JSON 文件")
         sys.exit(1)
 
     all_errors: list[str] = []
@@ -125,17 +162,22 @@ def main() -> None:
         if errors:
             failed += 1
             all_errors.extend(errors)
+            for err in errors:
+                logger.error(err)
         else:
             passed += 1
+            logger.debug(f"通过: {path}")
 
     if all_errors:
         print("\n=== 校验错误 ===")
         for err in all_errors:
             print(f"  ✗ {err}")
         print(f"\n=== 汇总: 通过 {passed}, 失败 {failed}, 共 {len(targets)} 个文件 ===")
+        logger.error(f"校验失败: 通过 {passed}, 失败 {failed}, 共 {len(targets)} 个文件")
         sys.exit(1)
 
     print(f"=== 校验通过: {passed} 个文件全部有效 ===")
+    logger.info(f"校验通过: {passed} 个文件全部有效")
 
 
 if __name__ == "__main__":

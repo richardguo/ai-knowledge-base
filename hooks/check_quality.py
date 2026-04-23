@@ -6,10 +6,43 @@ Usage:
 """
 
 import json
+import logging
 import re
 import sys
 from dataclasses import dataclass, field
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+GMT8 = timezone(timedelta(hours=8))
+
+
+def setup_logger(name: str) -> logging.Logger:
+    """创建同时输出到 stderr 和日志文件的 logger。"""
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG)
+    logger.handlers.clear()
+
+    formatter = logging.Formatter(
+        "%(asctime)s [%(levelname)s] %(message)s",
+        datefmt="%Y-%m-%dT%H:%M:%S%z"
+    )
+
+    stderr_handler = logging.StreamHandler(sys.stderr)
+    stderr_handler.setLevel(logging.INFO)
+    stderr_handler.setFormatter(formatter)
+    logger.addHandler(stderr_handler)
+
+    log_dir = Path("logs")
+    log_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now(GMT8).strftime("%Y-%m-%d-%H%M%S")
+    log_path = log_dir / f"check_quality-{timestamp}.log"
+
+    file_handler = logging.FileHandler(log_path, encoding="utf-8")
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+
+    return logger
 
 TECH_KEYWORDS: set[str] = {
     "llm", "gpt", "transformer", "agent", "rag", "fine-tun",
@@ -286,10 +319,14 @@ def _progress_bar(current: int, total: int, width: int = 30) -> str:
 
 def main() -> None:
     """入口函数。"""
+    logger = setup_logger("check_quality")
+    logger.info("开始质量评分")
+
     targets = collect_targets(sys.argv[1:])
 
     if not targets:
         print("未找到待评分的 JSON 文件", file=sys.stderr)
+        logger.warning("未找到待评分的 JSON 文件")
         sys.exit(1)
 
     reports: list[QualityReport] = []
@@ -299,6 +336,7 @@ def main() -> None:
         print(f"  {_color(f'[{i}/{total}]', 'dim')} {path.name}", flush=True)
         report = score_file(path)
         reports.append(report)
+        logger.debug(f"[{i}/{total}] {path.name}: 等级 {report.grade}, 分数 {report.total_score:.0f}/{report.max_score}")
 
     grade_counts = {"A": 0, "B": 0, "C": 0}
 
@@ -324,6 +362,7 @@ def main() -> None:
             print(
                 f"  {d.name:<6} {bar} {d.score:5.1f}/{d.max_score:.0f}  {d.details}"
             )
+        logger.info(f"{report.path}: 等级 {report.grade}, 分数 {report.total_score:.0f}/{report.max_score}")
 
     print(f"\n{'═' * 60}")
     a_str = _color(f"A={grade_counts['A']}", "green")
@@ -331,8 +370,13 @@ def main() -> None:
     c_str = _color(f"C={grade_counts['C']}", "red")
     print(f"  汇总: {a_str}  {b_str}  {c_str}  共 {total} 个文件")
 
+    logger.info(f"汇总: A={grade_counts['A']}, B={grade_counts['B']}, C={grade_counts['C']}, 共 {total} 个文件")
+
     if grade_counts["C"] > 0:
+        logger.error(f"检测到 {grade_counts['C']} 个 C 级文件")
         sys.exit(1)
+
+    logger.info("质量检查通过")
 
 
 if __name__ == "__main__":
