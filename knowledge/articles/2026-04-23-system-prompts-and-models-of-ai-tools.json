@@ -1,0 +1,22 @@
+{
+  "id": "679daf89-4686-447c-90e5-c23aa414494a",
+  "title": "system-prompts-and-models-of-ai-tools",
+  "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+  "source": "github-search",
+  "collected_at": "2026-04-23T20:42:31+08:00",
+  "processed_at": "2026-04-23T20:43:13+08:00",
+  "summary": "该GitHub仓库集中收集并分享了当前流行的AI编程工具与系统的提示词（system prompts）、内部工具及AI模型信息，涵盖了Cursor、Devin AI、Replit、VSCode Agent、Warp.dev等超过25种开发辅助工具。资源全面覆盖了从代码生成、智能补全到自动化编程的多个方面，特别是包含了开源项目的内部实现细节，为开发者研究和集成AI功能提供了宝贵的参考资料。这些内容有助于理解不同工具的设计思路、优化提示工程以及构建自定义AI辅助开发环境。",
+  "highlights": [
+    "收集了Cursor、Devin AI、Replit等主流AI编程工具的提示词与模型信息",
+    "覆盖了开源项目的内部工具和AI模型实现细节",
+    "为开发者研究和集成AI编程功能提供了实用参考资源"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "system-prompts",
+    "ai-tools",
+    "code-generation"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

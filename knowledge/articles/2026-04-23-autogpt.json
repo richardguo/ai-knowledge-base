@@ -1,0 +1,22 @@
+{
+  "id": "28fd71be-7f13-4b47-a50d-d6207a8af8d4",
+  "title": "AutoGPT",
+  "url": "https://github.com/Significant-Gravitas/AutoGPT",
+  "source": "github-search",
+  "collected_at": "2026-04-23T20:42:31+08:00",
+  "processed_at": "2026-04-23T20:43:13+08:00",
+  "summary": "AutoGPT 是一个开源的人工智能代理框架，旨在实现通用人工智能（AGI）的愿景，让每个人都能轻松访问和使用AI技术。该框架基于大型语言模型（如GPT系列），通过自主规划、执行任务和迭代优化，实现复杂目标的自动化完成。其核心特点是赋予AI代理自主决策能力，能够分解任务、调用工具（如网络搜索、文件操作）、并基于反馈进行自我修正，从而减少人工干预。AutoGPT 强调可访问性和可扩展性，提供工具链和API，使开发者和用户能专注于创新应用而非底层实现，推动了AI代理在自动化、内容生成、数据分析等领域的实用化。",
+  "highlights": [
+    "自主任务规划与执行能力",
+    "开源可访问的AI代理框架",
+    "支持工具调用和迭代优化"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-agent",
+    "automation-framework",
+    "open-source"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

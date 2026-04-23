@@ -1,0 +1,22 @@
+{
+  "id": "5eb5cbe5-95c4-4c34-b8c4-216f1cdabb4f",
+  "title": "langflow",
+  "url": "https://github.com/langflow-ai/langflow",
+  "source": "github-search",
+  "collected_at": "2026-04-23T20:42:31+08:00",
+  "processed_at": "2026-04-23T20:43:13+08:00",
+  "summary": "Langflow是一个基于Python的开源工具，专门用于构建和部署由人工智能驱动的智能体和自动化工作流。它提供了一个直观的拖拽式图形化界面，允许开发者无需编写大量代码即可设计复杂的数据处理流程，支持与多种大型语言模型（如GPT系列）和外部API集成，实现自然语言处理、内容生成、决策支持等任务。该工具强调模块化和可扩展性，用户可以通过自定义组件灵活编排工作流，同时支持本地部署和云端托管，便于在生产和研究环境中快速原型开发和部署。其核心价值在于降低了AI应用开发的技术门槛，加速了从概念验证到实际应用的转化过程。",
+  "highlights": [
+    "提供拖拽式可视化界面，降低AI工作流开发门槛",
+    "支持多种大型语言模型和外部工具集成，扩展性强",
+    "模块化设计便于本地部署和云端托管，适合生产环境"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "workflow-automation",
+    "low-code-tool"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

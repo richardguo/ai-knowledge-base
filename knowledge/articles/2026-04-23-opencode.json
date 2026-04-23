@@ -1,0 +1,22 @@
+{
+  "id": "9bd8b0f1-0135-4cf5-b112-0d7990e13a9f",
+  "title": "opencode",
+  "url": "https://github.com/anomalyco/opencode",
+  "source": "github-search",
+  "collected_at": "2026-04-23T20:42:31+08:00",
+  "processed_at": "2026-04-23T20:43:13+08:00",
+  "summary": "OpenCode 是一个开源编程助手代理，旨在通过自动化代码生成、重构和调试任务提升开发效率。项目基于大型语言模型构建，支持多种编程语言和开发环境，能够理解自然语言指令并生成高质量的代码片段。其核心架构包括任务解析、上下文管理和代码验证模块，确保输出代码的准确性和可维护性。OpenCode 强调可扩展性，允许开发者通过插件集成自定义工具或适配特定工作流，适用于个人开发者到企业级团队。项目在 GitHub 上活跃维护，文档详细，社区贡献积极，体现了开源协作的优势。",
+  "highlights": [
+    "基于大型语言模型，支持自然语言编程交互",
+    "模块化设计，提供可扩展的插件系统",
+    "活跃的开源社区，持续优化与多语言支持"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "coding-agent",
+    "automated-programming",
+    "open-source"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

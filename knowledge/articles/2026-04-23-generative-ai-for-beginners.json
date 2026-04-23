@@ -1,0 +1,22 @@
+{
+  "id": "00e8f161-8119-41d2-bf6d-45d2d1b5f092",
+  "title": "generative-ai-for-beginners",
+  "url": "https://github.com/microsoft/generative-ai-for-beginners",
+  "source": "github-search",
+  "collected_at": "2026-04-23T20:42:31+08:00",
+  "processed_at": "2026-04-23T20:43:13+08:00",
+  "summary": "该项目是一个面向初学者的生成式AI入门课程，包含21节课程，旨在帮助用户从零开始构建生成式AI应用。课程内容涵盖生成式AI的基本概念、核心模型（如GPT系列、Diffusion模型）的工作原理、提示工程、微调技术以及实际应用场景。课程通过实践项目引导学习者掌握使用主流框架（如LangChain、Hugging Face）进行开发，并涉及伦理、安全及部署考量。适合具备基础编程知识但缺乏AI经验的开发者，提供从理论到实战的完整学习路径。",
+  "highlights": [
+    "面向初学者的21节结构化课程，从基础到应用全面覆盖",
+    "包含实践项目，结合主流工具如LangChain和Hugging Face",
+    "涵盖伦理安全及部署等生产环境考量"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "generative-ai",
+    "beginner-course",
+    "ai-education"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}
