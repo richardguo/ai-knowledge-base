@@ -1,0 +1,80 @@
+name: Daily Knowledge Collection
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # UTC 00:00 = 北京时间 8:00
+  workflow_dispatch:      # 支持手动触发
+
+permissions:
+  contents: write         # 授予写入仓库权限，用于 git push
+
+env:
+  TZ: Asia/Shanghai       # 设置时区为北京时间
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出仓库代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 安装 Python 3.12 并启用 pip 缓存加速后续安装
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      # 安装项目依赖
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 运行采集流水线：从 GitHub 和 RSS 采集 AI 相关内容
+      - name: Run pipeline
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_API_BASE: ${{ secrets.LLM_API_BASE }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL_ID: ${{ secrets.LLM_MODEL_ID }}
+          ZHIPU_API_BASE_URL: ${{ secrets.ZHIPU_API_BASE_URL }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          ZHIPU_MODEL_ID: ${{ secrets.ZHIPU_MODEL_ID }}
+          SC_API_BASE_URL: ${{ secrets.SC_API_BASE_URL }}
+          SC_API_KEY: ${{ secrets.SC_API_KEY }}
+          SC_MODEL_ID: ${{ secrets.SC_MODEL_ID }}
+        run: python pipeline/pipeline.py --sources github,rss --limit 20 --verbose
+
+      # 校验生成的 JSON 文件格式是否正确
+      - name: Validate JSON
+        run: python hooks/validate_json.py
+
+      # 检查知识条目质量（5 维度评分）
+      - name: Check quality
+        run: python hooks/check_quality.py
+
+      # 检查是否有新文件产生，避免空提交
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add -A
+          CHANGED=$(git diff --cached --name-only)
+          if [ -n "$CHANGED" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            ARTICLE_COUNT=$(find knowledge/articles -name "*.json" ! -name "index.json" | wc -l)
+            echo "article_count=$ARTICLE_COUNT" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      # 提交并推送：commit 消息包含文章数量和日期
+      - name: Commit and push
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          DATE=$(date '+%Y-%m-%d')
+          COUNT=${{ steps.check_changes.outputs.article_count }}
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "docs: $COUNT articles collected on $DATE"
+          git push
