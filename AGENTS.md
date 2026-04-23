@@ -225,6 +225,11 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ## 5. lesson and learn
 - Windows PowerShell 不支持 && 语法
 - 创建目录/文件前，必须先验证该路径是否被框架支持。不确定时问用户，不要假设"其他项目可能有这个模式"
+- **【工具调用纪律——防死循环】**
+  1. 调用前：检查 schema，确认工具支持所需参数/能力
+  2. 调用后：结果不符预期时，先区分"参数错"还是"能力不支持"
+  3. 重试前：必须改变参数或策略；相同参数已调用过且结果未变 → 禁止再调
+  4. 死锁判定：同一工具+同参数连续 2 次输出相同 → 停止，向用户说明限制
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
