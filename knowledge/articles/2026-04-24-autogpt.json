@@ -1,20 +1,20 @@
 {
-  "id": "9bea4ac7-06e4-4184-9014-8626892b421f",
+  "id": "cf830377-107e-4d0f-855c-f9be6243a031",
   "title": "AutoGPT",
   "url": "https://github.com/Significant-Gravitas/AutoGPT",
   "source": "github-search",
-  "collected_at": "2026-04-24T11:19:51+08:00",
-  "processed_at": "2026-04-24T11:20:56+08:00",
-  "summary": "AutoGPT致力于实现AI技术的普惠化，使AI对每个人都可访问和构建。项目提供了一系列工具，帮助用户专注于真正重要的事情。作为AI自动化领域的先驱项目，它降低了AI应用开发的门槛。",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "ollama是一个本地大模型运行工具，支持在个人设备上部署和运行多种开源大语言模型。支持的模型包括Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma等主流模型。无需GPU即可运行较小模型，适合开发者本地测试、AI应用原型开发以及对数据隐私有要求的场景。",
   "highlights": [
-    "使命是让AI技术普惠化",
-    "提供构建工具降低AI应用开发门槛"
+    "本地运行大模型，保护数据隐私",
+    "支持多种主流开源模型，部署便捷"
   ],
-  "relevance_score": 7,
+  "relevance_score": 8,
   "tags": [
-    "ai-automation",
-    "open-source"
+    "local-llm",
+    "ai-deployment"
   ],
-  "category": "框架",
-  "maturity": "测试"
+  "category": "工具",
+  "maturity": "生产"
 }

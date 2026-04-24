@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-04-24T11:20:56+08:00",
-  "total_entries": 39,
+  "last_updated": "2026-04-24T11:46:18+08:00",
+  "total_entries": 58,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -567,6 +567,272 @@
         "design"
       ],
       "collected_at": "2026-04-24T11:19:55+08:00"
+    },
+    {
+      "id": "3f3adca4-c2af-4819-bdb9-0dd4dac57b17",
+      "title": "awesome-llm-apps",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-awesome-llm-apps.json",
+      "tags": [
+        "ai-agent",
+        "rag-applications"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "a25be3e2-4ada-4448-be39-3b97b026f80d",
+      "title": "llama.cpp",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 9,
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-llama-cpp.json",
+      "tags": [
+        "llm-inference",
+        "c-cpp"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "8ba50a42-9515-45ec-8f86-05ad5b0b3c54",
+      "title": "gemini-cli",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-gemini-cli.json",
+      "tags": [
+        "ai-agent",
+        "cli-tool"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "f5d0b672-79c1-4fa5-8701-73bc856e83fe",
+      "title": "supabase",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 8,
+      "url": "https://github.com/supabase/supabase",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-supabase.json",
+      "tags": [
+        "database",
+        "backend"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "0247acc4-a93c-4317-9451-0bc706d3050d",
+      "title": "Deep-Live-Cam",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://github.com/hacksider/Deep-Live-Cam",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-deep-live-cam.json",
+      "tags": [
+        "deepfake",
+        "computer-vision"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "e86efff6-fc5c-4117-820a-bc5c50cb342d",
+      "title": "browser-use",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/browser-use/browser-use",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-browser-use.json",
+      "tags": [
+        "ai-automation",
+        "web-interaction"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "89bf9501-d742-4fd9-85ee-2991c8f667c7",
+      "title": "awesome-mcp-servers",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-awesome-mcp-servers.json",
+      "tags": [
+        "mcp",
+        "ai-protocol"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "3f1b4f51-69ae-4001-a163-78a81ec3ce4e",
+      "title": "andrej-karpathy-skills",
+      "source": "github-search",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-andrej-karpathy-skills.json",
+      "tags": [
+        "llm-coding",
+        "best-practices"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "5d595cb8-9792-4be1-9eb3-f29b35d50163",
+      "title": "ragflow",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 9,
+      "url": "https://github.com/infiniflow/ragflow",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-ragflow.json",
+      "tags": [
+        "rag-engine",
+        "llm-context"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "ef864422-6fb9-41cf-90b3-9977092a1a67",
+      "title": "netdata",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://github.com/netdata/netdata",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-netdata.json",
+      "tags": [
+        "observability",
+        "monitoring"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "afa920d7-d64a-45c1-b73f-e61c433168dc",
+      "title": "vllm",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 9,
+      "url": "https://github.com/vllm-project/vllm",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-vllm.json",
+      "tags": [
+        "llm-inference",
+        "serving-engine"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "5e126a32-af13-418c-9b81-288ce52569d7",
+      "title": "codex",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/openai/codex",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-codex.json",
+      "tags": [
+        "coding-agent",
+        "developer-tools"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "738ffe5c-eb98-4011-a62c-a2c8bd876f49",
+      "title": "PaddleOCR",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://github.com/PaddlePaddle/PaddleOCR",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-paddleocr.json",
+      "tags": [
+        "ocr",
+        "document-processing"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "a724df65-cc3f-4a08-b547-a127a81df0ac",
+      "title": "lobehub",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/lobehub/lobehub",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-lobehub.json",
+      "tags": [
+        "multi-agent",
+        "collaboration-platform"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "b6b8722f-0b35-4527-b4f9-c8c10c3d3b4d",
+      "title": "daytona",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://github.com/daytonaio/daytona",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-daytona.json",
+      "tags": [
+        "ai-code-execution",
+        "infrastructure"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "7ecb76c8-ca56-4290-9a43-4e57aa8ef45f",
+      "title": "OpenHands",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 8,
+      "url": "https://github.com/OpenHands/OpenHands",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-openhands.json",
+      "tags": [
+        "ai-development",
+        "developer-assistance"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "87c5f80e-5c45-4936-9911-43b7596d659e",
+      "title": "LlamaFactory",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 9,
+      "url": "https://github.com/hiyouga/LlamaFactory",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-llamafactory.json",
+      "tags": [
+        "llm-fine-tuning",
+        "multimodal"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "ae6e5386-fdb4-48d7-b9b3-705862c6f04e",
+      "title": "ansible",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/ansible/ansible",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-ansible.json",
+      "tags": [
+        "it-automation",
+        "devops"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "7f44b5b5-43c7-420d-8efa-3bfde3a11f80",
+      "title": "claude-mem",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://github.com/thedotmack/claude-mem",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-24-claude-mem.json",
+      "tags": [
+        "ai-coding-assistant",
+        "context-memory"
+      ],
+      "collected_at": "2026-04-24T11:44:48+08:00"
     }
   ]
 }

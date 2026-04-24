@@ -1,0 +1,20 @@
+{
+  "id": "ae6e5386-fdb4-48d7-b9b3-705862c6f04e",
+  "title": "ansible",
+  "url": "https://github.com/ansible/ansible",
+  "source": "github-search",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "Ansible是一个极简的IT自动化平台，使应用程序和系统的部署维护更加简单。它使用接近自然英语的语法，通过SSH实现无代理自动化，可完成代码部署、网络配置到云管理等各类自动化任务。",
+  "highlights": [
+    "无代理SSH架构，部署维护简单",
+    "接近自然英语的自动化语法"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "it-automation",
+    "devops"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

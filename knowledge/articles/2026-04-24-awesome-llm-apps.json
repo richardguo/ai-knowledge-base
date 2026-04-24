@@ -1,19 +1,19 @@
 {
-  "id": "f22fe025-78a1-495f-b267-ad843c07f347",
+  "id": "3f3adca4-c2af-4819-bdb9-0dd4dac57b17",
   "title": "awesome-llm-apps",
   "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
   "source": "github-search",
-  "collected_at": "2026-04-24T09:52:09+08:00",
-  "processed_at": "2026-04-24T09:53:35+08:00",
-  "summary": "awesome-llm-apps是一个AI Agent和RAG应用的开源资源集合库，汇集了100+个可实际运行的应用项目。该仓库旨在帮助开发者快速克隆、定制并部署自己的AI应用，涵盖了从原型到生产的多种场景，是学习和构建LLM应用的优秀起点。",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "awesome-llm-apps是一个开源应用精选仓库，汇集超过100个可直接运行的AI Agent和RAG应用。该项目旨在帮助开发者快速克隆、定制并部署自己的AI应用，提供了丰富的示例和最佳实践。对于希望快速构建LLM应用的开发者来说，这是一个宝贵的资源集合。",
   "highlights": [
     "收录100+可直接运行的AI Agent和RAG应用",
     "提供克隆、定制、部署一站式解决方案"
   ],
   "relevance_score": 8,
   "tags": [
-    "ai-agents",
-    "rag"
+    "ai-agent",
+    "rag-applications"
   ],
   "category": "工具",
   "maturity": "生产"

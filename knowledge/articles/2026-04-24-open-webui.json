@@ -1,19 +1,19 @@
 {
-  "id": "399b12c7-5fdc-4a0e-846b-6749943f30f7",
+  "id": "51d5bb5a-d634-444e-b311-7b2b9058d7d9",
   "title": "open-webui",
   "url": "https://github.com/open-webui/open-webui",
   "source": "github-search",
-  "collected_at": "2026-04-24T11:19:51+08:00",
-  "processed_at": "2026-04-24T11:20:56+08:00",
-  "summary": "Open WebUI是一个功能强大的开源Web用户界面，专为本地AI模型设计。它支持Ollama、OpenAI API等多种后端，提供直观的聊天界面和模型管理功能。Open WebUI的特色在于支持本地部署，保护用户隐私，同时提供扩展机制允许自定义功能模块，是自托管AI聊天的理想选择。",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "Open-WebUI是一个用户友好的开源AI界面，支持Ollama、OpenAI API等多种后端。它提供直观的聊天界面、本地部署能力和丰富的自定义功能，让用户可以轻松访问和管理各种AI模型。",
   "highlights": [
-    "支持本地部署，保护隐私安全",
-    "多后端兼容，扩展性强"
+    "支持多种AI后端，兼容性强",
+    "开源可自部署，保护隐私安全"
   ],
   "relevance_score": 7,
   "tags": [
-    "web-interface",
-    "local-ai"
+    "ai-interface",
+    "open-source"
   ],
   "category": "工具",
   "maturity": "生产"

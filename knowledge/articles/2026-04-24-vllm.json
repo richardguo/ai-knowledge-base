@@ -1,0 +1,20 @@
+{
+  "id": "afa920d7-d64a-45c1-b73f-e61c433168dc",
+  "title": "vllm",
+  "url": "https://github.com/vllm-project/vllm",
+  "source": "github-search",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "vLLM是一个高性能、高内存效率的大语言模型推理和服务引擎。它采用创新的PagedAttention技术，有效管理注意力机制的内存使用，实现高吞吐量和低延迟的LLM服务。vLLM支持多种主流模型，是构建生产级LLM应用的理想选择。",
+  "highlights": [
+    "PagedAttention技术实现高效内存管理",
+    "高吞吐量低延迟的LLM推理服务"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "llm-inference",
+    "serving-engine"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

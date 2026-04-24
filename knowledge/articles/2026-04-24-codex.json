@@ -1,0 +1,20 @@
+{
+  "id": "5e126a32-af13-418c-9b81-288ce52569d7",
+  "title": "codex",
+  "url": "https://github.com/openai/codex",
+  "source": "github-search",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "Codex是一个轻量级终端编码代理，能够在本地终端环境中运行，帮助开发者完成代码编写、调试和重构等任务。它集成于开发者的日常工作流，提供智能代码补全和问题解答，是提升开发效率的实用工具。",
+  "highlights": [
+    "轻量级终端集成，无需复杂配置",
+    "智能代码辅助，提升开发效率"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "coding-agent",
+    "developer-tools"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

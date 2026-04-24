@@ -1,0 +1,20 @@
+{
+  "id": "7f44b5b5-43c7-420d-8efa-3bfde3a11f80",
+  "title": "claude-mem",
+  "url": "https://github.com/thedotmack/claude-mem",
+  "source": "github-search",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "Claude-mem是Claude Code的插件，能自动捕获编码会话中的所有操作，使用AI压缩技术处理后，将相关上下文注入未来的会话中。它帮助开发者保持工作连续性，是编程辅助和上下文管理的有趣创新。",
+  "highlights": [
+    "自动捕获编码会话并压缩存储",
+    "智能注入上下文到未来会话"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-coding-assistant",
+    "context-memory"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

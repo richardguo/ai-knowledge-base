@@ -1,0 +1,20 @@
+{
+  "id": "ef864422-6fb9-41cf-90b3-9977092a1a67",
+  "title": "netdata",
+  "url": "https://github.com/netdata/netdata",
+  "source": "github-search",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "Netdata是一个AI驱动的全栈可观测性平台，专为精简团队设计。它提供实时监控、性能指标追踪、告警和可视化功能，帮助开发者快速发现和解决系统问题。该平台以高性能和低资源占用著称，支持多种数据源和集成方式，是现代云原生环境中不可或缺的监控工具。",
+  "highlights": [
+    "AI驱动的全栈可观测性，支持实时监控和告警",
+    "高性能低资源占用，适合精简团队使用"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "observability",
+    "monitoring"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

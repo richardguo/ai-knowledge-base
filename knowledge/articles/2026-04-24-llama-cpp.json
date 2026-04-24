@@ -1,19 +1,19 @@
 {
-  "id": "f98c2d84-140c-41e7-8ea0-e0c6f63441f2",
+  "id": "a25be3e2-4ada-4448-be39-3b97b026f80d",
   "title": "llama.cpp",
   "url": "https://github.com/ggml-org/llama.cpp",
   "source": "github-search",
-  "collected_at": "2026-04-24T09:52:09+08:00",
-  "processed_at": "2026-04-24T09:53:35+08:00",
-  "summary": "llama.cpp是一个纯C/C++实现的LLM推理框架，在消费级硬件上实现了高效的本地LLM运行。该项目无需依赖PyTorch等重型框架，支持多种模型格式，以其极低的内存占用和出色的推理速度成为本地部署大模型的首选方案。",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "llama.cpp是一个纯C/C++实现的LLM推理框架，以其高效能和低资源消耗著称。该项目支持多种模型格式，可在消费级硬件上运行大语言模型推理，无需GPU即可实现本地部署，是边缘计算和本地AI应用的理想选择。",
   "highlights": [
-    "纯C/C++实现，零外部深度学习框架依赖",
-    "消费级硬件高效运行，内存占用极低"
+    "纯C/C++实现的高效LLM推理",
+    "支持消费级硬件本地部署，无需GPU"
   ],
   "relevance_score": 9,
   "tags": [
     "llm-inference",
-    "cpp"
+    "c-cpp"
   ],
   "category": "框架",
   "maturity": "生产"

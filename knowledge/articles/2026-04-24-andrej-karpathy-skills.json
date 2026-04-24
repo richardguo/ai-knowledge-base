@@ -1,19 +1,19 @@
 {
-  "id": "2c0c1147-4638-48c7-b29c-0f503832187f",
+  "id": "3f1b4f51-69ae-4001-a163-78a81ec3ce4e",
   "title": "andrej-karpathy-skills",
   "url": "https://github.com/forrestchang/andrej-karpathy-skills",
   "source": "github-search",
-  "collected_at": "2026-04-24T09:52:09+08:00",
-  "processed_at": "2026-04-24T09:53:35+08:00",
-  "summary": "andrej-karpathy-skills是一个CLAUDE.md配置文件，源自AI领域知名专家Andrej Karpathy对LLM编码陷阱的观察与总结。该文件旨在改进Claude Code的行为表现，通过注入Karpathy的实战经验和建议，帮助开发者更高效地使用AI辅助编程工具，提升代码质量和开发效率。",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "andrej-karpathy-skills项目包含一个CLAUDE.md文件，旨在改进Claude Code的行为模式。该文件基于Andrej Karpathy对LLM编码常见问题的观察总结，提供了一系列最佳实践和避坑指南，对提升AI辅助编码质量有重要参考价值。",
   "highlights": [
-    "融入专家级LLM使用经验",
-    "优化AI辅助编程工作流"
+    "基于Karpathy观察的LLM编码最佳实践",
+    "提供AI辅助编码的避坑指南"
   ],
-  "relevance_score": 7,
+  "relevance_score": 6,
   "tags": [
-    "llm-optimization",
-    "coding-assistant"
+    "llm-coding",
+    "best-practices"
   ],
   "category": "实践",
   "maturity": "实验"

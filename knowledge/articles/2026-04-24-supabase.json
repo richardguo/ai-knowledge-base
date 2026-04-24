@@ -1,20 +1,20 @@
 {
-  "id": "e24e94a2-7ec7-43a1-8dd9-006fd54e4075",
+  "id": "f5d0b672-79c1-4fa5-8701-73bc856e83fe",
   "title": "supabase",
   "url": "https://github.com/supabase/supabase",
   "source": "github-search",
-  "collected_at": "2026-04-24T09:52:09+08:00",
-  "processed_at": "2026-04-24T09:53:35+08:00",
-  "summary": "Supabase是一个开源的Postgres开发平台，为Web、移动和AI应用提供即用的Postgres数据库服务。除了核心的数据库功能，还提供实时订阅、身份认证、边缘函数等配套服务，是构建现代应用的全栈后端解决方案。",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "Supabase是一个开源的Postgres开发平台，为Web、移动和AI应用提供专用Postgres数据库服务。它提供了实时数据同步、认证、存储等后端功能，是构建现代应用的全栈解决方案，在开发者社区拥有广泛的用户基础。",
   "highlights": [
-    "开箱即用的Postgres数据库服务",
-    "支持实时数据订阅和AI应用开发"
+    "开源Postgres开发平台，提供完整后端服务",
+    "支持实时数据同步、认证和存储功能"
   ],
   "relevance_score": 8,
   "tags": [
     "database",
     "backend"
   ],
-  "category": "工具",
+  "category": "框架",
   "maturity": "生产"
 }

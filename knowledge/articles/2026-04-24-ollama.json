@@ -1,20 +1,20 @@
 {
-  "id": "9ee62973-b878-4e28-9d41-ee484058cfcd",
+  "id": "30c39350-24b7-4d2d-a746-e9eb2a03784d",
   "title": "ollama",
   "url": "https://github.com/ollama/ollama",
   "source": "github-search",
-  "collected_at": "2026-04-24T11:19:51+08:00",
-  "processed_at": "2026-04-24T11:20:56+08:00",
-  "summary": "ollama是一个本地大模型运行工具，支持在个人设备上部署和运行多种主流大语言模型，包括Kimi-K2.5、GLM-5、MiniMax、DeepSeek、Qwen、Gemma等。无需云端即可实现AI推理，保护数据隐私。",
+  "collected_at": "2026-04-24T11:44:48+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "superpowers是一个代理技能框架和软件开发方法论，旨在为AI Agent提供标准化的技能构建和执行机制。该框架强调Agent能力的可组合性和可扩展性，帮助开发者快速构建具备特定技能的AI代理。提供了一套完整的开发范式，涵盖技能定义、编排和执行流程。",
   "highlights": [
-    "本地部署运行，无需依赖云端",
-    "支持多种主流大模型"
+    "标准化Agent技能构建框架",
+    "支持技能可组合和可扩展"
   ],
-  "relevance_score": 9,
+  "relevance_score": 6,
   "tags": [
-    "local-llm",
-    "ai-inference"
+    "agent-framework",
+    "skill-orchestration"
   ],
-  "category": "工具",
-  "maturity": "生产"
+  "category": "框架",
+  "maturity": "测试"
 }

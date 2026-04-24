@@ -1,19 +1,19 @@
 {
-  "id": "b96eeef2-94f1-4cfa-aa0b-611186780b78",
+  "id": "00f97cf6-498d-4ea0-92f2-248a01cd7e34",
   "title": "CrabTrap: An LLM-as-a-judge HTTP proxy to secure agents in production",
   "url": "https://www.brex.com/crabtrap",
   "source": "rss",
-  "collected_at": "2026-04-24T11:19:55+08:00",
-  "processed_at": "2026-04-24T11:20:56+08:00",
-  "summary": "CrabTrap是一个开源的LLM即评判者的HTTP代理工具，专门用于保护生产环境中的AI代理。它通过HTTP代理层对AI代理的请求进行安全审查和评估，防止恶意交互和不当输出。该项目来自Brex公司，展示了企业级AI安全防护的实现方案。",
+  "collected_at": "2026-04-24T11:44:51+08:00",
+  "processed_at": "2026-04-24T11:46:18+08:00",
+  "summary": "CrabTrap是Brex开源的LLM-as-a-judge HTTP代理项目，专门用于在生产环境中保护AI agents。它通过LLM判断请求安全性，防止恶意输入攻击agent系统。项目提供开源实现，帮助企业安全部署AI代理服务。",
   "highlights": [
-    "LLM作为评判者的HTTP安全代理",
-    "保护生产环境AI代理安全"
+    "LLM判断HTTP代理保护生产环境agents",
+    "开源安全工具防止agent被恶意攻击"
   ],
   "relevance_score": 8,
   "tags": [
     "ai-security",
-    "proxy"
+    "agent-framework"
   ],
   "category": "工具",
   "maturity": "生产"
