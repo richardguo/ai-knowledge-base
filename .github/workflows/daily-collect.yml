@@ -2,12 +2,13 @@ name: Daily Knowledge Collection
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # UTC 00:00 = 北京时间 8:00
+    - cron: '0 0 * * *'  # UTC 00:00 = 北京时间 8:00 始终使用 UTC 时间，不受任何环境变量影响
   workflow_dispatch:      # 支持手动触发
 
 permissions:
   contents: write         # 授予写入仓库权限，用于 git push
 
+# TZ 环境变量不会影响 schedule 触发器的 cron 表达式！
 env:
   TZ: Asia/Shanghai       # 设置时区为北京时间
 
@@ -77,4 +78,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "docs: $COUNT articles collected on $DATE"
+
+          # 拉取远程更新并变基，解决非快进冲突
+          git fetch origin
+          git rebase origin/${{ github.ref_name }} || {
+            git rebase --abort
+            echo "::error::Rebase failed due to conflicts"
+            exit 1
+          }
+
           git push
