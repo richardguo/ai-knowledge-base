@@ -1,0 +1,10 @@
+node_modules
+package.json
+package-lock.json
+bun.lock
+.gitignore
+.idea
+.vscode
+.DS_Store
+__pycache__
+.env
