@@ -1,20 +1,20 @@
 {
-  "id": "725766b7-3c34-4cdf-9d36-6022d56155a7",
+  "id": "0bc1da46-1f7e-46f6-b4f5-e0a0b14ce036",
   "title": "Kuri – Zig based agent-browser alternative",
   "url": "https://github.com/justrach/kuri",
   "source": "rss",
-  "collected_at": "2026-04-24T09:52:12+08:00",
-  "processed_at": "2026-04-24T09:53:35+08:00",
-  "summary": "Kuri是一个基于Zig编程语言的agent-browser替代项目，旨在提供更轻量、更高效的浏览器自动化方案。Zig语言以其内存安全性和编译时特性著称，该项目将Zig优势应用于浏览器agent场景，为开发者提供了新的技术选型。",
+  "collected_at": "2026-04-24T11:19:55+08:00",
+  "processed_at": "2026-04-24T11:20:56+08:00",
+  "summary": "Kuri是一个基于Zig语言的浏览器自动化和代理框架。它提供了替代现有浏览器自动化工具的新选择，利用Zig的性能优势实现更高效的网页交互。该项目展示了编程语言Zig在Web自动化领域的应用潜力，为开发者提供了轻量级解决方案。",
   "highlights": [
-    "基于Zig语言的浏览器自动化方案",
-    "轻量级agent-browser替代实现"
+    "基于Zig语言的浏览器自动化框架",
+    "提供高性能网页交互能力"
   ],
   "relevance_score": 6,
   "tags": [
-    "zig-language",
-    "browser-automation"
+    "browser-automation",
+    "zig"
   ],
-  "category": "框架",
+  "category": "工具",
   "maturity": "实验"
 }

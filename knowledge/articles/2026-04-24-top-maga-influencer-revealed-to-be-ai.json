@@ -1,19 +1,19 @@
 {
-  "id": "eb2feb3e-a625-44ac-ada1-1be49571c258",
+  "id": "683127e9-2181-49f4-a3af-6d7e25b288e6",
   "title": "Top MAGA influencer revealed to be AI",
   "url": "https://nypost.com/2026/04/21/us-news/top-maga-influencer-emily-hart-revealed-to-be-ai-created-by-a-guy-in-india/",
   "source": "rss",
-  "collected_at": "2026-04-24T09:52:12+08:00",
-  "processed_at": "2026-04-24T09:53:35+08:00",
-  "summary": "据纽约邮报报道，一位名为Emily Hart的顶级MAGA政治影响者被揭露实际上是由印度男子用AI技术创建的虚拟人物。这一事件再次引发关于AI生成虚假身份和社交媒体操纵问题的担忧。该新闻在Hacker News上获得96个点赞和54条评论，反映出公众对AI滥用的高度关注。",
+  "collected_at": "2026-04-24T11:19:55+08:00",
+  "processed_at": "2026-04-24T11:20:56+08:00",
+  "summary": "调查揭示一位顶级MAGA政治影响者实际上是由印度人用AI创建的虚拟人物，引发关于AI生成虚假信息的担忧。",
   "highlights": [
-    "AI生成的虚假政治影响者被曝光",
-    "揭示社交媒体上AI虚假身份泛滥问题"
+    "AI生成虚假政治影响者",
+    "社交媒体AI滥用问题"
   ],
   "relevance_score": 7,
   "tags": [
-    "ai-misuse",
-    "social-media"
+    "social-media",
+    "ai-generated-content"
   ],
   "category": "实践",
   "maturity": "生产"

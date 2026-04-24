@@ -1,18 +1,18 @@
 {
-  "id": "f0ce53e9-0567-4d57-a7e0-4ae1d6ac4a46",
+  "id": "87589df0-3718-40ea-ba51-f42644458633",
   "title": "Less human AI agents, please",
   "url": "https://nial.se/blog/less-human-ai-agents-please/",
   "source": "rss",
-  "collected_at": "2026-04-24T09:52:12+08:00",
-  "processed_at": "2026-04-24T09:53:35+08:00",
-  "summary": "博客文章呼吁AI代理设计应减少拟人化倾向。作者认为当前AI代理过度模仿人类行为模式，导致交互体验不自然且效率低下。主张AI代理应保持机器特性，在特定场景下提供更直接、高效的任务执行能力。该观点引发168条评论讨论。",
+  "collected_at": "2026-04-24T11:19:55+08:00",
+  "processed_at": "2026-04-24T11:20:56+08:00",
+  "summary": "博客文章呼吁AI代理应该减少模拟人类行为的特点。作者认为当前AI代理过度追求拟人化反而带来问题，应该让AI更直接地作为工具而非模拟人类。文章引发168条评论的讨论，反映了AI设计哲学的思考。",
   "highlights": [
-    "反对AI代理过度拟人化的设计哲学",
-    "强调机器特性与效率优先的设计理念"
+    "AI代理设计应减少拟人化倾向",
+    "AI工具本质与模拟人类行为的讨论"
   ],
   "relevance_score": 6,
   "tags": [
-    "ai-agent",
+    "ai-agents",
     "design"
   ],
   "category": "论文",

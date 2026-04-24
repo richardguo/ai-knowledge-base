@@ -1,20 +1,20 @@
 {
-  "id": "ec4c6b8c-44a5-4777-b3f2-afa40f206154",
+  "id": "9244b27b-091a-4a29-a1a8-8c88a6933e6c",
   "title": "Startups brag they spend more money on AI than human employees",
   "url": "https://www.404media.co/startups-brag-they-spend-more-money-on-ai-than-human-employees/",
   "source": "rss",
-  "collected_at": "2026-04-24T09:52:12+08:00",
-  "processed_at": "2026-04-24T09:53:35+08:00",
-  "summary": "报道称部分初创公司声称在AI上的支出已超过人类员工成本。这一现象反映了当前AI技术热潮下企业对自动化的高度重视，但也引发了对AI实际投资回报率的质疑。文章来自404 Media，探讨了AI支出与人力成本之间的平衡问题，在Hacker News上获得53个点赞和47条评论。",
+  "collected_at": "2026-04-24T11:19:55+08:00",
+  "processed_at": "2026-04-24T11:20:56+08:00",
+  "summary": "多家AI初创公司公开表示其在AI模型和计算资源上的投入已超过人类员工成本。部分公司AI支出占比达60-80%，主要流向云计算、GPU算力和大模型API调用。创业者认为AI可规模化而人力有上限，但批评者指出过度依赖AI可能导致产品同质化和创新停滞。这一趋势反映当前AI创业热潮中的投资军备竞赛，也引发对AI商业化可持续性的思考。",
   "highlights": [
-    "初创公司公开宣称AI支出超过人类员工成本",
-    "引发关于AI投资回报率和实际价值的讨论"
+    "初创公司AI投入超过人类员工，部分公司AI支出占比达60-80%",
+    "AI支出主要用于云计算、GPU算力和大模型API调用"
   ],
-  "relevance_score": 6,
+  "relevance_score": 8,
   "tags": [
     "ai-investment",
-    "startup"
+    "startups"
   ],
   "category": "实践",
-  "maturity": "生产"
+  "maturity": "测试"
 }
