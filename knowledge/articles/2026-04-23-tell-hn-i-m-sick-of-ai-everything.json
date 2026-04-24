@@ -1,0 +1,22 @@
+{
+  "id": "f48984d5-3c12-44b1-9d4f-283207cce6ec",
+  "title": "Tell HN: I'm sick of AI everything",
+  "url": "https://news.ycombinator.com/item?id=47857461",
+  "source": "rss",
+  "collected_at": "2026-04-23T10:43:32+08:00",
+  "processed_at": "2026-04-23T10:44:17+08:00",
+  "summary": "本文是一位HN用户对当前AI技术泛滥现象的强烈不满表达。作者将AI的过度渗透类比为之前放弃Facebook的经历，认为AI相关内容已造成信息过载与体验干扰，甚至希望浏览器能直接屏蔽所有AI相关元素。帖子获得321点支持与182条评论，反映出技术社区中对AI狂热浪潮的反思声音正在增长。这种现象揭示了AI技术普及背后的用户疲劳问题，以及工具理性过度扩张可能引发的反弹，值得开发者与产品团队关注用户体验与技术伦理的平衡。",
+  "highlights": [
+    "用户对AI技术泛滥产生强烈反感，类比社交平台疲劳现象",
+    "帖子获得高互动量（321点支持、182评论），反映群体共鸣",
+    "提出极端解决方案（浏览器级屏蔽），凸显技术过度侵入生活的争议"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-fatigue",
+    "tech-backlash",
+    "user-experience"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

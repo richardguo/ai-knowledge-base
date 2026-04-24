@@ -1,0 +1,490 @@
+{
+  "analyzed_at": "2026-04-21T17:55:42+08:00",
+  "version": "1.0",
+  "input_files": [
+    "knowledge\\raw\\github-trending-2026-04-21-174943-raw.json"
+  ],
+  "items": [
+    {
+      "title": "andrej-karpathy-skills",
+      "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+      "source": "github-trending",
+      "popularity": 44394,
+      "popularity_type": "weekly_stars",
+      "author": "forrestchang",
+      "created_at": "2026-01-27T11:53:13+08:00",
+      "updated_at": "2026-04-21T17:49:52+08:00",
+      "language": "N/A",
+      "topics": [
+        "claude",
+        "llm"
+      ],
+      "analysis": {
+        "summary": "andrej-karpathy-skills 项目是一个针对 Claude Code 的改进指南，通过单一 CLAUDE.md 文件实现。该文件基于 Andrej Karpathy 对大型语言模型编程常见问题的观察，提出了四项核心原则以优化代码生成行为。这些原则包括：在编码前进行思考以明确假设、呈现多种解释并适时寻求澄清；优先考虑代码简洁性，避免过度设计和冗余抽象；仅进行必要的手术式修改，不随意改动无关代码或注释；以及通过测试优先和可验证的成功标准实现目标驱动执行。项目旨在直接解决 LLM 在编程中常见的错误假设、隐藏混淆、过度复杂化及无关修改等问题，提升代码生成的准确性和效率。",
+        "highlights": [
+          "基于 Karpathy 对 LLM 编程陷阱的观察，系统化提出四项改进原则",
+          "通过单一配置文件 CLAUDE.md 实现，易于集成和使用",
+          "针对性地解决过度设计、错误假设和无关修改等常见问题"
+        ],
+        "relevance_score": 7,
+        "tags": [
+          "claude-code",
+          "llm-guidelines",
+          "code-optimization"
+        ],
+        "category": "框架",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "source": "github-trending",
+      "popularity": 30630,
+      "popularity_type": "weekly_stars",
+      "author": "NousResearch",
+      "created_at": "2025-07-23T06:22:28+08:00",
+      "updated_at": "2026-04-21T17:49:40+08:00",
+      "language": "Python",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "clawdbot",
+        "codex",
+        "hermes",
+        "hermes-agent",
+        "llm",
+        "moltbot",
+        "nous-research",
+        "openai",
+        "openclaw"
+      ],
+      "analysis": {
+        "summary": "Hermes Agent是由Nous Research开发的自改进AI代理框架，支持多模型后端（如OpenAI、Claude、Hugging Face等）和跨平台部署（CLI、Telegram、Discord等）。其核心创新在于内置学习循环：代理能从经验中创建技能，在使用中持续优化，并通过记忆系统实现跨会话知识持久化。框架提供完整的终端用户界面（TUI）、并行子代理调度、定时任务自动化以及基于RPC的工具调用能力，同时兼容agentskills.io开放标准。部署灵活，可在低成本VPS或GPU集群上运行，适合构建可进化的个人或企业级AI助手。",
+        "highlights": [
+          "内置学习循环，支持从经验自主创建技能并持续优化",
+          "跨平台多通道集成（CLI、Telegram、Discord等）与多模型后端无锁定切换",
+          "提供完整TUI界面、并行代理调度、定时任务及记忆检索系统"
+        ],
+        "relevance_score": 8,
+        "tags": [
+          "ai-agent",
+          "self-improving",
+          "multi-platform"
+        ],
+        "category": "框架",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "source": "github-trending",
+      "popularity": 12472,
+      "popularity_type": "weekly_stars",
+      "author": "thedotmack",
+      "created_at": "2025-09-01T04:50:03+08:00",
+      "updated_at": "2026-04-21T17:47:44+08:00",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-memory",
+        "anthropic",
+        "artificial-intelligence",
+        "chromadb",
+        "claude",
+        "claude-agent-sdk",
+        "claude-agents",
+        "claude-code",
+        "claude-code-plugin",
+        "claude-skills",
+        "embeddings",
+        "long-term-memory",
+        "mem0",
+        "memory-engine",
+        "openmemory",
+        "rag",
+        "sqlite",
+        "supermemory"
+      ],
+      "analysis": {
+        "summary": "claude-mem是一个专为Claude Code设计的持久化记忆压缩系统，通过TypeScript实现。它能够自动捕捉用户在编程会话中与Claude交互的所有内容，包括代码修改、对话历史和上下文信息。系统利用Claude的agent-sdk进行AI驱动的智能压缩，将原始数据转化为紧凑的语义表示并存储于本地SQLite数据库。在后续会话中，通过向量检索（支持ChromaDB）和RAG技术，自动注入相关的历史上下文，显著提升Claude的连续对话能力和编程辅助的连贯性。该项目作为Claude Code插件，实现了长期记忆管理，降低了重复解释需求，使AI助手更像一个拥有项目记忆的协作伙伴。",
+        "highlights": [
+          "自动全量捕捉编程会话内容并进行AI智能压缩",
+          "基于向量检索与RAG实现上下文精准注入与长期记忆管理",
+          "作为Claude Code官方插件生态，提供开箱即用的生产级记忆增强方案"
+        ],
+        "relevance_score": 7,
+        "tags": [
+          "ai-memory",
+          "claude-agents",
+          "rag"
+        ],
+        "category": "框架",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "GenericAgent",
+      "url": "https://github.com/lsdefine/GenericAgent",
+      "source": "github-trending",
+      "popularity": 3914,
+      "popularity_type": "weekly_stars",
+      "author": "lsdefine",
+      "created_at": "2026-01-16T23:45:24+08:00",
+      "updated_at": "2026-04-21T17:47:08+08:00",
+      "language": "Python",
+      "topics": [
+        "ai-agent",
+        "automation",
+        "autonomous-agent",
+        "browser-automation",
+        "claude",
+        "computer-control",
+        "desktop-automation",
+        "gemini",
+        "lightweight",
+        "llm-agent",
+        "memory-system",
+        "python",
+        "self-evolving",
+        "skill-tree",
+        "task-automation"
+      ],
+      "analysis": {
+        "summary": "GenericAgent是一个极简的自演进自主智能体框架，核心代码仅约3000行。它通过9个原子工具和约100行的智能体循环，赋予大型语言模型对本地计算机的系统级控制能力，覆盖浏览器、终端、文件系统、键鼠输入、屏幕视觉和移动设备（ADB）。其核心设计哲学是“不预加载技能，而是演进技能”：每次解决新任务时，自动将执行路径结晶化为可直接复用的技能，逐渐积累形成用户专属的技能树。该框架支持Claude、Gemini、Kimi、MiniMax等主流模型，采用分层内存设计，上下文窗口小于30K，相比其他消耗200K-1M token的智能体显著降低了资源消耗。",
+        "highlights": [
+          "自演进机制：自动将任务执行路径结晶化为可复用技能，形成用户专属技能树",
+          "极简架构：核心代码仅约3000行，智能体循环约100行，无复杂依赖",
+          "高效执行：支持系统级控制，仅需小于30K上下文窗口，token消耗降低6倍"
+        ],
+        "relevance_score": 7,
+        "tags": [
+          "autonomous-agent",
+          "self-evolving",
+          "python"
+        ],
+        "category": "框架",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "evolver",
+      "url": "https://github.com/EvoMap/evolver",
+      "source": "github-trending",
+      "popularity": 4032,
+      "popularity_type": "weekly_stars",
+      "author": "EvoMap",
+      "created_at": "2026-02-01T13:59:24+08:00",
+      "updated_at": "2026-04-21T17:45:55+08:00",
+      "language": "JavaScript",
+      "topics": [
+        "agent",
+        "ai"
+      ],
+      "analysis": {
+        "summary": "Evolver 是一个基于 GEP（基因组进化协议）的 AI Agent 自进化引擎，由 EvoMap 团队开发。该项目旨在将临时的提示词调整转化为可审计、可复用的进化资产，通过协议约束的进化过程为 AI 智能体提供系统化的自我迭代能力。其核心包括基因与胶囊（genes and capsules）设计、进化审计追踪和提示治理机制，支持从克隆安装到生成 GEP 引导的进化提示的快速启动。作为 EvoMap 进化网络的核心引擎，它推动智能体在验证协作中持续演化，并计划从完全开源过渡为源代码可用模式，以保护项目完整性。",
+        "highlights": [
+          "基于 GEP 协议实现 AI Agent 的自我进化，将临时提示优化转化为结构化、可审计的进化资产",
+          "提供基因与胶囊、进化审计追踪等机制，强化了智能体的记忆与技能系统的可管理性与可复用性",
+          "作为 EvoMap 进化网络的核心引擎，支持智能体在验证协作中持续演化，并具备向生产环境过渡的成熟度"
+        ],
+        "relevance_score": 7,
+        "tags": [
+          "agent-evolution",
+          "genome-protocol",
+          "ai-engine"
+        ],
+        "category": "框架",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "dive-into-llms",
+      "url": "https://github.com/Lordog/dive-into-llms",
+      "source": "github-trending",
+      "popularity": 5703,
+      "popularity_type": "weekly_stars",
+      "author": "Lordog",
+      "created_at": "2024-04-08T21:11:40+08:00",
+      "updated_at": "2026-04-21T17:48:44+08:00",
+      "language": "Jupyter Notebook",
+      "topics": [
+        "llm"
+      ],
+      "analysis": {
+        "summary": "《动手学大模型》是一个面向初学者的开源编程实践教程系列，由上海交通大学课程讲义拓展而来，旨在通过Jupyter Notebook提供大模型开发的全流程实践指导。教程内容涵盖微调与部署、提示学习与思维链、知识编辑、数学推理、GUI Agent、大模型对齐及隐写术等多个核心主题，并提供课件、详细教程和可运行脚本。项目强调公益性和易用性，帮助学习者快速入门大模型技术，支持课程设计与学术研究，并已获得华为昇腾社区的国产化教程支持。",
+        "highlights": [
+          "基于高校课程讲义，内容系统且实战性强，适合初学者入门",
+          "提供全流程实践资源，包括课件、教程和可执行脚本，覆盖微调、提示工程、知识编辑等热门主题",
+          "获得华为昇腾社区支持，推出国产化大模型开发教程，增强本地化应用价值"
+        ],
+        "relevance_score": 7,
+        "tags": [
+          "large-language-model",
+          "fine-tuning",
+          "prompt-engineering"
+        ],
+        "category": "实践",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "ai-hedge-fund",
+      "url": "https://github.com/virattt/ai-hedge-fund",
+      "source": "github-trending",
+      "popularity": 3950,
+      "popularity_type": "weekly_stars",
+      "author": "virattt",
+      "created_at": "2024-11-30T00:30:01+08:00",
+      "updated_at": "2026-04-21T17:44:51+08:00",
+      "language": "Python",
+      "topics": [
+        "ai"
+      ],
+      "analysis": {
+        "summary": "该项目是一个概念验证性质的AI驱动对冲基金系统，利用多智能体协作模拟投资决策流程。系统集成了19个不同的智能体，分别代表不同投资风格（如价值投资、成长投资、量化分析等），包括Aswath Damodaran、Warren Buffett等知名投资大师的模拟代理。每个智能体负责特定任务，如估值计算、市场情绪分析、基本面和技术指标分析、风险管理及投资组合管理。项目使用Python实现，提供命令行和Web应用两种交互方式，强调教育目的，不进行真实交易。",
+        "highlights": [
+          "多智能体架构模拟真实对冲基金决策流程，融合多种投资策略",
+          "集成19个专业代理，覆盖估值、情感、基本面、技术分析及风险管理",
+          "提供命令行与Web界面，便于教育与研究，但明确禁止实际交易"
+        ],
+        "relevance_score": 7,
+        "tags": [
+          "ai-agents",
+          "hedge-fund",
+          "trading-simulation"
+        ],
+        "category": "框架",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "multica",
+      "url": "https://github.com/multica-ai/multica",
+      "source": "github-trending",
+      "popularity": 7009,
+      "popularity_type": "weekly_stars",
+      "author": "multica-ai",
+      "created_at": "2026-01-14T01:59:46+08:00",
+      "updated_at": "2026-04-21T17:49:10+08:00",
+      "language": "TypeScript",
+      "topics": [
+        "agent"
+      ],
+      "analysis": {
+        "summary": "Multica 是一个开源的托管智能体平台，旨在将编程智能体转变为真正的团队成员。它支持将任务分配给智能体，并让智能体像人类同事一样自主执行工作，包括编写代码、报告阻塞问题、更新状态等。平台提供完整的智能体生命周期管理，支持任务队列、实时进度流监控以及可复用技能库，允许团队将解决方案沉淀为共享技能。它兼容多种主流智能体模型（如Claude Code、Gemini等），并提供统一运行时仪表板、多工作空间隔离和自托管能力，适合人机协作的开发团队使用。",
+        "highlights": [
+          "智能体作为团队成员集成，支持任务分配、进度跟踪和自主执行，减少人工干预",
+          "可复用技能库允许团队积累和共享解决方案，提升长期效率",
+          "统一运行时管理，支持本地和云端部署，多工作空间隔离，增强灵活性"
+        ],
+        "relevance_score": 8,
+        "tags": [
+          "agent-platform",
+          "code-automation",
+          "team-collaboration"
+        ],
+        "category": "框架",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "source": "github-trending",
+      "popularity": 5936,
+      "popularity_type": "weekly_stars",
+      "author": "jamiepine",
+      "created_at": "2026-01-25T20:27:03+08:00",
+      "updated_at": "2026-04-21T17:48:19+08:00",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "cuda",
+        "mlx",
+        "qwen3-tts",
+        "qwen3-tts-ui",
+        "voice-ai",
+        "voice-clone",
+        "whisper"
+      ],
+      "analysis": {
+        "summary": "Voicebox是一款开源、本地优先的语音合成与克隆工作室，旨在为ElevenLabs等商业平台提供免费替代方案。该项目使用TypeScript开发，支持在本地设备上运行，确保语音数据和模型处理的完全隐私。核心功能包括从少量音频样本进行零样本语音克隆、提供50多个预设语音库，以及集成Qwen3-TTS、LuxTTS、Chatterbox、HumeAI TADA和Kokoro等7种TTS引擎，支持23种语言的语音生成。此外，工具还提供音高变换、混响、延迟、合唱等音频后处理效果，并配备时间线编辑器以构建多语音项目。其技术栈结合了CUDA和MLX加速，适用于开发语音驱动应用，具有较高的实用性和社区热度。",
+        "highlights": [
+          "完全本地化运行，确保语音数据隐私和安全",
+          "集成7种TTS引擎，支持23种语言及零样本语音克隆",
+          "提供音频后处理效果和时间线编辑器，适合多语音项目制作"
+        ],
+        "relevance_score": 7,
+        "tags": [
+          "voice-synthesis",
+          "open-source",
+          "local-ai"
+        ],
+        "category": "工具",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "android-reverse-engineering-skill",
+      "url": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
+      "source": "github-trending",
+      "popularity": 2299,
+      "popularity_type": "weekly_stars",
+      "author": "SimoneAvogadro",
+      "created_at": "2026-02-02T23:57:57+08:00",
+      "updated_at": "2026-04-21T17:49:25+08:00",
+      "language": "Shell",
+      "topics": [
+        "claude"
+      ],
+      "analysis": {
+        "summary": "android-reverse-engineering-skill是一个为Claude Code设计的技能工具，专注于Android应用逆向工程与API提取。它支持对APK、XAPK、JAR、AAR等文件进行反编译，主要利用jadx和Fernflower/Vineflower等引擎，并能并排比较不同引擎的输出结果。核心功能包括自动提取和记录应用中的HTTP API，如Retrofit端点、OkHttp调用、硬编码URL以及认证头与令牌；追踪从Activity/Fragment到ViewModel、Repository直至HTTP调用的完整调用流；分析应用结构（如清单文件、包组织、架构模式）；并提供应对ProGuard/R8混淆代码的策略。该工具可通过Claude Code插件市场安装，支持命令行与自然语言交互，降低了Android逆向工程的技术门槛，帮助开发者、安全研究人员快速理解、文档化和复现第三方应用的网络接口。",
+        "highlights": [
+          "支持多格式反编译与引擎对比，提升代码可读性",
+          "自动化提取HTTP API与认证信息，简化逆向分析流程",
+          "集成自然语言交互，降低使用门槛，提升效率"
+        ],
+        "relevance_score": 7,
+        "tags": [
+          "android-reverse-engineering",
+          "api-extraction",
+          "claude-code"
+        ],
+        "category": "工具",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "omi",
+      "url": "https://github.com/BasedHardware/omi",
+      "source": "github-trending",
+      "popularity": 3634,
+      "popularity_type": "weekly_stars",
+      "author": "BasedHardware",
+      "created_at": "2024-03-23T02:12:25+08:00",
+      "updated_at": "2026-04-21T17:47:48+08:00",
+      "language": "Dart",
+      "topics": [
+        "ai",
+        "app",
+        "bci",
+        "c",
+        "flutter",
+        "friend",
+        "mobile",
+        "necklace",
+        "nextjs",
+        "omi",
+        "personas",
+        "python",
+        "smartglasses",
+        "summary",
+        "transcription",
+        "wearable"
+      ],
+      "analysis": {
+        "summary": "Omi 是一个跨平台的“第二大脑”AI助手，通过实时捕捉用户屏幕内容与对话语音，进行转录、摘要并生成行动项。项目采用多语言技术栈，桌面端基于Swift/Rust构建，移动端使用Flutter，并整合Python与Next.js实现云端AI服务。其核心在于构建一个可穿戴设备（智能眼镜/项链）与手机、桌面协同的感知系统，实现全场景记忆与智能交互。系统设计强调开源与隐私，支持本地化部署，已服务超过30万专业人士，技术成熟度高。",
+        "highlights": [
+          "全场景感知能力：整合屏幕捕捉与语音转录，实现跨设备（桌面、移动、可穿戴）的实时环境感知与记忆",
+          "多模态AI架构：结合计算机视觉、语音识别与大语言模型，提供摘要、任务生成与上下文对话功能",
+          "开源与隐私优先：完整开源技术栈，支持本地部署，兼顾云端协作与数据控制"
+        ],
+        "relevance_score": 8,
+        "tags": [
+          "ai-assistant",
+          "multimodal-ai",
+          "wearable-computing"
+        ],
+        "category": "工具",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "markitdown",
+      "url": "https://github.com/microsoft/markitdown",
+      "source": "github-trending",
+      "popularity": 7084,
+      "popularity_type": "weekly_stars",
+      "author": "microsoft",
+      "created_at": "2024-11-14T03:56:40+08:00",
+      "updated_at": "2026-04-21T17:49:59+08:00",
+      "language": "Python",
+      "topics": [
+        "autogen",
+        "autogen-extension",
+        "langchain",
+        "markdown",
+        "microsoft-office",
+        "openai",
+        "pdf"
+      ],
+      "analysis": {
+        "summary": "MarkItDown是微软开发的Python工具，专注于将多种文件格式（包括PDF、Office文档、图像、音频、HTML等）转换为Markdown格式，特别适用于LLM和文本分析管道。它强调保留文档结构（如标题、列表、表格、链接），输出接近纯文本但带有必要标记，以提高LLM处理效率。工具轻量级，支持Python 3.10+，通过pip安装，并提供安全考虑，如限制I/O权限和推荐使用特定转换函数。与类似工具（如textract）相比，它更注重为AI工具优化，而非高保真人类阅读。",
+        "highlights": [
+          "支持广泛文件格式转换，包括PDF、Office、图像、音频和网络内容（如YouTube URL）",
+          "专注于为LLM和文本分析优化，保留Markdown结构以提高令牌效率",
+          "由微软AutoGen团队开发，集成安全考虑，提供细粒度转换函数控制"
+        ],
+        "relevance_score": 8,
+        "tags": [
+          "document-conversion",
+          "llm-tool",
+          "python"
+        ],
+        "category": "工具",
+        "maturity": "生产"
+      }
+    },
+    {
+      "title": "VoxCPM",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "source": "github-trending",
+      "popularity": 3189,
+      "popularity_type": "weekly_stars",
+      "author": "OpenBMB",
+      "created_at": "2025-09-16T11:41:49+08:00",
+      "updated_at": "2026-04-21T17:50:13+08:00",
+      "language": "Python",
+      "topics": [
+        "audio",
+        "deeplearning",
+        "minicpm",
+        "multilingual",
+        "python",
+        "pytorch",
+        "speech",
+        "speech-synthesis",
+        "text-to-speech",
+        "tts",
+        "tts-model",
+        "voice-cloning",
+        "voice-design",
+        "voxcpm"
+      ],
+      "analysis": {
+        "summary": "VoxCPM2是由OpenBMB开发的无标记器文本转语音系统，基于端到端扩散自回归架构，直接生成连续语音表示，避免了离散标记化过程，实现了高度自然和富有表现力的语音合成。该模型拥有20亿参数，在超过200万小时的多语言语音数据上训练，支持30种语言，无需语言标签即可直接合成。其创新性功能包括仅通过自然语言描述（如性别、年龄、语调、情感、语速）即可进行语音设计，无需参考音频；以及基于短参考音频片段的可控语音克隆，允许通过风格引导调整情感和节奏。模型基于MiniCPM-4架构，输出48kHz工作室质量音频，适用于多语言语音生成、创意语音设计和逼真克隆场景，具有广泛的应用潜力。",
+        "highlights": [
+          "无标记器端到端扩散自回归架构，直接生成连续语音表示",
+          "支持30种语言的多语言合成，无需语言标签",
+          "语音设计功能仅需自然语言描述，无需参考音频"
+        ],
+        "relevance_score": 8,
+        "tags": [
+          "text-to-speech",
+          "multilingual-model",
+          "speech-synthesis"
+        ],
+        "category": "框架",
+        "maturity": "生产"
+      }
+    }
+  ]
+}

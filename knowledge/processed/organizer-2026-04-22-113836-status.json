@@ -1,0 +1,41 @@
+{
+  "agent": "organizer",
+  "task_id": "2026-04-22-113836-manual",
+  "status": "completed",
+  "input_files": [
+    "knowledge/processed/analyzer-2026-04-22-110236.json"
+  ],
+  "output_files": [
+    "knowledge\\articles\\2026-04-22-everything-claude-code.json",
+    "knowledge\\articles\\2026-04-22-ragflow.json",
+    "knowledge\\articles\\2026-04-22-lobehub.json",
+    "knowledge\\articles\\2026-04-22-deer-flow.json",
+    "knowledge\\articles\\2026-04-22-oh-my-openagent.json",
+    "knowledge\\articles\\2026-04-22-harness.json",
+    "knowledge\\articles\\2026-04-22-deepagents.json",
+    "knowledge\\articles\\2026-04-22-impeccable.json",
+    "knowledge\\articles\\2026-04-22-archon.json",
+    "knowledge\\articles\\2026-04-22-parlant.json",
+    "knowledge\\articles\\2026-04-22-ai-guide.json",
+    "knowledge\\articles\\2026-04-22-openharness.json",
+    "knowledge\\articles\\2026-04-22-hive.json",
+    "knowledge\\articles\\2026-04-22-trellis.json",
+    "knowledge\\articles\\2026-04-22-osaurus.json",
+    "knowledge\\articles\\2026-04-22-yuxi.json",
+    "knowledge\\articles\\2026-04-22-browser-harness.json",
+    "knowledge\\articles\\2026-04-22-nexent.json",
+    "knowledge\\articles\\2026-04-22-oh-my-pi.json",
+    "knowledge\\articles\\2026-04-22-goclaw.json",
+    "knowledge\\articles\\2026-04-22-finceptterminal.json",
+    "knowledge\\articles\\2026-04-22-thunderbolt.json",
+    "knowledge\\articles\\2026-04-22-claude-context.json",
+    "knowledge\\articles\\2026-04-22-ai-agents-for-beginners.json",
+    "knowledge\\articles\\2026-04-22-trendradar.json"
+  ],
+  "index_file": "knowledge\\articles\\index.json",
+  "total_entries": 25,
+  "filtered_entries": 0,
+  "quality": "ok",
+  "start_time": "2026-04-22T11:03:34+08:00",
+  "end_time": "2026-04-22T11:38:36.607968"
+}

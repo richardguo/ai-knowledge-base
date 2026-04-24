@@ -1,0 +1,22 @@
+{
+  "id": "cc7ca39e-e4c3-494c-805e-34eda7a685c6",
+  "title": "TrendRadar",
+  "url": "https://github.com/sansan0/TrendRadar",
+  "source": "github-trending",
+  "collected_at": "2026-04-21T21:16:05+08:00",
+  "processed_at": "2026-04-21-233135",
+  "summary": "TrendRadar是一个AI驱动的舆情监控与趋势分析系统，旨在解决信息过载问题。它通过聚合多平台热点新闻和RSS订阅源，结合AI技术进行智能筛选、翻译和分析，生成简报并推送到多种通讯平台。项目支持Docker快速部署，数据可本地或云端存储，并集成了MCP（Model Context Protocol）架构，使AI能够通过自然语言对话进行深度分析、情感洞察和趋势预测。核心功能包括关键词过滤、多语言推送、以及与企业微信、飞书、钉钉、Telegram、邮件、ntfy、Bark、Slack等渠道的智能通知集成，适用于个人和企业的高效信息管理。",
+  "highlights": [
+    "支持MCP架构，赋能AI自然语言对话分析、情感洞察与趋势预测",
+    "集成多平台推送渠道，包括微信、飞书、钉钉、Telegram等，实现智能警报",
+    "基于Docker的快速部署，数据本地/云端自持，保障隐私与灵活性"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-monitoring",
+    "news-aggregation",
+    "mcp-integration"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

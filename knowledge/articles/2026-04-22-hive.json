@@ -1,0 +1,40 @@
+{
+  "id": "github-github-search-hive",
+  "title": "hive",
+  "source": "github-search",
+  "url": "https://github.com/aden-hive/hive",
+  "collected_at": "2026-04-22T10:59:00+08:00",
+  "summary": "OpenHive是一个零配置、模型无关的多智能体执行框架，专为生产环境复杂业务流程设计。通过动态生成多智能体拓扑结构，无需编写编排模板即可处理长期运行的工作流。系统基于目标定义自动编译严格的图执行DAG，协调专业化智能体安全执行任务，提供状态管理、故障恢复、可观测性和人工监督等核心功能。支持OpenAI、Anthropic、Google Gemini等多种大模型，内置102个MCP工具，具备自改进能力。采用无头开发模式，支持人机协同操作，适用于企业级AI应用部署。",
+  "tags": [
+    "multi-agent-system",
+    "agent-framework",
+    "production-ai"
+  ],
+  "relevance_score": 8,
+  "metadata": {
+    "author": "aden-hive",
+    "language": "Python",
+    "popularity": 10110,
+    "popularity_type": "total_stars",
+    "topics": [
+      "agent",
+      "agent-framework",
+      "agent-skills",
+      "anthropic",
+      "automation",
+      "autonomous-agents",
+      "claude",
+      "harness",
+      "harness-engineering",
+      "human-in-the-loop",
+      "openai",
+      "python",
+      "self-hosted",
+      "self-improving"
+    ],
+    "created_at": "2026-01-12T08:04:22+08:00",
+    "updated_at": "2026-04-22T10:59:00+08:00",
+    "category": "框架",
+    "maturity": "生产"
+  }
+}

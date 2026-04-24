@@ -1,0 +1,133 @@
+{
+  "collected_at": "2026-04-21T10:25:35+08:00",
+  "source": "github-trending",
+  "version": "1.0",
+  "since": "daily",
+  "items": [
+    {
+      "title": "FinceptTerminal",
+      "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+      "popularity": 3109,
+      "popularity_type": "daily_stars",
+      "author": "Fincept-Corporation",
+      "created_at": "2024-08-29T22:38:08+08:00",
+      "updated_at": "2026-04-21T10:25:23+08:00",
+      "language": "Python",
+      "topics": [
+        "bloomberg-terminal",
+        "contributions-welcome",
+        "finance",
+        "financial-markets",
+        "foss",
+        "good-first-issue",
+        "help-wanted",
+        "investing",
+        "investment",
+        "investment-research",
+        "machine-learning",
+        "opensource",
+        "python",
+        "quantitative-finance",
+        "stock-market",
+        "stocks"
+      ],
+      "summary": "一款现代化的开源金融终端应用，集成机器学习技术提供市场分析、投资研究和经济数据工具。采用 C++20 和 Qt6 构建，支持交互式数据探索，旨在为用户提供数据驱动的投资决策支持，是 Bloomberg Terminal 的开源替代方案。"
+    },
+    {
+      "title": "thunderbolt",
+      "url": "https://github.com/thunderbird/thunderbolt",
+      "popularity": 675,
+      "popularity_type": "daily_stars",
+      "author": "thunderbird",
+      "created_at": "2025-07-24T02:54:20+08:00",
+      "updated_at": "2026-04-21T10:18:14+08:00",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "llms",
+        "on-device-ai"
+      ],
+      "summary": "Thunderbird 推出的开源跨平台 AI 客户端，支持本地部署和多种 LLM 模型。用户可选择自己的模型、掌控数据所有权、消除供应商锁定。支持所有主流桌面和移动平台，兼容前沿模型、本地模型和私有化部署模型，适合企业级本地化 AI 应用场景。"
+    },
+    {
+      "title": "paperless-ngx",
+      "url": "https://github.com/paperless-ngx/paperless-ngx",
+      "popularity": 606,
+      "popularity_type": "daily_stars",
+      "author": "paperless-ngx",
+      "created_at": "2022-02-13T05:56:52+08:00",
+      "updated_at": "2026-04-21T10:23:25+08:00",
+      "language": "Python",
+      "topics": [
+        "angular",
+        "archiving",
+        "django",
+        "dms",
+        "document-management",
+        "document-management-system",
+        "hacktoberfest",
+        "machine-learning",
+        "ocr",
+        "optical-character-recognition",
+        "pdf"
+      ],
+      "summary": "社区驱动的文档管理系统，利用 OCR 和机器学习技术将物理文档转化为可搜索的在线档案。基于 Django 和 Angular 开发，支持文档扫描、索引和归档，是 Paperless 和 Paperless-ng 项目的官方继承者，适合个人和企业文档数字化管理。"
+    },
+    {
+      "title": "worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "popularity": 316,
+      "popularity_type": "daily_stars",
+      "author": "koala73",
+      "created_at": "2026-01-09T01:26:06+08:00",
+      "updated_at": "2026-04-21T10:25:41+08:00",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "dashboard",
+        "geopolitics",
+        "monitoring",
+        "news",
+        "opensource",
+        "osint",
+        "palantir",
+        "situation"
+      ],
+      "summary": "实时全球情报监控仪表板，AI 驱动的新闻聚合与地缘政治监测平台。提供统一态势感知界面，支持基础设施追踪，类似 Palantir 的开源替代方案。提供技术、金融、商品等多个垂直领域变体，适合情报分析和决策支持场景。"
+    },
+    {
+      "title": "openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "popularity": 905,
+      "popularity_type": "daily_stars",
+      "author": "openai",
+      "created_at": "2025-03-11T11:42:36+08:00",
+      "updated_at": "2026-04-21T10:25:38+08:00",
+      "language": "Python",
+      "topics": [
+        "agents",
+        "ai",
+        "framework",
+        "llm",
+        "openai",
+        "python"
+      ],
+      "summary": "OpenAI 官方推出的轻量级多智能体工作流框架，支持 OpenAI Responses、Chat Completions API 以及 100+ 其他 LLM。提供智能体、工具、护栏、人机协同、会话管理、追踪等核心功能，支持沙箱智能体和实时智能体，是构建复杂 AI Agent 系统的生产级解决方案。"
+    },
+    {
+      "title": "DeepGEMM",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "popularity": 109,
+      "popularity_type": "daily_stars",
+      "author": "deepseek-ai",
+      "created_at": "2025-02-13T17:09:21+08:00",
+      "updated_at": "2026-04-21T10:24:28+08:00",
+      "language": "Cuda",
+      "topics": [
+        "ai"
+      ],
+      "summary": "DeepSeek 开源的高性能 GPU 张量核心库，集成 FP8、FP4、BF16 GEMM 算子、融合 MoE、MQA 评分、HyperConnection 等大模型关键计算原语。采用 JIT 运行时编译，无需预编译 CUDA 代码，性能媲美专家调优库，是学习 GPU 内核优化的优质资源。"
+    }
+  ]
+}

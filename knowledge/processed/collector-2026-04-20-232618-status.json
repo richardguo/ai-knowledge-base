@@ -1,0 +1,26 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-20-232618-e45491cc",
+  "status": "completed",
+  "sources": [
+    "github-search"
+  ],
+  "output_files": [],
+  "raw_output_file": "knowledge\\raw\\github-search-2026-04-20-232618-raw.json",
+  "quality": "below_threshold",
+  "error_count": 0,
+  "start_time": "2026-04-20T23:26:18+08:00",
+  "raw_items_url": [
+    "https://github.com/openclaw/openclaw",
+    "https://github.com/n8n-io/n8n",
+    "https://github.com/Significant-Gravitas/AutoGPT",
+    "https://github.com/ollama/ollama",
+    "https://github.com/affaan-m/everything-claude-code",
+    "https://github.com/obra/superpowers",
+    "https://github.com/f/prompts.chat",
+    "https://github.com/huggingface/transformers",
+    "https://github.com/Snailclimb/JavaGuide",
+    "https://github.com/langflow-ai/langflow"
+  ],
+  "end_time": "2026-04-20T23:27:04+08:00"
+}

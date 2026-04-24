@@ -1,0 +1,22 @@
+{
+  "id": "a7cbcbeb-f440-4878-a589-1c689414cf4b",
+  "title": "ollama",
+  "url": "https://github.com/ollama/ollama",
+  "source": "github-search",
+  "collected_at": "2026-04-21T21:16:05+08:00",
+  "processed_at": "2026-04-21-233135",
+  "summary": "Ollama是一个用Go语言编写的开源项目，旨在帮助开发者快速启动和运行多种开源大语言模型，如DeepSeek、Gemma、Llama、Qwen等。它提供了跨平台的一键安装脚本（macOS、Windows、Linux）和Docker镜像，并集成了丰富的生态工具，包括Python和JavaScript客户端库，以及REST API，便于模型管理和集成。项目支持将模型与Claude Code、OpenClaw等外部代理或应用连接，扩展了在编程助手、聊天机器人等场景的应用。其核心优势在于简化了本地或服务器端大模型的部署流程，降低了使用门槛。",
+  "highlights": [
+    "支持多种主流开源大语言模型，提供统一管理界面",
+    "跨平台安装简便，并提供Docker镜像和客户端库",
+    "具备REST API和丰富集成，便于开发者嵌入现有应用"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "large-language-model",
+    "model-deployment",
+    "developer-tools"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

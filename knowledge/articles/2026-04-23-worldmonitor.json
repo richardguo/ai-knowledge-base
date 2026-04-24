@@ -1,0 +1,22 @@
+{
+  "id": "7bc56ccc-d243-4f57-a1c3-588028f6523e",
+  "title": "worldmonitor",
+  "url": "https://github.com/koala73/worldmonitor",
+  "source": "github-trending",
+  "collected_at": "2026-04-23T09:03:05+08:00",
+  "processed_at": "2026-04-23T09:18:05+08:00",
+  "summary": "World Monitor 是一个基于 TypeScript 构建的开源实时全球情报仪表板，集成了 AI 驱动的新闻聚合、地缘政治监控和基础设施追踪功能。该项目采用 AGPL v3 许可证，提供了统一的态势感知界面，支持多平台部署（包括 Web 应用和桌面客户端，覆盖 Windows、macOS 和 Linux）。系统通过 OSINT（开源情报）技术整合实时数据流，并利用 AI 进行新闻分析和事件关联，帮助用户监测全球动态。项目结构模块化，包含多个主题变体（如技术、金融、商品等），展示了较强的工程化和可扩展性。",
+  "highlights": [
+    "AI 驱动的实时新闻聚合与地缘政治监控，提供统一的全球态势感知仪表板",
+    "多平台支持，包括 Web 应用和跨平台桌面客户端（Windows、macOS、Linux）",
+    "开源 OSINT 工具，采用 AGPL v3 许可证，支持自定义部署和扩展"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "real-time-dashboard",
+    "osint-tools",
+    "situational-awareness"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

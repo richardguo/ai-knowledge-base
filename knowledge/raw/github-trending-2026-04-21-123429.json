@@ -1,0 +1,133 @@
+{
+  "collected_at": "2026-04-21T12:34:29+08:00",
+  "source": "github-trending",
+  "version": "1.0",
+  "items": [
+    {
+      "title": "FinceptTerminal",
+      "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+      "popularity": 3109,
+      "popularity_type": "daily_stars",
+      "author": "Fincept-Corporation",
+      "language": "Python",
+      "topics": [
+        "bloomberg-terminal",
+        "contributions-welcome",
+        "finance",
+        "financial-markets",
+        "foss",
+        "good-first-issue",
+        "help-wanted",
+        "investing",
+        "investment",
+        "investment-research",
+        "machine-learning",
+        "opensource",
+        "python",
+        "quantitative-finance",
+        "stock-market",
+        "stocks"
+      ],
+      "created_at": "2024-08-29T22:38:08+08:00",
+      "updated_at": "2026-04-21T12:34:30+08:00",
+      "summary": "1. **分析请求：**\n*   **源材料：** 项目名称（“FinceptTerminal”）、项目描述（现代金融应用、高级市场分析、投资研究、经济数据工具、交互式探索、数据驱动决策、用户友好环境）以及 README 的前 3000 字（主要包含徽章、链接和口号“Your Thinking is the Only Limit. The Data Isn't.”）。\n*   **目标：** 用中文撰写项目摘要。\n*   **长度限制：** 50-200 字。\n*   **重点：** 项目功能和特点。\n*   **输出格式：** 仅直接输出，无前缀/后缀。\n\n2. **从源材料中提取关键信息：**\n*   *名称：* FinceptTerminal\n*   *核心功能：* 高级市场分析、投资研究、经济数据工具。\n*   *目标/用途：* 交互式探索、数据驱动决策。\n*   *用户体验：* 用户友好的环境。\n*   *技术栈（可选但有助于提供背景）：* C++20, Qt6, Python（暗示高性能和现代界面）。\n*   *口号/氛围：* “State-of-the-art financial intellig...”（暗示先进的智能/技术）。\n\n3. **起草摘要（迭代过程）：**\n\n*   *草稿 1（构思翻译）：*\n    FinceptTerminal是一个现代化的金融应用程序。它提供先进的市场分析、投资研究和经济数据工具。设计用于交互式探索和数据驱动的决策制定。它拥有用户友好的环境。基于C++20, Qt6和Python开发。\n\n*   *草稿 2（优化流畅度和专业语气）：*\n    FinceptTerminal是一款现代化的金融终端应用，专为交互式探索和数据驱动决策而设计。它集成了先进的市场分析、投资研究及经济数据工具，为用户提供专业级的金融智能支持。该项目采用C++20、Qt6和Python构建，在保证高性能的同时，提供用户友好的操作环境，助力用户突破思维限制，充分挖掘数据价值。\n\n*   *草稿 3（检查字数和重点）：*\n    FinceptTerminal是一款现代化的金融应用终端，旨在通过交互式探索辅助用户进行数据驱动的决策。项目核心功能涵盖高级市场分析、投资研究及经济数据工具。它采用C++20、Qt6和Python技术栈构建，结合了高性能与用户友好的界面设计"
+    },
+    {
+      "title": "thunderbolt",
+      "url": "https://github.com/thunderbird/thunderbolt",
+      "popularity": 675,
+      "popularity_type": "daily_stars",
+      "author": "thunderbird",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "llms",
+        "on-device-ai"
+      ],
+      "created_at": "2025-07-24T02:54:20+08:00",
+      "updated_at": "2026-04-21T12:33:11+08:00",
+      "summary": "1. **分析请求：**\n    *   **源材料：** 项目名称（“thunderbolt”），项目描述（“AI You Control...”），以及 README 的前 3000 字（重点关注简介、特性、警告和文档链接）。\n    *   **任务：** 用中文写一个项目摘要。\n    *   **长度：** 50-200 字。\n    *   **重点：** 功能和特点。\n    *   **输出格式：** 仅摘要内容，无前缀/后缀。\n\n2. **分析源材料：**\n    *   *名称：* Thunderbolt。\n    *   *核心价值主张：* “AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.”（AI 你掌控：选择模型，拥有数据，消除供应商锁定）。\n    *   *性质：* 开源、跨平台 AI 客户端，可在任何地方本地部署。\n    *   *平台：* Web、iOS、Android、Mac、Linux、Windows。\n    *   *模型兼容性：* 前沿模型、本地模型、本地部署模型。支持 Ollama、llama.cpp 或 OpenAI 兼容的 API。\n    *   *目标受众：* 目前主要针对希望在本地部署的企业客户。\n    *   *状态：* 正在积极开发中，正在进行安全审计，为生产环境做准备。\n    *   *关键特性：* 企业功能、FDEs（可能是功能开发环境或类似功能，但“企业功能”涵盖了高层含义），本地部署。\n\n3. **起草 - 尝试 1（心理大纲）：**\n    Thunderbolt 是一个开源、跨平台的 AI 客户端。它允许用户掌控 AI，选择自己的模型，拥有自己的数据，并消除供应商锁定。它支持所有主要的桌面和移动平台（Web、iOS、Android、Mac、Linux、Windows）。它与本地、本地部署和前沿模型兼容。它专为本地部署而设计，目前针对企业，并提供企业级支持。\n\n4. **润色并翻译成中文（迭代过程）：**\n\n    *   *草稿 1（中文）：* Thunderbolt 是一个开源、跨平台的 AI 客户端，支持本地部署。它的主要特点是让用户掌控 AI：自主选择模型、拥有数据并消除供应商锁定。该应用覆盖 Web、iOS、Android、Mac、Linux"
+    },
+    {
+      "title": "paperless-ngx",
+      "url": "https://github.com/paperless-ngx/paperless-ngx",
+      "popularity": 606,
+      "popularity_type": "daily_stars",
+      "author": "paperless-ngx",
+      "language": "Python",
+      "topics": [
+        "angular",
+        "archiving",
+        "django",
+        "dms",
+        "document-management",
+        "document-management-system",
+        "hacktoberfest",
+        "machine-learning",
+        "ocr",
+        "optical-character-recognition",
+        "pdf"
+      ],
+      "created_at": "2022-02-13T05:56:52+08:00",
+      "updated_at": "2026-04-21T12:27:24+08:00",
+      "summary": "1.  **分析请求：**\n    *   **输入：** 项目名称（“paperless-ngx”），项目描述（“A community-supported supercharged document management system: scan, index and archive all your documents”），以及 README 的部分内容（徽章、Logo、简介、目录）。\n    *   **任务：** 用中文写一个项目摘要。\n    *   **长度限制：** 50-200 个汉字。\n    *   **重点：** 项目功能和特点。\n    *   **输出格式：** 仅摘要内容，无前缀/后缀。\n\n2.  **分析源材料：**\n    *   *名称：* Paperless-ngx。\n    *   *描述：* 社区支持、超级充能的文档管理系统；扫描、索引和归档所有文档。\n    *   *README 简介：* 将物理文档转化为可搜索的在线档案。Paperless 和 Paperless-ng 的官方继任者。由团队设计以分发责任。\n    *   *功能（隐含/明确）：* 文档管理、扫描、索引、归档、搜索、在线归档。\n\n3.  **起草 - 尝试 1（心理翻译）：**\n    Paperless-ngx 是一个社区支持的超级文档管理系统。它是原 Paperless 和 Paperless-ng 的官方继任者。它的主要功能是扫描、索引和归档所有文档，将物理文档转化为可搜索的在线档案。它旨在帮助用户减少纸张使用，实现文档的高效管理和检索。\n\n4.  **精炼和浓缩（关注 50-200 字限制和关键特点）：**\n    *   *关键点：* 社区支持，文档管理系统，扫描/索引/归档，可搜索在线档案，Paperless 的继任者。\n    *   *草稿 2：* Paperless-ngx 是一款社区支持的超强文档管理系统，也是原 Paperless 项目的官方继任者。它支持扫描、索引和归档所有文档，能将物理文件转化为可搜索的在线档案。该系统旨在帮助用户高效管理文件，实现无纸化办公，让文档检索变得轻松便捷。\n\n5.  **字数检查（草稿 2）：**\n    Paperless-ngx 是一款社区支持的超强文档管理系统，也是原 Paperless 项目的官方继任者。它支持扫描、索引和归档"
+    },
+    {
+      "title": "worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "popularity": 316,
+      "popularity_type": "daily_stars",
+      "author": "koala73",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "dashboard",
+        "geopolitics",
+        "monitoring",
+        "news",
+        "opensource",
+        "osint",
+        "palantir",
+        "situation"
+      ],
+      "created_at": "2026-01-09T01:26:06+08:00",
+      "updated_at": "2026-04-21T12:34:21+08:00",
+      "summary": "1. **分析请求：**\n    *   **源材料：** 项目名称“worldmonitor”，项目描述，以及 README 的前 3000 字（主要是徽章、下载链接和变体）。\n    *   **任务：** 用中文写一个项目摘要。\n    *   **长度：** 50-200 字。\n    *   **重点：** 项目功能和特点。\n    *   **限制：** 仅直接输出，无前缀/后缀。\n\n2. **分析源材料：**\n    *   *名称：* worldmonitor\n    *   *描述：* 实时全球情报仪表板。AI 驱动的新闻聚合、地缘政治监控和基础设施跟踪，集成在一个统一的态势感知界面中。\n    *   *README 细节：*\n        *   提供多个变体：Web、Tech（科技）、Finance（金融）、Commodity（大宗商品）、Happy（快乐）。\n        *   提供桌面下载：Windows、macOS (ARM/Intel)、Linux。\n        *   技术栈：TypeScript。\n        *   许可证：AGPL v3。\n\n3. **起草摘要（迭代过程）：**\n\n    *   *尝试 1（心理翻译）：*\n        World Monitor是一个实时全球情报仪表板。它使用AI进行新闻聚合，监控地缘政治和基础设施。它有一个统一的界面。它有Web版和桌面版，支持Windows和macOS。还有不同的变体，比如金融和科技版本。\n\n    *   *尝试 2（提炼和浓缩）：*\n        World Monitor是一个实时全球情报仪表板。它集成了AI驱动的新闻聚合、地缘政治监控和基础设施跟踪功能，提供统一的态势感知界面。项目支持多平台访问，包括Web应用及Windows、macOS和Linux桌面端。此外，还提供科技、金融、大宗商品等多种专业变体，以满足不同领域的监控需求。\n\n    *   *检查字数（尝试 2）：*\n        World Monitor是一个实时全球情报仪表板。它集成了AI驱动的新闻聚合、地缘政治监控和基础设施跟踪功能，提供统一的态势感知界面。项目支持多平台访问，包括Web应用及Windows、macOS和Linux桌面端。此外，还提供科技、金融、大宗商品等多种专业变体，以满足不同领域的监控需求。\n        （长度：约 115 个字符"
+    },
+    {
+      "title": "openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "popularity": 905,
+      "popularity_type": "daily_stars",
+      "author": "openai",
+      "language": "Python",
+      "topics": [
+        "agents",
+        "ai",
+        "framework",
+        "llm",
+        "openai",
+        "python"
+      ],
+      "created_at": "2025-03-11T11:42:36+08:00",
+      "updated_at": "2026-04-21T12:34:08+08:00",
+      "summary": "1. **分析请求：**\n    *   **源材料：** 项目名称“openai-agents-python”，描述“A lightweight, powerful framework for multi-agent workflows”，以及 README 的摘录（核心概念、安装等）。\n    *   **任务：** 用中文写一个项目摘要。\n    *   **长度限制：** 50-200 字。\n    *   **重点：** 项目功能和特点。\n    *   **输出格式：** 直接输出，无前缀/后缀。\n\n2.  **分析源材料（关键信息提取）：**\n    *   *名称：* OpenAI Agents SDK (Python)。\n    *   *性质：* 轻量级、强大的多代理工作流框架。\n    *   *兼容性：* 提供商无关（Provider-agnostic），支持 OpenAI API 和 100+ 其他 LLM。\n    *   *核心功能/特点：*\n        *   **代理：** 配置了指令、工具、护栏和移交功能。\n        *   **沙箱代理：** 长时间运行的容器。\n        *   **代理作为工具 / 移交：** 委派给其他代理。\n        *   **工具：** 函数、MCP、托管工具。\n        *   **护栏：** 输入/输出的安全检查。\n        *   **人机协同：** 人工干预机制。\n        *   **会话：** 自动历史记录管理。\n        *   **追踪：** 内置追踪用于调试/优化。\n        *   **实时代理：** 使用 `gpt-realtime-1.5` 的语音代理。\n\n3.  **起草摘要（迭代过程）：**\n\n    *   *尝试 1（构思草稿）：*\n        OpenAI Agents SDK 是一个用于构建多代理工作流的轻量级且强大的框架。它支持 OpenAI API 和 100 多种其他 LLM。核心功能包括配置了指令和工具的代理、沙箱代理、代理间移交、各种工具、护栏、人机协同、自动会话管理、追踪和实时语音代理。它可以帮助开发者轻松构建和调试复杂的 AI 应用。\n\n    *   *检查字数（尝试 1）：* 约 120 字。长度良好。\n    *   *优化流畅度和影响力（中文）：*\n        OpenAI Agents SDK 是一个轻量级且强大的多代理"
+    },
+    {
+      "title": "DeepGEMM",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "popularity": 109,
+      "popularity_type": "daily_stars",
+      "author": "deepseek-ai",
+      "language": "Cuda",
+      "topics": [
+        "ai"
+      ],
+      "created_at": "2025-02-13T17:09:21+08:00",
+      "updated_at": "2026-04-21T12:31:11+08:00",
+      "summary": "1. **分析请求：**\n*   **输入：** 项目名称（“DeepGEMM”），项目描述（“clean and efficient FP8 GEMM kernels with fine-grained scaling”），以及 README 的前 3000 字（包含介绍、新闻和快速开始部分）。\n*   **任务：** 用中文写一个项目摘要。\n*   **限制：** 50-200 字。\n*   **重点：** 项目功能和特点。\n*   **输出格式：** 仅直接输出，无前缀/后缀。\n\n2. **分析输入数据（DeepGEMM）：**\n*   *它是什么？* 一个统一的高性能张量核心内核库。\n*   *关键功能：*\n    *   大语言模型（LLM）的计算原语：GEMMs（FP8, FP4, BF16）。\n    *   融合通信的 MoE（Mega MoE）。\n    *   用于闪电索引器的 MQA 评分。\n    *   HyperConnection (HC)。\n*   *实现细节：*\n    *   单一、内聚的 CUDA 代码库。\n    *   轻量级运行时即时（JIT）编译（安装期间无需 CUDA 编译）。\n    *   受 CUTLASS/CuTe 概念启发，但避免了繁重的模板/代数。\n    *   设计简单，代码库精简。\n*   *性能：* 轻量级设计，但性能匹敌或超过专家调优的库（例如，在 H800 上达到 1550 TFLOPS）。\n*   *硬件支持：* SM90 (H100/H800) 和 SM100 架构。\n\n3. **起草摘要（迭代过程）：**\n\n*   *尝试 1（思维大纲）：*\n    DeepGEMM 是一个高性能的 CUDA 内核库。它支持现代大语言模型的计算，比如 FP8/FP4 GEMM、MoE 和 MQA。它使用轻量级的 JIT 编译，不需要在安装时编译。代码设计简洁，适合学习。虽然简单，但性能很强，甚至超过了专家调优的库。支持 SM90 和 SM100 GPU。\n\n*   *尝试 2（翻译为正式中文并润色）：*\n    DeepGEMM 是一个统一的高性能张量核心内核库，专为现代大"
+    }
+  ],
+  "since": "daily"
+}

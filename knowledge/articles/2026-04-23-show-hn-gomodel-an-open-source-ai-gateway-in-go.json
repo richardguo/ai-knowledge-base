@@ -1,0 +1,22 @@
+{
+  "id": "635a7604-2c86-4da0-bb09-20fe70a56ee8",
+  "title": "Show HN: GoModel – an open-source AI gateway in Go",
+  "url": "https://github.com/ENTERPILOT/GOModel/",
+  "source": "rss",
+  "collected_at": "2026-04-23T20:54:04+08:00",
+  "processed_at": "2026-04-23T20:55:31+08:00",
+  "summary": "GoModel是一个用Go语言开发的开源AI网关，充当应用与OpenAI、Anthropic等模型提供商之间的中间层。该工具于12月开始开发，主要解决四个核心问题：按客户端或团队跟踪AI使用量和成本、切换模型无需修改应用代码、更轻松地调试请求流程、通过精确和语义缓存减少AI支出。相比LiteLLM（746MB），GoModel的Docker镜像仅约17MB，体积小44倍以上，且请求工作流程可见易检查，配置采用环境变量优先设计。在LiteLLM发生供应链攻击后，该项目作为替代方案受到关注。",
+  "highlights": [
+    "Go语言实现，Docker镜像仅17MB，资源占用极低",
+    "支持按客户端/团队跟踪AI使用量和成本核算",
+    "环境变量优先配置，模型切换无需修改应用代码"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-gateway",
+    "go",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

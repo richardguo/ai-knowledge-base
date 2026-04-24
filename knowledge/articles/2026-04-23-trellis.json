@@ -1,0 +1,22 @@
+{
+  "id": "2fa47a81-35b1-43af-b9a1-c7b585dec8dc",
+  "title": "Trellis",
+  "url": "https://github.com/mindfold-ai/Trellis",
+  "source": "github-search",
+  "collected_at": "2026-04-23T09:03:03+08:00",
+  "processed_at": "2026-04-23T09:18:05+08:00",
+  "summary": "Trellis是一个多平台AI编程框架，旨在统一和增强AI驱动的代码生成与工作流程。它支持多种AI编码工具，如Claude Code、Cursor、GitHub Copilot等，通过自动注入规范（如代码约定和项目结构）到AI提示中，确保生成的代码符合项目标准。框架提供模块化工作流引擎，允许开发者定制和组合AI任务（如代码生成、重构、测试），并内置了上下文管理和错误处理机制。其跨平台设计使得在不同开发环境（如IDE、CLI）中保持一致性成为可能，同时通过配置文件（.trellis/）实现灵活的项目适配。Trellis强调可扩展性，允许集成自定义AI模型和工具，适用于从原型开发到生产部署的全周期编码场景。",
+  "highlights": [
+    "多平台支持：兼容Claude Code、Cursor、GitHub Copilot等主流AI编码工具，实现跨环境统一工作流",
+    "规范自动化：通过.spec文件自动将代码约定和项目结构注入AI提示，提升生成代码的合规性和一致性",
+    "模块化工作流引擎：允许用户自定义和组合AI任务（如代码生成、测试、重构），支持灵活扩展和集成"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-framework",
+    "ai-workflow",
+    "code-generation"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

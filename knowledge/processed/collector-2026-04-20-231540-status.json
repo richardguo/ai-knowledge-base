@@ -1,0 +1,21 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-20-231540-e917c2ef",
+  "status": "completed",
+  "sources": [
+    "github-trending"
+  ],
+  "output_files": [],
+  "raw_output_file": "knowledge\\raw\\github-trending-2026-04-20-231540-raw.json",
+  "quality": "below_threshold",
+  "error_count": 0,
+  "start_time": "2026-04-20T23:15:40+08:00",
+  "raw_items_url": [
+    "https://github.com/Fincept-Corporation/FinceptTerminal",
+    "https://github.com/thunderbird/thunderbolt",
+    "https://github.com/koala73/worldmonitor",
+    "https://github.com/openai/openai-agents-python",
+    "https://github.com/deepseek-ai/DeepGEMM"
+  ],
+  "end_time": "2026-04-20T23:17:47+08:00"
+}

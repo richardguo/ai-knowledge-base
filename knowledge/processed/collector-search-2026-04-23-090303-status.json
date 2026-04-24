@@ -1,0 +1,37 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-23-090303-2a809455",
+  "status": "completed",
+  "sources": [
+    "github-search"
+  ],
+  "output_files": [
+    "knowledge\\raw\\github-search-2026-04-23-090303.json"
+  ],
+  "quality": "ok",
+  "error_count": 0,
+  "start_time": "2026-04-23T09:03:03+08:00",
+  "raw_items_url": [
+    "https://github.com/affaan-m/everything-claude-code",
+    "https://github.com/infiniflow/ragflow",
+    "https://github.com/lobehub/lobehub",
+    "https://github.com/bytedance/deer-flow",
+    "https://github.com/code-yeongyu/oh-my-openagent",
+    "https://github.com/harness/harness",
+    "https://github.com/langchain-ai/deepagents",
+    "https://github.com/pbakaus/impeccable",
+    "https://github.com/coleam00/Archon",
+    "https://github.com/emcie-co/parlant",
+    "https://github.com/liyupi/ai-guide",
+    "https://github.com/HKUDS/OpenHarness",
+    "https://github.com/aden-hive/hive",
+    "https://github.com/mindfold-ai/Trellis",
+    "https://github.com/osaurus-ai/osaurus",
+    "https://github.com/browser-use/browser-harness",
+    "https://github.com/xerrors/Yuxi",
+    "https://github.com/ModelEngine-Group/nexent",
+    "https://github.com/can1357/oh-my-pi",
+    "https://github.com/nextlevelbuilder/goclaw"
+  ],
+  "end_time": "2026-04-23T09:03:22+08:00"
+}

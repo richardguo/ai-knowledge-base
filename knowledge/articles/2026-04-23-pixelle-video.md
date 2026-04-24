@@ -1,0 +1,24 @@
+---
+id: caa9396d-376c-49f4-98ac-78c829ef33e2
+source: github-trending
+relevance_score: 7
+---
+
+# Pixelle-Video
+
+**来源**: Github trending | **评分**: 7
+**分类**: 框架 | **成熟度**: 生产
+**标签**: video-generation, ai-automation, comfyui-workflow
+
+**采集时间**: 2026-04-23T09:03:05+08:00
+**处理时间**: 2026-04-23T09:18:05+08:00
+
+## 摘要
+Pixelle-Video是一个基于ComfyUI架构构建的AI全自动短视频生成引擎。项目使用Python开发，旨在实现从文本主题输入到完整短视频输出的端到端自动化流程。其核心工作流包括：通过集成大语言模型（如GPT、DeepSeek）自动生成视频文案；利用图像生成与视频生成模型（如WAN 2.1）为文案配图或生成动态视频片段；通过多种TTS引擎（如Edge-TTS）合成语音解说；并自动添加背景音乐与视觉模板，最终合成视频。项目采用模块化设计，支持原子能力的灵活组合与自定义工作流，允许用户替换底层AI模型与组件。提供了Web界面、Windows整合包及详细的API，降低了视频创作的技术门槛。
+
+## 核心亮点
+- 全流程自动化，输入主题即可生成包含文案、AI配图/视频、语音解说、背景音乐的完整短视频
+- 基于ComfyUI的模块化架构，支持灵活组合与替换AI模型（如生图、TTS、LLM），具备高度可扩展性
+- 提供Web界面、Windows整合包及API，支持多语言TTS、数字人口播、动作迁移等扩展功能，降低使用门槛
+
+[原始链接](https://github.com/AIDC-AI/Pixelle-Video)

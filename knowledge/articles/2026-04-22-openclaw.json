@@ -1,0 +1,22 @@
+{
+  "id": "d1e65557-559e-4603-be21-8fbfe32b8b6d",
+  "title": "openclaw",
+  "url": "https://github.com/openclaw/openclaw",
+  "source": "github-search",
+  "collected_at": "2026-04-22T21:50:59+08:00",
+  "processed_at": "2026-04-22T21:53:03+08:00",
+  "summary": "OpenClaw是一个致力于构建跨平台个人AI助手的开源项目。其核心目标是消除操作系统与硬件平台的限制，让用户能够在Windows、macOS、Linux或移动端无缝运行个人AI服务。项目采用独特的“The lobster way”设计理念，可能暗示其具备轻量级、高适应性或特定的技术架构。作为AI助手框架，它可能集成了大语言模型接口，支持本地推理与云端API调用，旨在为用户提供隐私安全、功能定制化的智能辅助体验，适用于代码编写、文档处理及工作流自动化等多样化场景。",
+  "highlights": [
+    "跨平台兼容性：支持任意操作系统与平台运行",
+    "个人化助手：专注于个人用户的AI辅助需求",
+    "开源架构：提供可定制与自托管的解决方案"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-assistant",
+    "cross-platform",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "实验"
+}

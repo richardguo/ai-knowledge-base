@@ -1,0 +1,20 @@
+{
+  "id": "d5baa820-513d-4cdc-8681-5b89f4761b4d",
+  "title": "spec-kit",
+  "url": "https://github.com/github/spec-kit",
+  "source": "github-search",
+  "collected_at": "2026-04-24T09:52:09+08:00",
+  "processed_at": "2026-04-24T09:53:35+08:00",
+  "summary": "spec-kit是一个帮助开发者入门Spec-Driven Development（规范驱动开发）的工具包。规范驱动开发是一种通过预先定义清晰规范来指导代码实现的开发方法论，旨在提高代码质量和项目可维护性。该工具包提供了模板、验证工具和最佳实践指南，帮助团队建立统一的开发规范，减少沟通成本和返工率。",
+  "highlights": [
+    "提供规范驱动开发的完整工具链",
+    "帮助团队建立统一开发标准"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "developer-tools",
+    "spec-driven"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

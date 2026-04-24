@@ -1,0 +1,15 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-20-225912-0cee8000",
+  "status": "failed",
+  "sources": [
+    "github-trending"
+  ],
+  "output_files": [],
+  "raw_output_file": "knowledge\\raw\\github-trending-2026-04-20-225912-raw.json",
+  "quality": "ok",
+  "error_count": 0,
+  "start_time": "2026-04-20T22:59:12+08:00",
+  "raw_items_url": [],
+  "end_time": ""
+}

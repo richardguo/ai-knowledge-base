@@ -1,0 +1,20 @@
+{
+  "id": "61f9962d-896a-4fc1-b24f-2bf7316e3a92",
+  "title": "Bring Your Agent to Teams",
+  "url": "https://microsoft.github.io/teams-sdk/blog/bring-your-agent-to-teams/",
+  "source": "rss",
+  "collected_at": "2026-04-24T09:52:12+08:00",
+  "processed_at": "2026-04-24T09:53:35+08:00",
+  "summary": "Microsoft推出Teams SDK，支持开发者将AI Agent集成到Teams工作环境中。该功能允许企业用户在Teams内直接调用AI助手，实现会议总结、任务自动化、智能搜索等场景。这是微软将企业级AI Agent落地的关键一步。",
+  "highlights": [
+    "企业协作平台与AI Agent的深度集成",
+    "Microsoft推动AI Agent在企业场景的规模化落地"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-framework",
+    "enterprise"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

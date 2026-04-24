@@ -1,0 +1,22 @@
+{
+  "id": "b4efd377-61ee-4705-a6a0-efa8ed59d86d",
+  "title": "firecrawl",
+  "url": "https://github.com/firecrawl/firecrawl",
+  "source": "github-search",
+  "collected_at": "2026-04-21T21:16:05+08:00",
+  "processed_at": "2026-04-21-233135",
+  "summary": "Firecrawl是一个专为AI应用设计的网络数据提取API，能够高效爬取、搜索并与网页交互，支持将HTML内容转换为适合大型语言模型（LLM）处理的Markdown或JSON格式。该项目采用TypeScript开发，具备行业领先的可靠性，覆盖96%的网页（包括JavaScript密集型页面），并通过代理轮换、速率限制处理和JS内容解析等技术解决常见爬虫难题。其核心功能包括实时网页抓取、结构化数据提取、媒体文件（如PDF、DOCX）解析以及交互式操作（如点击、滚动），旨在为AI代理提供干净、可扩展的网络数据源。作为开源项目，Firecrawl提供托管服务，并强调低延迟（P95延迟3.4秒）和LLM友好输出，帮助开发者减少令牌消耗并构建更高效的AI应用。",
+  "highlights": [
+    "覆盖96%网页且支持JS渲染，无需手动代理配置，提供高可靠性数据抓取",
+    "专为LLM优化，输出Markdown和结构化JSON，降低AI应用处理成本",
+    "集成交互式操作（点击、滚动）和媒体解析，扩展了传统爬虫的功能边界"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "web-scraping",
+    "ai-agents",
+    "data-extraction"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

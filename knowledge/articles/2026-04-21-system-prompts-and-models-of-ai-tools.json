@@ -1,0 +1,22 @@
+{
+  "id": "096af797-f798-494e-954f-778c02a9a833",
+  "title": "system-prompts-and-models-of-ai-tools",
+  "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+  "source": "github-search",
+  "collected_at": "2026-04-21T21:16:05+08:00",
+  "processed_at": "2026-04-21-233135",
+  "summary": "该项目是一个收集、整理并开源多个AI代码工具系统提示词（System Prompts）和内部模型的综合性仓库。其核心价值在于聚合了包括Cursor、GitHub Copilot、Devin AI、v0、Windsurf、Replit、Claude Code等数十种流行或新兴AI编程助手的内部配置、提示策略及部分模型信息，为开发者和研究者提供了一个透明的参考基准和实验起点。这极大地降低了探索和复现这些工具行为模式的门槛，并有助于社区理解不同AI编码工具的设计哲学与能力边界。项目维护者强调了安全意识，并提供了对AI初创公司的安全警告及相关服务推荐。项目通过加密货币、Patreon等方式接受支持，并展示了活跃的社区互动和显著的流行度（总星标数超13.5万）。",
+  "highlights": [
+    "聚合了数十种主流及前沿AI编程工具（如Cursor, Devin AI, v0）的内部系统提示词与模型信息，覆盖面极广",
+    "明确指出了AI初创公司在系统提示词安全方面面临的风险（如提示词注入、提取），并推荐了相应的安全服务",
+    "项目热度极高（总星标超13.5万），且通过多种渠道（Discord、赞助、问题反馈）维持着活跃的社区生态"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-tools",
+    "system-prompts",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

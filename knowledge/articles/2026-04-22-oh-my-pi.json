@@ -1,0 +1,41 @@
+{
+  "id": "github-github-search-oh-my-pi",
+  "title": "oh-my-pi",
+  "source": "github-search",
+  "url": "https://github.com/can1357/oh-my-pi",
+  "collected_at": "2026-04-22T10:58:04+08:00",
+  "summary": "oh-my-pi 是一个基于终端的 AI 编程助手，采用 TypeScript 开发，支持多种 AI 模型提供商（如 OpenAI、Anthropic Claude）。它集成了代码编辑、LSP 支持、Python 环境、浏览器工具及子代理等功能，通过哈希锚定编辑和优化的工具链提升代码修改的准确性和效率。项目采用 Bun 运行时，支持 Rust 扩展，提供会话管理、上下文压缩、分支操作和自主记忆等高级特性。用户可通过自定义系统提示、模型配置和扩展（主题、命令、技能、钩子、工具）进行深度定制，适用于命令行环境下的自动化编程任务。",
+  "tags": [
+    "ai-coding-agent",
+    "terminal-tool",
+    "multi-provider"
+  ],
+  "relevance_score": 7,
+  "metadata": {
+    "author": "can1357",
+    "language": "TypeScript",
+    "popularity": 3294,
+    "popularity_type": "total_stars",
+    "topics": [
+      "ai-agent",
+      "ai-coding-agent",
+      "anthropic",
+      "bun",
+      "claude",
+      "cli",
+      "coding-assistant",
+      "llm",
+      "mcp",
+      "multi-provider",
+      "openai",
+      "rust",
+      "terminal",
+      "tui",
+      "typescript"
+    ],
+    "created_at": "2025-12-31T22:01:28+08:00",
+    "updated_at": "2026-04-22T10:58:04+08:00",
+    "category": "工具",
+    "maturity": "生产"
+  }
+}

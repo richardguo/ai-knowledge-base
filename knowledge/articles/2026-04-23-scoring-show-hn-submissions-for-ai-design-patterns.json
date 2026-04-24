@@ -1,0 +1,22 @@
+{
+  "id": "c5e84e77-427d-4965-a17f-8c377a1fa70e",
+  "title": "Scoring Show HN submissions for AI design patterns",
+  "url": "https://www.adriankrebs.ch/blog/design-slop/",
+  "source": "rss",
+  "collected_at": "2026-04-23T20:54:04+08:00",
+  "processed_at": "2026-04-23T20:55:31+08:00",
+  "summary": "本文探讨了AI设计模式的评分系统，作者通过分析Hacker News上的Show HN submissions，识别并量化了所谓的“设计垃圾“（design slop）现象。文章使用自动化方法对AI生成的UI/UX设计进行评分，揭示了当前AI设计工具输出质量参差不齐的现状。核心发现包括：大多数AI设计作品缺乏真正的创新性，倾向于生成同质化的模板化内容；人类设计师的审美判断在评估中仍然不可或缺；需要建立更完善的质量评估框架来提升AI设计工具的输出质量。该分析为AI辅助设计领域提供了有价值的实践参考。",
+  "highlights": [
+    "通过自动化评分系统量化AI设计作品的“设计垃圾“现象",
+    "揭示AI设计工具输出同质化、缺乏创新的普遍问题",
+    "强调人类审美判断在AI设计评估中的重要性"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-design",
+    "design-automation",
+    "product-quality"
+  ],
+  "category": "实践",
+  "maturity": "测试"
+}

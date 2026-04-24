@@ -1,0 +1,101 @@
+{
+  "collected_at": "2026-04-20T23:15:40+08:00",
+  "source": "github-trending",
+  "version": "1.0",
+  "items": [
+    {
+      "title": "FinceptTerminal",
+      "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+      "popularity": 3129,
+      "popularity_type": "daily_stars",
+      "author": "Fincept-Corporation",
+      "language": "Python",
+      "topics": [
+        "bloomberg-terminal",
+        "contributions-welcome",
+        "finance",
+        "financial-markets",
+        "foss",
+        "good-first-issue",
+        "help-wanted",
+        "investing",
+        "investment",
+        "investment-research",
+        "machine-learning",
+        "opensource",
+        "python",
+        "quantitative-finance",
+        "stock-market",
+        "stocks"
+      ],
+      "created_at": "2026-04-20T23:16:49+08:00",
+      "updated_at": "2026-04-20T23:16:49+08:00",
+      "summary": "1. **分析请求：**\n*   **项目名称：** FinceptTerminal\n*   **作者：** Fincept-Corporation\n*   **语言：** Python（主要），尽管 README 标签显示 C++ 和 Qt6。提示强调的是 Python，但描述的是一个“现代金融应用程序”。\n*   **核心描述：** 一个现代金融应用程序，提供先进的市场分析、投资研究和经济数据工具。专为交互式探索和数据驱动的决策制定而设计，具有用户友好的环境。\n*   **关键标签：** bloomberg-terminal（彭博终端）, finance（金融）, financial-markets（金融市场）, investment-research（投资研究）, machine-learning（机器学习）, opensource（开源）, python, quantitative-finance（量化金融）, stock-market（股票市场）。\n*   **目标：** 生成一个 50-200 字的中文摘要。\n*   **约束：** 直接输出，无其他内容。\n\n2. **识别关键价值主张：**\n*   **开源替代品：** 可能是彭博终端（或其他昂贵平台）的免费/开源替代品。\n*   **功能：** 市场分析、投资研究、经济数据。\n*   **目标受众：** 投资者、研究人员、量化分析师。\n*   **技术栈：** Python, C++, Qt6（意味着桌面 GUI）。\n*   **优势：** 用户友好"
+    },
+    {
+      "title": "thunderbolt",
+      "url": "https://github.com/thunderbird/thunderbolt",
+      "popularity": 667,
+      "popularity_type": "daily_stars",
+      "author": "thunderbird",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "llms",
+        "on-device-ai"
+      ],
+      "created_at": "2025-07-24T02:54:20+08:00",
+      "updated_at": "2026-04-20T23:16:52+08:00",
+      "summary": "1. **分析请求：**\n*   **项目名称：** thunderbolt\n*   **作者：** thunderbird\n*   **语言：** TypeScript\n*   **标签：** ai, ai-agents, llms, on-device-ai\n*   **描述：** AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.\n*   **目标：** 生成 50-200 字的中文摘要，介绍核心功能和价值。\n*   **约束：** 仅直接输出摘要，不要有其他内容。\n\n2. **分析输入数据：**\n*   *名称/作者：* “Thunderbird”团队开发的“Thunderbolt”。\n*   *标签：* 强调本地 AI（设备端）、AI 智能体以及与大语言模型（LLMs）的交互。\n*   *描述：* 这是关键。\n    *   “Choose your models” -> 模型灵活性/可互换性。\n    *   “Own your data” -> 隐私、本地处理、数据主权。\n    *   “Eliminate vendor lock-in” -> 开放性、独立性、生态系统兼容性。\n\n3. **起草 - 迭代 1（构思）：**\nThunderbolt 是一个由 Thunderbird 开发的 TypeScript 项目。它侧重于 AI 智能体和设备端 AI。它的核心价值在于让用户控制 AI。你可以选择自己的模型，拥有自己的数据，"
+    },
+    {
+      "title": "worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "popularity": 343,
+      "popularity_type": "daily_stars",
+      "author": "koala73",
+      "language": "TypeScript",
+      "topics": [
+        "ai"
+      ],
+      "created_at": "2026-04-20T23:17:20+08:00",
+      "updated_at": "2026-04-20T23:17:20+08:00",
+      "summary": "1.  **分析请求：**\n    *   **项目名称：** worldmonitor\n    *   **作者：** koala73\n    *   **语言：** TypeScript\n    *   **标签：** ai\n    *   **描述：** 实时全球情报仪表板。AI驱动的新闻聚合、地缘政治监控和基础设施跟踪，集成在统一的态势感知界面中。\n    *   **README 片段：** 确认了描述并显示了各种版本（Web App、Tech、Finance、Commodity）。\n    *   **输出限制：** 50-200 个中文字符。\n    *   **内容要求：** 摘要介绍核心功能和价值。\n    *   **输出格式：** 仅直接输出，无引言/结尾。\n\n2.  **起草 - 第一步：提取关键信息：**\n    *   它是什么？实时全球情报仪表板。\n    *   它是如何工作的？AI 驱动（TypeScript）。\n    *   它做什么？新闻聚合、地缘政治监控、基础设施跟踪。\n    *   它提供什么价值？统一的态势感知界面，实时洞察。\n\n3.  **起草 - 第二步：中文初步翻译：**\n    World Monitor 是一个基于 TypeScript 的实时全球情报仪表板。它利用 AI 技术进行新闻聚合、地缘政治监控和基础设施跟踪。该项目提供了一个统一的态势感知界面，帮助用户"
+    },
+    {
+      "title": "openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "popularity": 909,
+      "popularity_type": "daily_stars",
+      "author": "openai",
+      "language": "Python",
+      "topics": [
+        "agents",
+        "ai",
+        "framework",
+        "llm",
+        "openai",
+        "python"
+      ],
+      "created_at": "2025-03-11T11:42:36+08:00",
+      "updated_at": "2026-04-20T23:13:35+08:00",
+      "summary": "A lightweight, powerful framework for multi-agent workflows"
+    },
+    {
+      "title": "DeepGEMM",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "popularity": 155,
+      "popularity_type": "daily_stars",
+      "author": "deepseek-ai",
+      "language": "Cuda",
+      "topics": [
+        "ai"
+      ],
+      "created_at": "2025-02-13T17:09:21+08:00",
+      "updated_at": "2026-04-20T23:08:24+08:00",
+      "summary": "1.  **分析请求：**\n    *   **任务：** 生成一个 GitHub 项目的中文摘要。\n    *   **限制：** 50-200 字。\n    *   **内容：** 核心功能和价值。\n    *   **项目名称：** DeepGEMM。\n    *   **作者：** deepseek-ai。\n    *   **语言：** Cuda。\n    *   **输入材料：** 描述和 README 片段。\n    *   **输出格式：** 仅包含摘要，无其他文本。\n\n2.  **分析输入材料：**\n    *   *描述：* \"DeepGEMM: clean and efficient FP8 GEMM kernels with fine-grained scaling\"（DeepGEMM：干净且高效的具有细粒度缩放的 FP8 GEMM 核心）。\n    *   *README 摘要：*\n        *   统一、高性能的张量核心内核库。\n        *   关键计算原语：GEMM (FP8, FP4, BF16)、融合 MoE (Mega MoE)、MQA 评分、HyperConnection 等。\n        *   统一的 CUDA 代码库。\n        *   通过轻量级 JIT 编译（安装时无需 CUDA 编译）。\n        *   灵感来自 CUTLASS/CuTe，但避免了沉重的模板/代数。\n        *   �"
+    }
+  ],
+  "since": "daily"
+}

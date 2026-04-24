@@ -1,0 +1,106 @@
+{
+  "collected_at": "2026-04-20T23:15:40+08:00",
+  "source": "github-trending",
+  "version": "1.0",
+  "items": [
+    {
+      "title": "FinceptTerminal",
+      "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+      "popularity": 3129,
+      "popularity_type": "daily_stars",
+      "author": "Fincept-Corporation",
+      "language": "Python",
+      "topics": [
+        "bloomberg-terminal",
+        "contributions-welcome",
+        "finance",
+        "financial-markets",
+        "foss",
+        "good-first-issue",
+        "help-wanted",
+        "investing",
+        "investment",
+        "investment-research",
+        "machine-learning",
+        "opensource",
+        "python",
+        "quantitative-finance",
+        "stock-market",
+        "stocks"
+      ],
+      "description": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
+      "readme": "# Fincept Terminal\n\n<div align=\"center\">\n\n[![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-C06524)](https://github.com/Fincept-Corporation/FinceptTerminal/blob/main/LICENSE)\n[![C++20](https://img.shields.io/badge/C%2B%2B-20-00599C?logo=cplusplus)](https://isocpp.org/)\n[![Qt6](https://img.shields.io/badge/Qt-6-41CD52?logo=qt&logoColor=white)](https://www.qt.io/)\n[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)\n[![Hits](https://hits.sh/github.com/Fincept-Corporation/FinceptTerminal.svg?label=Visits)](https://hits.sh/github.com/Fincept-Corporation/FinceptTerminal/)\n\n<a href=\"https://trendshift.io/repositories/17028\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/17028\" alt=\"Fincept-Corporation%2FFinceptTerminal | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n\n[![GitHub Stars](https://img.shields.io/github/stars/Fincept-Corporation/FinceptTerminal?style=social)](https://github.com/Fincept-Corporation/FinceptTerminal/stargazers)\n[![GitHub Forks](https://img.shields.io/github/forks/Fincept-Corporation/FinceptTerminal?style=social)](https://github.com/Fincept-Corporation/FinceptTerminal/network/members)\n[![GitHub Watchers](https://img.shields.io/github/watchers/Fincept-Corporation/FinceptTerminal?style=social)](https://github.com/Fincept-Corporation/FinceptTerminal/watchers)\n[![GitHub Release](https://img.shields.io/github/v/release/Fincept-Corporation/FinceptTerminal?color=brightgreen&logo=github)](https://github.com/Fincept-Corporation/FinceptTerminal/releases)\n[![GitHub Issues](https://img.shields.io/github/issues/Fincept-Corporation/FinceptTerminal)](https://github.com/Fincept-Corporation/FinceptTerminal/issues)\n\n[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/intent/tweet?text=Check%20out%20FinceptTerminal&url=https%3A//github.com/Fincept-Corporation/FinceptTerminal/) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A//github.com/Fincept-Corporation/FinceptTerminal/) [![Facebook](https://img.shields.io/badge/-Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white)](https://www.facebook.com/sharer/sharer.php?u=https%3A//github.com/Fincept-Corporation/FinceptTerminal/) [![Reddit](https://img.shields.io/badge/-Reddit-FF4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/submit?url=https%3A//github.com/Fincept-Corporation/FinceptTerminal/&title=FinceptTerminal) [![WhatsApp](https://img.shields.io/badge/-WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send?text=Check%20out%20FinceptTerminal%3A%20https%3A//github.com/Fincept-Corporation/FinceptTerminal/)\n\n### **Your Thinking is the Only Limit. The Data Isn't.**\n\nState-of-the-art financial intelligence platform with CFA-level analytics, AI automation, and unlimited data connectivity.\n\n[📥 Download](https://github.com/Fincept-Corporation/FinceptTerminal/releases) · [📚 Docs](https://github.com/Fincept-Corporation/FinceptTerminal/tree/main/docs) · [💬 Discussions](https://github.com/Fincept-Corporation/FinceptTerminal/discussions) · [💬 Discord](https://discord.gg/ae87a8ygbN) · [🤝 Partner](https://github.com/Fincept-Corporation/FinceptTerminal/blob/main/docs/COMMERCIAL_LICENSE.md)\n\n![Fincept Terminal](https://raw.githubusercontent.com/Fincept-Corporation/FinceptTerminal/main/images/Dashboard.png)\n\n<table>\n  <tr>\n    <td align=\"center\" width=\"25%\"><a href=\"https://raw.githubusercontent.com/Fincept-Corporation/FinceptTerminal/main/images/EquityResearch.png\"><img src=\"https://raw.githubusercontent.com/Fincept-Corporation/FinceptTerminal/main/images/EquityResearch.png\" width=\"100%\"/></a><br/><sub><b>Equity Research</b></sub></td>\n    <td align=\"center\" width=\"25%\"><a href=\"https://raw.githubusercontent.com/Fincept-Corporation/FinceptTerminal/main/images/Portfolio.png\"><img src=\"https://raw.githubusercontent.com/Fincept-Corporation/FinceptTerminal/main/images/Portfolio.png\" width=\"100%\"/></a><br/><sub><b>Portfolio</b></sub></td>\n    <td align=\"center\" width=\"25%\"><a href=\"https://raw.githubusercontent.com/Fincept-Corporation/FinceptTerminal/main/images/News.png\"><img src=\"https://raw.githubusercontent.com/Fincept-Corporation/FinceptTerminal/main/images/News.png\" width=\"100%\"/></a><br/><sub><b>News</b></sub></td>\n    <td align=\"center\" width=\"25%\"><a href=\"https://raw.githubusercontent.com/Fincept-Corporation/FinceptTerminal/main/images/NodeEditor.png\"><img src=\"https://raw.githubusercontent.com/Fincept-Corporation/FinceptTerminal/main/images/NodeEditor.png\" width=\"100%\"/></a><br/><sub><b>Node Editor</b></sub></td>\n  </tr>\n</table>\n\n</div>\n\n---\n\n## About\n\n**Fincept Terminal v4** is a pure native C++20 desktop application. It uses **Qt6** for UI and rendering, embedded **",
+      "created_at": "2026-04-20T23:16:49+08:00",
+      "updated_at": "2026-04-20T23:16:49+08:00"
+    },
+    {
+      "title": "thunderbolt",
+      "url": "https://github.com/thunderbird/thunderbolt",
+      "popularity": 667,
+      "popularity_type": "daily_stars",
+      "author": "thunderbird",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "llms",
+        "on-device-ai"
+      ],
+      "description": "AI You Control: Choose your models. Own your data. Eliminate vendor lock-in.",
+      "readme": "",
+      "created_at": "2025-07-24T02:54:20+08:00",
+      "updated_at": "2026-04-20T23:16:52+08:00"
+    },
+    {
+      "title": "worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "popularity": 343,
+      "popularity_type": "daily_stars",
+      "author": "koala73",
+      "language": "TypeScript",
+      "topics": [
+        "ai"
+      ],
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "readme": "# World Monitor\n\n**Real-time global intelligence dashboard** — AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface.\n\n[![GitHub stars](https://img.shields.io/github/stars/koala73/worldmonitor?style=social)](https://github.com/koala73/worldmonitor/stargazers)\n[![GitHub forks](https://img.shields.io/github/forks/koala73/worldmonitor?style=social)](https://github.com/koala73/worldmonitor/network/members)\n[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/re63kWKxaz)\n[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)\n[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)\n[![Last commit](https://img.shields.io/github/last-commit/koala73/worldmonitor)](https://github.com/koala73/worldmonitor/commits/main)\n[![Latest release](https://img.shields.io/github/v/release/koala73/worldmonitor?style=flat)](https://github.com/koala73/worldmonitor/releases/latest)\n\n<p align=\"center\">\n  <a href=\"https://worldmonitor.app\"><img src=\"https://img.shields.io/badge/Web_App-worldmonitor.app-blue?style=for-the-badge&logo=googlechrome&logoColor=white\" alt=\"Web App\"></a>&nbsp;\n  <a href=\"https://tech.worldmonitor.app\"><img src=\"https://img.shields.io/badge/Tech_Variant-tech.worldmonitor.app-0891b2?style=for-the-badge&logo=googlechrome&logoColor=white\" alt=\"Tech Variant\"></a>&nbsp;\n  <a href=\"https://finance.worldmonitor.app\"><img src=\"https://img.shields.io/badge/Finance_Variant-finance.worldmonitor.app-059669?style=for-the-badge&logo=googlechrome&logoColor=white\" alt=\"Finance Variant\"></a>&nbsp;\n  <a href=\"https://commodity.worldmonitor.app\"><img src=\"https://img.shields.io/badge/Commodity_Variant-commodity.worldmonitor.app-b45309?style=for-the-badge&logo=googlechrome&logoColor=white\" alt=\"Commodity Variant\"></a>&nbsp;\n  <a href=\"https://happy.worldmonitor.app\"><img src=\"https://img.shields.io/badge/Happy_Variant-happy.worldmonitor.app-f59e0b?style=for-the-badge&logo=googlechrome&logoColor=white\" alt=\"Happy Variant\"></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://worldmonitor.app/api/download?platform=windows-exe\"><img src=\"https://img.shields.io/badge/Download-Windows_(.exe)-0078D4?style=for-the-badge&logo=windows&logoColor=white\" alt=\"Download Windows\"></a>&nbsp;\n  <a href=\"https://worldmonitor.app/api/download?platform=macos-arm64\"><img src=\"https://img.shields.io/badge/Download-macOS_Apple_Silicon-000000?style=for-the-badge&logo=apple&logoColor=white\" alt=\"Download macOS ARM\"></a>&nbsp;\n  <a href=\"https://worldmonitor.app/api/download?platform=macos-x64\"><img src=\"https://img.shields.io/badge/Download-macOS_Intel-555555?style=for-the-badge&logo=apple&logoColor=white\" alt=\"Download macOS Intel\"></a>&nbsp;\n  <a href=\"https://worldmonitor.app/api/download?platform=linux-appimage\"><img src=\"https://img.shields.io/badge/Download-Linux_(.AppImage)-FCC624?style=for-the-badge&logo=linux&logoColor=black\" alt=\"Download Linux\"></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://www.worldmonitor.app/docs/documentation\"><strong>Documentation</strong></a> &nbsp;·&nbsp;\n  <a href=\"https://github.com/koala73/worldmonitor/releases/latest\"><strong>Releases</strong></a> &nbsp;·&nbsp;\n  <a href=\"https://www.worldmonitor.app/docs/contributing\"><strong>Contributing</strong></a>\n</p>\n\n![World Monitor Dashboard](docs/images/worldmonitor-7-mar-2026.jpg)\n\n---\n\n## What It Does\n\n- **435+ curated news feeds** across 15 categories, AI-synthesized into briefs\n- **Dual map engine** — 3D globe (globe.gl) and WebGL flat map (deck.gl) with 45 data layers\n- **Cross-stream correlation** — military, economic, disaster, and escalation signal convergence\n- **Country Intelligence Index** — composite risk scoring across 12 signal categories\n- **Finance radar** — 92 stock exchanges, commodities, crypto, and 7-signal market composite\n- **Local AI** — run everything with Ollama, no API keys required\n- **5 site variants** from a single codebase (world, tech, finance, commodity, happy)\n- **Native desktop app** (Tauri 2) for macOS, Windows, and Linux\n- **21 languages** with native-language feeds and RTL support\n\nFor the full feature list, architecture, data sources, and algorithms, see the **[documentation](https://www.worldmonitor.app/docs/documentation)**.\n\n---\n\n## Quick Start\n\n```bash\ngit clone https://github.com/koala73/worldmonitor.git\ncd worldmonitor\nnpm install\nnpm run dev\n```\n\nOpen [localhost:5173](http://localhost:5173). No environment variables required for basic operation.\n\nFor variant-specific development:\n\n```bash\nnpm run dev:tech       # tech.worldmonitor.app\nnpm run dev:finance    # finance.worldmonitor.app\nnpm run dev:commodity  # commodity.worldmonitor.app\nnpm run dev:happy      # happy.worldmonitor.app\n```\n\nSee the **[self-hosting guide](https://www.worldmonitor.app/docs",
+      "created_at": "2026-04-20T23:17:20+08:00",
+      "updated_at": "2026-04-20T23:17:20+08:00"
+    },
+    {
+      "title": "openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "popularity": 909,
+      "popularity_type": "daily_stars",
+      "author": "openai",
+      "language": "Python",
+      "topics": [
+        "agents",
+        "ai",
+        "framework",
+        "llm",
+        "openai",
+        "python"
+      ],
+      "description": "A lightweight, powerful framework for multi-agent workflows",
+      "readme": "",
+      "created_at": "2025-03-11T11:42:36+08:00",
+      "updated_at": "2026-04-20T23:13:35+08:00"
+    },
+    {
+      "title": "DeepGEMM",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "popularity": 155,
+      "popularity_type": "daily_stars",
+      "author": "deepseek-ai",
+      "language": "Cuda",
+      "topics": [
+        "ai"
+      ],
+      "description": "DeepGEMM: clean and efficient FP8 GEMM kernels with fine-grained scaling",
+      "readme": "# DeepGEMM\n\nDeepGEMM is a unified, high-performance tensor core kernel library that brings together the key computation primitives of modern large language models — GEMMs (FP8, FP4, BF16), fused MoE with overlapped communication (Mega MoE), MQA scoring for the lightning indexer, HyperConnection (HC), and more — into a single, cohesive CUDA codebase. All kernels are compiled at runtime via a lightweight Just-In-Time (JIT) module, requiring no CUDA compilation during installation.\n\nDeepGEMM leverages some concepts from [CUTLASS](https://github.com/nvidia/cutlass) and [CuTe](https://github.com/NVIDIA/cutlass/tree/main/include/cute), but avoids heavy reliance on their templates or algebras. The library is designed for simplicity, with only a limited number of core kernel functions, making it a clean and accessible resource for learning NVIDIA GPU kernel optimization techniques.\n\nDespite its lightweight design, DeepGEMM's performance matches or exceeds expert-tuned libraries across various matrix shapes.\n\n## News\n\n- 2026.04.16: Mega MoE, FP8xFP4 GEMM, FP4 Indexer, PDL, faster JIT compilation and more.\n  - Performance comparison will be posted later.\n  - Please see [#304](https://github.com/deepseek-ai/DeepGEMM/pull/304) for more details.\n- 2025.09.28: DeepGEMM now supports scoring kernels (weighted ReLU MQA logits) for the lightning indexer for DeepSeek v3.2.\n  - Please see [#200](https://github.com/deepseek-ai/DeepGEMM/pull/200) for more details.\n- 2025.07.20: DeepGEMM now supports both SM90/SM100, and has a full refactor with a low-CPU-overhead JIT CPP module.\n  - NVRTC and post-compilation SASS optimization are all disabled.\n  - NVRTC will be supported later.\n  - As NVCC 12.9 will automatically do the FFMA interleaving, all post optimizations will be no longer supported.\n  - Please see [#112](https://github.com/deepseek-ai/DeepGEMM/pull/112) for more details.\n- 2025.05.14: DeepGEMM now offers weight gradient kernels for dense and MoE backward! See [#95](https://github.com/deepseek-ai/DeepGEMM/pull/95) for details.\n- 2025.05.07: DeepGEMM now supports NVRTC with up to 10x compilation speedup! See [#94](https://github.com/deepseek-ai/DeepGEMM/pull/94) for details. Please use `DG_JIT_USE_NVRTC=1` to enable it (may have performance loss with some cases).\n- 2025.04.18: DeepGEMM now achieves up to **1550 TFLOPS** on H800! See [#74](https://github.com/deepseek-ai/DeepGEMM/pull/74), [#78](https://github.com/deepseek-ai/DeepGEMM/pull/78), [#81](https://github.com/deepseek-ai/DeepGEMM/pull/81), [#86](https://github.com/deepseek-ai/DeepGEMM/pull/86) and [340d988](https://github.com/deepseek-ai/DeepGEMM/commit/340d9880f4a418d943d34260d20a79f41f4c0526) for details.\n\n## Quick start\n\n### Requirements\n\n- NVIDIA SM90 or SM100 architecture GPU\n- Python 3.8 or higher\n- Compilers with C++20 support\n- CUDA Toolkit:\n  - CUDA 12.3 or higher for SM90\n    - **We highly recommend 12.9 or higher for the best performance**\n  - CUDA 12.9 or higher for SM100\n- PyTorch 2.1 or higher\n- CUTLASS 4.0 or higher (could be cloned by Git submodule)\n- `{fmt}` library (could be cloned by Git submodule)\n\n### Development\n\n```bash\n# Submodule must be cloned\ngit clone --recursive git@github.com:deepseek-ai/DeepGEMM.git\ncd DeepGEMM\n\n# Link some essential includes and build the CPP JIT module\ncat develop.sh\n./develop.sh\n```\n\n### Installation\n\n```bash\ncat install.sh\n./install.sh\n```\n\nThen, import `deep_gemm` in your Python project, and enjoy!\n\n## Interfaces\n\n#### Notices\n\nThis library provides optimized GEMM kernels for NVIDIA GPUs with a naming convention: `D = C + A @ B`. The input shape layout is NT (non-transposed A, transposed B). While the SM90 implementation supports only the NT memory layout (row-major, col-major), the SM100 implementation supports all memory layouts (NT, TN, NN, TT). For example, `fp8_gemm_nt` will do a `D = C + A @ B.T`\n\nFor both architectures, the LHS scaling factor is required to have a TMA-aligned and transposed layout. And the data format for the scaling factor of SM90 and SM100 is different:\n\n- SM90 requires scaling factors in FP32 format.\n- SM100 requires scaling factors in packed [UE8M0](https://docs.nvidia.com/cuda/parallel-thread-execution/#alternate-floating-point-data-formats) format, which packs 4 UE8M0 into a single `torch.int`.\n\nPlease note that operations like input transposition or FP8 casting must be handled separately by the user, please implement or fuse them into prior kernels independently. While the library provides some simple PyTorch utility functions, these may result in slower performance, but our primary focus is on optimizing the GEMM kernels themselves.\n\n#### Normal dense GEMMs (non-grouped)\n\nTo perform a basic non-grouped FP8 GEMM, call the `fp8_gemm_{nt, nn, tn, tt}` function. For more details, please refer to the function documentation.\n\n#### Grouped GEMMs (contiguous layout)\n\nUnlike traditional grouped GEMMs in CUTLASS, DeepGEMM groups only the M-axis, while N and K must remain fixed. This design i",
+      "created_at": "2025-02-13T17:09:21+08:00",
+      "updated_at": "2026-04-20T23:08:24+08:00"
+    }
+  ],
+  "since": "daily"
+}

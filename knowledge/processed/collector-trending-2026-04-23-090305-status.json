@@ -1,0 +1,26 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-23-090305-d22c7369",
+  "status": "completed",
+  "sources": [
+    "github-trending"
+  ],
+  "output_files": [
+    "knowledge\\raw\\github-trending-2026-04-23-090305.json"
+  ],
+  "quality": "below_threshold",
+  "error_count": 0,
+  "start_time": "2026-04-23T09:03:05+08:00",
+  "raw_items_url": [
+    "https://github.com/zilliztech/claude-context",
+    "https://github.com/Fincept-Corporation/FinceptTerminal",
+    "https://github.com/koala73/worldmonitor",
+    "https://github.com/langfuse/langfuse",
+    "https://github.com/KeygraphHQ/shannon",
+    "https://github.com/open-metadata/OpenMetadata",
+    "https://github.com/sansan0/TrendRadar",
+    "https://github.com/AIDC-AI/Pixelle-Video",
+    "https://github.com/vercel-labs/skills"
+  ],
+  "end_time": "2026-04-23T09:03:38+08:00"
+}

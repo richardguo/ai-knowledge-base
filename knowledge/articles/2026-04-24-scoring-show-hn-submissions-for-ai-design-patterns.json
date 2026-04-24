@@ -1,0 +1,20 @@
+{
+  "id": "47a93e8f-6c03-48dc-9713-e2af13be046a",
+  "title": "Scoring Show HN submissions for AI design patterns",
+  "url": "https://www.adriankrebs.ch/blog/design-slop/",
+  "source": "rss",
+  "collected_at": "2026-04-24T09:52:12+08:00",
+  "processed_at": "2026-04-24T09:53:35+08:00",
+  "summary": "作者对Hacker News上的Show HN submissions进行了系统性分析，评估其中AI设计模式的采用情况。该研究揭示了当前AI开发领域的设计趋势和常见模式，在HN上获得326个点赞和231条评论，是本次列表中热度最高的内容。这种元分析为理解AI开发生态提供了有价值的视角。",
+  "highlights": [
+    "系统性分析Show HN中的AI设计模式",
+    "揭示当前AI开发领域的设计趋势和常见模式"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-design",
+    "analysis"
+  ],
+  "category": "论文",
+  "maturity": "实验"
+}

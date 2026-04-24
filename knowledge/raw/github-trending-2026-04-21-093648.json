@@ -1,0 +1,133 @@
+{
+  "collected_at": "2026-04-21T09:36:48+08:00",
+  "source": "github-trending",
+  "version": "1.0",
+  "since": "daily",
+  "items": [
+    {
+      "title": "FinceptTerminal",
+      "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+      "popularity": 3109,
+      "popularity_type": "daily_stars",
+      "author": "Fincept-Corporation",
+      "created_at": "2024-08-29T22:38:08+08:00",
+      "updated_at": "2026-04-21T09:36:38+08:00",
+      "language": "Python",
+      "topics": [
+        "bloomberg-terminal",
+        "contributions-welcome",
+        "finance",
+        "financial-markets",
+        "foss",
+        "good-first-issue",
+        "help-wanted",
+        "investing",
+        "investment",
+        "investment-research",
+        "machine-learning",
+        "opensource",
+        "python",
+        "quantitative-finance",
+        "stock-market",
+        "stocks"
+      ],
+      "summary": "FinceptTerminal 是一款现代化金融应用，提供高级市场分析、投资研究和经济数据工具，支持交互式探索和数据驱动决策。基于 C++20 和 Qt6 构建桌面端，Python 3.11+ 提供扩展能力，涵盖股票市场、量化金融、机器学习等领域，定位为开源版 Bloomberg Terminal。"
+    },
+    {
+      "title": "thunderbolt",
+      "url": "https://github.com/thunderbird/thunderbolt",
+      "popularity": 675,
+      "popularity_type": "daily_stars",
+      "author": "thunderbird",
+      "created_at": "2025-07-24T02:54:20+08:00",
+      "updated_at": "2026-04-21T09:36:27+08:00",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "llms",
+        "on-device-ai"
+      ],
+      "summary": "Thunderbolt 是由 Thunderbird 推出的开源跨平台 AI 客户端，核心理念是用户自主选择模型、拥有数据、消除供应商锁定。支持 Web、iOS、Android、Mac、Linux、Windows 全平台，兼容前沿模型、本地模型和私有化部署模型，推荐搭配 Ollama 或 llama.cpp 实现免费本地推理，目前正处于积极开发和安全审计阶段，面向企业私有化部署场景。"
+    },
+    {
+      "title": "paperless-ngx",
+      "url": "https://github.com/paperless-ngx/paperless-ngx",
+      "popularity": 606,
+      "popularity_type": "daily_stars",
+      "author": "paperless-ngx",
+      "created_at": "2022-02-13T05:56:52+08:00",
+      "updated_at": "2026-04-21T09:36:04+08:00",
+      "language": "Python",
+      "topics": [
+        "angular",
+        "archiving",
+        "django",
+        "dms",
+        "document-management",
+        "document-management-system",
+        "hacktoberfest",
+        "machine-learning",
+        "ocr",
+        "optical-character-recognition",
+        "pdf"
+      ],
+      "summary": "Paperless-ngx 是社区驱动的文档管理系统，可将纸质文档转化为可搜索的在线档案。作为 Paperless 和 Paperless-ng 的官方继任者，基于 Django 后端和 Angular 前端构建，集成 OCR 光学字符识别和机器学习能力，支持文档扫描、索引和归档，帮助用户实现无纸化办公。"
+    },
+    {
+      "title": "worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "popularity": 316,
+      "popularity_type": "daily_stars",
+      "author": "koala73",
+      "created_at": "2026-01-09T01:26:06+08:00",
+      "updated_at": "2026-04-21T09:36:34+08:00",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "dashboard",
+        "geopolitics",
+        "monitoring",
+        "news",
+        "opensource",
+        "osint",
+        "palantir",
+        "situation"
+      ],
+      "summary": "World Monitor 是实时全球情报仪表盘，集成 AI 驱动的新闻聚合、地缘政治监测和基础设施追踪功能，提供统一的态势感知界面。提供通用、科技、金融和大宗商品等多个变体版本，定位为开源 OSINT 工具，类似 Palantir 的开源替代方案。"
+    },
+    {
+      "title": "openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "popularity": 905,
+      "popularity_type": "daily_stars",
+      "author": "openai",
+      "created_at": "2025-03-11T11:42:36+08:00",
+      "updated_at": "2026-04-21T09:35:46+08:00",
+      "language": "Python",
+      "topics": [
+        "agents",
+        "ai",
+        "framework",
+        "llm",
+        "openai",
+        "python"
+      ],
+      "summary": "OpenAI Agents SDK 是一个轻量级多 Agent 工作流框架，支持提供商无关的模型调用，兼容 OpenAI Responses/Chat Completions API 及 100+ 其他 LLM。核心概念包括 Agent、沙箱 Agent、工具（函数/MCP/托管工具）、防护栏、人机协作、会话管理、链路追踪和实时 Agent，支持将 Agent 作为工具使用及 Agent 间交接。"
+    },
+    {
+      "title": "DeepGEMM",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "popularity": 109,
+      "popularity_type": "daily_stars",
+      "author": "deepseek-ai",
+      "created_at": "2025-02-13T17:09:21+08:00",
+      "updated_at": "2026-04-21T09:26:14+08:00",
+      "language": "Cuda",
+      "topics": [
+        "ai"
+      ],
+      "summary": "DeepGEMM 是 DeepSeek 推出的高性能 Tensor Core 核函数库，统一了现代大语言模型的关键计算原语：FP8/FP4/BF16 GEMM、融合 MoE（Mega MoE）、MQA 评分、HyperConnection 等。采用轻量级 JIT 编译，安装无需 CUDA 编译，设计简洁易学，性能匹敌甚至超越专家调优库，是学习 NVIDIA GPU 核函数优化的优质资源。"
+    }
+  ]
+}

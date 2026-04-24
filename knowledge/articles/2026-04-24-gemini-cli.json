@@ -1,0 +1,20 @@
+{
+  "id": "3916db1f-92b6-4f4f-8dd1-161fd2c8b50b",
+  "title": "gemini-cli",
+  "url": "https://github.com/google-gemini/gemini-cli",
+  "source": "github-search",
+  "collected_at": "2026-04-24T09:52:09+08:00",
+  "processed_at": "2026-04-24T09:53:35+08:00",
+  "summary": "gemini-cli是一个开源的AI Agent工具，将Google Gemini大模型的能力直接集成到终端环境中。开发者可以通过命令行与Gemini进行交互，实现自动化任务处理、代码生成、文件操作等功能，是提升开发效率的实用CLI工具。",
+  "highlights": [
+    "开源终端AI Agent，集成Gemini能力",
+    "支持自动化任务和代码生成"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-agent",
+    "cli-tool"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

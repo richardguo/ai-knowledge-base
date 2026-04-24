@@ -1,0 +1,24 @@
+---
+id: b9e17be7-66e7-42bb-a03f-44604e01ce6c
+source: github-trending
+relevance_score: 8
+---
+
+# TrendRadar
+
+**来源**: Github trending | **评分**: 8
+**分类**: 框架 | **成熟度**: 生产
+**标签**: ai-trend-monitoring, multi-platform-notification, docker-python
+
+**采集时间**: 2026-04-23T09:03:05+08:00
+**处理时间**: 2026-04-23T09:18:05+08:00
+
+## 摘要
+TrendRadar是一款基于Python开发的AI驱动的舆情监控与趋势分析工具，旨在帮助用户告别信息过载，通过聚合多平台热点和RSS订阅，结合AI技术实现智能筛选、翻译和新闻简报生成。项目支持Docker快速部署，数据可在本地或云端自持，确保隐私安全。其核心功能包括关键词精准筛选、AI分析简报推送至手机，并集成了微信、飞书、钉钉、Telegram、邮件、ntfy、bark、Slack等多种通知渠道，方便用户实时接收信息。此外，项目还支持MCP（Model Context Protocol）架构，赋能自然语言对话分析、情感洞察与趋势预测，扩展了AI在舆情监控中的应用场景。整体上，TrendRadar为个人和企业提供了一个高效、可定制的热点跟踪解决方案。
+
+## 核心亮点
+- 支持多平台热点聚合与RSS订阅，结合AI智能筛选、翻译和分析，生成简报并推送至手机
+- 集成微信、飞书、钉钉、Telegram等十余种通知渠道，并支持Docker部署，确保数据隐私和便捷性
+- 兼容MCP架构，赋能自然语言对话分析、情感洞察与趋势预测，增强AI驱动的舆情监控能力
+
+[原始链接](https://github.com/sansan0/TrendRadar)

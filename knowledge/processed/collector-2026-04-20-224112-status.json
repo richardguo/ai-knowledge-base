@@ -1,0 +1,21 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-20-224112-641ec8b1",
+  "status": "completed",
+  "sources": [
+    "github-trending"
+  ],
+  "output_files": [],
+  "raw_output_file": "knowledge\\raw\\github-trending-2026-04-20-224112-raw.json",
+  "quality": "below_threshold",
+  "error_count": 0,
+  "start_time": "2026-04-20T22:41:12+08:00",
+  "raw_items_url": [
+    "https://github.com/Fincept-Corporation/FinceptTerminal",
+    "https://github.com/thunderbird/thunderbolt",
+    "https://github.com/paperless-ngx/paperless-ngx",
+    "https://github.com/koala73/worldmonitor",
+    "https://github.com/openai/openai-agents-python"
+  ],
+  "end_time": "2026-04-20T22:41:39+08:00"
+}

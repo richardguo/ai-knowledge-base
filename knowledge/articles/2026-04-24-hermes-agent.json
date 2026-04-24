@@ -1,0 +1,20 @@
+{
+  "id": "0f787f02-210f-4fd9-9c9f-53e3983e3ebc",
+  "title": "hermes-agent",
+  "url": "https://github.com/NousResearch/hermes-agent",
+  "source": "github-search",
+  "collected_at": "2026-04-24T09:32:04+08:00",
+  "processed_at": "2026-04-24T09:33:12+08:00",
+  "summary": "hermes-agent是一个新兴的AI Agent开发框架，核心理念是打造一个能够随着用户需求不断成长和进化的智能代理。与传统静态Agent不同，它强调Agent的自我学习和适应能力，支持动态扩展功能模块。该框架目前处于早期发展阶段，提供了基础的Agent构建接口和扩展机制，适合对AI Agent有定制化需求的开发者尝试。",
+  "highlights": [
+    "强调Agent的自我学习和适应能力",
+    "支持动态扩展功能模块"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "ai-agent"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

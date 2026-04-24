@@ -1,0 +1,46 @@
+{
+  "id": "github-github-search-ai-guide",
+  "title": "ai-guide",
+  "source": "github-search",
+  "url": "https://github.com/liyupi/ai-guide",
+  "collected_at": "2026-04-22T10:52:17+08:00",
+  "summary": "ai-guide是由程序员鱼皮创建的综合性AI知识库与学习平台，专注于AI编程与应用的普及教育。项目以开源文档形式提供，内容涵盖Vibe Coding零基础教程、主流大模型（DeepSeek/GPT/Claude/Gemini）使用指南、AI编程工具（Cursor/Claude Code）、开发框架（LangChain/Spring AI）、Prompt工程、RAG、Agent开发及AI产品变现等全链路知识。该资源库采用VuePress构建，提供结构化学习路径，包含大量实战案例和可视化教程，旨在降低AI技术门槛，帮助不同背景的用户快速掌握AI应用开发能力。",
+  "tags": [
+    "ai-programming",
+    "knowledge-base",
+    "vibe-coding"
+  ],
+  "relevance_score": 7,
+  "metadata": {
+    "author": "liyupi",
+    "language": "JavaScript",
+    "popularity": 12287,
+    "popularity_type": "total_stars",
+    "topics": [
+      "ai",
+      "algorithm",
+      "artificial-intelligence",
+      "chatgpt",
+      "claude",
+      "cursor",
+      "deep-learning",
+      "deepseek",
+      "gemini",
+      "generative-ai",
+      "gpt",
+      "llm",
+      "mcp",
+      "openai",
+      "python",
+      "rag",
+      "vibe-coding",
+      "vibecoding",
+      "vue",
+      "vuepress"
+    ],
+    "created_at": "2025-02-13T13:47:46+08:00",
+    "updated_at": "2026-04-22T10:52:17+08:00",
+    "category": "实践",
+    "maturity": "生产"
+  }
+}

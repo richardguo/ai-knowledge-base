@@ -1,0 +1,22 @@
+{
+  "id": "39b4c414-0289-432c-9a72-76d138605da2",
+  "title": "ai-agents-for-beginners",
+  "url": "https://github.com/microsoft/ai-agents-for-beginners",
+  "source": "github-trending",
+  "collected_at": "2026-04-21T21:16:05+08:00",
+  "processed_at": "2026-04-21-233135",
+  "summary": "该项目是由微软推出的入门级AI智能体构建课程，以Jupyter Notebook形式提供12节系统性课程，涵盖智能体基础概念、架构设计与实战应用。课程重点教授如何使用AutoGen和Semantic Kernel等主流框架构建基于大语言模型的智能体系统，并集成RAG（检索增强生成）技术实现知识增强。内容设计从零开始，包含多智能体协作、工具调用、记忆管理等核心模块，适合初学者快速掌握智能体开发全流程。项目采用开源协作模式，支持30多种语言自动化翻译，并包含丰富的实践代码示例与社区互动资源。",
+  "highlights": [
+    "微软官方出品，系统性入门课程，覆盖智能体开发全链路",
+    "集成AutoGen与Semantic Kernel双框架实战，包含多智能体协作与RAG增强",
+    "支持30+语言自动化翻译，具备活跃社区与持续更新机制"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-agents",
+    "autogen",
+    "semantic-kernel"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

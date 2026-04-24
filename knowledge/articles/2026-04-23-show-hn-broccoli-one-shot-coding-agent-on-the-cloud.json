@@ -1,0 +1,22 @@
+{
+  "id": "36715f7f-d7bb-4b2d-a53f-1891d5c91c98",
+  "title": "Show HN: Broccoli, one shot coding agent on the cloud",
+  "url": "https://github.com/besimple-oss/broccoli",
+  "source": "rss",
+  "collected_at": "2026-04-23T20:54:04+08:00",
+  "processed_at": "2026-04-23T20:55:31+08:00",
+  "summary": "Broccoli是一个开源云端编码代理框架，旨在自动化软件开发流程。它从Linear任务管理系统获取编码任务，在隔离的云沙箱中独立执行每个任务，包括代码检出、上下文理解、功能实现、测试运行和审查循环，最终自动打开Pull Request供人工审核。该框架解决了团队中多任务并行处理时的上下文切换、工作树管理和资源占用问题。每个任务拥有独立的云沙箱环境，可端到端独立运行，实现了从任务获取到PR创建的完整自动化pipeline。过去四周，团队100%的非开发者PR通过Broccoli发送，验证了其在提升开发效率和代码质量方面的显著效果。",
+  "highlights": [
+    "从Linear自动获取编码任务，在隔离云沙箱中端到端执行",
+    "自动完成代码检出、实现、测试运行、审查循环并打开PR",
+    "过去四周100%非开发者PR通过Broccoli发送，安全高效"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "cloud-development",
+    "automation"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

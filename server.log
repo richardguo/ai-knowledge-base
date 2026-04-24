@@ -1,0 +1,8 @@
+知识库目录: D:\Development\PythonProject\Practice_workspace\ai-knowledge-base_v2\knowledge\articles
+已加载文章数: 100
+MCP Server 启动中 (SSE 模式)...
+SSE 端点: http://localhost:8000/sse
+INFO:     Started server process [36896]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)

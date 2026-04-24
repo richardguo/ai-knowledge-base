@@ -1,0 +1,22 @@
+{
+  "id": "3027b88a-1f23-4336-9c00-4818ace67752",
+  "title": "lobehub",
+  "url": "https://github.com/lobehub/lobehub",
+  "source": "github-search",
+  "collected_at": "2026-04-23T09:03:03+08:00",
+  "processed_at": "2026-04-23T09:18:05+08:00",
+  "summary": "LobeHub是一个基于TypeScript开发的AI智能体协作平台，旨在构建人类与智能体协同进化的网络。该项目将智能体作为工作交互的基本单位，支持多智能体协作、团队设计以及智能体生命周期管理。核心特性包括MCP（Model Context Protocol）插件的一键安装与市场、桌面应用、智能网络搜索、思维链、分支对话、文件上传与知识库、多模型服务提供商支持（如OpenAI、Claude、Gemini等）、本地大语言模型集成、视觉识别、语音对话（TTS/STT）、文生图以及插件系统。平台强调可扩展性和生产就绪性，通过Vercel部署、Docker容器化、持续集成/测试（GitHub Actions）和活跃社区（Discord）维护，适用于构建复杂的AI驱动工作流。",
+  "highlights": [
+    "以智能体为工作单元，支持多智能体协作与团队设计，构建人机协同进化网络",
+    "集成MCP协议，提供插件一键安装和市场，增强智能体功能扩展性",
+    "全面支持主流AI模型（OpenAI/Claude/Gemini等）及本地LLM，涵盖视觉、语音、图像生成等多模态能力"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-framework",
+    "multi-agent-collaboration",
+    "ai-workflow"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

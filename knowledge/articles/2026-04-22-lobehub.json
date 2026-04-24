@@ -1,0 +1,38 @@
+{
+  "id": "github-github-search-lobehub",
+  "title": "lobehub",
+  "source": "github-search",
+  "url": "https://github.com/lobehub/lobehub",
+  "collected_at": "2026-04-22T10:48:10+08:00",
+  "summary": "LobeHub 是一个以智能体为核心的工作与生活协同平台，旨在构建人类与智能体共同进化的网络。该项目基于 TypeScript 开发，提供桌面应用和 Web 服务，支持多智能体协作、团队设计及工作交互。平台集成了多种大语言模型服务（如 OpenAI、Claude、Gemini、DeepSeek 等），并具备知识库、文件上传、插件系统（MCP 一键安装与市场）、视觉识别、语音对话（TTS/STT）、文生图等功能。其亮点包括以智能体为工作单元的设计理念、支持多智能体协同网络扩展、以及促进人类与智能体共同演化的机制。项目热度较高，拥有完善的社区支持和持续更新，适用于生产环境下的智能体开发与部署。",
+  "tags": [
+    "agent-framework",
+    "multi-agent-collaboration",
+    "ai-platform"
+  ],
+  "relevance_score": 8,
+  "metadata": {
+    "author": "lobehub",
+    "language": "TypeScript",
+    "popularity": 75451,
+    "popularity_type": "total_stars",
+    "topics": [
+      "agent",
+      "agent-collaboration",
+      "agent-harness",
+      "ai",
+      "chatgpt",
+      "claude",
+      "deepseek",
+      "gemini",
+      "gpt",
+      "knowledge-base",
+      "mcp",
+      "openai"
+    ],
+    "created_at": "2023-05-21T15:19:12+08:00",
+    "updated_at": "2026-04-22T10:48:10+08:00",
+    "category": "框架",
+    "maturity": "生产"
+  }
+}

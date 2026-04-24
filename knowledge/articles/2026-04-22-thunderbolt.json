@@ -1,0 +1,30 @@
+{
+  "id": "github-github-trending-thunderbolt",
+  "title": "thunderbolt",
+  "source": "github-trending",
+  "url": "https://github.com/thunderbird/thunderbolt",
+  "collected_at": "2026-04-22T10:58:54+08:00",
+  "summary": "Thunderbolt是一款开源、跨平台的AI客户端，旨在让用户自主控制AI模型和数据，消除供应商锁定。它支持在本地或私有云部署，兼容前沿、本地及本地部署的模型，包括与Ollama和llama.cpp等免费本地推理工具的集成。项目采用TypeScript开发，基于Tauri框架构建，适用于Web、iOS、Android、Mac、Linux和Windows等多个平台。目前处于企业生产准备阶段，正进行安全审计，主要面向企业客户提供本地化部署方案。其核心特性包括离线优先设计、企业级功能支持以及灵活的模型提供商集成，但当前仍依赖部分后端服务如认证和搜索，用户需自行部署Docker后端或添加API密钥来使用。",
+  "tags": [
+    "ai-agents",
+    "on-device-ai",
+    "open-source"
+  ],
+  "relevance_score": 7,
+  "metadata": {
+    "author": "thunderbird",
+    "language": "TypeScript",
+    "popularity": 596,
+    "popularity_type": "daily_stars",
+    "topics": [
+      "ai",
+      "ai-agents",
+      "llms",
+      "on-device-ai"
+    ],
+    "created_at": "2025-07-24T02:54:20+08:00",
+    "updated_at": "2026-04-22T10:58:54+08:00",
+    "category": "框架",
+    "maturity": "生产"
+  }
+}

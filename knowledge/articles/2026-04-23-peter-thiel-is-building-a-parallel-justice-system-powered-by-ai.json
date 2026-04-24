@@ -1,0 +1,22 @@
+{
+  "id": "db215b9f-dd4a-42e2-8b43-75bace9f5e75",
+  "title": "Peter Thiel Is Building a Parallel Justice System – Powered by AI",
+  "url": "https://www.codastory.com/polarization/can-we-trust-an-ai-jury-to-judge-journalism/",
+  "source": "rss",
+  "collected_at": "2026-04-23T20:54:04+08:00",
+  "processed_at": "2026-04-23T20:55:31+08:00",
+  "summary": "本文探讨Peter Thiel正在构建的AI驱动平行司法系统，特别是关于AI陪审团用于新闻判断的实验。该项目试图利用人工智能技术模拟传统司法审判流程，对新闻内容进行评估和判断。这一尝试引发了关于AI在法律和新闻领域应用边界的讨论，包括技术可行性、伦理问题以及对人工作审判的替代性影响。该系统目前处于实验阶段，其实际效果和可靠性仍有待验证。",
+  "highlights": [
+    "Peter Thiel投资建设AI驱动的平行司法系统",
+    "AI陪审团用于新闻内容判断的实验性应用",
+    "引发关于AI在法律新闻领域应用的伦理讨论"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-justice-system",
+    "parallel-justice",
+    "ai-jury"
+  ],
+  "category": "框架",
+  "maturity": "实验"
+}

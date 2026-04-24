@@ -1,0 +1,20 @@
+{
+  "id": "091ce735-acef-4114-b9e6-951fe7a69a80",
+  "title": "Anker made its own chip to bring AI to all its products",
+  "url": "https://www.theverge.com/tech/916463/anker-thus-chip-announcement",
+  "source": "rss",
+  "collected_at": "2026-04-24T09:52:12+08:00",
+  "processed_at": "2026-04-24T09:53:35+08:00",
+  "summary": "安克创新(Anker)宣布自研AI芯片\"Thus\"，计划将AI能力嵌入其所有消费电子产品线。这是消费电子领域首个由第三方配件厂商自主研发AI芯片的案例，标志着AI硬件平民化趋势加速。",
+  "highlights": [
+    "消费电子厂商自研AI芯片的先例",
+    "AI能力向消费级硬件的全面渗透"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-hardware",
+    "consumer-electronics"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

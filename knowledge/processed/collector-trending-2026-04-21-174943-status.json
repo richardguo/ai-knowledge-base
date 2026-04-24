@@ -1,0 +1,29 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-21-174943-5bd73f1d",
+  "status": "completed",
+  "sources": [
+    "github-trending"
+  ],
+  "output_files": [],
+  "raw_output_file": "knowledge\\raw\\github-trending-2026-04-21-174943-raw.json",
+  "quality": "ok",
+  "error_count": 0,
+  "start_time": "2026-04-21T17:49:43+08:00",
+  "raw_items_url": [
+    "https://github.com/forrestchang/andrej-karpathy-skills",
+    "https://github.com/NousResearch/hermes-agent",
+    "https://github.com/thedotmack/claude-mem",
+    "https://github.com/lsdefine/GenericAgent",
+    "https://github.com/EvoMap/evolver",
+    "https://github.com/Lordog/dive-into-llms",
+    "https://github.com/virattt/ai-hedge-fund",
+    "https://github.com/multica-ai/multica",
+    "https://github.com/jamiepine/voicebox",
+    "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
+    "https://github.com/BasedHardware/omi",
+    "https://github.com/microsoft/markitdown",
+    "https://github.com/OpenBMB/VoxCPM"
+  ],
+  "end_time": "2026-04-21T17:50:17+08:00"
+}

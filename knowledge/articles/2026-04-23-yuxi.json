@@ -1,0 +1,22 @@
+{
+  "id": "7c284e75-8f01-4e88-a1e5-7be8cf882447",
+  "title": "Yuxi",
+  "url": "https://github.com/xerrors/Yuxi",
+  "source": "github-search",
+  "collected_at": "2026-04-23T09:03:03+08:00",
+  "processed_at": "2026-04-23T09:18:05+08:00",
+  "summary": "语析（Yuxi）是一个结合知识库管理与知识图谱的多租户Agent Harness平台，旨在构建面向真实业务的智能体系统。该项目采用Vue + FastAPI前后端分离架构，后端集成LangChain和LangGraph实现智能体开发，支持子智能体、Skills、MCPs和Tools等机制。平台核心功能包括多格式文档上传与处理，基于LightRAG的知识库构建与评估，以及Neo4j驱动的知识图谱可视化与推理。工程化方面提供Docker部署、暗黑模式和生产级配置，适用于企业级多租户场景。",
+  "highlights": [
+    "集成LightRAG知识库与知识图谱，支持多格式文档上传与智能体推理",
+    "基于LangGraph v1构建多智能体/子智能体系统，支持MCPs与中间件机制",
+    "Vue + FastAPI全栈架构，提供Docker部署与生产级多租户支持"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "knowledge-graph",
+    "rag"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

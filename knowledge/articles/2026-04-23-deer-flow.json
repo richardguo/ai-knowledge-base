@@ -1,0 +1,22 @@
+{
+  "id": "3fa5ea61-5a58-432d-80ce-60fb9d088819",
+  "title": "deer-flow",
+  "url": "https://github.com/bytedance/deer-flow",
+  "source": "github-search",
+  "collected_at": "2026-04-23T09:03:03+08:00",
+  "processed_at": "2026-04-23T09:18:05+08:00",
+  "summary": "DeerFlow是由字节跳动开源的超级智能体框架，专注于长周期任务执行与深度研究。该框架通过编排子智能体、记忆系统、沙箱环境和可扩展技能库，能够处理从几分钟到数小时的复杂任务，如研究、编程和内容创作。其2.0版本为完全重写，采用Python 3.12+和Node.js 22+双栈架构，并集成了字节自研的InfoQuest智能搜索工具，支持多语言界面。项目强调生产就绪性，推荐使用豆包-Seed-2.0-Code、DeepSeek v3.2及Kimi 2.5等大模型驱动，已在GitHub获得高热度关注。",
+  "highlights": [
+    "多智能体协同框架，支持长周期复杂任务自动化",
+    "集成沙箱、记忆、工具网关等核心组件，具备高扩展性",
+    "背靠字节生态，整合InfoQuest搜索并推荐官方大模型服务"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-framework",
+    "multi-agent",
+    "long-horizon-task"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

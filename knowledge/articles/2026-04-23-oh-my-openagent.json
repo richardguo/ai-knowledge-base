@@ -1,0 +1,22 @@
+{
+  "id": "c49e05ec-8ca7-405e-a516-fe0f4062a526",
+  "title": "oh-my-openagent",
+  "url": "https://github.com/code-yeongyu/oh-my-openagent",
+  "source": "github-search",
+  "collected_at": "2026-04-23T09:03:03+08:00",
+  "processed_at": "2026-04-23T09:18:05+08:00",
+  "summary": "oh-my-openagent 是一个基于 TypeScript 开发的 AI 代理编排框架，前身为 oh-my-opencode，旨在打破单一 AI 模型的依赖，支持多模型（如 Claude、GPT、Gemini、Kimi、GLM 等）的灵活集成与协同工作。项目强调开放性和反锁定，通过实时构建与社区公开协作（借助 Jobdori AI 助手），提供终端用户界面（TUI）和 IDE 集成能力。其核心是构建一个面向未来开放市场的智能代理系统，允许用户根据任务需求动态选择不同模型进行推理、创意生成和高速处理，实现模型间的优势互补与成本优化。",
+  "highlights": [
+    "多模型编排与反锁定设计，支持 Claude、GPT、Gemini 等主流 AI 模型协同工作",
+    "实时公开构建与社区驱动，通过 Discord 直播开发和维护过程",
+    "终端用户界面（TUI）与 IDE 集成，提供直观的代理操作体验"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-orchestration",
+    "multi-model-framework",
+    "typescript"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

@@ -1,0 +1,22 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-22-102544-8bb123a9",
+  "status": "completed",
+  "sources": [
+    "github-trending"
+  ],
+  "output_files": [
+    "knowledge\\raw\\github-trending-2026-04-22-102544.json"
+  ],
+  "quality": "below_threshold",
+  "error_count": 0,
+  "start_time": "2026-04-22T10:25:44+08:00",
+  "raw_items_url": [
+    "https://github.com/Fincept-Corporation/FinceptTerminal",
+    "https://github.com/thunderbird/thunderbolt",
+    "https://github.com/zilliztech/claude-context",
+    "https://github.com/microsoft/ai-agents-for-beginners",
+    "https://github.com/sansan0/TrendRadar"
+  ],
+  "end_time": "2026-04-22T10:26:09+08:00"
+}

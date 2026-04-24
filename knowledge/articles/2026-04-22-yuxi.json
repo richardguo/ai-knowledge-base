@@ -1,0 +1,35 @@
+{
+  "id": "github-github-search-yuxi",
+  "title": "Yuxi",
+  "source": "github-search",
+  "url": "https://github.com/xerrors/Yuxi",
+  "collected_at": "2026-04-22T10:35:47+08:00",
+  "summary": "语析（Yuxi）是一个基于大模型的多租户智能体开发平台，集成了知识库（RAG）与知识图谱（KG）管理功能。项目采用前后端分离架构，后端使用Python的FastAPI框架，结合LangChain和LangGraph构建智能体系统，支持子智能体、Skills、MCPs和工具链；前端使用Vue.js实现交互界面。核心特性包括：支持多格式文档（如PDF、Word、Markdown、图片）上传与处理，通过Embedding和Rerank技术构建可检索的知识库；基于LightRAG实现知识图谱的自动化构建与可视化，并能将图谱融入智能体推理过程。平台强调工程化与生产部署，提供Docker容器化支持、暗黑模式及多租户管理，适用于构建面向真实业务的RAG+KG智能体应用。",
+  "tags": [
+    "agent-framework",
+    "rag",
+    "knowledge-graph"
+  ],
+  "relevance_score": 7,
+  "metadata": {
+    "author": "xerrors",
+    "language": "Python",
+    "popularity": 4975,
+    "popularity_type": "total_stars",
+    "topics": [
+      "docker",
+      "fastapi",
+      "harness",
+      "kbqa",
+      "kgqa",
+      "llms",
+      "neo4j",
+      "rag",
+      "vue"
+    ],
+    "created_at": "2024-07-05T18:57:35+08:00",
+    "updated_at": "2026-04-22T10:35:47+08:00",
+    "category": "框架",
+    "maturity": "生产"
+  }
+}

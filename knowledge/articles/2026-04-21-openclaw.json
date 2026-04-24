@@ -1,0 +1,22 @@
+{
+  "id": "3bc54aa7-a10d-40b6-ac89-8becd8681d1e",
+  "title": "openclaw",
+  "url": "https://github.com/openclaw/openclaw",
+  "source": "github-search",
+  "collected_at": "2026-04-21T21:16:05+08:00",
+  "processed_at": "2026-04-21-233135",
+  "summary": "OpenClaw是一款开源的个人AI助手，采用TypeScript编写，强调数据自主权（own-your-data），用户可在本地设备上部署运行。项目支持跨操作系统（macOS、Linux、Windows via WSL2）和平台，通过网关（Gateway）作为控制平面，集成多种通信渠道如WhatsApp、Telegram、Slack、Discord、iMessage等，实现语音交互与实时Canvas渲染。它提供CLI引导安装（openclaw onboard），支持Docker和Nix部署，旨在构建快速、常驻、单用户的本地化AI助手体验。",
+  "highlights": [
+    "强调数据自主权，用户完全掌控个人数据，避免云端依赖",
+    "跨平台支持，兼容主流操作系统及超过20种通信渠道，扩展性强",
+    "提供完整的本地化部署方案，包括Docker、Nix和CLI工具，安装与维护便捷"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-assistant",
+    "personal-ai",
+    "local-deployment"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

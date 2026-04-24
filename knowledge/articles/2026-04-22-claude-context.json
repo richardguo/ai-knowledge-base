@@ -1,0 +1,46 @@
+{
+  "id": "github-github-trending-claude-context",
+  "title": "claude-context",
+  "source": "github-trending",
+  "url": "https://github.com/zilliztech/claude-context",
+  "collected_at": "2026-04-22T10:58:16+08:00",
+  "summary": "Claude Context 是一个基于 Model Context Protocol (MCP) 开发的插件，旨在为 Claude Code 及其他 AI 编程助手提供语义化代码搜索功能。该项目通过将整个代码库嵌入向量数据库，实现高效的语义搜索，使 AI 代理能够快速获取与当前任务相关的代码片段，而无需加载整个目录，从而显著降低大代码库场景下的使用成本。它支持与多种 AI 编码工具集成，并提供了 VS Code 扩展及 npm 包，方便开发者部署和使用。",
+  "tags": [
+    "semantic-search",
+    "code-generation",
+    "vector-database"
+  ],
+  "relevance_score": 8,
+  "metadata": {
+    "author": "zilliztech",
+    "language": "TypeScript",
+    "popularity": 169,
+    "popularity_type": "daily_stars",
+    "topics": [
+      "agent",
+      "agentic-rag",
+      "ai-coding",
+      "claude-code",
+      "code-generation",
+      "code-search",
+      "cursor",
+      "embedding",
+      "gemini-cli",
+      "mcp",
+      "merkle-tree",
+      "nodejs",
+      "openai",
+      "rag",
+      "semantic-search",
+      "typescript",
+      "vector-database",
+      "vibe-coding",
+      "voyage-ai",
+      "vscode-extension"
+    ],
+    "created_at": "2025-06-06T10:12:47+08:00",
+    "updated_at": "2026-04-22T10:58:16+08:00",
+    "category": "工具",
+    "maturity": "生产"
+  }
+}

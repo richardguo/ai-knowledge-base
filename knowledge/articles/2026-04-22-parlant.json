@@ -1,0 +1,22 @@
+{
+  "id": "3649cd81-bcef-43a9-a893-0b3f4d22555a",
+  "title": "parlant",
+  "url": "https://github.com/emcie-co/parlant",
+  "source": "github-search",
+  "collected_at": "2026-04-22T13:26:16+08:00",
+  "processed_at": "2026-04-22T13:29:42+08:00",
+  "summary": "Parlant是一个面向客户服务场景的AI智能体交互控制框架，旨在解决企业级B2C及敏感B2B交互中的可控性与一致性问题。它通过上下文工程优化，克服了传统系统提示词在复杂生产环境下的失效问题，以及路由图在面对自然语言交互时的脆弱性。该项目支持OpenAI、Gemini、Llama3等多种大模型，提供了一个开源的、可替代Ada或Sierra等商业平台的解决方案，帮助开发者构建稳定、合规且符合品牌调性的智能客服系统。",
+  "highlights": [
+    "解决系统提示词在复杂场景下注意力分散及路由图脆弱的痛点，优化上下文工程",
+    "专为企业级客户服务设计，确保交互的一致性、合规性和品牌调性",
+    "提供商业平台（如Ada, Sierra）的开源替代方案，支持OpenAI、Gemini、Llama3等主流大模型"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-agents",
+    "customer-service",
+    "llm-framework"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

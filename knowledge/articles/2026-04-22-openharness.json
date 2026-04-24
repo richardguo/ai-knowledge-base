@@ -1,0 +1,25 @@
+{
+  "id": "github-github-search-openharness",
+  "title": "OpenHarness",
+  "source": "github-search",
+  "url": "https://github.com/HKUDS/OpenHarness",
+  "collected_at": "2026-04-22T10:55:58+08:00",
+  "summary": "OpenHarness是一个轻量级AI智能体基础设施框架，由HKUDS团队开发，核心提供工具调用、技能管理、记忆存储与多智能体协作能力。其内置的个人智能体ohmo基于现有Claude Code或Codex订阅运行，无需额外API密钥，可在飞书、Slack、Telegram、Discord等平台进行长会话协作，支持自动创建分支、编写代码、运行测试及提交PR。框架采用Python≥3.10开发，集成React+Ink TUI界面，包含43+工具、114项测试用例与6个端到端测试套件，支持CLI集成OpenClaw、nanobot、Cursor等外部智能体。项目已具备CI工作流，社区活跃，定位为生产可用的开源智能体开发套件。",
+  "tags": [
+    "agent-framework",
+    "ai-assistant",
+    "python"
+  ],
+  "relevance_score": 7,
+  "metadata": {
+    "author": "HKUDS",
+    "language": "Python",
+    "popularity": 10740,
+    "popularity_type": "total_stars",
+    "topics": [],
+    "created_at": "2026-04-01T23:37:13+08:00",
+    "updated_at": "2026-04-22T10:55:58+08:00",
+    "category": "框架",
+    "maturity": "生产"
+  }
+}

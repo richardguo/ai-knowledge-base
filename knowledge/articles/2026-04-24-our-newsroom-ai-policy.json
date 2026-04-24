@@ -1,0 +1,20 @@
+{
+  "id": "7c321d36-2eb3-4d03-b1ce-1d4a40bfee16",
+  "title": "Our newsroom AI policy",
+  "url": "https://arstechnica.com/staff/2026/04/our-newsroom-ai-policy/",
+  "source": "rss",
+  "collected_at": "2026-04-24T09:52:12+08:00",
+  "processed_at": "2026-04-24T09:53:35+08:00",
+  "summary": "Ars Technica公布其新闻室的AI使用政策，明确了AI在新闻报道中的使用边界。政策涵盖AI辅助写作、图像生成、事实核查等场景，强调人类编辑的主导作用。该政策为传统媒体如何平衡AI效率与新闻真实性提供了参考框架。",
+  "highlights": [
+    "传统媒体AI使用政策的实践范例",
+    "人机协作模式下新闻真实性的保障机制"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-policy",
+    "journalism"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

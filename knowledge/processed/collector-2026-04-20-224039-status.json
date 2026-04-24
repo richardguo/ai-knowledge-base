@@ -1,0 +1,21 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-20-224039-4ea27000",
+  "status": "completed",
+  "sources": [
+    "github-search"
+  ],
+  "output_files": [],
+  "raw_output_file": "knowledge\\raw\\github-search-2026-04-20-224039-raw.json",
+  "quality": "below_threshold",
+  "error_count": 0,
+  "start_time": "2026-04-20T22:40:39+08:00",
+  "raw_items_url": [
+    "https://github.com/openclaw/openclaw",
+    "https://github.com/n8n-io/n8n",
+    "https://github.com/Significant-Gravitas/AutoGPT",
+    "https://github.com/ollama/ollama",
+    "https://github.com/affaan-m/everything-claude-code"
+  ],
+  "end_time": "2026-04-20T22:41:06+08:00"
+}

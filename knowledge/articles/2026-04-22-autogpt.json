@@ -1,0 +1,21 @@
+{
+  "id": "8d6fbed1-3777-487b-bb51-a340f9abfe84",
+  "title": "AutoGPT",
+  "url": "https://github.com/Significant-Gravitas/AutoGPT",
+  "source": "github-search",
+  "collected_at": "2026-04-22T21:50:59+08:00",
+  "processed_at": "2026-04-22T21:53:03+08:00",
+  "summary": "AutoGPT 是一个革命性的自主 AI 智能体框架，旨在将大型语言模型（如 GPT-4）的能力转化为自主行动。它允许用户仅设定一个目标，AI 便会自动将其分解为子任务，并在循环中自主思考、规划和执行，包括浏览网页、读写文件、运行代码等操作，无需人工持续干预。作为 AI Agent 领域的先行者，AutoGPT 推动了从“人机对话”向“自主智能”的范式转变，极大地降低了构建复杂 AI 应用的门槛，是探索通用人工智能（AGI）的重要实验性工具。",
+  "highlights": [
+    "全自动任务执行：能够自主分解目标、规划步骤并循环执行任务链",
+    "自主智能体先驱：引发了全球 AI Agent 开发热潮，定义了自主交互范式",
+    "低代码开发：提供工具链，让开发者专注于核心逻辑而非底层实现"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "ai-agent",
+    "autonomous-ai"
+  ],
+  "category": "框架",
+  "maturity": "实验"
+}

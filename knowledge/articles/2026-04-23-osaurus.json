@@ -1,0 +1,22 @@
+{
+  "id": "fb2eb782-9ccf-4b74-a346-4b70195b5383",
+  "title": "osaurus",
+  "url": "https://github.com/osaurus-ai/osaurus",
+  "source": "github-search",
+  "collected_at": "2026-04-23T09:03:03+08:00",
+  "processed_at": "2026-04-23T09:18:05+08:00",
+  "summary": "Osaurus是一款原生的macOS AI代理框架，用Swift构建，强调用户对AI的完全控制和数据隐私。核心定位是作为AI模型与用户之间的桥梁，提供持久化记忆、自主执行、加密身份和工具集成等功能。支持多种模型后端，包括本地MLX模型、Apple Neural Engine、Apple Foundation Models以及兼容OpenAI、Anthropic、Ollama等云API。项目通过MCP（Model Context Protocol）服务器支持工具扩展，并承诺完全离线运行，所有上下文、记忆和身份数据均保留在用户设备上。其设计理念认为模型本身是可互换的商品，而围绕模型构建的个性化层（代理、记忆、工具）才是真正产生复利价值的部分。",
+  "highlights": [
+    "完全离线与隐私优先：所有AI代理、记忆、身份数据均存储在本地，无需连接云端服务器，确保用户数据主权和隐私安全。",
+    "原生macOS集成与高性能：利用Swift语言和Apple Silicon硬件优势，深度集成Apple Neural Engine和Foundation Models，实现高效的原生推理。",
+    "开放的模型与工具生态：兼容主流云API和本地MLX模型，支持MCP协议扩展工具，提供灵活的插件系统，用户可自由选择或切换模型后端。"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "offline-ai",
+    "macos-native"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

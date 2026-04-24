@@ -1,0 +1,16 @@
+{
+  "agent": "collector",
+  "task_id": "2026-04-21-211257-e1e7f7d5",
+  "status": "failed",
+  "sources": [
+    "github-search"
+  ],
+  "output_files": [
+    "knowledge\\raw\\github-search-2026-04-21-211257.json"
+  ],
+  "quality": "ok",
+  "error_count": 0,
+  "start_time": "2026-04-21T21:12:57+08:00",
+  "raw_items_url": [],
+  "end_time": ""
+}

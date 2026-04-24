@@ -1,0 +1,22 @@
+{
+  "id": "a14928ee-f503-4024-b212-b374813662f8",
+  "title": "langchain",
+  "url": "https://github.com/langchain-ai/langchain",
+  "source": "github-search",
+  "collected_at": "2026-04-21T21:16:05+08:00",
+  "processed_at": "2026-04-21-233135",
+  "summary": "LangChain是一个用于构建基于大语言模型（LLM）的智能体（Agent）和应用程序的开源Python框架。它通过提供可互操作的组件链和第三方集成，简化了AI应用开发流程，帮助开发者高效组合聊天模型、工具、记忆模块等元素。该框架强调可扩展性和未来兼容性，确保应用能适应快速演进的基础技术。核心功能包括智能体编排、工具调用、检索增强生成（RAG）工作流支持，并与LangGraph（用于复杂工作流）、LangSmith（用于评估与监控）等生态工具深度集成，形成完整的智能体工程平台。",
+  "highlights": [
+    "提供模块化、可互操作的组件链，支持快速构建和组合LLM应用",
+    "与LangGraph、LangSmith等工具形成完整生态，覆盖开发、调试、部署全流程",
+    "支持多模型（如OpenAI、Anthropic、Gemini）和丰富集成，具备高度扩展性"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-framework",
+    "python",
+    "generative-ai"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

@@ -1,0 +1,24 @@
+---
+id: 690da648-bc2b-48d5-8d30-7bdd9f8cf033
+source: github-trending
+relevance_score: 8
+---
+
+# FinceptTerminal
+
+**来源**: Github trending | **评分**: 8
+**分类**: 工具 | **成熟度**: 生产
+**标签**: quantitative-finance, open-source-finance, financial-analytics
+
+**采集时间**: 2026-04-21T21:16:05+08:00
+**处理时间**: 2026-04-21-233135
+
+## 摘要
+FinceptTerminal 是一款开源的现代金融应用程序，旨在为投资研究和市场分析提供交互式数据探索工具。项目采用 Python 3.11+ 作为核心语言，同时集成了 C++20 和 Qt6 用于高性能图形界面开发，支持跨平台部署。其功能覆盖金融市场数据分析、经济指标监控、量化投资研究以及机器学习模型集成，帮助用户进行数据驱动的决策。项目采用 AGPL-3.0 开源协议，社区活跃，设有 good-first-issue 和 help-wanted 标签鼓励贡献，每日星标增长达 2595，表明在金融科技开源领域具有较高关注度。
+
+## 核心亮点
+- 集成多语言技术栈（Python、C++、Qt）实现高性能金融数据分析与可视化界面
+- 提供完整的开源金融终端解决方案，涵盖市场数据、投资研究和机器学习工具
+- 活跃的社区协作与清晰的贡献引导（如 good-first-issue 标签），促进项目生态发展
+
+[原始链接](https://github.com/Fincept-Corporation/FinceptTerminal)

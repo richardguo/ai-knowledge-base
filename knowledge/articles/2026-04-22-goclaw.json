@@ -1,0 +1,42 @@
+{
+  "id": "github-github-search-goclaw",
+  "title": "goclaw",
+  "source": "github-search",
+  "url": "https://github.com/nextlevelbuilder/goclaw",
+  "collected_at": "2026-04-22T07:32:49+08:00",
+  "summary": "GoClaw是一个用Go语言重建的多租户AI智能体编排平台，提供AI网关功能，支持20多个LLM提供商（包括Anthropic和OpenAI兼容接口）和7种通信通道（如Discord、Telegram等）。该平台采用五层安全架构和原生并发机制，确保多租户环境下的隔离性与安全性。核心特性包括单二进制部署、生产级测试验证、基于PostgreSQL的多租户数据存储，并集成WebSocket实时通信与OpenTelemetry可观测性工具。其设计目标是为企业级用户提供安全、可扩展的AI智能体团队部署方案，适用于需要高并发和严格安全要求的场景。",
+  "tags": [
+    "ai-gateway",
+    "multi-agent",
+    "go"
+  ],
+  "relevance_score": 7,
+  "metadata": {
+    "author": "nextlevelbuilder",
+    "language": "Go",
+    "popularity": 2876,
+    "popularity_type": "total_stars",
+    "topics": [
+      "agent-orchestration",
+      "ai-agent",
+      "ai-gateway",
+      "anthropic",
+      "chatbot",
+      "discord-bot",
+      "golang",
+      "harness",
+      "harness-engineering",
+      "llm",
+      "mcp",
+      "multi-agent",
+      "openai",
+      "postgresql",
+      "telegram-bot",
+      "websocket"
+    ],
+    "created_at": "2026-02-22T15:26:36+08:00",
+    "updated_at": "2026-04-22T07:32:49+08:00",
+    "category": "框架",
+    "maturity": "生产"
+  }
+}

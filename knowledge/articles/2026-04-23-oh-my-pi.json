@@ -1,0 +1,22 @@
+{
+  "id": "c535adad-fa73-4d23-9474-8cf09a4c26e1",
+  "title": "oh-my-pi",
+  "url": "https://github.com/can1357/oh-my-pi",
+  "source": "github-search",
+  "collected_at": "2026-04-23T09:03:03+08:00",
+  "processed_at": "2026-04-23T09:18:05+08:00",
+  "summary": "oh-my-pi是一个基于终端的AI编程助手，采用TypeScript和Rust混合开发，以Bun为运行时环境。该项目是badlogic/pi-mono的分支，专注于提供终端内的AI编程体验。核心功能包括：支持哈希锚点编辑，实现对代码的精准修改；优化的工具链，集成语言服务器协议（LSP）、Python环境、浏览器操作等能力；支持子代理和多模型提供商（如Anthropic、OpenAI）。项目提供了丰富的终端用户界面（TUI）功能，包括会话管理、上下文压缩、分支操作和自主记忆，并支持通过自定义系统提示、扩展主题、技能和工具进行深度配置。",
+  "highlights": [
+    "哈希锚点编辑实现精准代码修改",
+    "集成LSP、Python、浏览器等多工具链",
+    "支持多模型提供商和子代理架构"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-coding-agent",
+    "terminal-tui",
+    "multi-provider"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

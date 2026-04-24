@@ -1,0 +1,22 @@
+{
+  "id": "8ca6ec12-bec5-4cb6-a87c-d10d25ded136",
+  "title": "nexent",
+  "url": "https://github.com/ModelEngine-Group/nexent",
+  "source": "github-search",
+  "collected_at": "2026-04-23T09:03:03+08:00",
+  "processed_at": "2026-04-23T09:18:05+08:00",
+  "summary": "Nexent是一个基于Harness Engineering原则构建的无代码平台，专为自动生成生产级AI智能体而设计。该平台通过统一工具、技能、记忆和编排模块，内置约束、反馈循环和控制平面，使用户无需编写代码或进行复杂拖拽，仅通过自然语言即可快速创建和部署各类智能体。其核心优势在于简化了智能体的开发流程，提供开箱即用的生产就绪能力，支持Docker容器化部署，并具备良好的可扩展性与社区支持。项目已发布相对稳定的v1版本，持续迭代中，适用于需要快速构建和集成AI代理的应用场景。",
+  "highlights": [
+    "零代码平台，通过纯语言快速生成生产级AI智能体",
+    "基于Harness Engineering原则，提供统一工具、技能、记忆和内置控制平面",
+    "支持Docker容器化部署，具备完整的社区生态和持续更新路线图"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "zero-code-platform",
+    "harness-engineering"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

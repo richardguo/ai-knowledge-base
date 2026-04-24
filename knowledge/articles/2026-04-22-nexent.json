@@ -1,0 +1,22 @@
+{
+  "id": "1ee8b91c-affb-4830-84fe-cdf7e461fa78",
+  "title": "nexent",
+  "url": "https://github.com/ModelEngine-Group/nexent",
+  "source": "github-search",
+  "collected_at": "2026-04-22T13:26:16+08:00",
+  "processed_at": "2026-04-22T13:29:42+08:00",
+  "summary": "Nexent是一个基于Harness Engineering原则的零代码平台，旨在自动生成生产级AI代理。它通过统一的工具、技能、记忆和编排机制，内置了约束、反馈回路与控制平面，允许用户仅使用自然语言即可开发复杂的AI代理，无需复杂的拖拽或手动编排。该平台支持Docker快速部署，当前v1版本已趋于稳定，适用于构建多智能体工作流及RAG应用，显著降低了AI代理的开发门槛。",
+  "highlights": [
+    "基于Harness Engineering原则的零代码AI代理生成平台",
+    "提供统一的工具、技能、记忆及编排能力，内置约束与反馈机制",
+    "支持纯语言开发，无需复杂编排即可构建生产级Agent"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agentic-framework",
+    "multi-agent",
+    "zero-code"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}
