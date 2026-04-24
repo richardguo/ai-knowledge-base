@@ -27,7 +27,12 @@ from typing import Any
 import httpx
 from dotenv import load_dotenv
 
-from model_client import LLMError, chat_with_retry, get_default_provider
+from model_client import (
+    LLMError,
+    chat_with_retry,
+    get_cost_tracker,
+    get_default_provider,
+)
 
 GMT8 = timezone(timedelta(hours=8))
 
@@ -57,6 +62,32 @@ ANALYSIS_PROMPT = """请对以下内容进行深度分析，直接输出JSON，�
 tags:1-3个英文小写连字符(如large-language-model,agent-framework)
 category:框架/工具/论文/实践
 maturity:实验/测试/生产"""
+
+BATCH_ANALYSIS_PROMPT = """请对以下 {count} 条内容逐一进行深度分析，输出JSON格式。
+
+内容列表：
+{items_json}
+
+【重要】输出要求：
+1. 输出JSON对象，包含一个"results"数组
+2. results数组中的每个对象对应一条内容的分析结果
+3. 每个对象的index必须与内容列表顺序一致（从0开始）
+
+输出格式示例：
+{{
+  "results": [
+    {{"index": 0, "summary": "摘要内容", "highlights": ["亮点1", "亮点2"], "relevance_score": 7, "tags": ["tag-1", "tag-2"], "category": "框架", "maturity": "生产"}},
+    {{"index": 1, "summary": "...", "highlights": [...], "relevance_score": 8, "tags": [...], "category": "工具", "maturity": "测试"}}
+  ]
+}}
+
+字段说明：
+- summary: 150-200字中文技术摘要（简洁为主）
+- highlights: 2个核心亮点
+- relevance_score: 9-10改变格局,7-8直接帮助,5-6值得了解,1-4可忽略
+- tags: 2个英文小写连字符(如machine-learning,agent-framework)
+- category: 框架/工具/论文/实践
+- maturity: 实验/测试/生产"""
 
 
 def setup_logging(verbose: bool = False) -> logging.Logger:
@@ -406,9 +437,11 @@ class Step1Collector:
 
 
 class Step2Analyzer:
-    """分析步骤 - 调用 LLM 对每条内容进行摘要/评分/标签分析."""
+    """分析步骤 - 批量调用 LLM 对内容进行摘要/评分/标签分析."""
 
     MAX_CONCURRENT = 5
+    BATCH_SIZE = 10
+    MAX_DESCRIPTION_LENGTH = 2000
 
     def __init__(self, config: dict[str, str], logger: logging.Logger):
         """初始化分析器.
@@ -429,7 +462,7 @@ class Step2Analyzer:
     def run(
         self, items: list[dict[str, Any]], dry_run: bool = False
     ) -> list[dict[str, Any]]:
-        """执行分析.
+        """执行批量分析.
 
         Args:
             items: 待分析的条目列表.
@@ -450,70 +483,435 @@ class Step2Analyzer:
                 item["analysis"] = self._default_analysis()
             return items
 
+        total = len(items)
         self.logger.info(
-            f"[Step2] 开始分析 {len(items)} 条内容（并发 {self.MAX_CONCURRENT}）"
+            f"[Step2] 开始批量分析 {total} 条内容 "
+            f"(批量大小: {self.BATCH_SIZE}, 并发: {self.MAX_CONCURRENT})"
         )
 
         results: dict[int, dict[str, Any]] = {}
-        total = len(items)
+        retry_items: list[tuple[int, dict[str, Any]]] = []
+
+        batches = self._split_into_batches(items)
+        self.logger.info(f"[Step2] 分为 {len(batches)} 个批次")
 
         with ThreadPoolExecutor(max_workers=self.MAX_CONCURRENT) as executor:
-            future_to_index = {
-                executor.submit(self._analyze_item, item): i
-                for i, item in enumerate(items)
+            future_to_batch = {
+                executor.submit(self._analyze_batch, batch): batch for batch in batches
             }
 
-            for future in as_completed(future_to_index):
-                i = future_to_index[future]
-                item = items[i]
-                title = item.get("title", "")
+            for future in as_completed(future_to_batch):
+                batch = future_to_batch[future]
+                batch_indices = {item[0] for item in batch}
 
                 try:
-                    analysis = future.result()
+                    batch_results = future.result()
+                    for idx, analysis in batch_results.items():
+                        item = items[idx]
+                        item["analysis"] = analysis
+                        results[idx] = item
+                        self._log_progress(idx, total, analysis, item.get("title", ""))
+
+                    failed_indices = batch_indices - set(batch_results.keys())
+                    for idx, item in batch:
+                        if idx in failed_indices:
+                            self.logger.warning(
+                                f"[Step2] 批次中条目解析失败 [{idx}]: {item.get('title', '')}"
+                            )
+                            retry_items.append((idx, item))
                 except Exception as e:
                     self.logger.error(
-                        f"[Step2] 分析失败 [{i + 1}/{total}]: {title} - {e}"
+                        f"[Step2] 批次分析失败 (索引 {sorted(batch_indices)}): {e}"
                     )
-                    analysis = self._default_analysis()
+                    for idx, item in batch:
+                        retry_items.append((idx, item))
 
-                item["analysis"] = analysis
-                results[i] = item
+        if retry_items:
+            self.logger.info(f"[Step2] 重试 {len(retry_items)} 条失败内容")
+            retry_batches = self._split_into_batches_from_list(retry_items)
 
-                score = analysis.get("relevance_score", "?")
-                tags = ",".join(analysis.get("tags", []))
-                print(
-                    f"[Step2] [{i + 1}/{total}] ✅ {title[:30]} - 评分:{score} 标签:{tags}",
-                    file=sys.stderr,
-                )
+            for retry_batch in retry_batches:
+                try:
+                    batch_results = self._analyze_batch(retry_batch)
+                    for idx, analysis in batch_results.items():
+                        item = self._find_item_by_idx(retry_items, idx)
+                        if item:
+                            item["analysis"] = analysis
+                            results[idx] = item
+                            self._log_progress(
+                                idx, total, analysis, item.get("title", "")
+                            )
+
+                    for idx, item in retry_batch:
+                        if idx not in batch_results:
+                            self.logger.warning(
+                                f"[Step2] 重试解析失败 [{idx}]: {item.get('title', '')}"
+                            )
+                            item["analysis"] = self._default_analysis()
+                            results[idx] = item
+                except Exception as e:
+                    self.logger.error(
+                        f"[Step2] 重试批次失败 (索引 {[idx for idx, _ in retry_batch]}): {e}"
+                    )
+                    for idx, item in retry_batch:
+                        item["analysis"] = self._default_analysis()
+                        results[idx] = item
 
         return [results[i] for i in sorted(results.keys())]
 
-    def _analyze_item(self, item: dict[str, Any]) -> dict[str, Any]:
-        """分析单个条目.
+    def _split_into_batches_from_list(
+        self, items: list[tuple[int, dict[str, Any]]]
+    ) -> list[list[tuple[int, dict[str, Any]]]]:
+        """将重试列表分割成批次.
 
         Args:
-            item: 待分析的条目.
+            items: (index, item) 元组列表.
 
         Returns:
-            分析结果字典.
+            批次列表.
         """
-        prompt = ANALYSIS_PROMPT.format(
-            title=item.get("title", ""),
-            source=item.get("source", ""),
-            description=(item.get("description", "") or item.get("readme", ""))[:1000],
+        batches: list[list[tuple[int, dict[str, Any]]]] = []
+        for i in range(0, len(items), self.BATCH_SIZE):
+            batches.append(items[i : i + self.BATCH_SIZE])
+        return batches
+
+    def _find_item_by_idx(
+        self, items: list[tuple[int, dict[str, Any]]], idx: int
+    ) -> dict[str, Any] | None:
+        """根据索引查找条目.
+
+        Args:
+            items: (index, item) 元组列表.
+            idx: 目标索引.
+
+        Returns:
+            找到的条目或 None.
+        """
+        for item_idx, item in items:
+            if item_idx == idx:
+                return item
+        return None
+
+    def _split_into_batches(
+        self, items: list[dict[str, Any]]
+    ) -> list[list[tuple[int, dict[str, Any]]]]:
+        """将条目列表分割成批次.
+
+        Args:
+            items: 待分析的条目列表.
+
+        Returns:
+            批次列表，每个批次是 (index, item) 元组的列表.
+        """
+        batches: list[list[tuple[int, dict[str, Any]]]] = []
+        for i in range(0, len(items), self.BATCH_SIZE):
+            batch = [
+                (idx, items[idx])
+                for idx in range(i, min(i + self.BATCH_SIZE, len(items)))
+            ]
+            batches.append(batch)
+        return batches
+
+    def _analyze_batch(
+        self, batch: list[tuple[int, dict[str, Any]]]
+    ) -> dict[int, dict[str, Any]]:
+        """批量分析一组条目.
+
+        Args:
+            batch: (index, item) 元组列表.
+
+        Returns:
+            {index: analysis} 字典.
+        """
+        items_json = self._format_batch_items(batch)
+        prompt = BATCH_ANALYSIS_PROMPT.format(
+            count=len(batch),
+            items_json=items_json,
         )
 
         try:
             response = chat_with_retry(
                 provider=self.provider,
                 messages=[{"role": "user", "content": prompt}],
-                max_tokens=2000,
-                temperature=0.7,
+                max_tokens=16000,
+                temperature=0.3,
+                response_format={"type": "json_object"},
             )
-            return self._parse_analysis(response.content)
+            return self._parse_batch_analysis(response.content, batch)
         except LLMError as e:
-            self.logger.warning(f"[Step2] LLM 调用失败: {e}")
-            return self._default_analysis()
+            self.logger.warning(f"[Step2] 批量 LLM 调用失败: {e}")
+            raise
+        except ValueError:
+            raise
+
+    def _format_batch_items(self, batch: list[tuple[int, dict[str, Any]]]) -> str:
+        """格式化批次内容为 JSON 字符串.
+
+        Args:
+            batch: (index, item) 元组列表.
+
+        Returns:
+            格式化后的 JSON 字符串.
+        """
+        formatted_items = []
+        for idx, item in batch:
+            description = item.get("description", "") or item.get("readme", "")
+            description = description[: self.MAX_DESCRIPTION_LENGTH]
+            formatted_items.append(
+                {
+                    "index": idx,
+                    "title": item.get("title", ""),
+                    "source": item.get("source", ""),
+                    "description": description,
+                }
+            )
+        return json.dumps(formatted_items, ensure_ascii=False, indent=2)
+
+    def _parse_batch_analysis(
+        self, content: str, batch: list[tuple[int, dict[str, Any]]]
+    ) -> dict[int, dict[str, Any]]:
+        """解析批量分析结果.
+
+        Args:
+            content: LLM 返回的文本内容.
+            batch: (index, item) 元组列表.
+
+        Returns:
+            {index: analysis} 字典.
+        """
+        expected_indices = {idx for idx, _ in batch}
+        cleaned = content.strip()
+
+        parsed = self._try_parse_json_array(cleaned)
+        if parsed is not None:
+            results = self._extract_batch_results(parsed, expected_indices)
+            if results:
+                return results
+
+            results = self._extract_batch_results_by_order(parsed, batch)
+            if results:
+                return results
+
+        raise ValueError("无法从响应中解析有效的 JSON 数组")
+
+    def _extract_batch_results_by_order(
+        self, parsed_list: list[dict[str, Any]], batch: list[tuple[int, dict[str, Any]]]
+    ) -> dict[int, dict[str, Any]]:
+        """按顺序映射批量结果.
+
+        Args:
+            parsed_list: 解析后的列表.
+            batch: (index, item) 元组列表.
+
+        Returns:
+            {index: analysis} 字典.
+        """
+        if len(parsed_list) != len(batch):
+            self.logger.warning(
+                f"[Step2] 结果数量({len(parsed_list)})与批次大小({len(batch)})不匹配"
+            )
+            return {}
+
+        results: dict[int, dict[str, Any]] = {}
+        for i, (global_idx, _) in enumerate(batch):
+            if i < len(parsed_list):
+                validated = self._validate_analysis(parsed_list[i])
+                if validated.get("summary") != "分析生成失败":
+                    results[global_idx] = validated
+
+        return results
+
+    def _try_parse_json_array(self, content: str) -> list[dict[str, Any]] | None:
+        """尝试多种方式解析 JSON 数组.
+
+        Args:
+            content: LLM 返回的文本内容.
+
+        Returns:
+            解析后的列表，失败返回 None.
+        """
+        cleaned = content.strip()
+
+        try:
+            parsed = json.loads(cleaned)
+            if isinstance(parsed, list):
+                return self._ensure_dict_list(parsed)
+            if isinstance(parsed, dict):
+                for key in ["results", "data", "items", "list", "items"]:
+                    if key in parsed and isinstance(parsed[key], list):
+                        return self._ensure_dict_list(parsed[key])
+                for value in parsed.values():
+                    if isinstance(value, list):
+                        return self._ensure_dict_list(value)
+        except json.JSONDecodeError:
+            pass
+
+        if cleaned.startswith("["):
+            try:
+                parsed = json.loads(cleaned)
+                if isinstance(parsed, list):
+                    return self._ensure_dict_list(parsed)
+            except json.JSONDecodeError:
+                pass
+
+        code_block_pattern = re.compile(r"```(?:json)?\s*([\s\S]*?)\s*```")
+        for match in code_block_pattern.finditer(cleaned):
+            block = match.group(1).strip()
+            try:
+                parsed = json.loads(block)
+                if isinstance(parsed, list):
+                    return self._ensure_dict_list(parsed)
+            except json.JSONDecodeError:
+                continue
+
+        array_start = cleaned.find("[")
+        if array_start != -1:
+            bracket_count = 0
+            in_string = False
+            escape_next = False
+            array_end = -1
+
+            for i in range(array_start, len(cleaned)):
+                char = cleaned[i]
+
+                if escape_next:
+                    escape_next = False
+                    continue
+
+                if char == "\\":
+                    escape_next = True
+                    continue
+
+                if char == '"' and not escape_next:
+                    in_string = not in_string
+                    continue
+
+                if in_string:
+                    continue
+
+                if char == "[":
+                    bracket_count += 1
+                elif char == "]":
+                    bracket_count -= 1
+                    if bracket_count == 0:
+                        array_end = i + 1
+                        break
+
+            if array_end > array_start:
+                try:
+                    parsed = json.loads(cleaned[array_start:array_end])
+                    if isinstance(parsed, list):
+                        return self._ensure_dict_list(parsed)
+                except json.JSONDecodeError:
+                    pass
+
+        partial = self._extract_partial_json_objects(cleaned)
+        if partial:
+            return partial
+
+        return None
+
+    def _ensure_dict_list(self, items: list[Any]) -> list[dict[str, Any]] | None:
+        """确保列表中的每个元素都是字典.
+
+        Args:
+            items: 待检查的列表.
+
+        Returns:
+            字典列表，如果无法转换则返回 None.
+        """
+        result: list[dict[str, Any]] = []
+        for item in items:
+            if isinstance(item, dict):
+                result.append(item)
+            elif isinstance(item, str):
+                try:
+                    parsed = json.loads(item)
+                    if isinstance(parsed, dict):
+                        result.append(parsed)
+                except json.JSONDecodeError:
+                    continue
+        return result if result else None
+
+    def _extract_partial_json_objects(
+        self, content: str
+    ) -> list[dict[str, Any]] | None:
+        """从截断的 JSON 中提取已完成的对象.
+
+        Args:
+            content: LLM 返回的文本内容.
+
+        Returns:
+            提取的对象列表，失败返回 None.
+        """
+        objects: list[dict[str, Any]] = []
+
+        obj_pattern = re.compile(r'\{\s*"index"\s*:\s*\d+[^}]*\}', re.DOTALL)
+
+        for match in obj_pattern.finditer(content):
+            obj_str = match.group(0)
+            brace_count = 0
+            valid = True
+
+            for char in obj_str:
+                if char == "{":
+                    brace_count += 1
+                elif char == "}":
+                    brace_count -= 1
+
+            if brace_count == 0:
+                try:
+                    obj = json.loads(obj_str)
+                    if isinstance(obj, dict) and "index" in obj:
+                        objects.append(obj)
+                except json.JSONDecodeError:
+                    continue
+
+        return objects if objects else None
+
+    def _extract_batch_results(
+        self, parsed_list: list[dict[str, Any]], expected_indices: set[int]
+    ) -> dict[int, dict[str, Any]]:
+        """从解析的列表中提取结果.
+
+        Args:
+            parsed_list: 解析后的列表.
+            expected_indices: 期望的索引集合.
+
+        Returns:
+            {index: analysis} 字典.
+        """
+        results: dict[int, dict[str, Any]] = {}
+
+        for item in parsed_list:
+            idx = item.get("index")
+            if idx is None:
+                continue
+
+            if idx in expected_indices:
+                validated = self._validate_analysis(item)
+                if validated.get("summary") != "分析生成失败":
+                    results[idx] = validated
+
+        return results
+
+    def _log_progress(
+        self, idx: int, total: int, analysis: dict[str, Any], title: str
+    ) -> None:
+        """打印进度日志.
+
+        Args:
+            idx: 当前索引.
+            total: 总数.
+            analysis: 分析结果.
+            title: 条目标题.
+        """
+        score = analysis.get("relevance_score", "?")
+        tags = ",".join(analysis.get("tags", []))
+        print(
+            f"[Step2] [{idx + 1}/{total}] ✅ {title[:30]} - 评分:{score} 标签:{tags}",
+            file=sys.stderr,
+        )
 
     def _parse_analysis(self, content: str) -> dict[str, Any]:
         """解析 LLM 返回的分析结果.
@@ -970,6 +1368,8 @@ def main() -> int:
     print(f"  整理: {len(organized_items)} 条", file=sys.stderr)
     print(f"  保存: {len(saved_paths)} 条", file=sys.stderr)
     print("=" * 60, file=sys.stderr)
+
+    get_cost_tracker().report()
 
     return 0
 

@@ -77,11 +77,11 @@ class LLMResponse:
 
 @dataclass
 class ModelPricing:
-    """模型定价信息（单位：CNY/1K Tokens）。
+    """模型定价信息（单位：CNY/百万 Tokens）。
 
     Attributes:
-        prompt_price: 提示词单价（每千 Token）。
-        completion_price: 生成内容单价（每千 Token）。
+        prompt_price: 提示词单价（每百万 Token）。
+        completion_price: 生成内容单价（每百万 Token）。
     """
 
     prompt_price: float
@@ -89,19 +89,14 @@ class ModelPricing:
 
 
 MODEL_PRICING: dict[str, ModelPricing] = {
-    "deepseek-chat": ModelPricing(prompt_price=0.001, completion_price=0.002),
-    "deepseek-coder": ModelPricing(prompt_price=0.001, completion_price=0.002),
-    "qwen-turbo": ModelPricing(prompt_price=0.002, completion_price=0.006),
-    "qwen-plus": ModelPricing(prompt_price=0.004, completion_price=0.012),
-    "qwen-max": ModelPricing(prompt_price=0.04, completion_price=0.12),
-    "glm-4": ModelPricing(prompt_price=0.1, completion_price=0.1),
-    "glm-4.7": ModelPricing(prompt_price=0.1, completion_price=0.1),
-    "gpt-3.5-turbo": ModelPricing(prompt_price=0.0015, completion_price=0.002),
-    "gpt-4": ModelPricing(prompt_price=0.03, completion_price=0.06),
-    "gpt-4-turbo": ModelPricing(prompt_price=0.01, completion_price=0.03),
+    "deepseek": ModelPricing(prompt_price=1, completion_price=2),
+    "qwen": ModelPricing(prompt_price=4, completion_price=12),
+    "gpt-4o-mini": ModelPricing(prompt_price=150, completion_price=600),
+    "minimax": ModelPricing(prompt_price=2, completion_price=8),
+    "glm-4.7": ModelPricing(prompt_price=4, completion_price=16),
 }
 
-DEFAULT_PRICING = ModelPricing(prompt_price=0.01, completion_price=0.01)
+DEFAULT_PRICING = ModelPricing(prompt_price=2, completion_price=8)
 
 
 class LLMProvider(ABC):
@@ -181,6 +176,7 @@ class OpenAICompatibleProvider(LLMProvider):
         api_base: str | None = None,
         api_key: str | None = None,
         default_model: str | None = None,
+        enable_token_count: bool | None = None,
     ):
         """初始化提供商实例。
 
@@ -188,12 +184,19 @@ class OpenAICompatibleProvider(LLMProvider):
             api_base: API 基础地址，为 None 时从环境变量读取。
             api_key: API 密钥，为 None 时从环境变量读取。
             default_model: 默认模型，为 None 时从环境变量读取。
+            enable_token_count: 是否启用本地 Token 估算，为 None 时从环境变量读取。
         """
         self.api_base = api_base or os.getenv(
             "LLM_API_BASE", "https://open.bigmodel.cn/api/paas/v4"
         )
         self.api_key = api_key or os.getenv("LLM_API_KEY", "")
         self.default_model = default_model or os.getenv("LLM_MODEL_ID", "glm-4")
+
+        if enable_token_count is not None:
+            self.enable_token_count = enable_token_count
+        else:
+            env_val = os.getenv("LLM_ENABLE_TOKEN_COUNT", "false").lower()
+            self.enable_token_count = env_val in ("true", "1", "yes")
 
         if not self.api_key:
             raise LLMError("缺少 API Key，请设置 LLM_API_KEY 环境变量")
@@ -274,11 +277,23 @@ class OpenAICompatibleProvider(LLMProvider):
                 total_tokens=usage_data.get("total_tokens", 0),
             )
 
-            logger.info(
-                f"LLM 响应成功: model={model}, "
-                f"tokens={usage.total_tokens} (prompt={usage.prompt_tokens}, "
-                f"completion={usage.completion_tokens})"
-            )
+            if self.enable_token_count:
+                estimated_prompt = _count_messages_tokens(messages)
+                estimated_completion = _count_text_tokens(content)
+                logger.info(
+                    f"LLM 响应成功: model={model}, "
+                    f"tokens={usage.total_tokens} (prompt={usage.prompt_tokens}, "
+                    f"completion={usage.completion_tokens}) | "
+                    f"本地估算: prompt≈{estimated_prompt}, completion≈{estimated_completion}"
+                )
+            else:
+                logger.info(
+                    f"LLM 响应成功: model={model}, "
+                    f"tokens={usage.total_tokens} (prompt={usage.prompt_tokens}, "
+                    f"completion={usage.completion_tokens})"
+                )
+
+            _cost_tracker.record(usage, self)
 
             return LLMResponse(
                 content=content,
@@ -381,18 +396,49 @@ def estimate_tokens(text: str) -> int:
     return chinese_tokens + max(other_tokens, 0)
 
 
+def _count_text_tokens(text: str) -> int:
+    """估算单段文本的 Token 数量。
+
+    Args:
+        text: 待估算的文本。
+
+    Returns:
+        估算的 Token 数量。
+    """
+    return estimate_tokens(text)
+
+
+def _count_messages_tokens(messages: list[dict[str, str]]) -> int:
+    """估算消息列表的 Token 数量（含角色开销）。
+
+    每条消息额外计算约 4 个 Token 的角色标记开销。
+
+    Args:
+        messages: 消息列表。
+
+    Returns:
+        估算的 Token 数量。
+    """
+    total = 0
+    for msg in messages:
+        total += estimate_tokens(msg.get("content", ""))
+        total += 4
+    total += 2
+    return total
+
+
 def calculate_cost(usage: Usage, pricing: ModelPricing) -> float:
     """计算 Token 消耗成本。
 
     Args:
         usage: Token 使用量。
-        pricing: 模型定价信息。
+        pricing: 模型定价信息（单位：元/百万 Tokens）。
 
     Returns:
         成本（单位：CNY）。
     """
-    prompt_cost = (usage.prompt_tokens / 1000) * pricing.prompt_price
-    completion_cost = (usage.completion_tokens / 1000) * pricing.completion_price
+    prompt_cost = (usage.prompt_tokens / 1_000_000) * pricing.prompt_price
+    completion_cost = (usage.completion_tokens / 1_000_000) * pricing.completion_price
     return prompt_cost + completion_cost
 
 
@@ -413,7 +459,139 @@ def format_cost(cost: float) -> str:
         return f"¥{cost:.2f}"
 
 
+@dataclass
+class _CostRecord:
+    """单次 API 调用记录。
+
+    Attributes:
+        model: 模型标识符。
+        prompt_tokens: 输入 Token 数。
+        completion_tokens: 输出 Token 数。
+        cost: 本次调用成本（CNY）。
+    """
+
+    model: str
+    prompt_tokens: int
+    completion_tokens: int
+    cost: float
+
+
+class CostTracker:
+    """LLM 调用成本追踪器。
+
+    追踪每次 API 调用的 Token 消耗和成本，支持按模型汇总。
+
+    Attributes:
+        enabled: 是否启用追踪。
+        records: 调用记录列表。
+    """
+
+    def __init__(self, enabled: bool = False) -> None:
+        """初始化成本追踪器。
+
+        Args:
+            enabled: 是否启用追踪。
+        """
+        self.enabled = enabled
+        self.records: list[_CostRecord] = []
+
+    def record(self, usage: Usage, provider: LLMProvider) -> None:
+        """记录一次 API 调用。
+
+        Args:
+            usage: Token 使用量。
+            provider: LLM 提供商实例，用于获取模型定价。
+        """
+        if not self.enabled:
+            return
+
+        model = provider.default_model
+        pricing = provider.get_model_pricing(model)
+        cost = calculate_cost(usage, pricing)
+
+        self.records.append(
+            _CostRecord(
+                model=model,
+                prompt_tokens=usage.prompt_tokens,
+                completion_tokens=usage.completion_tokens,
+                cost=cost,
+            )
+        )
+
+    def estimated_cost(self, provider: LLMProvider | None = None) -> float:
+        """返回估算总成本。
+
+        Args:
+            provider: LLM 提供商实例（未使用，保留接口兼容）。
+
+        Returns:
+            总成本（单位：CNY）。
+        """
+        return sum(r.cost for r in self.records)
+
+    def report(self, provider: LLMProvider | None = None) -> None:
+        """打印成本报告。
+
+        按模型汇总 Token 消耗和成本，输出到日志。
+
+        Args:
+            provider: LLM 提供商实例（未使用，保留接口兼容）。
+        """
+        if not self.records:
+            logger.info("[CostTracker] 无调用记录")
+            return
+
+        model_stats: dict[str, dict[str, Any]] = {}
+        for r in self.records:
+            if r.model not in model_stats:
+                model_stats[r.model] = {
+                    "calls": 0,
+                    "prompt_tokens": 0,
+                    "completion_tokens": 0,
+                    "cost": 0.0,
+                }
+            stats = model_stats[r.model]
+            stats["calls"] += 1
+            stats["prompt_tokens"] += r.prompt_tokens
+            stats["completion_tokens"] += r.completion_tokens
+            stats["cost"] += r.cost
+
+        total_calls = len(self.records)
+        total_prompt = sum(s["prompt_tokens"] for s in model_stats.values())
+        total_completion = sum(s["completion_tokens"] for s in model_stats.values())
+        total_cost = self.estimated_cost()
+
+        lines = [
+            "",
+            "=" * 50,
+            "  LLM 成本报告",
+            "=" * 50,
+        ]
+        for model, stats in model_stats.items():
+            lines.append(
+                f"  {model}: "
+                f"{stats['calls']}次调用, "
+                f"输入{stats['prompt_tokens']:,} tokens, "
+                f"输出{stats['completion_tokens']:,} tokens, "
+                f"成本 {format_cost(stats['cost'])}"
+            )
+        lines.append("-" * 50)
+        lines.append(
+            f"  合计: "
+            f"{total_calls}次调用, "
+            f"输入{total_prompt:,} tokens, "
+            f"输出{total_completion:,} tokens, "
+            f"总成本 {format_cost(total_cost)}"
+        )
+        lines.append("=" * 50)
+
+        for line in lines:
+            logger.info(line)
+
+
 _default_provider: LLMProvider | None = None
+
+_cost_tracker = CostTracker(enabled=False)
 
 
 def get_default_provider() -> LLMProvider:
@@ -422,10 +600,20 @@ def get_default_provider() -> LLMProvider:
     Returns:
         OpenAICompatibleProvider 实例。
     """
-    global _default_provider
+    global _default_provider, _cost_tracker
     if _default_provider is None:
         _default_provider = OpenAICompatibleProvider()
+        _cost_tracker.enabled = _default_provider.enable_token_count
     return _default_provider
+
+
+def get_cost_tracker() -> CostTracker:
+    """获取全局成本追踪器实例。
+
+    Returns:
+        CostTracker 实例。
+    """
+    return _cost_tracker
 
 
 def quick_chat(
@@ -463,7 +651,13 @@ def quick_chat(
         messages.append({"role": "system", "content": system_prompt})
     messages.append({"role": "user", "content": prompt})
 
-    return chat_with_retry(provider=provider, messages=messages, model=model, temperature=temperature, **kwargs)
+    return chat_with_retry(
+        provider=provider,
+        messages=messages,
+        model=model,
+        temperature=temperature,
+        **kwargs,
+    )
 
 
 if __name__ == "__main__":
@@ -478,7 +672,9 @@ if __name__ == "__main__":
         provider = get_default_provider()
         logger.info(f"   API Base: {provider.api_base}")
         logger.info(f"   Default Model: {provider.default_model}")
-        logger.info(f"   API Key: {'*' * 8}{provider.api_key[-4:] if len(provider.api_key) > 4 else '****'}")
+        logger.info(
+            f"   API Key: {'*' * 8}{provider.api_key[-4:] if len(provider.api_key) > 4 else '****'}"
+        )
     except LLMError as e:
         logger.error(f"   配置错误: {e}")
         exit(1)
@@ -512,7 +708,9 @@ if __name__ == "__main__":
         response = quick_chat(test_prompt, temperature=0.3)
         logger.info(f"   响应: {response.content}")
         logger.info(f"   模型: {response.model}")
-        logger.info(f"   用量: {json.dumps(response.usage.to_dict(), ensure_ascii=False)}")
+        logger.info(
+            f"   用量: {json.dumps(response.usage.to_dict(), ensure_ascii=False)}"
+        )
 
         pricing = provider.get_model_pricing(response.model)
         cost = calculate_cost(response.usage, pricing)
@@ -528,7 +726,9 @@ if __name__ == "__main__":
     try:
         response = chat_with_retry(provider, messages, max_retries=2)
         logger.info(f"   响应: {response.content[:100]}...")
-        logger.info(f"   用量: {json.dumps(response.usage.to_dict(), ensure_ascii=False)}")
+        logger.info(
+            f"   用量: {json.dumps(response.usage.to_dict(), ensure_ascii=False)}"
+        )
     except LLMError as e:
         logger.error(f"   调用失败: {e}")
 
