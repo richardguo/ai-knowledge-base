@@ -1,20 +1,20 @@
 {
-  "id": "4c816dda-9045-4c8a-8ccd-d3ae7b17621b",
+  "id": "3a937437-330e-4102-8905-603c6927fcc2",
   "title": "Scoring Show HN submissions for AI design patterns",
   "url": "https://www.adriankrebs.ch/blog/design-slop/",
   "source": "rss",
-  "collected_at": "2026-04-24T11:44:51+08:00",
-  "processed_at": "2026-04-24T11:46:18+08:00",
-  "summary": "作者对Hacker News上的Show HN项目进行评分，分析其中涉及的AI设计模式。研究发现大量项目存在相似的AI应用模式，揭示了当前AI创业的同质化趋势和设计套路。",
+  "collected_at": "2026-04-24T13:33:20+08:00",
+  "processed_at": "2026-04-24T13:34:19+08:00",
+  "summary": "作者对Hacker News上的Show HN项目进行AI设计模式评分，分析当前AI产品的主流设计趋势。揭示了AI应用开发中的常见模式和同质化问题，为AI产品设计提供参考。",
   "highlights": [
-    "系统分析Show HN的AI设计模式",
-    "揭示AI创业项目的同质化趋势"
+    "分析Show HN项目的AI设计模式",
+    "揭示AI产品的设计趋势和同质化"
   ],
   "relevance_score": 7,
   "tags": [
     "ai-design",
-    "startup"
+    "product-analysis"
   ],
-  "category": "实践",
-  "maturity": "测试"
+  "category": "论文",
+  "maturity": "实验"
 }

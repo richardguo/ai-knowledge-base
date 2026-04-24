@@ -1,19 +1,19 @@
 {
-  "id": "8a0248dd-e851-4486-b453-1b515007900e",
+  "id": "750abc63-9e7f-4d78-90ea-cbbfab2769fd",
   "title": "Kernel code removals driven by LLM-created security reports",
   "url": "https://lwn.net/Articles/1068928/",
   "source": "rss",
-  "collected_at": "2026-04-24T11:44:51+08:00",
-  "processed_at": "2026-04-24T11:46:18+08:00",
-  "summary": "LWN.net报道了Linux内核维护者开始基于LLM生成的安全报告移除代码的现象。文章探讨了AI工具在代码安全审计中的应用，以及自动化代码清理对内核维护的影响。LLM能够识别潜在安全漏洞并生成报告，但依赖AI进行关键代码决策也引发了对准确性和误判风险的讨论。",
+  "collected_at": "2026-04-24T13:33:20+08:00",
+  "processed_at": "2026-04-24T13:34:19+08:00",
+  "summary": "LWN报道了Linux内核维护者开始基于LLM生成的安全报告移除代码的现象。文章讨论了自动化代码审查工具在开源项目中的应用，以及可能带来的误判风险和对开发者工作流程的影响。",
   "highlights": [
-    "LLM生成的安全报告驱动内核代码移除决策",
-    "AI工具在开源项目安全审计中的实际应用"
+    "LLM生成的安全报告驱动内核代码移除",
+    "自动化代码审查对开源生态的影响"
   ],
   "relevance_score": 7,
   "tags": [
-    "linux-kernel",
-    "ai-security"
+    "kernel",
+    "security-automation"
   ],
   "category": "实践",
   "maturity": "测试"

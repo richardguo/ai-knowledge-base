@@ -1,14 +1,14 @@
 {
-  "id": "4d7ec617-0b7d-44e4-8964-fb852b623834",
+  "id": "fb37d6ed-fc33-4f9d-9910-0540c7b991ff",
   "title": "MeshCore development team splits over trademark dispute and AI-generated code",
   "url": "https://blog.meshcore.io/2026/04/23/the-split",
   "source": "rss",
-  "collected_at": "2026-04-24T11:44:51+08:00",
-  "processed_at": "2026-04-24T11:46:18+08:00",
-  "summary": "MeshCore开发团队因商标纠纷和AI生成代码归属问题产生分歧导致团队分裂。该事件反映了开源社区中AI代码所有权认定的复杂性，以及商标权在开源项目中的潜在冲突。团队分裂将对项目未来发展产生重大影响。",
+  "collected_at": "2026-04-24T13:33:20+08:00",
+  "processed_at": "2026-04-24T13:34:19+08:00",
+  "summary": "MeshCore开发团队因商标纠纷和AI生成代码问题发生分裂。事件反映出开源社区在AI代码所有权认定方面的争议，以及商标保护与社区开放之间的矛盾。这一案例为开源项目的治理和AI辅助开发提供了重要参考。",
   "highlights": [
-    "团队因商标纠纷和AI生成代码归属问题分裂",
-    "开源项目中AI代码所有权认定存在法律和伦理争议"
+    "开源社区因商标和AI代码归属问题产生分裂",
+    "引发关于AI生成代码所有权和开源治理的讨论"
   ],
   "relevance_score": 6,
   "tags": [
@@ -16,5 +16,5 @@
     "ai-governance"
   ],
   "category": "实践",
-  "maturity": "生产"
+  "maturity": "测试"
 }

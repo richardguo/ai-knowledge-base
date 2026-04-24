@@ -1,20 +1,20 @@
 {
-  "id": "1956597f-23b9-4744-8799-261f25f73f9e",
+  "id": "f9bf01f4-d8d0-49ac-beaa-626e5804278f",
   "title": "n8n",
   "url": "https://github.com/n8n-io/n8n",
   "source": "github-search",
-  "collected_at": "2026-04-24T11:44:48+08:00",
-  "processed_at": "2026-04-24T11:46:18+08:00",
-  "summary": "AutoGPT是一个致力于让AI技术普惠化的开源项目，其核心理念是让每个人都能轻松使用和构建AI应用。项目提供了一系列工具，帮助用户专注于真正重要的事情，而无需关心底层技术细节。AutoGPT代表了AI Agent的早期探索方向，通过自动化任务分解和执行来降低AI使用门槛。",
+  "collected_at": "2026-04-24T13:33:20+08:00",
+  "processed_at": "2026-04-24T13:34:19+08:00",
+  "summary": "n8n是一个开源工作流自动化平台，支持可视化编排与自定义代码结合，提供400多种集成能力。平台支持自托管和云端部署，内置AI功能模块，可用于构建企业级自动化流程。适合需要将AI能力融入业务流程的开发者和企业用户。",
   "highlights": [
-    "降低AI使用门槛，让AI技术普惠化",
-    "提供构建工具，支持自动化任务执行"
+    "400+集成能力，覆盖主流服务和工作流",
+    "支持可视化编排与代码自定义，灵活度高"
   ],
-  "relevance_score": 7,
+  "relevance_score": 8,
   "tags": [
-    "ai-agent",
-    "automation"
+    "workflow-automation",
+    "ai-integration"
   ],
   "category": "工具",
-  "maturity": "测试"
+  "maturity": "生产"
 }

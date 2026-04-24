@@ -1,19 +1,19 @@
 {
-  "id": "3316a804-e635-48ff-ac3e-4ed3a525a4e4",
+  "id": "efd00d87-a6ac-4973-a0c4-02a450ed38d5",
   "title": "Meta to start capturing employee mouse movement, keystrokes for AI training data",
   "url": "https://tech.yahoo.com/ai/meta-ai/articles/exclusive-meta-start-capturing-employee-162745587.html",
   "source": "rss",
-  "collected_at": "2026-04-24T11:44:51+08:00",
-  "processed_at": "2026-04-24T11:46:18+08:00",
-  "summary": "与index 54内容高度相似，报道Meta捕获员工鼠标移动和键盘输入用于AI训练数据。可能是不同来源的重复报道或轻微版本差异。该话题在Hacker News上获得58点评分和4条评论关注度较低。",
+  "collected_at": "2026-04-24T13:33:20+08:00",
+  "processed_at": "2026-04-24T13:34:19+08:00",
+  "summary": "Meta开始收集员工的鼠标移动和键盘敲击数据，用于AI模型训练。这一举措由CEO扎克伯格推动，旨在获取更丰富的交互数据来提升AI系统的用户体验。Yahoo Tech独家报道了这一消息，目前已有58个HackerNews用户关注，4条评论。该做法引发了关于员工隐私和数据伦理的讨论，但同时也反映了AI行业对高质量训练数据的迫切需求。",
   "highlights": [
-    "员工行为数据收集政策",
-    "AI训练数据来源的隐私问题"
+    "Meta创新性地将员工行为数据（鼠标移动、键盘输入）作为AI训练数据源",
+    "CEO扎克伯格亲自推动，反映头部科技公司对训练数据的战略重视"
   ],
   "relevance_score": 6,
   "tags": [
-    "privacy",
-    "ai-training-data"
+    "data-collection",
+    "ai-training"
   ],
   "category": "实践",
   "maturity": "测试"

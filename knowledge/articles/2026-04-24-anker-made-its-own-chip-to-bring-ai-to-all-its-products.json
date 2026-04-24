@@ -1,20 +1,20 @@
 {
-  "id": "0d743a59-9015-49f0-9275-2168a21ea96e",
+  "id": "ba7724d4-379d-4bcd-a639-2b5d612ce6cd",
   "title": "Anker made its own chip to bring AI to all its products",
   "url": "https://www.theverge.com/tech/916463/anker-thus-chip-announcement",
   "source": "rss",
-  "collected_at": "2026-04-24T11:44:51+08:00",
-  "processed_at": "2026-04-24T11:46:18+08:00",
-  "summary": "安克(Anker)宣布自研AI芯片，将AI能力集成到其所有消费电子产品中。此举标志着消费电子厂商开始从硬件层面布局AI，推动边缘AI在日常设备中的普及。",
+  "collected_at": "2026-04-24T13:33:20+08:00",
+  "processed_at": "2026-04-24T13:34:19+08:00",
+  "summary": "Anker推出自研AI芯片，旨在将AI能力嵌入其所有产品线。这一举措标志着消费电子品牌开始从硬件层面构建AI能力，可能引领行业从软件AI向设备端AI的转型。",
   "highlights": [
-    "消费电子厂商自研AI芯片",
-    "推动边缘AI在消费产品中的应用"
+    "消费电子品牌自研AI芯片",
+    "推动AI从云端向设备端落地"
   ],
-  "relevance_score": 6,
+  "relevance_score": 7,
   "tags": [
     "hardware",
     "edge-ai"
   ],
   "category": "工具",
-  "maturity": "测试"
+  "maturity": "生产"
 }

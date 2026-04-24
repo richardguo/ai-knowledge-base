@@ -1,18 +1,18 @@
 {
-  "id": "32ceac5e-b331-49ea-b2f7-402d4e633d2e",
+  "id": "523a27f6-3c19-46df-a5bd-a068b5a9a4b4",
   "title": "Scammer used an AI-generated MAGA girl to grift men",
   "url": "https://www.wired.com/story/ai-generated-maga-girls/",
   "source": "rss",
-  "collected_at": "2026-04-24T11:44:51+08:00",
-  "processed_at": "2026-04-24T11:46:18+08:00",
-  "summary": "报道一起AI滥用案例：诈骗者使用AI生成的MAGA风格女性形象进行社交工程诈骗，针对男性用户实施欺诈。该案例展示了深度伪造技术在恶意用途上的风险，以及AI生成内容带来的社会安全问题。",
+  "collected_at": "2026-04-24T13:33:20+08:00",
+  "processed_at": "2026-04-24T13:34:19+08:00",
+  "summary": "报道一起利用AI生成虚拟人物进行诈骗的案例。骗子创建了一个AI生成的MAGA风格女性形象来欺骗男性用户，这反映了AI技术被滥用于社交工程攻击的风险。",
   "highlights": [
     "AI生成虚假身份进行社交工程诈骗",
-    "深度伪造技术的恶意应用风险"
+    "AI技术滥用风险警示"
   ],
   "relevance_score": 7,
   "tags": [
-    "deepfake",
+    "ai-misuse",
     "scam"
   ],
   "category": "实践",
