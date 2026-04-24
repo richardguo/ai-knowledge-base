@@ -1,0 +1,22 @@
+{
+  "id": "b2b57b30-f33e-445b-8f84-698ac2156b78",
+  "title": "everything-claude-code",
+  "url": "https://github.com/affaan-m/everything-claude-code",
+  "source": "github-search",
+  "collected_at": "2026-04-23T20:42:31+08:00",
+  "processed_at": "2026-04-23T20:43:13+08:00",
+  "summary": "该项目是一个针对Claude Code、Codex、Opencode、Cursor等代码生成模型的智能体性能优化系统，旨在通过集成技能、本能、记忆、安全性和研究优先的开发策略来提升模型在实际编码任务中的表现。系统通过模块化设计，结合了强化学习与上下文管理技术，以优化代码生成质量、响应速度和资源利用效率。其核心在于构建一个可扩展的框架，支持多模型协作与自适应学习，适用于复杂软件开发场景，推动AI辅助编程向更高层次的自动化与智能化发展。",
+  "highlights": [
+    "集成技能、本能、记忆与安全性的多维度优化框架",
+    "支持Claude Code、Codex、Opencode、Cursor等多模型协作",
+    "研究优先的开发策略提升代码生成质量与效率"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "code-generation",
+    "performance-optimization"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

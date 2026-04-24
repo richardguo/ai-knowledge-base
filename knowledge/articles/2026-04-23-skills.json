@@ -1,0 +1,22 @@
+{
+  "id": "44550c18-0f02-4faa-a5cf-f05b3f9d9a42",
+  "title": "skills",
+  "url": "https://github.com/anthropics/skills",
+  "source": "github-search",
+  "collected_at": "2026-04-23T20:42:31+08:00",
+  "processed_at": "2026-04-23T20:43:13+08:00",
+  "summary": "该项目是一个公开的GitHub仓库，旨在为AI智能体（Agent）收集和提供可复用的技能模块。它聚焦于构建一个模块化、可扩展的技能库，使开发者能够快速集成各种预定义能力到自己的智能体系统中，如信息检索、工具调用、API交互等。该仓库通常包含技能的定义、实现示例及集成指南，支持通过配置组合不同技能以完成复杂任务，从而降低开发门槛并促进智能体应用的标准化。其设计思想强调解耦与复用，是当前AI Agent生态中推动组件化开发的重要基础设施项目。",
+  "highlights": [
+    "模块化技能库，支持快速集成与组合",
+    "提供丰富的预定义技能实现与示例",
+    "促进AI Agent开发的标准化与复用"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-skills",
+    "modular-framework",
+    "open-source"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

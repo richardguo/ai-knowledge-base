@@ -1,0 +1,22 @@
+{
+  "id": "3dec627a-dd2f-4403-9103-26ca877b4527",
+  "title": "ComfyUI",
+  "url": "https://github.com/Comfy-Org/ComfyUI",
+  "source": "github-search",
+  "collected_at": "2026-04-23T20:42:31+08:00",
+  "processed_at": "2026-04-23T20:43:13+08:00",
+  "summary": "ComfyUI是一个基于节点/图形界面的模块化扩散模型GUI、API与后端系统，专为AI图像生成设计。它通过可视化编程的方式，让用户能够直观地构建和调整复杂的扩散模型工作流，支持高度定制化的节点连接与参数配置。该系统后端基于PyTorch等深度学习框架，提供稳定的模型推理能力，并允许开发者通过API进行集成与扩展。其模块化架构使得用户能够灵活组合不同功能节点（如潜在空间编码、采样器、条件控制等），从而优化生成效果与流程效率。ComfyUI适用于研究、创作与生产环境，降低了使用先进扩散模型的技术门槛，提升了工作流的可重复性与可控性。",
+  "highlights": [
+    "基于节点/图形的可视化编程界面",
+    "高度模块化与可扩展的架构",
+    "集成API支持后端推理与自定义集成"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "diffusion-models",
+    "ai-image-generation",
+    "graphical-interface"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

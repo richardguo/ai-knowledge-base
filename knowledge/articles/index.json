@@ -1,0 +1,306 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-04-23T20:43:13+08:00",
+  "total_entries": 20,
+  "entries": [
+    {
+      "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
+      "title": "openclaw",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/openclaw/openclaw",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-openclaw.json",
+      "tags": [
+        "ai-assistant",
+        "agent-framework"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "2064095b-a8a9-4e8a-81e1-7836a51a557f",
+      "title": "n8n",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/n8n-io/n8n",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-n8n.json",
+      "tags": [
+        "workflow-automation",
+        "low-code-platform",
+        "ai-integration"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "28fd71be-7f13-4b47-a50d-d6207a8af8d4",
+      "title": "AutoGPT",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-autogpt.json",
+      "tags": [
+        "ai-agent",
+        "automation-framework",
+        "open-source"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "b00046ec-8013-4a74-bc23-d838fbd0adec",
+      "title": "ollama",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/ollama/ollama",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-ollama.json",
+      "tags": [
+        "large-language-model",
+        "model-deployment",
+        "open-source-tool"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "b2b57b30-f33e-445b-8f84-698ac2156b78",
+      "title": "everything-claude-code",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/affaan-m/everything-claude-code",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-everything-claude-code.json",
+      "tags": [
+        "agent-framework",
+        "code-generation",
+        "performance-optimization"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "5402110a-048e-42be-b51b-4e9678123408",
+      "title": "prompts.chat",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://github.com/f/prompts.chat",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-prompts-chat.json",
+      "tags": [
+        "prompt-engineering",
+        "open-source",
+        "ai-tools"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "f4168ee1-480e-4a90-9049-60d4f4628c88",
+      "title": "transformers",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/huggingface/transformers",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-transformers.json",
+      "tags": [
+        "machine-learning-framework",
+        "transformer-models",
+        "multimodal-ai"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "aeec6c33-84bb-42e2-ae56-f74c24d4f3a5",
+      "title": "JavaGuide",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/Snailclimb/JavaGuide",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-javaguide.json",
+      "tags": [
+        "java-backend",
+        "interview-guide",
+        "system-design"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "9bd8b0f1-0135-4cf5-b112-0d7990e13a9f",
+      "title": "opencode",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 8,
+      "url": "https://github.com/anomalyco/opencode",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-opencode.json",
+      "tags": [
+        "coding-agent",
+        "automated-programming",
+        "open-source"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "5eb5cbe5-95c4-4c34-b8c4-216f1cdabb4f",
+      "title": "langflow",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/langflow-ai/langflow",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-langflow.json",
+      "tags": [
+        "agent-framework",
+        "workflow-automation",
+        "low-code-tool"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "63ba558d-1665-458c-bc25-fdd0220406fc",
+      "title": "dify",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/langgenius/dify",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-dify.json",
+      "tags": [
+        "agent-framework",
+        "workflow-orchestration",
+        "llm-application"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "679daf89-4686-447c-90e5-c23aa414494a",
+      "title": "system-prompts-and-models-of-ai-tools",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-system-prompts-and-models-of-ai-tools.json",
+      "tags": [
+        "system-prompts",
+        "ai-tools",
+        "code-generation"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "a4993b10-452e-40cf-b373-dd1006f65445",
+      "title": "langchain",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 8,
+      "url": "https://github.com/langchain-ai/langchain",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-langchain.json",
+      "tags": [
+        "agent-framework",
+        "large-language-model",
+        "application-development"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "c41a447f-b484-4385-b068-7e7923efaad4",
+      "title": "open-webui",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/open-webui/open-webui",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-open-webui.json",
+      "tags": [
+        "ai-interface",
+        "open-source",
+        "web-framework"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "44550c18-0f02-4faa-a5cf-f05b3f9d9a42",
+      "title": "skills",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/anthropics/skills",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-skills.json",
+      "tags": [
+        "agent-skills",
+        "modular-framework",
+        "open-source"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "2f0e8aae-3ea5-4b68-bb7f-1ffc0832a33b",
+      "title": "claude-code",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://github.com/anthropics/claude-code",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-claude-code.json",
+      "tags": [
+        "ai-coding-assistant",
+        "terminal-tool",
+        "git-automation"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "9aed4fb2-2265-4ad0-9f69-e5e413c2327b",
+      "title": "hermes-agent",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-hermes-agent.json",
+      "tags": [
+        "agent-framework",
+        "autonomous-agents",
+        "ai-toolkit"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "d77496ca-e1cb-45c6-a828-92e98fcc940e",
+      "title": "firecrawl",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/firecrawl/firecrawl",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-firecrawl.json",
+      "tags": [
+        "web-scraping",
+        "ai-tools",
+        "api-integration"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "3dec627a-dd2f-4403-9103-26ca877b4527",
+      "title": "ComfyUI",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-comfyui.json",
+      "tags": [
+        "diffusion-models",
+        "ai-image-generation",
+        "graphical-interface"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    },
+    {
+      "id": "00e8f161-8119-41d2-bf6d-45d2d1b5f092",
+      "title": "generative-ai-for-beginners",
+      "source": "github-search",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-23-generative-ai-for-beginners.json",
+      "tags": [
+        "generative-ai",
+        "beginner-course",
+        "ai-education"
+      ],
+      "collected_at": "2026-04-23T20:42:31+08:00"
+    }
+  ]
+}

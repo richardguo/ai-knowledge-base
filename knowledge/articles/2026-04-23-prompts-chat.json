@@ -1,0 +1,22 @@
+{
+  "id": "5402110a-048e-42be-b51b-4e9678123408",
+  "title": "prompts.chat",
+  "url": "https://github.com/f/prompts.chat",
+  "source": "github-search",
+  "collected_at": "2026-04-23T20:42:31+08:00",
+  "processed_at": "2026-04-23T20:43:13+08:00",
+  "summary": "prompts.chat（前身为Awesome ChatGPT Prompts）是一个专注于AI提示词分享、发现与收集的开源社区平台。该项目允许用户自由共享和探索来自社区的各类提示词，旨在提升大型语言模型（如ChatGPT）的使用效率与效果。其核心价值在于提供了一个集中化、可协作的提示词库，帮助用户快速获取经过验证的高质量提示模板，降低AI应用的门槛。技术层面，该项目采用开源模式，支持私有化部署，为组织提供了完全隐私保护的本地部署方案，适用于企业或团队内部的知识管理与AI工具集成。",
+  "highlights": [
+    "开源社区驱动的提示词共享平台，促进协作与知识积累",
+    "支持私有化部署，保障数据隐私与安全，适合企业级应用",
+    "前身为知名项目Awesome ChatGPT Prompts，具有广泛的用户基础与内容积累"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "prompt-engineering",
+    "open-source",
+    "ai-tools"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

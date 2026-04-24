@@ -1,0 +1,22 @@
+2026-04-23T20:43:13+0800 [INFO] 开始 JSON 格式校验
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-autogpt.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-claude-code.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-comfyui.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-dify.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-everything-claude-code.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-firecrawl.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-generative-ai-for-beginners.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-hermes-agent.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-javaguide.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-langchain.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-langflow.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-n8n.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-ollama.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-open-webui.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-openclaw.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-opencode.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-prompts-chat.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-skills.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-system-prompts-and-models-of-ai-tools.json
+2026-04-23T20:43:13+0800 [DEBUG] 通过: knowledge/articles/2026-04-23-transformers.json
+2026-04-23T20:43:13+0800 [INFO] 校验通过: 20 个文件全部有效
