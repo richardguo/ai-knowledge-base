@@ -11,10 +11,12 @@ permissions:
 # TZ 环境变量不会影响 schedule 触发器的 cron 表达式！
 env:
   TZ: Asia/Shanghai       # 设置时区为北京时间
+  PYTHONDONTWRITEBYTECODE: 1  # 禁止 Python 生成 __pycache__
 
 jobs:
   collect:
     runs-on: ubuntu-latest
+    environment: remote_env  # 指定使用 remote_env 环境中的变量
 
     steps:
       # 检出仓库代码
