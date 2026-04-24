@@ -190,7 +190,7 @@ class OpenAICompatibleProvider(LLMProvider):
             "LLM_API_BASE", "https://open.bigmodel.cn/api/paas/v4"
         )
         self.api_key = api_key or os.getenv("LLM_API_KEY", "")
-        self.default_model = default_model or os.getenv("LLM_MODEL_ID", "glm-4")
+        self.default_model = default_model or os.getenv("LLM_MODEL_ID", "glm-4.7")
 
         if enable_token_count is not None:
             self.enable_token_count = enable_token_count
@@ -691,7 +691,7 @@ if __name__ == "__main__":
 
     logger.info("\n3. 测试成本计算")
     test_usage = Usage(prompt_tokens=100, completion_tokens=50)
-    test_models = ["deepseek-chat", "qwen-turbo", "glm-4", "unknown-model"]
+    test_models = ["deepseek-v4-flash", "qwen-turbo", "glm-4", "unknown-model"]
     for model_name in test_models:
         pricing = provider.get_model_pricing(model_name)
         cost = calculate_cost(test_usage, pricing)

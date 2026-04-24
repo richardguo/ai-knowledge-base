@@ -36,15 +36,15 @@ jobs:
       - name: Run pipeline
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LLM_API_BASE: ${{ secrets.LLM_API_BASE }}
+          LLM_API_BASE: ${{ vars.LLM_API_BASE }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_MODEL_ID: ${{ secrets.LLM_MODEL_ID }}
-          ZHIPU_API_BASE_URL: ${{ secrets.ZHIPU_API_BASE_URL }}
+          LLM_MODEL_ID: ${{ vars.LLM_MODEL_ID }}
+          ZHIPU_API_BASE_URL: ${{ vars.ZHIPU_API_BASE_URL }}
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
-          ZHIPU_MODEL_ID: ${{ secrets.ZHIPU_MODEL_ID }}
-          SC_API_BASE_URL: ${{ secrets.SC_API_BASE_URL }}
+          ZHIPU_MODEL_ID: ${{ vars.ZHIPU_MODEL_ID }}
+          SC_API_BASE_URL: ${{ vars.SC_API_BASE_URL }}
           SC_API_KEY: ${{ secrets.SC_API_KEY }}
-          SC_MODEL_ID: ${{ secrets.SC_MODEL_ID }}
+          SC_MODEL_ID: ${{ vars.SC_MODEL_ID }}
         run: python pipeline/pipeline.py --sources github,rss --limit 20 --verbose
 
       # 校验生成的 JSON 文件格式是否正确
