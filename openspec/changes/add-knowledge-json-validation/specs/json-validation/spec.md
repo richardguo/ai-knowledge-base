@@ -33,18 +33,17 @@
 
 ### Requirement: Schema file matching by path pattern
 校验脚本 SHALL 按以下路径模式匹配 schema：
-- `knowledge/raw/github-search-*.json` → `openspec/specs/schemas/collector-output.json`
-- `knowledge/raw/github-trending-*.json` → `openspec/specs/schemas/collector-output.json`
-- `knowledge/processed/analyzer-*.json` → `openspec/specs/schemas/analyzer-output.json`
-- `knowledge/articles/index.json` → `openspec/specs/schemas/index.json`
-- `knowledge/articles/????-??-??-*.json` → `openspec/specs/schemas/knowledge-article.json`
+- `knowledge/raw/pipeline-*.json` → `openspec/specs/schemas/collector-output.json`（Step1Collector 产出）
+- `knowledge/articles/index.json` → `openspec/specs/schemas/index.json`（Step4Saver 索引）
+- `knowledge/articles/????-??-??-*.json` → `openspec/specs/schemas/knowledge-article.json`（Step4Saver 知识条目）
 - `knowledge/processed/collector-*-status.json` → 不校验（状态文件）
 - `knowledge/processed/organizer-*-status.json` → 不校验（状态文件）
+- `knowledge/processed/analyzer-*-status.json` → 不校验（状态文件）
 
 无法匹配的 JSON 文件 SHALL 跳过校验，不报错。
 
 #### Scenario: Collector output file matched to correct schema
-- **WHEN** staged 文件为 `knowledge/raw/github-search-2026-04-22-100000.json`
+- **WHEN** staged 文件为 `knowledge/raw/pipeline-2026-04-22-100000.json`
 - **THEN** 使用 `openspec/specs/schemas/collector-output.json` 校验
 
 #### Scenario: Knowledge article file matched to correct schema

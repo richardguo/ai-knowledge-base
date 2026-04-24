@@ -4,7 +4,7 @@
   "title": "Knowledge Article",
   "description": "知识条目的 JSON Schema，覆盖 knowledge/articles/*.json",
   "type": "object",
-  "required": ["id", "title", "source", "url", "collected_at", "summary", "tags", "relevance_score"],
+  "required": ["id", "title", "source", "url", "collected_at", "processed_at", "summary", "highlights", "tags", "relevance_score", "category", "maturity"],
   "properties": {
     "id": {
       "type": "string",

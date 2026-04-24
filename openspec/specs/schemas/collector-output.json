@@ -12,16 +12,11 @@
     },
     "source": {
       "type": "string",
-      "enum": ["github-search", "github-trending"],
-      "description": "数据源类型"
+      "description": "数据源类型，多个源用逗号分隔，如 github,rss"
     },
     "version": {
       "type": "string",
       "description": "数据格式版本"
-    },
-    "since": {
-      "type": "string",
-      "description": "Trending 时间范围，github-trending 数据源必填"
     },
     "items": {
       "type": "array",
@@ -30,21 +25,13 @@
       }
     }
   },
-  "if": {
-    "properties": {
-      "source": { "const": "github-trending" }
-    }
-  },
-  "then": {
-    "required": ["since"]
-  },
   "$defs": {
     "collectorItem": {
       "type": "object",
       "required": [
-        "title", "url", "author", "language",
-        "popularity", "popularity_type", "topics",
-        "created_at", "updated_at"
+        "title", "url", "source", "popularity", "popularity_type",
+        "author", "created_at", "updated_at", "language", "topics",
+        "description", "readme", "summary", "collected_at"
       ],
       "properties": {
         "title": {
@@ -54,43 +41,55 @@
           "type": "string",
           "format": "uri"
         },
-        "description": {
+        "source": {
           "type": "string",
-          "default": ""
-        },
-        "author": {
-          "type": "string"
-        },
-        "language": {
-          "type": "string"
+          "description": "条目来源，如 github-search, rss"
         },
         "popularity": {
           "type": "integer",
           "minimum": 0
         },
         "popularity_type": {
-          "type": "string"
+          "type": "string",
+          "description": "流行度类型，如 total_stars, none"
+        },
+        "author": {
+          "type": "string",
+          "description": "作者/组织名"
+        },
+        "created_at": {
+          "type": "string",
+          "description": "创建时间，ISO 8601 格式"
+        },
+        "updated_at": {
+          "type": "string",
+          "description": "更新时间，ISO 8601 格式"
+        },
+        "language": {
+          "type": "string",
+          "description": "主要编程语言，N/A 表示未知"
         },
         "topics": {
           "type": "array",
           "items": { "type": "string" }
         },
-        "readme": {
+        "description": {
           "type": "string",
           "default": ""
+        },
+        "readme": {
+          "type": "string",
+          "default": "",
+          "description": "README 内容前 5000 字符"
         },
         "summary": {
           "type": "string",
-          "default": ""
-        },
-        "created_at": {
-          "type": "string"
-        },
-        "updated_at": {
-          "type": "string"
+          "default": "",
+          "description": "摘要，Collector 阶段置空，由 Analyzer 填充"
         },
         "collected_at": {
-          "type": "string"
+          "type": "string",
+          "description": "采集时间，ISO 8601 格式"
         }
       },
       "additionalProperties": true

@@ -1,12 +1,31 @@
 ## Context
 
-当前流水线有三个 Agent（Collector → Analyzer → Organizer），通过 JSON 文件传递数据：
-- `knowledge/raw/*.json`：Collector 产出
-- `knowledge/processed/analyzer-*.json`：Analyzer 产出
-- `knowledge/articles/*.json`：Organizer 产出的知识条目
-- `knowledge/articles/index.json`：索引文件
+当前流水线有四个步骤（Collector → Analyzer → Organizer → Saver），通过 JSON 文件传递数据：
+- `knowledge/raw/pipeline-{timestamp}.json`：Step1Collector 产出，包含 GitHub 和 RSS 采集的原始数据
+- 分析后数据：Step2Analyzer 为每个 item 添加 analysis 字段（summary, highlights, relevance_score, tags, category, maturity）
+- 整理后数据：Step3Organizer 执行去重、格式标准化、按评分过滤（>=6）
+- `knowledge/articles/{YYYY-MM-DD}-{slug}.json`：Step4Saver 产出的最终知识条目
+- `knowledge/articles/index.json`：Step4Saver 更新的索引文件
 
-`openspec/specs/project.md` 已声明了 `specs/schemas/collector-output.json` 和 `specs/schemas/analyzer-output.json` 两个 schema 文件路径，但文件未创建。项目约定 git hook 放 `.git/hooks/`、不用 husky、pre-commit 失败必须 block。
+`openspec/specs/project.md` 已声明了相关 schema 文件路径，但文件未创建。项目约定 git hook 放 `.git/hooks/`、不用 husky、pre-commit 失败必须 block。
+
+## 流水线数据流
+
+```
+[Step1Collector] 采集 GitHub + RSS → knowledge/raw/pipeline-{timestamp}.json
+        ↓
+[Step2Analyzer] 批量 LLM 分析（批量大小: 10, 并发: 5）→ 添加 analysis 字段
+        ↓
+[Step3Organizer] 去重 + 过滤（评分>=6）+ 标准化
+        ↓
+[Step4Saver] 保存为独立文件 → knowledge/articles/{date}-{slug}.json + index.json
+```
+
+### 批量分析特性
+- BATCH_SIZE = 10：每批处理 10 条内容
+- MAX_CONCURRENT = 5：最多 5 个并发请求
+- 支持失败重试机制
+- 使用 ThreadPoolExecutor 实现并发
 
 ## Goals / Non-Goals
 

@@ -29,17 +29,13 @@
   "$defs": {
     "indexEntry": {
       "type": "object",
-      "required": ["id", "title", "url"],
+      "required": ["id", "title", "source", "category", "relevance_score", "url", "file_path", "tags", "collected_at"],
       "properties": {
         "id": {
           "type": "string"
         },
         "title": {
           "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
         },
         "source": {
           "type": "string"
@@ -52,21 +48,19 @@
           "minimum": 1,
           "maximum": 10
         },
-        "json_path": {
-          "type": "string"
-        },
-        "md_path": {
-          "type": "string"
+        "url": {
+          "type": "string",
+          "format": "uri"
         },
         "file_path": {
-          "type": "string"
-        },
-        "collected_at": {
           "type": "string"
         },
         "tags": {
           "type": "array",
           "items": { "type": "string" }
+        },
+        "collected_at": {
+          "type": "string"
         }
       },
       "additionalProperties": true
