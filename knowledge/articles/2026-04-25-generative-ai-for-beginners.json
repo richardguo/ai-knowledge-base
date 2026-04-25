@@ -1,19 +1,19 @@
 {
-  "id": "2d8c58f8-0660-4f5a-946f-a4f4ab90f03f",
+  "id": "90d0bd91-f1f8-4804-8c48-f723fcad916a",
   "title": "generative-ai-for-beginners",
   "url": "https://github.com/microsoft/generative-ai-for-beginners",
   "source": "github-search",
-  "collected_at": "2026-04-25T13:01:03+08:00",
-  "processed_at": "2026-04-25T13:01:38+08:00",
-  "summary": "Generative AI for Beginners是微软推出的21课入门教程，覆盖生成式AI的核心概念、LLM原理、提示工程、RAG应用开发和代理系统等。是初学者系统学习AI开发的优质起点。",
+  "collected_at": "2026-04-25T13:31:48+08:00",
+  "processed_at": "2026-04-25T13:33:07+08:00",
+  "summary": "这是一个面向初学者的生成式 AI 课程，包含 21 个精心设计的课时。内容涵盖了从基础概念到实际应用开发的完整路径，旨在帮助学习者快速掌握使用生成式 AI 技术构建应用的核心技能。作为微软等机构支持的入门资源，它是初学者系统学习 AI 开发原理和实践的最佳起点之一。",
   "highlights": [
-    "微软官方出品，系统性入门教程",
-    "涵盖从基础到实践的完整学习路径"
+    "系统性课程设计",
+    "理论与实践紧密结合"
   ],
-  "relevance_score": 7,
+  "relevance_score": 6,
   "tags": [
-    "learning-resource",
-    "generative-ai"
+    "tutorial",
+    "education"
   ],
   "category": "实践",
   "maturity": "生产"
