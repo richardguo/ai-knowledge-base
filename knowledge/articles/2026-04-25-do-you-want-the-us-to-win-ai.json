@@ -1,20 +1,20 @@
 {
-  "id": "4996486c-50e0-432b-8ac4-1c6150f1d03d",
+  "id": "fa54983d-17a8-4f02-869f-62a7093ccca4",
   "title": "Do you want the US to \"win\" AI?",
   "url": "https://geohot.github.io//blog/jekyll/update/2026/04/23/us-win-ai.html",
   "source": "rss",
-  "collected_at": "2026-04-25T10:12:20+08:00",
-  "processed_at": "2026-04-25T10:14:00+08:00",
-  "summary": "Geohot讨论美国是否应该\"赢得\"AI竞争。文章分析了AI竞赛的地缘政治意义，探讨了技术领先与全球治理的关系，引发关于AI国家战略的思考。",
+  "collected_at": "2026-04-25T12:57:56+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "geohot（George Hotz）探讨美国是否应该在AI领域\"获胜\"的文章。讨论了AI竞争的地缘政治维度、国家安全考量、以及AI发展应该追求商业竞争还是国家主导的不同观点，引发关于AI战略的思考。",
   "highlights": [
-    "AI地缘政治竞争分析",
-    "技术领先与全球治理关系"
+    "AI地缘政治竞争讨论",
+    "国家AI战略选择思考"
   ],
   "relevance_score": 6,
   "tags": [
     "ai-policy",
     "geopolitics"
   ],
-  "category": "实践",
-  "maturity": "测试"
+  "category": "论文",
+  "maturity": "实验"
 }

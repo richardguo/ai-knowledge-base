@@ -1,0 +1,20 @@
+{
+  "id": "9908ae7c-9643-4fb8-9133-b9a093c44b52",
+  "title": "andrej-karpathy-skills",
+  "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "andrej-karpathy-skills项目包含一个CLAUDE.md文件，汇集了AI领域知名专家Andrej Karpathy关于LLM编码常见问题的观察和最佳实践。该文件可用于改进Claude Code的行为，提升代码质量和开发效率。",
+  "highlights": [
+    "Karpathy专家经验总结",
+    "改进LLM编码实践"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "best-practices",
+    "llm-development"
+  ],
+  "category": "实践",
+  "maturity": "测试"
+}

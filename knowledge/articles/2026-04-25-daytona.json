@@ -1,0 +1,20 @@
+{
+  "id": "efbe8942-6e04-4c24-89ad-bdba3a5ed1fe",
+  "title": "daytona",
+  "url": "https://github.com/daytonaio/daytona",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "daytona提供安全的弹性基础设施用于运行AI生成的代码。该平台解决了AI代码执行的安全隔离和资源调度问题，支持沙箱环境运行不可信代码，同时提供按需扩展的计算资源。daytona的设计目标是在保证安全性的前提下，让AI生成的代码能够快速部署和执行，适用于自动化编程和代码评估场景。",
+  "highlights": [
+    "AI代码的安全沙箱执行环境",
+    "弹性计算资源按需调度"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-code",
+    "infrastructure"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-04-25T10:14:00+08:00",
-  "total_entries": 64,
+  "last_updated": "2026-04-25T13:01:38+08:00",
+  "total_entries": 65,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -917,6 +917,20 @@
         "geopolitics"
       ],
       "collected_at": "2026-04-25T10:12:20+08:00"
+    },
+    {
+      "id": "f46192c5-9516-4cae-bf89-9933a9776838",
+      "title": "AppFlowy",
+      "source": "github-search",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://github.com/AppFlowy-IO/AppFlowy",
+      "file_path": "D:\\Development\\PythonProject\\Practice_workspace\\ai-knowledge-base_v2\\knowledge\\articles\\2026-04-25-appflowy.json",
+      "tags": [
+        "productivity",
+        "open-source"
+      ],
+      "collected_at": "2026-04-25T12:57:51+08:00"
     }
   ]
 }

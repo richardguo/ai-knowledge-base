@@ -1,0 +1,20 @@
+{
+  "id": "17e551d4-524f-4ecf-a01c-a0f8d0bcd294",
+  "title": "codex",
+  "url": "https://github.com/openai/codex",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "codex是一个轻量级终端编码代理，能够在本地终端环境中直接执行AI辅助编程任务。与传统IDE集成方案不同，codex强调极简部署和快速响应，用户可通过命令行直接调用AI能力进行代码生成、调试和重构。该工具特别适合追求高效工作流的开发者，支持多种主流编程语言的智能补全和错误修复。",
+  "highlights": [
+    "终端轻量级部署，开箱即用",
+    "支持多语言智能代码补全和调试"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "coding-agent",
+    "developer-tools"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

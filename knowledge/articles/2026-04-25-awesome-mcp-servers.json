@@ -1,0 +1,20 @@
+{
+  "id": "6c2ebd0c-25cc-42c9-bddf-d935bb5cbbba",
+  "title": "awesome-mcp-servers",
+  "url": "https://github.com/punkpeye/awesome-mcp-servers",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "awesome-mcp-servers是一个MCP（Model Context Protocol）服务器的精选集合。MCP是一种新兴的AI模型上下文协议，该项目汇总了各种实现MCP协议的服务器资源，帮助开发者快速构建和集成AI代理应用。",
+  "highlights": [
+    "MCP协议服务器资源集合",
+    "助力AI代理应用开发"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "mcp",
+    "ai-protocol"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

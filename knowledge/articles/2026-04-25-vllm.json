@@ -1,0 +1,20 @@
+{
+  "id": "1779f94d-44b9-4fb6-8f1f-dbb1353ec700",
+  "title": "vllm",
+  "url": "https://github.com/vllm-project/vllm",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "vllm是一个专为大型语言模型设计的高吞吐量、低内存占用的推理和服务引擎。该项目采用PagedAttention技术大幅提升推理效率，支持连续批处理和异步执行，在保持模型精度的同时显著降低显存占用。vllm已成为LLM部署领域的事实标准，被广泛应用于ChatGPT、Claude等产品的后端服务。其核心优势在于能够在消费级GPU上实现高效的长文本推理。",
+  "highlights": [
+    "PagedAttention技术实现高效内存管理",
+    "连续批处理支持高并发推理"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "llm-inference",
+    "performance"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

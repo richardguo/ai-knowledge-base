@@ -1,0 +1,20 @@
+{
+  "id": "501fb08a-f32e-4268-a962-306c0d3429bd",
+  "title": "PaddleOCR",
+  "url": "https://github.com/PaddlePaddle/PaddleOCR",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "PaddleOCR是基于PaddlePaddle深度学习框架开发的OCR工具包，支持100多种语言的文本识别。该工具能够将PDF和图像文档高效转换为结构化数据，特别擅长处理复杂排版和手写体识别。PaddleOCR提供从文本检测、方向识别到文字识别的完整pipeline，是连接非结构化文档与大语言模型的重要桥梁，在企业文档数字化场景中应用广泛。",
+  "highlights": [
+    "支持100+语言的多语种OCR识别",
+    "完整端到端文档数字化pipeline"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ocr",
+    "document-processing"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

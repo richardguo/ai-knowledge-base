@@ -1,19 +1,19 @@
 {
-  "id": "88717d9f-14b8-4967-9c6c-7a6fc8841d55",
+  "id": "6f60e7c4-dbe8-4283-a454-0e954f68f5d0",
   "title": "Meta employees are up in arms over a mandatory program to train AI on their",
   "url": "https://www.businessinsider.com/meta-new-ai-tool-tracks-staff-activity-sparks-concern-2026-4",
   "source": "rss",
-  "collected_at": "2026-04-25T10:12:20+08:00",
-  "processed_at": "2026-04-25T10:14:00+08:00",
-  "summary": "Meta员工对公司强制要求参与AI培训项目表示强烈不满。据Business Insider报道，该项目要求员工数据用于AI模型训练，引发了关于员工隐私和数据权益的担忧。员工对这种强制性要求感到愤怒。",
+  "collected_at": "2026-04-25T12:57:56+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "Meta公司推出了一款新AI工具，用于追踪员工工作活动，并计划将这些数据用于AI模型训练。此举引发了公司内部员工的强烈不满和抗议，员工担心自己的隐私数据被未经同意用于AI训练。这一事件反映了AI发展过程中数据隐私和员工权益保护的重要议题，也揭示了科技公司在推进AI技术时面临的伦理挑战。",
   "highlights": [
-    "Meta强制员工参与AI训练引发争议",
-    "员工隐私权益与AI训练需求冲突"
+    "Meta强制要求员工数据用于AI训练引发员工强烈抗议",
+    "新AI工具追踪员工工作活动，存在隐私和数据安全风险"
   ],
   "relevance_score": 6,
   "tags": [
     "ai-ethics",
-    "corporate-policy"
+    "data-privacy"
   ],
   "category": "实践",
   "maturity": "生产"

@@ -1,16 +1,16 @@
 {
-  "id": "c71291a3-596a-4e62-abcd-2563c46f41b1",
+  "id": "9aee1c73-b8c7-4400-9148-36c5290b6250",
   "title": "South Korea police arrest man for posting AI photo of runaway wolf",
   "url": "https://www.bbc.com/news/articles/c4gx1n0dl9no",
   "source": "rss",
-  "collected_at": "2026-04-25T10:12:20+08:00",
-  "processed_at": "2026-04-25T10:14:00+08:00",
-  "summary": "韩国警方逮捕了一名发布AI生成的逃跑狼照片的男子。这是韩国首例因AI虚假信息被逮捕的案例，反映出各国正在加强对AI生成内容的法律监管力度。",
+  "collected_at": "2026-04-25T12:57:56+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "韩国警方逮捕了一名在社交媒体上发布AI生成的逃狼照片的男子。这是首例因AI虚假信息被逮捕的案例，反映了各国政府正在加强对AI生成内容的监管力度，也引发了关于AI内容责任界定的讨论。",
   "highlights": [
-    "韩国首例AI虚假信息逮捕案",
-    "AI生成内容法律监管加强"
+    "首例AI虚假信息逮捕案例",
+    "AI内容监管法律里程碑"
   ],
-  "relevance_score": 6,
+  "relevance_score": 7,
   "tags": [
     "ai-regulation",
     "legal"

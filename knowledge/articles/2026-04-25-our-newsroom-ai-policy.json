@@ -1,19 +1,19 @@
 {
-  "id": "fe9d40d5-2779-4112-bd4f-dcf5812686f6",
+  "id": "153761d8-fe1e-4157-b869-c755bf53eb50",
   "title": "Our newsroom AI policy",
   "url": "https://arstechnica.com/staff/2026/04/our-newsroom-ai-policy/",
   "source": "rss",
-  "collected_at": "2026-04-25T10:12:20+08:00",
-  "processed_at": "2026-04-25T10:14:00+08:00",
-  "summary": "Ars Technica公布其新闻编辑室的AI使用政策，明确了AI在新闻采编中的使用规范，包括透明度要求、编辑监督机制等，为媒体行业AI伦理提供参考。",
+  "collected_at": "2026-04-25T12:57:56+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "Ars Technica公布其新闻室的AI使用政策，明确了AI在新闻报道中的使用边界：可用于辅助写作和编辑，但不能用于生成原始报道或更改事实。政策强调透明度和人类监督的重要性，为媒体AI伦理提供参考范本。",
   "highlights": [
-    "新闻编辑室AI使用规范",
-    "AI新闻伦理透明度要求"
+    "新闻室AI使用明确规范",
+    "强调人类监督和透明度"
   ],
   "relevance_score": 7,
   "tags": [
-    "ai-ethics",
-    "journalism"
+    "ai-policy",
+    "media"
   ],
   "category": "实践",
   "maturity": "生产"

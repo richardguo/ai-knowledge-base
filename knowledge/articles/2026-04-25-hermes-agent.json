@@ -1,18 +1,18 @@
 {
-  "id": "7e48bd8e-12be-4cdf-9633-8a5e2381a986",
+  "id": "aea1c546-aee1-4a82-a2bc-24d74d2f3f05",
   "title": "hermes-agent",
   "url": "https://github.com/NousResearch/hermes-agent",
   "source": "github-search",
-  "collected_at": "2026-04-25T10:12:10+08:00",
-  "processed_at": "2026-04-25T10:14:00+08:00",
-  "summary": "Hermes Agent是一个强调持续成长的AI代理框架，设计理念是代理能力随使用时间不断提升。它提供自适应学习机制，代理可根据用户反馈和交互历史优化表现，适合需要个性化AI助手的场景。",
+  "collected_at": "2026-04-25T13:01:03+08:00",
+  "processed_at": "2026-04-25T13:01:38+08:00",
+  "summary": "Hermes Agent是一个强调持续学习和适应的AI代理框架。它设计为能够随着使用不断进化，提供灵活的工具调用和任务规划能力，适合构建需要长期交互和学习的智能应用。",
   "highlights": [
-    "自适应学习机制，代理能力持续提升",
-    "支持个性化定制，适应不同用户需求"
+    "支持代理持续学习和进化",
+    "灵活的工具调用和任务规划机制"
   ],
-  "relevance_score": 7,
+  "relevance_score": 6,
   "tags": [
-    "agent-ai",
+    "agent-framework",
     "adaptive-learning"
   ],
   "category": "框架",

@@ -1,19 +1,19 @@
 {
-  "id": "02374269-2c19-4c72-a11b-1e3341722e32",
+  "id": "c8385ae6-a4e1-4140-85e7-063283d39a14",
   "title": "Scoring Show HN submissions for AI design patterns",
   "url": "https://www.adriankrebs.ch/blog/design-slop/",
   "source": "rss",
-  "collected_at": "2026-04-25T10:12:20+08:00",
-  "processed_at": "2026-04-25T10:14:00+08:00",
-  "summary": "作者对Hacker News上的Show HN submissions进行评分，分析其中涉及的AI设计模式。研究发现大量提交物存在相似的AI设计模式，如RAG、Agent、Function Calling等，并将其称为「设计Slop」——即AI时代的模板化设计。该分析获得了330点关注和233条评论。",
+  "collected_at": "2026-04-25T12:57:56+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "文章对Show HN submissions进行评分，分析其中涉及的AI设计模式，揭示了当前AI产品开发中常见的设计趋势和模式，为理解AI应用设计提供参考。",
   "highlights": [
-    "系统化分析HN上AI项目的设计模式",
-    "揭示AI项目中的模板化设计趋势"
+    "系统化分析AI设计模式",
+    "揭示AI产品开发趋势"
   ],
   "relevance_score": 7,
   "tags": [
     "ai-design-patterns",
-    "show-hn"
+    "analysis"
   ],
   "category": "论文",
   "maturity": "测试"

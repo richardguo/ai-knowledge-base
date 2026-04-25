@@ -1,0 +1,20 @@
+{
+  "id": "a8423315-895f-4e14-bc87-1d02046765b9",
+  "title": "Deep-Live-Cam",
+  "url": "https://github.com/hacksider/Deep-Live-Cam",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "Deep-Live-Cam是一款实时换脸和深度伪造工具，仅需单张图片即可实现视频实时换脸。该项目利用深度学习技术，支持直播场景下的面部替换，但需注意其潜在的伦理和隐私风险。",
+  "highlights": [
+    "单图实时换脸技术",
+    "支持视频和直播场景"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "deepfake",
+    "computer-vision"
+  ],
+  "category": "工具",
+  "maturity": "实验"
+}

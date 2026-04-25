@@ -1,0 +1,20 @@
+{
+  "id": "0b3275d6-1855-4d5c-8b78-964a54dd67a3",
+  "title": "ansible",
+  "url": "https://github.com/ansible/ansible",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "ansible是Red Hat开发的IT自动化平台，采用声明式配置管理简化应用部署和系统运维工作。该平台使用YAML语言编写 playbook，以SSH无代理方式实现远程系统管理。ansible支持从代码部署、网络配置到云资源管理的广泛场景，其接近自然语言的语法降低了自动化门槛，是DevOps实践中不可或缺的工具。",
+  "highlights": [
+    "无代理SSH架构，部署简单",
+    "YAML声明式配置，易于维护"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "automation",
+    "devops"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

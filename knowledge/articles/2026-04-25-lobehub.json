@@ -1,0 +1,20 @@
+{
+  "id": "ead2cafb-4bd8-477b-8fcd-02b54d21ca10",
+  "title": "lobehub",
+  "url": "https://github.com/lobehub/lobehub",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "lobehub是一个AI协作工作空间，旨在构建多代理协作的未来工作模式。该平台支持创建和管理多个AI代理，实现代理间的协作与知识共享。lobehub的核心理念是将AI代理作为最小工作单元，用户可以灵活组合不同能力的代理形成团队，共同完成复杂任务。该项目代表了多代理系统在实际应用中的重要探索。",
+  "highlights": [
+    "多代理协作框架，支持代理组队工作",
+    "灵活的代理能力组合与任务分配"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "multi-agent",
+    "collaboration"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

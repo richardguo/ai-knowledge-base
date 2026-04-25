@@ -1,0 +1,20 @@
+{
+  "id": "f46192c5-9516-4cae-bf89-9933a9776838",
+  "title": "AppFlowy",
+  "url": "https://github.com/AppFlowy-IO/AppFlowy",
+  "source": "github-search",
+  "collected_at": "2026-04-25T12:57:51+08:00",
+  "processed_at": "2026-04-25T12:59:07+08:00",
+  "summary": "AppFlowy是开源的AI协作工作空间，被定位为Notion的开源替代方案。该平台整合项目管理、知识库和团队协作功能，支持本地部署确保数据主权。AppFlowy的AI能力体现在智能文档摘要、自动标签分类和语义搜索上，用户可以完全控制自己的数据存储，满足企业和个人对隐私敏感场景的需求。",
+  "highlights": [
+    "本地部署确保数据主权和控制",
+    "AI增强的文档管理和语义搜索"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "productivity",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}
