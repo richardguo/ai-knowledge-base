@@ -28,11 +28,11 @@ import httpx
 from dotenv import load_dotenv
 
 from model_client import (
-    LLMError,
     chat_with_retry,
     get_cost_tracker,
     get_default_provider,
 )
+from utils import LLMError
 
 GMT8 = timezone(timedelta(hours=8))
 

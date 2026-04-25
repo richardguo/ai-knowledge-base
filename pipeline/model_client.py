@@ -16,7 +16,6 @@
 
 import logging
 import os
-import time
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -24,6 +23,8 @@ from typing import Any
 
 import httpx
 from dotenv import load_dotenv
+
+from utils import LLMError, llm_retry
 
 load_dotenv(Path(__file__).parent.parent / ".env")
 
@@ -144,20 +145,6 @@ class LLMProvider(ABC):
             ModelPricing 对象，包含输入输出单价。
         """
         pass
-
-
-class LLMError(Exception):
-    """LLM 调用错误。"""
-
-    def __init__(self, message: str, status_code: int | None = None):
-        """初始化错误。
-
-        Args:
-            message: 错误信息。
-            status_code: HTTP 状态码（可选）。
-        """
-        super().__init__(message)
-        self.status_code = status_code
 
 
 class OpenAICompatibleProvider(LLMProvider):
@@ -328,6 +315,7 @@ def chat_with_retry(
     messages: list[dict[str, str]],
     model: str | None = None,
     max_retries: int = 3,
+    max_retries_on_rate_limit: int = 20,
     base_delay: float = 1.0,
     timeout: float = 120.0,
     **kwargs: Any,
@@ -335,12 +323,14 @@ def chat_with_retry(
     """带重试机制的聊天请求。
 
     当请求失败时，使用指数退避策略进行重试。
+    RateLimit 错误（429）使用更高的重试次数。
 
     Args:
         provider: LLM 提供商实例。
         messages: 消息列表。
         model: 模型标识符。
-        max_retries: 最大重试次数，默认 3 次。
+        max_retries: 普通错误最大重试次数，默认 3 次。
+        max_retries_on_rate_limit: RateLimit 错误最大重试次数，默认 20 次。
         base_delay: 基础延迟时间（秒），默认 1.0 秒。
         timeout: 单次请求超时时间（秒），默认 120 秒。
         **kwargs: 其他传递给 provider.chat 的参数。
@@ -351,26 +341,18 @@ def chat_with_retry(
     Raises:
         LLMError: 当所有重试都失败时抛出。
     """
-    last_error: Exception | None = None
 
-    for attempt in range(max_retries + 1):
-        try:
-            return provider.chat(
-                messages=messages, model=model, timeout=timeout, **kwargs
-            )
-        except LLMError as e:
-            last_error = e
-            if attempt < max_retries:
-                delay = base_delay * (2**attempt)
-                logger.warning(
-                    f"LLM 调用失败 (尝试 {attempt + 1}/{max_retries + 1}), "
-                    f"{delay:.1f}秒后重试: {e}"
-                )
-                time.sleep(delay)
-            else:
-                logger.error(f"LLM 调用失败，已达最大重试次数: {e}")
+    @llm_retry(
+        max_retries=max_retries,
+        max_retries_on_rate_limit=max_retries_on_rate_limit,
+        base_delay=base_delay,
+    )
+    def _call() -> LLMResponse:
+        return provider.chat(
+            messages=messages, model=model, timeout=timeout, **kwargs
+        )
 
-    raise last_error or LLMError("未知错误")
+    return _call()
 
 
 def estimate_tokens(text: str) -> int:
