@@ -165,7 +165,19 @@ class TestRateLimit:
         assert call_count == 4
 
     def test_mixed_errors_unified_counter(self, mocker: Any) -> None:
-        """测试混合场景：RateLimit + ServerError，验证计数逻辑。"""
+        """测试混合场景：RateLimit + ServerError，验证计数逻辑。
+        
+        计数器说明：
+        - attempt 从 0 开始，每次重试后 +1
+        - 每次失败时根据当前错误类型选择检查哪个阈值：
+          - 429 错误 -> 检查 max_retries_on_rate_limit
+          - 其他可重试错误 -> 检查 max_retries
+        
+        本测试流程：
+        - call_count=0, attempt=0: 抛出 429 -> 检查 max_retries_on_rate_limit=5, 未达到, 重试
+        - call_count=1, attempt=1: 抛出 429 -> 检查 max_retries_on_rate_limit=5, 未达到, 重试
+        - call_count=2, attempt=2: 抛出 500 -> 检查 max_retries=2, 已达到, 抛出异常
+        """
         call_count = 0
         error_sequence = [429, 429, 500]
 
@@ -264,8 +276,8 @@ class TestExponentialBackoff:
         with pytest.raises(LLMError):
             always_fail()
 
-        for delay in sleep_times:
-            base_delay_attempt = 1.0 * (2 ** sleep_times.index(delay))
+        for attempt_index, delay in enumerate(sleep_times):
+            base_delay_attempt = 1.0 * (2 ** attempt_index)
             assert delay >= base_delay_attempt * 0.5
             assert delay <= base_delay_attempt
 
