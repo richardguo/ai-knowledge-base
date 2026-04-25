@@ -1,0 +1,20 @@
+{
+  "id": "91e4a8b4-e196-4012-831e-1d7e123037fb",
+  "title": "Meta to start capturing employee mouse movements, keystrokes for AI training",
+  "url": "https://www.reuters.com/sustainability/boards-policy-regulation/meta-start-capturing-employee-mouse-movements-keystrokes-ai-training-data-2026-04-21/",
+  "source": "rss",
+  "collected_at": "2026-04-25T10:12:20+08:00",
+  "processed_at": "2026-04-25T10:14:00+08:00",
+  "summary": "Meta计划开始捕获员工的鼠标移动、按键等行为数据用于AI模型训练。这一举措引发巨大争议，获得792点关注和524条评论。员工的工作行为被用于改善AI模型，引发关于隐私、监控和员工权益的严重担忧。",
+  "highlights": [
+    "Meta大规模收集员工行为数据用于AI训练",
+    "引发关于职场隐私和AI伦理的广泛争议"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "ai-privacy",
+    "employee-monitoring"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

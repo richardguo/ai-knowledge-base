@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-04-24T13:34:19+08:00",
-  "total_entries": 58,
+  "last_updated": "2026-04-25T10:14:00+08:00",
+  "total_entries": 64,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -833,6 +833,90 @@
         "context-memory"
       ],
       "collected_at": "2026-04-24T11:44:48+08:00"
+    },
+    {
+      "id": "0dcf0c4d-be62-41c1-a23c-8f20be571f5a",
+      "title": "Tesla discloses $2B AI hardware company acquisition in filing",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://electrek.co/2026/04/23/tesla-tsla-quietly-discloses-2-billion-ai-hardware-acquisition-10q/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-25-tesla-discloses-2b-ai-hardware-company-acquisition-in-filing.json",
+      "tags": [
+        "ai-hardware",
+        "tesla"
+      ],
+      "collected_at": "2026-04-25T10:12:20+08:00"
+    },
+    {
+      "id": "10e82504-7998-468e-8e6a-9bdce0df4f93",
+      "title": "Show HN: Browser Harness – Gives LLM freedom to complete any browser task",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/browser-use/browser-harness",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-25-show-hn-browser-harness-gives-llm-freedom-to-complete-any-browser-task.json",
+      "tags": [
+        "llm-agent",
+        "browser-automation"
+      ],
+      "collected_at": "2026-04-25T10:12:20+08:00"
+    },
+    {
+      "id": "bb80b44a-e9fa-4224-9a89-43153e1cd272",
+      "title": "Show HN: Atomic – Local-first, AI-augmented personal knowledge base",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://atomicapp.ai/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-25-show-hn-atomic-local-first-ai-augmented-personal-knowledge-base.json",
+      "tags": [
+        "knowledge-base",
+        "local-first"
+      ],
+      "collected_at": "2026-04-25T10:12:20+08:00"
+    },
+    {
+      "id": "26d82129-b1a0-4f5e-8b1f-4ece44abf0c3",
+      "title": "Hear your agent suffer through your code",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://github.com/AndrewVos/endless-toil",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-25-hear-your-agent-suffer-through-your-code.json",
+      "tags": [
+        "developer-experience",
+        "ai-agent"
+      ],
+      "collected_at": "2026-04-25T10:12:20+08:00"
+    },
+    {
+      "id": "c71291a3-596a-4e62-abcd-2563c46f41b1",
+      "title": "South Korea police arrest man for posting AI photo of runaway wolf",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://www.bbc.com/news/articles/c4gx1n0dl9no",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-25-south-korea-police-arrest-man-for-posting-ai-photo-of-runaway-wolf.json",
+      "tags": [
+        "ai-regulation",
+        "legal"
+      ],
+      "collected_at": "2026-04-25T10:12:20+08:00"
+    },
+    {
+      "id": "4996486c-50e0-432b-8ac4-1c6150f1d03d",
+      "title": "Do you want the US to \"win\" AI?",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://geohot.github.io//blog/jekyll/update/2026/04/23/us-win-ai.html",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-25-do-you-want-the-us-to-win-ai.json",
+      "tags": [
+        "ai-policy",
+        "geopolitics"
+      ],
+      "collected_at": "2026-04-25T10:12:20+08:00"
     }
   ]
 }

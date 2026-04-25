@@ -1,0 +1,20 @@
+{
+  "id": "10e82504-7998-468e-8e6a-9bdce0df4f93",
+  "title": "Show HN: Browser Harness – Gives LLM freedom to complete any browser task",
+  "url": "https://github.com/browser-use/browser-harness",
+  "source": "rss",
+  "collected_at": "2026-04-25T10:12:20+08:00",
+  "processed_at": "2026-04-25T10:14:00+08:00",
+  "summary": "Browser Harness是一个给LLM最大自由度控制浏览器的框架。开发者移除了传统浏览器框架的限制，让LLM可以直接使用CDP协议操作Chrome，实现自纠正和动态添加工具。LLM可以自行编写click helpers、处理文件上传等复杂操作。",
+  "highlights": [
+    "LLM可直接使用CDP协议控制Chrome",
+    "支持自纠正和动态添加工具"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "llm-agent",
+    "browser-automation"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

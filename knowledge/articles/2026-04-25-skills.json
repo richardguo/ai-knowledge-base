@@ -1,0 +1,20 @@
+{
+  "id": "1d1942ce-44a9-465a-b519-00b9ef386d1b",
+  "title": "skills",
+  "url": "https://github.com/anthropics/skills",
+  "source": "github-search",
+  "collected_at": "2026-04-25T10:12:10+08:00",
+  "processed_at": "2026-04-25T10:14:00+08:00",
+  "summary": "Agent Skills是一个公开的AI代理技能仓库，收集和分享各类可复用的代理能力。这些技能涵盖文本处理、数据分析、代码生成等场景，开发者可直接引用或基于此扩展，加速AI代理应用的开发。",
+  "highlights": [
+    "汇聚可复用AI代理技能，提升开发效率",
+    "技能类型丰富，覆盖多场景需求"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "agent-skills",
+    "community"
+  ],
+  "category": "实践",
+  "maturity": "测试"
+}

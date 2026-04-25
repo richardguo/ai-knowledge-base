@@ -1,0 +1,20 @@
+{
+  "id": "2bd15872-f924-428a-b072-11dfaab610ce",
+  "title": "Bring Your Agent to Teams",
+  "url": "https://microsoft.github.io/teams-sdk/blog/bring-your-agent-to-teams/",
+  "source": "rss",
+  "collected_at": "2026-04-25T10:12:20+08:00",
+  "processed_at": "2026-04-25T10:14:00+08:00",
+  "summary": "微软推出Bring Your Agent to Teams功能，允许开发者将AI代理集成到Microsoft Teams中。该SDK支持在Teams平台部署和运行自定义AI助手，实现工作流自动化。",
+  "highlights": [
+    "支持将AI代理集成到Teams",
+    "实现工作流自动化"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "microsoft-teams",
+    "ai-agent"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

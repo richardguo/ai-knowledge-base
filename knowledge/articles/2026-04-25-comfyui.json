@@ -1,0 +1,20 @@
+{
+  "id": "27f4376f-75a7-4938-a13e-a9349fd11be7",
+  "title": "ComfyUI",
+  "url": "https://github.com/Comfy-Org/ComfyUI",
+  "source": "github-search",
+  "collected_at": "2026-04-25T10:12:10+08:00",
+  "processed_at": "2026-04-25T10:14:00+08:00",
+  "summary": "ComfyUI是当前最强大的模块化扩散模型GUI和后端系统，采用节点式工作流设计。它支持Stable Diffusion等主流扩散模型，提供高度灵活的图像生成流水线，可通过节点组合实现复杂创意工作流。",
+  "highlights": [
+    "节点式工作流设计，模块化程度最高",
+    "支持主流扩散模型，扩展性强"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "diffusion-model",
+    "node-interface"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}
