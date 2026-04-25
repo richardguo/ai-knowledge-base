@@ -582,3 +582,77 @@ class TestStatusCodesComplete:
                 fail_func()
 
             assert call_count == 1, f"状态码 {status_code} 不应该重试"
+
+
+class TestLLMErrorRepr:
+    """LLMError.__repr__ 方法测试。"""
+
+    def test_repr_with_status_code(self) -> None:
+        """测试有 status_code 时的 __repr__ 输出。"""
+        error = LLMError("服务器错误", status_code=500)
+        repr_str = repr(error)
+        
+        assert "LLMError" in repr_str
+        assert "服务器错误" in repr_str
+        assert "status_code=500" in repr_str
+
+    def test_repr_without_status_code(self) -> None:
+        """测试无 status_code 时的 __repr__ 输出。"""
+        error = LLMError("网络超时", status_code=None)
+        repr_str = repr(error)
+        
+        assert "LLMError" in repr_str
+        assert "网络超时" in repr_str
+        assert "status_code" not in repr_str
+
+    def test_repr_default_status_code(self) -> None:
+        """测试默认 status_code（无参数）时的 __repr__ 输出。"""
+        error = LLMError("默认错误")
+        repr_str = repr(error)
+        
+        assert "LLMError" in repr_str
+        assert "默认错误" in repr_str
+        assert "status_code" not in repr_str
+
+
+class TestAsyncDecoratorOnSyncFunction:
+    """异步装饰器应用于同步函数的边缘测试。"""
+
+    @pytest.mark.asyncio
+    async def test_async_decorator_on_sync_function_returns_result(self) -> None:
+        """同步函数使用异步装饰器时，直接返回结果（非协程）。"""
+        
+        @llm_retry_async(max_retries=1, base_delay=0.01)
+        def sync_func() -> str:
+            return "sync_result"
+
+        result = await sync_func()
+        assert result == "sync_result"
+
+    @pytest.mark.asyncio
+    async def test_async_decorator_on_sync_function_with_retry(self) -> None:
+        """同步函数使用异步装饰器时，重试逻辑仍然生效。"""
+        call_count = 0
+
+        @llm_retry_async(max_retries=2, base_delay=0.01)
+        def sync_func_with_failure() -> str:
+            nonlocal call_count
+            call_count += 1
+            if call_count == 1:
+                raise LLMError("临时错误", status_code=500)
+            return "success"
+
+        result = await sync_func_with_failure()
+        assert result == "success"
+        assert call_count == 2
+
+    @pytest.mark.asyncio
+    async def test_async_decorator_on_sync_function_exhaust_retries(self) -> None:
+        """同步函数使用异步装饰器时，耗尽重试后抛出异常。"""
+        
+        @llm_retry_async(max_retries=1, base_delay=0.01)
+        def sync_func_always_fail() -> str:
+            raise LLMError("始终失败", status_code=500)
+
+        with pytest.raises(LLMError):
+            await sync_func_always_fail()
