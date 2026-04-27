@@ -1,20 +1,20 @@
 {
-  "id": "faf39cb6-766d-422c-bdf1-f857ffb6edbb",
+  "id": "ce1a35cb-e178-4138-932d-a604325f8fb5",
   "title": "Agentic AI systems violate the implicit assumptions of database design",
   "url": "https://arpitbhayani.me/blogs/defensive-databases/",
   "source": "rss",
-  "collected_at": "2026-04-27T10:01:38+08:00",
-  "processed_at": "2026-04-27T10:05:04+08:00",
-  "summary": "探讨Agentic AI系统如何违反数据库设计的隐含假设。文章分析了传统数据库设计假设与AI代理系统需求之间的矛盾，提出防御性数据库(Defensive Databases)概念来应对代理系统的非确定性特征。",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "探讨代理AI系统如何违反数据库设计的隐含假设。传统数据库设计假设明确的读写模式，但代理系统具有自主性、工具使用和多步骤推理等特性，导致传统数据库范式不适用。作者提出防御性数据库设计理念来应对这些挑战。",
   "highlights": [
-    "揭示AI代理与传统数据库设计的根本矛盾",
-    "提出防御性数据库设计理念"
+    "揭示代理AI与传统数据库范式的根本冲突",
+    "提出防御性数据库设计概念"
   ],
   "relevance_score": 8,
   "tags": [
-    "database-design",
-    "agent-architecture"
+    "agent-ai",
+    "database-design"
   ],
-  "category": "实践",
-  "maturity": "测试"
+  "category": "论文",
+  "maturity": "实验"
 }

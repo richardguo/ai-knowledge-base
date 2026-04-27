@@ -1,19 +1,19 @@
 {
-  "id": "f0941c9d-c22d-4466-b4d5-94b5dbf8db43",
+  "id": "ccf05ad2-d5b0-4bd1-b11f-c0795fe7f971",
   "title": "Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
   "url": "https://github.com/nex-crm/wuphf",
   "source": "rss",
-  "collected_at": "2026-04-27T10:01:38+08:00",
-  "processed_at": "2026-04-27T10:05:04+08:00",
-  "summary": "一个面向AI代理的知识管理系统，采用Markdown+Git作为数据源，结合Bleve(BM25)和SQLite构建索引。每个代理拥有独立的notebook和共享团队wiki，支持草稿到wiki的晋升流程、实体事实日志、wikilinks链接检测和每日lint检查。设计理念是让知识持久化、可移植，代理可在会话间累积上下文，避免重复粘贴。基准测试显示500个工件、50个查询下BM25可达85%召回率。",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "Karpathy风格的LLM代理维基系统，使用Markdown+Git作为数据源，Bleve(BM25)+SQLite作为索引层。每个代理拥有私有笔记本(agents/{slug}/notebook/.md)和团队共享wiki，支持draft-to-wiki promotion流程。实体事实日志采用append-only JSONL格式，由独立git身份提交以确保可追溯性。包含[[Wikilinks]]和损坏链接检测，日常lint检查矛盾和过时条目。当前500个artifacts、50个查询的基准测试BM25达到85% recall@20。",
   "highlights": [
-    "Markdown+Git作为持久化知识层，支持git clone迁移",
-    "Bleve(BM25)+SQLite混合索引，85%召回率满足内部标准"
+    "Markdown+Git作为持久化层，数据可移植性强",
+    "BM25+SQLite轻量级索引架构，无需向量数据库即可达到85%召回率"
   ],
   "relevance_score": 8,
   "tags": [
-    "knowledge-management",
-    "agent-framework"
+    "agent-wiki",
+    "knowledge-management"
   ],
   "category": "工具",
   "maturity": "生产"

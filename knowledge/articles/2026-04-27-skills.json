@@ -1,19 +1,19 @@
 {
-  "id": "8122dcb9-2bb6-43ae-9ac5-a0ef6745d1be",
+  "id": "7b37ead0-67f6-4f21-8520-7fdf48d5a4aa",
   "title": "skills",
   "url": "https://github.com/anthropics/skills",
   "source": "github-search",
-  "collected_at": "2026-04-27T10:01:36+08:00",
-  "processed_at": "2026-04-27T10:05:04+08:00",
-  "summary": "Agent Skills是一个公共社区仓库，收集和分享各种AI代理的技能定义和最佳实践。旨在建立一个可复用的代理技能库，帮助开发者快速获取成熟的代理能力。适合希望了解代理设计模式和寻找现成解决方案的开发者参考学习。",
+  "collected_at": "2026-04-27T10:37:02+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "Agent Skills是一个公开的代理技能仓库，收集和分享各种AI代理的提示词模板、工作流模式和最佳实践。它旨在帮助开发者快速复用经过验证的代理配置，加速AI应用的开发和迭代。",
   "highlights": [
-    "社区驱动的代理技能资源库",
-    "提供可复用的代理能力定义和实践"
+    "可复用的代理技能模板库",
+    "社区驱动的最佳实践分享"
   ],
   "relevance_score": 6,
   "tags": [
     "agent-skills",
-    "community"
+    "prompt-library"
   ],
   "category": "实践",
   "maturity": "测试"

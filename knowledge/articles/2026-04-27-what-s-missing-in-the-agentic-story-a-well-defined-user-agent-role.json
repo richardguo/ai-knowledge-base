@@ -1,20 +1,20 @@
 {
-  "id": "32986a71-2088-4f85-8ca3-3549a5de01a1",
+  "id": "39819fd2-937f-4f6a-8e8a-2f553dd4daf5",
   "title": "What's missing in the 'agentic' story: a well-defined user agent role",
   "url": "https://www.mnot.net/blog/2026/04/24/agents_as_collective_bargains",
   "source": "rss",
-  "collected_at": "2026-04-27T10:01:38+08:00",
-  "processed_at": "2026-04-27T10:05:04+08:00",
-  "summary": "文章指出agentic AI叙事中缺少明确的用户代理角色定义。探讨了AI代理系统中人机协作的边界，以及如何定义用户代理在AI工作流中的角色。",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "文章指出当前Agent叙事中缺少对用户Agent角色的明确定义。作者认为需要重新思考AI Agent与用户之间的关系，建立更清晰的职责边界和协作模式。这一观点对理解Agent系统的设计和交互模式具有参考价值。",
   "highlights": [
-    "agentic系统用户角色定义",
-    "人机协作边界探讨"
+    "Agent角色定义的重要性",
+    "人机协作模式重塑"
   ],
-  "relevance_score": 7,
+  "relevance_score": 6,
   "tags": [
     "agent-framework",
-    "human-computer-interaction"
+    "human-ai-collaboration"
   ],
-  "category": "框架",
+  "category": "论文",
   "maturity": "实验"
 }

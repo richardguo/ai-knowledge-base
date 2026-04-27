@@ -1,19 +1,19 @@
 {
-  "id": "3a2fd7a6-f5c0-4683-b4d2-87af76aec1c6",
+  "id": "eabfca50-4470-44c3-a43f-28d63a2348ee",
   "title": "The AI industry is discovering that the public hates it",
   "url": "https://newrepublic.com/article/209163/ai-industry-discovering-public-backlash",
   "source": "rss",
-  "collected_at": "2026-04-27T10:01:38+08:00",
-  "processed_at": "2026-04-27T10:05:04+08:00",
-  "summary": "文章揭示AI行业正在经历公众反对的浪潮，大众对AI技术的负面情绪日益增长。行业需要正视公众关切，重新思考AI的推广策略和社会影响。",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "文章指出AI行业正在意识到公众对AI技术的反感情绪在上升。从ChatGPT争议到深度伪造滥用，公众对AI的信任度下降。文章分析了AI行业面临的社会信任危机，以及可能对行业发展产生的影响。这反映了AI技术与社会接受度之间的张力。",
   "highlights": [
-    "AI公众反对情绪增长",
-    "行业面临的信任危机"
+    "AI行业公众信任危机",
+    "AI技术社会接受度分析"
   ],
   "relevance_score": 7,
   "tags": [
-    "ai-public-perception",
-    "industry-challenges"
+    "ai-ethics",
+    "ai-adoption"
   ],
   "category": "实践",
   "maturity": "生产"

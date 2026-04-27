@@ -1,20 +1,20 @@
 {
-  "id": "1108273e-e725-42cc-b6fd-355df6727f9e",
+  "id": "2db06a67-d730-4e4c-8187-7322b69f7948",
   "title": "Show HN: AI memory with biological decay (52% recall)",
   "url": "https://github.com/sachitrafa/YourMemory",
   "source": "rss",
-  "collected_at": "2026-04-27T10:01:38+08:00",
-  "processed_at": "2026-04-27T10:05:04+08:00",
-  "summary": "该开源项目提出基于Ebbinghaus遗忘曲线的AI记忆管理方案，解决RAG系统中上下文噪音问题。通过为记忆分配强度分数实现间隔重复，未使用数据会被修剪。引入图层解决语义搜索的逻辑邻居问题，在LoCoMo数据集上达到52% Recall@5。",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "该项目提出了一种仿生AI记忆系统，借鉴艾宾浩斯遗忘曲线管理上下文记忆。核心创新在于为记忆分配强度分数，通过间隔重复强化重要数据，自动修剪低频内容。同时引入图结构解决语义搜索的「逻辑邻居」问题。在LoCoMo数据集上达到52%的Recall@5， token消耗降低84%。作为本地优先的MCP服务器实现，为长周期Agent项目提供了新的记忆管理思路。",
   "highlights": [
-    "52% Recall@5，遗忘曲线记忆管理",
-    "图层增强向量存储，84% token节省"
+    "引入生物遗忘曲线机制管理上下文",
+    "图结构层解决语义搜索局限性"
   ],
   "relevance_score": 8,
   "tags": [
-    "rag",
-    "memory-management"
+    "ai-memory",
+    "agent-framework"
   ],
-  "category": "工具",
+  "category": "框架",
   "maturity": "测试"
 }

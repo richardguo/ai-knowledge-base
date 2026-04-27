@@ -1,11 +1,11 @@
 {
-  "id": "03004425-5d5c-4d94-b419-c0df937062c7",
+  "id": "4e6dd0a2-4d7a-4122-b478-1478d9828ed1",
   "title": "Tesla discloses $2B AI hardware company acquisition in filing",
   "url": "https://electrek.co/2026/04/23/tesla-tsla-quietly-discloses-2-billion-ai-hardware-acquisition-10q/",
   "source": "rss",
-  "collected_at": "2026-04-27T10:01:38+08:00",
-  "processed_at": "2026-04-27T10:05:04+08:00",
-  "summary": "特斯拉在10-Q文件中披露以20亿美元收购一家AI硬件公司。这是特斯拉在AI硬件领域的重要战略布局，显示其正在加强自主AI计算能力建设。",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "特斯拉在10-Q文件中披露以20亿美元收购一家AI硬件公司。这是特斯拉在AI基础设施领域的重大投资，表明其正在加强自主AI硬件能力，可能用于训练自动驾驶和机器人相关模型。",
   "highlights": [
     "20亿美元AI硬件收购",
     "特斯拉AI基础设施战略布局"
@@ -15,6 +15,6 @@
     "tesla",
     "ai-hardware"
   ],
-  "category": "实践",
+  "category": "工具",
   "maturity": "生产"
 }

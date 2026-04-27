@@ -1,20 +1,20 @@
 {
-  "id": "b4565a5a-1c0f-4481-a9a0-49ce09189237",
+  "id": "0276ae03-81d1-45fe-9459-13c826871c78",
   "title": "Have you tried Clean Architecture as foundation for your AI project?",
   "url": "https://news.ycombinator.com/item?id=47913561",
   "source": "rss",
-  "collected_at": "2026-04-27T10:01:38+08:00",
-  "processed_at": "2026-04-27T10:05:04+08:00",
-  "summary": "探讨Clean Architecture（清洁架构）作为AI项目基础架构的可行性和优势。Clean Architecture的分层设计理念有助于构建可维护、可测试的AI系统。",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "HN讨论帖询问开发者是否将Clean Architecture（清洁架构）作为AI项目的基础架构。Clean Architecture强调代码分层和依赖倒置，理论上可提升AI系统的可维护性和可测试性。但实际应用效果和最佳实践仍需进一步探索。",
   "highlights": [
-    "Clean Architecture分层设计",
-    "AI项目架构最佳实践"
+    "Clean Architecture在AI项目中的应用探讨",
+    "AI系统架构设计的最佳实践"
   ],
-  "relevance_score": 7,
+  "relevance_score": 6,
   "tags": [
     "clean-architecture",
     "software-design"
   ],
-  "category": "框架",
-  "maturity": "生产"
+  "category": "实践",
+  "maturity": "测试"
 }
