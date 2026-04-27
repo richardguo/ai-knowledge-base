@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-04-25T13:33:07+08:00",
-  "total_entries": 65,
+  "last_updated": "2026-04-27T10:05:04+08:00",
+  "total_entries": 78,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -931,6 +931,188 @@
         "open-source"
       ],
       "collected_at": "2026-04-25T12:57:51+08:00"
+    },
+    {
+      "id": "7b97bed2-2be0-4273-905b-461dc6350ce3",
+      "title": "Google banks on AI edge to catch up to cloud rivals Amazon and Microsoft",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://www.ft.com/content/2429f0f0-b685-4747-b425-bf8001a2e94c",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-google-banks-on-ai-edge-to-catch-up-to-cloud-rivals-amazon-and-microsoft.json",
+      "tags": [
+        "cloud-computing",
+        "google-cloud"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "1108273e-e725-42cc-b6fd-355df6727f9e",
+      "title": "Show HN: AI memory with biological decay (52% recall)",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/sachitrafa/YourMemory",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-show-hn-ai-memory-with-biological-decay-52-recall.json",
+      "tags": [
+        "rag",
+        "memory-management"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "cc5ab455-5083-4f23-ac05-0ede4a55d966",
+      "title": "AI should elevate your thinking, not replace it",
+      "source": "rss",
+      "category": "论文",
+      "relevance_score": 6,
+      "url": "https://www.koshyjohn.com/blog/ai-should-elevate-your-thinking-not-replace-it/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-ai-should-elevate-your-thinking-not-replace-it.json",
+      "tags": [
+        "ai-philosophy",
+        "human-ai-collaboration"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "b4565a5a-1c0f-4481-a9a0-49ce09189237",
+      "title": "Have you tried Clean Architecture as foundation for your AI project?",
+      "source": "rss",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://news.ycombinator.com/item?id=47913561",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-have-you-tried-clean-architecture-as-foundation-for-your-ai-project.json",
+      "tags": [
+        "clean-architecture",
+        "software-design"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "fd3eed7e-ea23-4c6b-b9b8-c6349dbc5af3",
+      "title": "An AI agent deleted our production database. The agent's confession is below",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://twitter.com/lifeof_jer/status/2048103471019434248",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-an-ai-agent-deleted-our-production-database-the-agent-s-confession-is-below.json",
+      "tags": [
+        "ai-safety",
+        "incident-analysis"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "25807d8a-7d5c-48cb-838e-bd63ee6177a9",
+      "title": "Eden AI – European Alternative to OpenRouter",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://www.edenai.co",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-eden-ai-european-alternative-to-openrouter.json",
+      "tags": [
+        "ai-service-provider",
+        "european-market"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "3a2fd7a6-f5c0-4683-b4d2-87af76aec1c6",
+      "title": "The AI industry is discovering that the public hates it",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://newrepublic.com/article/209163/ai-industry-discovering-public-backlash",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-the-ai-industry-is-discovering-that-the-public-hates-it.json",
+      "tags": [
+        "ai-public-perception",
+        "industry-challenges"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "8905690a-e12c-4901-99b7-48aee9b5078a",
+      "title": "AI Might Be Lying to Your Boss",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://williamoconnell.me/blog/post/ai-ide/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-ai-might-be-lying-to-your-boss.json",
+      "tags": [
+        "ai-transparency",
+        "trust-issues"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "32986a71-2088-4f85-8ca3-3549a5de01a1",
+      "title": "What's missing in the 'agentic' story: a well-defined user agent role",
+      "source": "rss",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://www.mnot.net/blog/2026/04/24/agents_as_collective_bargains",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-what-s-missing-in-the-agentic-story-a-well-defined-user-agent-role.json",
+      "tags": [
+        "agent-framework",
+        "human-computer-interaction"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "680dd5c5-c2d2-4139-8b8a-92010d1afd3e",
+      "title": "Lambda Calculus Benchmark for AI",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://victortaelin.github.io/lambench/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-lambda-calculus-benchmark-for-ai.json",
+      "tags": [
+        "benchmark",
+        "lambda-calculus"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "f0941c9d-c22d-4466-b4d5-94b5dbf8db43",
+      "title": "Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/nex-crm/wuphf",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-show-hn-a-karpathy-style-llm-wiki-your-agents-maintain-markdown-and-git.json",
+      "tags": [
+        "knowledge-management",
+        "agent-framework"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "1e0486b8-3ff7-4884-8fce-fc19a6b89f49",
+      "title": "Open source memory layer so any AI agent can do what Claude.ai and ChatGPT do",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://alash3al.github.io/stash?_v01",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-open-source-memory-layer-so-any-ai-agent-can-do-what-claude-ai-and-chatgpt-do.json",
+      "tags": [
+        "memory-layer",
+        "open-source"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "faf39cb6-766d-422c-bdf1-f857ffb6edbb",
+      "title": "Agentic AI systems violate the implicit assumptions of database design",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://arpitbhayani.me/blogs/defensive-databases/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-27-agentic-ai-systems-violate-the-implicit-assumptions-of-database-design.json",
+      "tags": [
+        "database-design",
+        "agent-architecture"
+      ],
+      "collected_at": "2026-04-27T10:01:38+08:00"
     }
   ]
 }

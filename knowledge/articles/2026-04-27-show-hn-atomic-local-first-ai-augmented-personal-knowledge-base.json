@@ -1,0 +1,20 @@
+{
+  "id": "1356f443-6ab4-4979-b5a8-bdab3c73e49b",
+  "title": "Show HN: Atomic – Local-first, AI-augmented personal knowledge base",
+  "url": "https://atomicapp.ai/",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:01:38+08:00",
+  "processed_at": "2026-04-27T10:05:04+08:00",
+  "summary": "Atomic是一个本地优先、AI增强的个人知识库系统。MIT开源许可，支持自托管服务器，客户端覆盖Web/iOS/Android。内置MCP工具和代理聊天功能，CodeMirror6定制的Markdown编辑器，支持RSS订阅、网页剪藏、移动端分享等多种内容导入方式。",
+  "highlights": [
+    "本地优先架构，支持全平台客户端",
+    "MCP工具链+代理聊天集成"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "knowledge-base",
+    "local-first"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

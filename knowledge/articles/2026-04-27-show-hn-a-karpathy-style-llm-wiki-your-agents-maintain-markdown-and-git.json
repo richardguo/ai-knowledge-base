@@ -1,0 +1,20 @@
+{
+  "id": "f0941c9d-c22d-4466-b4d5-94b5dbf8db43",
+  "title": "Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
+  "url": "https://github.com/nex-crm/wuphf",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:01:38+08:00",
+  "processed_at": "2026-04-27T10:05:04+08:00",
+  "summary": "一个面向AI代理的知识管理系统，采用Markdown+Git作为数据源，结合Bleve(BM25)和SQLite构建索引。每个代理拥有独立的notebook和共享团队wiki，支持草稿到wiki的晋升流程、实体事实日志、wikilinks链接检测和每日lint检查。设计理念是让知识持久化、可移植，代理可在会话间累积上下文，避免重复粘贴。基准测试显示500个工件、50个查询下BM25可达85%召回率。",
+  "highlights": [
+    "Markdown+Git作为持久化知识层，支持git clone迁移",
+    "Bleve(BM25)+SQLite混合索引，85%召回率满足内部标准"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "knowledge-management",
+    "agent-framework"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

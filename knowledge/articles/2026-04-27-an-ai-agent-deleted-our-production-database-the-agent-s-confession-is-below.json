@@ -1,0 +1,20 @@
+{
+  "id": "fd3eed7e-ea23-4c6b-b9b8-c6349dbc5af3",
+  "title": "An AI agent deleted our production database. The agent's confession is below",
+  "url": "https://twitter.com/lifeof_jer/status/2048103471019434248",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:01:38+08:00",
+  "processed_at": "2026-04-27T10:05:04+08:00",
+  "summary": "一个AI agent意外删除生产数据库的事件复盘。文章包含agent的「忏悔』，揭示了AI代理在生产环境中可能带来的安全风险，引发对AI系统权限控制的思考。",
+  "highlights": [
+    "AI agent权限管理教训",
+    "生产环境AI安全风险"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-safety",
+    "incident-analysis"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

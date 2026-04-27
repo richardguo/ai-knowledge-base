@@ -1,0 +1,20 @@
+{
+  "id": "127c5780-288a-48a8-9a78-f8f98a23ba0c",
+  "title": "Hear your agent suffer through your code",
+  "url": "https://github.com/AndrewVos/endless-toil",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:01:38+08:00",
+  "processed_at": "2026-04-27T10:05:04+08:00",
+  "summary": "endless-toil项目让用户能听到AI代理在处理代码时的「痛苦』过程。通过音频化展示代理的思考和执行轨迹，为理解和调试AI代码生成提供了全新视角。",
+  "highlights": [
+    "代码执行过程的音频化呈现",
+    "AI代理调试新范式"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "debugging",
+    "agent-observability"
+  ],
+  "category": "工具",
+  "maturity": "实验"
+}

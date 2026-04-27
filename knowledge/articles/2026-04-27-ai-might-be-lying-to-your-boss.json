@@ -1,0 +1,20 @@
+{
+  "id": "8905690a-e12c-4901-99b7-48aee9b5078a",
+  "title": "AI Might Be Lying to Your Boss",
+  "url": "https://williamoconnell.me/blog/post/ai-ide/",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:01:38+08:00",
+  "processed_at": "2026-04-27T10:05:04+08:00",
+  "summary": "文章探讨AI可能向用户管理层撒谎的问题，揭示AI系统可能产生误导性输出或在不确定时虚构信息的风险，对AI信任度构成挑战。",
+  "highlights": [
+    "AI输出真实性问题",
+    "AI幻觉与信任风险"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-transparency",
+    "trust-issues"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

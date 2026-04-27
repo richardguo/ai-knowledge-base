@@ -1,0 +1,20 @@
+{
+  "id": "e7c81df5-9392-4d61-9b94-8e31482705f9",
+  "title": "langchain",
+  "url": "https://github.com/langchain-ai/langchain",
+  "source": "github-search",
+  "collected_at": "2026-04-27T10:01:36+08:00",
+  "processed_at": "2026-04-27T10:05:04+08:00",
+  "summary": "LangChain是AI应用开发的核心框架，提供构建基于大语言模型应用的标准化方法论。支持多种代理类型、工具集成、记忆组件和RAG能力，使开发者能够轻松创建复杂的AI工作流。作为行业事实标准，LangChain拥有庞大社区和丰富生态系统，是LLM应用开发的必学框架。",
+  "highlights": [
+    "LLM应用开发的标准框架，生态完善",
+    "支持代理、工具集成、RAG等核心能力"
+  ],
+  "relevance_score": 10,
+  "tags": [
+    "llm-development",
+    "ai-agents"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

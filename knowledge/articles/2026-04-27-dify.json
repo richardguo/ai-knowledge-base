@@ -1,0 +1,20 @@
+{
+  "id": "97bef0ea-03e5-4968-a303-f80a258e9276",
+  "title": "dify",
+  "url": "https://github.com/langgenius/dify",
+  "source": "github-search",
+  "collected_at": "2026-04-27T10:01:36+08:00",
+  "processed_at": "2026-04-27T10:05:04+08:00",
+  "summary": "Dify是一个生产就绪的开源LLM应用开发平台，提供从原型设计到生产部署的完整工作流。支持快速构建AI代理、聊天机器人和RAG应用，提供可视化的调试和监控工具。平台强调易用性和灵活性，帮助开发者快速将AI能力集成到现有系统中，是LLMOps领域的重要工具。",
+  "highlights": [
+    "一站式LLM应用开发平台，端到端支持",
+    "开源可定制，提供可视化调试和监控"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "llmops",
+    "workflow-automation"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

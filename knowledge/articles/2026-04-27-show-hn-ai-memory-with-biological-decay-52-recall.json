@@ -1,0 +1,20 @@
+{
+  "id": "1108273e-e725-42cc-b6fd-355df6727f9e",
+  "title": "Show HN: AI memory with biological decay (52% recall)",
+  "url": "https://github.com/sachitrafa/YourMemory",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:01:38+08:00",
+  "processed_at": "2026-04-27T10:05:04+08:00",
+  "summary": "该开源项目提出基于Ebbinghaus遗忘曲线的AI记忆管理方案，解决RAG系统中上下文噪音问题。通过为记忆分配强度分数实现间隔重复，未使用数据会被修剪。引入图层解决语义搜索的逻辑邻居问题，在LoCoMo数据集上达到52% Recall@5。",
+  "highlights": [
+    "52% Recall@5，遗忘曲线记忆管理",
+    "图层增强向量存储，84% token节省"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "rag",
+    "memory-management"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}
