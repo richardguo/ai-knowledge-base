@@ -1,0 +1,20 @@
+{
+  "id": "7a97d62c-89c7-42ad-ad12-eb81ab061c03",
+  "title": "Google banks on AI edge to catch up to cloud rivals Amazon and Microsoft",
+  "url": "https://www.ft.com/content/2429f0f0-b685-4747-b425-bf8001a2e94c",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "Google正利用其AI技术优势试图在云服务市场追赶亚马逊和微软。文章探讨了Google Cloud在AI领域的战略布局，包括其Tensor处理单元和生成式AI服务的进展。作为科技巨头在云计算+AI赛道的重要竞争动态，此话题对了解行业格局具有参考价值。",
+  "highlights": [
+    "Google Cloud在AI基础设施上的技术积累",
+    "云服务市场竞争格局分析"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "cloud-computing",
+    "google-ai"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "d1cf20a6-c125-414a-91de-fbe540d7f872",
+  "title": "Lambda Calculus Benchmark for AI",
+  "url": "https://victortaelin.github.io/lambench/",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "Lambda Calculus Benchmark是一个评估AI模型lambda calculus推理能力的基准测试。该测试通过函数式编程基础考察AI的逻辑推理和程序理解能力，为评估AI的数学思维提供了新的维度。",
+  "highlights": [
+    "Lambda calculus推理能力评估",
+    "AI数学思维基准测试"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-benchmark",
+    "lambda-calculus"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

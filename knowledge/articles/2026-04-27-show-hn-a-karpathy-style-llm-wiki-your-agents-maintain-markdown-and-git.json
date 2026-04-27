@@ -1,0 +1,20 @@
+{
+  "id": "ccf05ad2-d5b0-4bd1-b11f-c0795fe7f971",
+  "title": "Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
+  "url": "https://github.com/nex-crm/wuphf",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "Karpathy风格的LLM代理维基系统，使用Markdown+Git作为数据源，Bleve(BM25)+SQLite作为索引层。每个代理拥有私有笔记本(agents/{slug}/notebook/.md)和团队共享wiki，支持draft-to-wiki promotion流程。实体事实日志采用append-only JSONL格式，由独立git身份提交以确保可追溯性。包含[[Wikilinks]]和损坏链接检测，日常lint检查矛盾和过时条目。当前500个artifacts、50个查询的基准测试BM25达到85% recall@20。",
+  "highlights": [
+    "Markdown+Git作为持久化层，数据可移植性强",
+    "BM25+SQLite轻量级索引架构，无需向量数据库即可达到85%召回率"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-wiki",
+    "knowledge-management"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "f513b9e9-2789-4976-a2de-a50c174d2554",
+  "title": "Show HN: Browser Harness – Gives LLM freedom to complete any browser task",
+  "url": "https://github.com/browser-use/browser-harness",
+  "source": "rss",
+  "collected_at": "2026-04-27T10:37:05+08:00",
+  "processed_at": "2026-04-27T10:39:35+08:00",
+  "summary": "Browser Harness赋予LLM最大自由度完成浏览器任务。使用Chrome CDP websocket连接，代理可以自我纠正错误并动态添加工具。框架包含大量确定性启发式规则处理边界情况(弹窗、文件下载、跨域iframe等)。新范式是skill.md+可动态修改的Python helpers，代理可自行编写如upload_file等函数。",
+  "highlights": [
+    "代理可自主编写工具函数而非预设所有边界情况处理",
+    "skill.md+动态helpers的灵活架构"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "browser-automation",
+    "llm-agent"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}
