@@ -37,6 +37,7 @@ jobs:
       # 运行采集流水线：从 GitHub 和 RSS 采集 AI 相关内容
       - name: Run pipeline
         env:
+          PYTHONPATH: ${{ github.workspace }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LLM_API_BASE: ${{ vars.LLM_API_BASE }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
