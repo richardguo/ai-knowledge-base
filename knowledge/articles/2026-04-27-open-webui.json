@@ -1,0 +1,20 @@
+{
+  "id": "11fedea7-3918-4553-a9c8-14f07eca6684",
+  "title": "open-webui",
+  "url": "https://github.com/open-webui/open-webui",
+  "source": "github-search",
+  "collected_at": "2026-04-27T13:22:05+08:00",
+  "processed_at": "2026-04-27T13:22:52+08:00",
+  "summary": "Open WebUI是用户友好的本地AI界面，专为Ollama等本地大模型设计，同时也支持OpenAI API和其他兼容接口。提供直观的Web UI用于对话交互、模型管理和知识库配置，是部署本地LLM的热门选择。",
+  "highlights": [
+    "支持Ollama/OpenAI等多后端，本地部署首选",
+    "Web界面友好易用，支持知识库和模型管理"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ui-interface",
+    "local-llm"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "656973e0-b16c-4917-8491-1ea4a84439cd",
+  "title": "firecrawl",
+  "url": "https://github.com/firecrawl/firecrawl",
+  "source": "github-search",
+  "collected_at": "2026-04-27T13:22:05+08:00",
+  "processed_at": "2026-04-27T13:22:52+08:00",
+  "summary": "Firecrawl是专为AI应用设计的网页数据获取API，提供搜索、爬取和网页交互能力。可高效获取互联网数据用于模型训练、RAG知识库构建和AI应用数据源获取，是AI数据的强力采集工具。",
+  "highlights": [
+    "专为AI设计的数据采集，RAG数据源利器",
+    "支持搜索+爬取+交互，完整网页数据能力"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "web-scraping",
+    "rag"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "4c3e05e6-f121-4b90-a205-d733038f1f84",
+  "title": "AutoGPT",
+  "url": "https://github.com/Significant-Gravitas/AutoGPT",
+  "source": "github-search",
+  "collected_at": "2026-04-27T13:22:05+08:00",
+  "processed_at": "2026-04-27T13:22:52+08:00",
+  "summary": "AutoGPT是一个致力于让AI技术普惠化的开源项目，其核心理念是让每个人都能轻松使用和构建AI能力。项目提供完整的工具集，帮助用户专注于真正重要的工作而非底层技术细节。AutoGPT代表了AI自动化助手的发展方向，在AI Agent领域具有重要影响力。",
+  "highlights": [
+    "使命是让AI技术对所有人可访问",
+    "提供完整工具集，降低AI使用门槛"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-automation",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}
