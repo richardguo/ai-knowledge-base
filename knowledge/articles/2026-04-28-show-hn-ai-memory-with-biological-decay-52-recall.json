@@ -1,0 +1,20 @@
+{
+  "id": "2517c11b-272a-438c-ae01-b8c6b8266155",
+  "title": "Show HN: AI memory with biological decay (52% recall)",
+  "url": "https://github.com/sachitrafa/YourMemory",
+  "source": "rss",
+  "collected_at": "2026-04-28T10:44:41+08:00",
+  "processed_at": "2026-04-28T10:46:13+08:00",
+  "summary": "该项目实验性地将艾宾浩斯遗忘曲线应用于AI记忆管理，通过强度评分和图结构解决RAG的噪声问题。在LoCoMo数据集上达到52%的Recall@5， token浪费减少84%。",
+  "highlights": [
+    "引入生物学遗忘曲线管理上下文",
+    "图结构解决语义搜索的相邻节点问题"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "rag",
+    "memory-management"
+  ],
+  "category": "工具",
+  "maturity": "实验"
+}

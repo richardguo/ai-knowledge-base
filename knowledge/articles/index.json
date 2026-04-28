@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-04-27T10:39:35+08:00",
-  "total_entries": 78,
+  "last_updated": "2026-04-28T10:46:13+08:00",
+  "total_entries": 85,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1113,6 +1113,104 @@
         "agent-architecture"
       ],
       "collected_at": "2026-04-27T10:01:38+08:00"
+    },
+    {
+      "id": "d80e21bd-5c80-438a-b95b-ef799d11f406",
+      "title": "Canva apologizes after its AI tool replaces 'Palestine' in designs",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-28-canva-apologizes-after-its-ai-tool-replaces-palestine-in-designs.json",
+      "tags": [
+        "ai-bias",
+        "content-moderation"
+      ],
+      "collected_at": "2026-04-28T10:44:41+08:00"
+    },
+    {
+      "id": "c4fa8b49-d1f0-4f01-b8b4-fb4dca491297",
+      "title": "Tendril – a self-extending agent that builds and registers its own tools",
+      "source": "rss",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://github.com/serverless-dna/tendril",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-28-tendril-a-self-extending-agent-that-builds-and-registers-its-own-tools.json",
+      "tags": [
+        "agent-framework",
+        "self-extending"
+      ],
+      "collected_at": "2026-04-28T10:44:41+08:00"
+    },
+    {
+      "id": "fcdfa7d3-43b8-4cca-98a6-ea2d796e1f85",
+      "title": "Show HN: OSS Agent I built topped the TerminalBench on Gemini-3-flash-preview",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/dirac-run/dirac",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-28-show-hn-oss-agent-i-built-topped-the-terminalbench-on-gemini-3-flash-preview.json",
+      "tags": [
+        "open-source",
+        "agent-benchmark"
+      ],
+      "collected_at": "2026-04-28T10:44:41+08:00"
+    },
+    {
+      "id": "46c510d6-87f2-49ab-8dcb-061b34df0da1",
+      "title": "China blocks Meta's acquisition of AI startup Manus",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-28-china-blocks-meta-s-acquisition-of-ai-startup-manus.json",
+      "tags": [
+        "ai-acquisition",
+        "regulation"
+      ],
+      "collected_at": "2026-04-28T10:44:41+08:00"
+    },
+    {
+      "id": "51d0ae0f-10f4-48f7-a718-267f4d527793",
+      "title": "Mistral built a $14B AI empire by not being American",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://www.forbes.com/sites/iainmartin/2026/04/16/how-frances-mistral-built-a-14-billion-ai-empire-by-not-being-american/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-28-mistral-built-a-14b-ai-empire-by-not-being-american.json",
+      "tags": [
+        "ai-business",
+        "european-ai"
+      ],
+      "collected_at": "2026-04-28T10:44:41+08:00"
+    },
+    {
+      "id": "56d788e0-6894-42f7-bb83-1741698e4396",
+      "title": "4TB of voice samples just stolen from 40k AI contractors at Mercor",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://app.oravys.com/blog/mercor-breach-2026",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-28-4tb-of-voice-samples-just-stolen-from-40k-ai-contractors-at-mercor.json",
+      "tags": [
+        "data-breach",
+        "ai-security"
+      ],
+      "collected_at": "2026-04-28T10:44:41+08:00"
+    },
+    {
+      "id": "7ddc8d04-5867-4b52-8526-f8db25938158",
+      "title": "AI can cost more than human workers now",
+      "source": "rss",
+      "category": "论文",
+      "relevance_score": 7,
+      "url": "https://www.axios.com/2026/04/26/ai-cost-human-workers",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-28-ai-can-cost-more-than-human-workers-now.json",
+      "tags": [
+        "ai-economics",
+        "cost-analysis"
+      ],
+      "collected_at": "2026-04-28T10:44:41+08:00"
     }
   ]
 }

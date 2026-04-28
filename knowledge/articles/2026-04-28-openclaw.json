@@ -1,0 +1,20 @@
+{
+  "id": "9160b43f-6fe0-4865-bfb5-3fe3821e39c6",
+  "title": "openclaw",
+  "url": "https://github.com/openclaw/openclaw",
+  "source": "github-search",
+  "collected_at": "2026-04-28T10:44:41+08:00",
+  "processed_at": "2026-04-28T10:46:13+08:00",
+  "summary": "openclaw是一个开源的个人AI助手项目，旨在提供可在任何操作系统和任何平台上运行的个性化AI服务。项目采用'lobster way'（龙虾方式）的独特理念，强调AI助手的可访问性和个性化定制。作为个人AI助手框架，它支持跨平台部署，让用户能够拥有完全属于自己的AI助手体验。",
+  "highlights": [
+    "跨平台支持，可在任何OS和平台上运行",
+    "强调个性化定制的个人AI助手"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "ai-assistant",
+    "cross-platform"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

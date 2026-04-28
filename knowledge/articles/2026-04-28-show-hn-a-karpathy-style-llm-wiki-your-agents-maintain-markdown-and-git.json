@@ -1,0 +1,20 @@
+{
+  "id": "a6fc792e-a512-45a3-8a1c-36a1c45b1f8b",
+  "title": "Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
+  "url": "https://github.com/nex-crm/wuphf",
+  "source": "rss",
+  "collected_at": "2026-04-28T10:44:41+08:00",
+  "processed_at": "2026-04-28T10:46:13+08:00",
+  "summary": "这是一个Show HN项目，实现了类似Karpathy提出的LLM原生知识库系统。使用Markdown+Git作为数据存储，结合Bleve（BM25）和SQLite构建索引，使AI agent能够跨会话累积和共享知识。",
+  "highlights": [
+    "Markdown+Git作为AI知识持久化方案",
+    "BM25+SQLite混合索引实现知识检索"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "knowledge-base",
+    "llm-memory"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}
