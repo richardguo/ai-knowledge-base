@@ -23,6 +23,7 @@ def chat(
     prompt: str,
     system: str = "",
     response_format: Optional[dict] = None,
+    temperature: float = 0.7,
 ) -> tuple[str, dict]:
     """调用 LLM 进行对话。
 
@@ -30,6 +31,7 @@ def chat(
         prompt: 用户输入的提示文本。
         system: 系统提示文本，用于设定 AI 角色和行为。
         response_format: 响应格式配置。例如 {"type": "json_object"} 启用 JSON 模式。
+        temperature: 生成温度，控制输出随机性。默认 0.7。
 
     Returns:
         tuple[str, dict]: 返回 (LLM 响应文本, token 用量统计)。
@@ -47,7 +49,11 @@ def chat(
         messages.append({"role": "system", "content": system})
     messages.append({"role": "user", "content": prompt})
 
-    payload_dict: dict[str, Any] = {"model": model_id, "messages": messages}
+    payload_dict: dict[str, Any] = {
+        "model": model_id,
+        "messages": messages,
+        "temperature": temperature,
+    }
 
     if response_format:
         payload_dict["response_format"] = response_format
@@ -81,6 +87,7 @@ def chat_stream(
     prompt: str,
     system: str = "",
     response_format: Optional[dict] = None,
+    temperature: float = 0.7,
 ) -> Generator[str, None, None]:
     """流式调用 LLM，逐步 yield 文本片段。
 
@@ -92,6 +99,7 @@ def chat_stream(
         prompt: 用户输入的提示文本。
         system: 系统提示文本。
         response_format: 响应格式配置，例如 {"type": "json_object"}。
+        temperature: 生成温度，控制输出随机性。默认 0.7。
 
     Yields:
         str: 模型输出的文本片段。最后一个 yield 为 "|||USAGE|||" + usage_json。
@@ -112,6 +120,7 @@ def chat_stream(
         "model": model_id,
         "messages": messages,
         "stream": True,
+        "temperature": temperature,
     }
     if response_format:
         payload_dict["response_format"] = response_format
@@ -175,6 +184,7 @@ def chat_json_stream(
     prompt: str,
     system: str = "",
     use_json_mode: bool = True,
+    temperature: float = 0.7,
 ) -> tuple[dict[str, Any], dict]:
     """流式调用 LLM 并返回 JSON 结构化结果。
 
@@ -185,6 +195,7 @@ def chat_json_stream(
         prompt: 用户输入的提示文本。
         system: 系统提示文本。
         use_json_mode: 是否使用 JSON 模式。默认 True。
+        temperature: 生成温度，控制输出随机性。默认 0.7。
 
     Returns:
         tuple[dict[str, Any], dict]: 返回 (解析后的 JSON 对象, token 用量统计)。
@@ -202,7 +213,7 @@ def chat_json_stream(
     full_text_parts: list[str] = []
     usage: dict = {}
 
-    for chunk in chat_stream(enhanced_prompt, system, response_format=fmt):
+    for chunk in chat_stream(enhanced_prompt, system, response_format=fmt, temperature=temperature):
         if chunk.startswith("|||USAGE|||"):
             usage = json.loads(chunk[len("|||USAGE|||") :])
         else:
@@ -231,6 +242,7 @@ def chat_json(
     prompt: str,
     system: str = "",
     use_json_mode: bool = True,
+    temperature: float = 0.7,
 ) -> tuple[dict[str, Any], dict]:
     """调用 LLM 并返回 JSON 结构化结果。
 
@@ -238,6 +250,7 @@ def chat_json(
         prompt: 用户输入的提示文本，应明确要求输出 JSON 格式。
         system: 系统提示文本，建议包含 JSON 格式说明。
         use_json_mode: 是否使用 JSON 模式（强制模型输出 JSON）。默认 True。
+        temperature: 生成温度，控制输出随机性。默认 0.7。
 
     Returns:
         tuple[dict[str, Any], dict]: 返回 (解析后的 JSON 对象, token 用量统计)。
@@ -252,7 +265,7 @@ def chat_json(
         response_format = None
         enhanced_prompt = f"{prompt}\n\n请以 JSON 格式输出，不要包含任何其他文本。"
 
-    text, usage = chat(enhanced_prompt, system, response_format=response_format)
+    text, usage = chat(enhanced_prompt, system, response_format=response_format, temperature=temperature)
 
     try:
         json_str = text.strip()

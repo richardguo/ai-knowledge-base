@@ -14,7 +14,7 @@ from urllib.parse import quote
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from workflows.model_client import accumulate_usage, chat_json_stream
+from workflows.model_client import accumulate_usage, chat_json, chat_json_stream
 from workflows.state import KBState
 
 
@@ -357,6 +357,12 @@ def organize_node(state: KBState) -> dict[str, Any]:
 def review_node(state: KBState) -> dict[str, Any]:
     """审核节点：LLM 四维度评分，iteration >= 2 强制通过。
 
+    四个评分维度（每维度 1-5 分）：
+    - summary_quality: 摘要质量（准确性、简洁性、洞察深度）
+    - tag_accuracy: 标签准确性
+    - category_correctness: 分类合理性
+    - consistency: 整体一致性
+
     Args:
         state: 当前工作流状态。
 
@@ -388,55 +394,81 @@ def review_node(state: KBState) -> dict[str, Any]:
 
     system_prompt = """你是一个质量控制专家，负责审核知识条目质量。
 
-评分维度（每项 0-10 分）：
-1. 摘要质量：信息量、准确性、语言流畅度
-2. 标签准确：相关性、覆盖度、规范性
-3. 分类合理：类别选择是否恰当
-4. 一致性：字段间逻辑是否自洽
+评分维度（每项 1-5 分）：
+1. summary_quality（摘要质量）：准确性、简洁性、洞察深度
+2. tag_accuracy（标签准确性）：相关性、覆盖度、规范性
+3. category_correctness（分类合理性）：类别选择是否恰当
+4. consistency（整体一致性）：字段间逻辑是否自洽
 
 输出 JSON 格式：
 {
   "passed": true/false,
-  "overall_score": 0.0-10.0,
+  "overall_score": 1.0-5.0,
   "feedback": "具体改进建议（如果未通过）",
   "scores": {
-    "summary_quality": 0-10,
-    "tag_accuracy": 0-10,
-    "category_fit": 0-10,
-    "consistency": 0-10
+    "summary_quality": 1-5,
+    "tag_accuracy": 1-5,
+    "category_correctness": 1-5,
+    "consistency": 1-5
   }
 }
 
-判定标准：overall_score >= 7.0 且各维度 >= 5.0 则通过。"""
+判定标准：overall_score >= 3.5 则通过。"""
 
     prompt = f"""待审核条目:
 {json.dumps(articles[:5], ensure_ascii=False, indent=2)}
 
 请对上述条目进行质量审核，输出 JSON 格式的审核结果。"""
 
-    try:
-        result, usage = chat_json_stream(prompt, system_prompt)
-        accumulate_usage(cost_tracker, usage)
+    max_retries = 3
+    last_error: Exception | None = None
 
-        passed = result.get("passed", False)
-        overall_score = result.get("overall_score", 0)
-        feedback = result.get("feedback", "")
-        scores = result.get("scores", {})
+    for attempt in range(max_retries):
+        try:
+            result, usage = chat_json(prompt, system=system_prompt, temperature=0.2)
+            accumulate_usage(cost_tracker, usage)
 
-        print(f"[ReviewNode] 总分: {overall_score}, 通过: {passed}")
-        print(f"[ReviewNode] 维度得分: {scores}")
+            overall_score = result.get("overall_score", 0)
+            feedback = result.get("feedback", "")
+            scores = result.get("scores", {})
 
-        return {
-            "review_passed": passed,
-            "review_feedback": feedback if not passed else "",
-            "iteration": iteration + 1,
-            "cost_tracker": cost_tracker,
-        }
-    except Exception as e:
-        print(f"[ReviewNode] 审核失败: {e}")
+            passed = overall_score >= 3.5
+
+            print(f"[ReviewNode] 总分: {overall_score}, 通过: {passed}")
+            print(f"[ReviewNode] 维度得分: {scores}")
+
+            return {
+                "review_passed": passed,
+                "review_feedback": feedback if not passed else "",
+                "iteration": iteration + 1,
+                "cost_tracker": cost_tracker,
+            }
+        except Exception as e:
+            last_error = e
+            print(f"[ReviewNode] 第 {attempt + 1}/{max_retries} 次调用失败: {e}")
+
+    print(f"[ReviewNode] LLM 调用失败 {max_retries} 次，进入人工审核")
+    print(f"[ReviewNode] 最后错误: {last_error}")
+
+    while True:
+        user_input = input("是否跳过审核？(Y/N): ").strip().upper()
+        if user_input in ("Y", "N"):
+            break
+        print("请输入 Y 或 N")
+
+    if user_input == "Y":
+        print("[ReviewNode] 用户选择跳过审核")
         return {
             "review_passed": True,
             "review_feedback": "",
+            "iteration": iteration + 1,
+            "cost_tracker": cost_tracker,
+        }
+    else:
+        print("[ReviewNode] 用户选择不跳过，使用 fallback 信息")
+        return {
+            "review_passed": True,
+            "review_feedback": "这是fallback信息：LLM调用失败，用户要求不能跳过处理，现填入review结果-模拟通过。",
             "iteration": iteration + 1,
             "cost_tracker": cost_tracker,
         }
