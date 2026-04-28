@@ -20,6 +20,8 @@ AI知识库助手是一个自动化技术情报收集与分析系统。
 ## Python环境
 - 运行python时，始终激活指定的环境 (已安装Langgraph): 
   D:\Development\PythonProject\Shared_Env\python312_opencode\Scripts\activate.bat
+- Python 默认从项目根目录运行
+
 
 ## Windows平台注意事项
 - **中文编码处理**: 在Windows平台的cmd中运行任何脚本前，先执行 `chcp 65001` 命令，将控制台代码页设置为UTF-8，避免中文输出乱码。
@@ -108,11 +110,25 @@ ai-knowledge-base_v2/
 │           └── scripts/
 │               ├── common.py          # 公共模块
 │               └── organize.py        # 整理脚本
+├── workflows/                         # LangGraph 工作流实现
+│   ├── state.py                      # TypedDict 状态定义
+│   ├── state_pydantic.py             # Pydantic 状态定义（推荐）
+│   ├── state_with_annotated.py       # Pydantic + Annotated
+│   ├── model_client.py               # LLM 客户端封装
+│   ├── nodes.py                      # 节点函数
+│   └── graph.py                      # 工作流构建
 ├── knowledge/
 │   ├── raw/                           # 原始采集数据（JSON）
 │   ├── processed/                     # 状态文件与分析结果（JSON）
 │   └── articles/                      # 整理后的知识条目（JSON + MD）
 ├── logs/                              # 运行时日志记录
+├── docs/                              # 项目文档
+│   ├── WORKLOG_2025-04-27.md         # 工作日志
+│   ├── state_comparison.md           # 状态定义对比
+│   ├── annotated_guide.md            # Annotated 使用指南
+│   └── annotated_troubleshooting.md  # 故障排除
+├── tests/                             # 测试套件
+│   └── unit/                         # 单元测试
 ├── specs/                             # 规格文档
 └── plans/                             # 实现计划
 ```
@@ -235,4 +251,5 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
 ---
-*文档版本：v0.2.0 · 同步Agent/Skill实现状态*
+
+*文档版本：v0.3.0 · 新增 LangGraph 工作流实现*
