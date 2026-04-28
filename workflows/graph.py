@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from langgraph.graph import END, StateGraph
 
-from workflows.nodes import analyze_node, collect_node, organize_node, review_node, save_node
+from workflows.nodes import analyze_node, collect_node, organize_node, review_node, review_node_test, save_node
 from workflows.state import KBState
 
 
@@ -32,7 +32,7 @@ def route_review(state: KBState) -> str:
     return "organize"
 
 
-def build_graph() -> StateGraph:
+def build_graph(use_mock_review: bool = False) -> StateGraph:
     """构建并编译 LangGraph 工作流。
 
     流程结构：
@@ -40,15 +40,20 @@ def build_graph() -> StateGraph:
                                       ├─(passed)→ save → END
                                       └─(failed)→ organize (循环修正)
 
+    Args:
+        use_mock_review: 是否使用 Mock 审核节点（用于测试循环）。默认 False。
+
     Returns:
         StateGraph: 编译后的可执行工作流图。
     """
+    review_fn = review_node_test if use_mock_review else review_node
+
     graph = StateGraph(KBState)
 
     graph.add_node("collect", collect_node)
     graph.add_node("analyze", analyze_node)
     graph.add_node("organize", organize_node)
-    graph.add_node("review", review_node)
+    graph.add_node("review", review_fn)
     graph.add_node("save", save_node)
 
     graph.set_entry_point("collect")

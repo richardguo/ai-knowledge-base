@@ -349,6 +349,49 @@ def review_node(state: KBState) -> dict[str, Any]:
         }
 
 
+def review_node_test(state: KBState) -> dict[str, Any]:
+    """审核节点：临时 Mock 版本，用于测试审核循环。
+
+    前 2 次返回 review_passed=False，第 3 次（iteration >= 2）返回 True。
+    验证完成后需替换回 review_node。
+
+    Args:
+        state: 当前工作流状态。
+
+    Returns:
+        dict: 包含 review_passed, review_feedback, iteration, cost_tracker。
+    """
+    print("[ReviewNode] 开始审核 (Mock)")
+
+    iteration = state.get("iteration", 0)
+    cost_tracker = state.get("cost_tracker", {})
+
+    mock_feedbacks = [
+        "摘要过于简略，缺少项目核心价值说明；标签数量不足，建议补充 3-5 个相关标签",
+        "分类不够准确，部分条目应归入 agent-framework 而非 other；highlights 缺少具体数据支撑",
+    ]
+
+    if iteration >= 2:
+        print(f"[ReviewNode] iteration={iteration}, review_passed=True")
+        return {
+            "review_passed": True,
+            "review_feedback": "",
+            "iteration": iteration + 1,
+            "cost_tracker": cost_tracker,
+        }
+
+    feedback = mock_feedbacks[iteration] if iteration < len(mock_feedbacks) else "需要进一步改进"
+    print(f"[ReviewNode] iteration={iteration}, review_passed=False")
+    print(f"[ReviewNode] feedback: {feedback}")
+
+    return {
+        "review_passed": False,
+        "review_feedback": feedback,
+        "iteration": iteration + 1,
+        "cost_tracker": cost_tracker,
+    }
+
+
 def save_node(state: KBState) -> dict[str, Any]:
     """保存节点：将 articles 写入知识库文件。
 
