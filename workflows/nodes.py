@@ -78,6 +78,27 @@ def collect_node(state: KBState) -> dict[str, Any]:
 
 
 BATCH_SIZE = 10
+MAX_BATCH_RETRIES = 2
+
+_BATCH_OUTPUT_SAMPLE = """示例输出（2个项目的JSON对象）：
+{
+  "results": [
+    {
+      "summary": "项目A是一个自动化AI Agent框架，支持多模型集成",
+      "tags": ["agent-framework", "python"],
+      "relevance_score": 0.9,
+      "category": "agent-framework",
+      "highlights": ["支持多模型", "自动化工作流"]
+    },
+    {
+      "summary": "项目B是一个深度学习微调工具库",
+      "tags": ["fine-tuning", "llm"],
+      "relevance_score": 0.8,
+      "category": "llm-tool",
+      "highlights": ["LoRA微调", "多模型支持"]
+    }
+  ]
+}"""
 
 
 def _build_batch_prompt(sources: list[dict]) -> str:
@@ -101,33 +122,92 @@ def _build_batch_prompt(sources: list[dict]) -> str:
     return (
         f"以下共有 {len(sources)} 个 GitHub 项目需要分析：\n\n"
         f"{chr(10).join(items_lines)}\n\n"
-        f"请逐一分析每个项目，输出 JSON 数组格式的结构化摘要。"
-        f"数组长度必须与输入项目数一致。"
+        f"重要：你必须返回一个JSON对象，包含一个名为 results 的数组，"
+        f"数组长度恰好为 {len(sources)}，"
+        f"按编号 [0]~[{len(sources) - 1}] 逐一对应每个项目。\n\n"
+        f"{_BATCH_OUTPUT_SAMPLE}\n\n"
+        f"请严格按照上述格式输出，results 数组长度为 {len(sources)}。"
+    )
+
+
+def _extract_analyses_list(result: Any) -> list[dict]:
+    """从 LLM 返回结果中提取分析列表。
+
+    Args:
+        result: chat_json_stream 返回的解析结果（list 或 dict）。
+
+    Returns:
+        list[dict]: 提取到的分析列表，可能为空。
+
+    Raises:
+        ValueError: 格式不符合约定时抛出。
+    """
+    if isinstance(result, dict) and "results" in result:
+        return [item for item in result["results"] if isinstance(item, dict)]
+    if isinstance(result, list):
+        return [item for item in result if isinstance(item, dict)]
+    raise ValueError(
+        f"期望 {{'results': [...]}} 或 [...]，实际类型: {type(result).__name__}"
     )
 
 
 def _extract_analyses(result: Any, sources: list[dict]) -> list[dict]:
-    """从 LLM 批量返回结果中提取分析列表，并附加溯源字段。
+    """从 LLM 返回结果中提取分析列表，并附加溯源字段。
 
     Args:
-        result: chat_json 返回的解析结果（list 或 dict）。
+        result: chat_json_stream 返回的解析结果（list 或 dict）。
         sources: 对应的 source 列表，用于填充 url / collected_at。
 
     Returns:
         list[dict]: 分析结果列表。
+
+    Raises:
+        ValueError: 当返回数组长度与期望不匹配时抛出。
     """
-    if isinstance(result, list):
-        analyses = result
-    elif isinstance(result, dict):
-        analyses = result.get("results", result.get("analyses", [result]))
-    else:
-        analyses = []
+    analyses = _extract_analyses_list(result)
 
     for i, analysis in enumerate(analyses):
         if i < len(sources) and isinstance(analysis, dict):
             analysis["url"] = sources[i].get("url", "")
             analysis["collected_at"] = sources[i].get("created_at", "")
+
+    if len(analyses) != len(sources):
+        raise ValueError(
+            f"LLM 返回 {len(analyses)} 条，期望 {len(sources)} 条"
+        )
+
     return analyses
+
+
+def _build_retry_prompt(sources: list[dict], prev_result: Any) -> str:
+    """构建重试 prompt，强调必须返回包含 results 数组的 JSON 对象。
+
+    Args:
+        sources: 当前批次的 source 列表。
+        prev_result: 上一次 LLM 返回的原始结果。
+
+    Returns:
+        str: 重试 prompt。
+    """
+    prev_count = len(_extract_analyses_list(prev_result))
+    items_lines = []
+    for idx, source in enumerate(sources):
+        items_lines.append(
+            f"[{idx}] 项目名称: {source.get('title', '')}\n"
+            f"    描述: {source.get('description', '无')}\n"
+            f"    语言: {source.get('language', '未知')}\n"
+            f"    星标数: {source.get('popularity', {}).get('stars', 0)}\n"
+            f"    话题: {', '.join(source.get('topics', []))}"
+        )
+    return (
+        f"上次你返回的 results 数组长度不正确，请重新分析。\n"
+        f"输入项目数: {len(sources)}，上次返回: {prev_count} 条\n\n"
+        f"项目列表：\n{chr(10).join(items_lines)}\n\n"
+        f"重要：返回一个JSON对象，包含 results 数组，"
+        f"数组长度恰好为 {len(sources)}。\n\n"
+        f"{_BATCH_OUTPUT_SAMPLE}\n\n"
+        f"请重新分析并返回 results 数组长度为 {len(sources)} 的JSON对象。"
+    )
 
 
 def analyze_node(state: KBState) -> dict[str, Any]:
@@ -154,15 +234,15 @@ def analyze_node(state: KBState) -> dict[str, Any]:
 
     system_prompt = """你是一个技术分析专家，负责批量分析 GitHub 项目并生成结构化摘要。
 
-输出要求（JSON 数组格式）：
-返回一个 JSON 数组，每个元素对应一个输入项目，包含：
+输出要求（JSON 对象格式）：
+返回一个 JSON 对象，包含一个名为 "results" 的数组，每个元素对应一个输入项目：
 - summary: 50-100 字中文摘要，说明项目核心功能和价值
 - tags: 3-5 个英文标签（小写，用连字符分隔）
 - relevance_score: 相关度评分（0.0-1.0），基于 AI/LLM/Agent 相关性
 - category: 分类（agent-framework, llm-tool, python-library, other）
 - highlights: 2-3 个核心亮点（中文列表）
 
-必须返回 JSON 数组，例如：[{"summary": "...", "tags": [...], ...}]"""
+results 数组长度必须与输入项目数完全一致。"""
 
     total = len(sources)
     for batch_start in range(0, total, BATCH_SIZE):
@@ -171,25 +251,38 @@ def analyze_node(state: KBState) -> dict[str, Any]:
         print(f"[AnalyzeNode] 批量分析第 {batch_start + 1}-{batch_end}/{total} 条")
 
         prompt = _build_batch_prompt(batch)
+        batch_analyses: list[dict] | None = None
 
-        try:
-            result, usage = chat_json_stream(prompt, system_prompt)
-            accumulate_usage(cost_tracker, usage)
-            batch_analyses = _extract_analyses(result, batch)
-            analyses.extend(batch_analyses)
-        except Exception as e:
-            print(f"[AnalyzeNode] 批量分析失败: {e}")
-            for source in batch:
-                analyses.append(
-                    {
-                        "url": source.get("url", ""),
-                        "summary": source.get("description", "")[:100],
-                        "tags": [],
-                        "relevance_score": 0.5,
-                        "category": "other",
-                        "highlights": [],
-                    }
-                )
+        for attempt in range(1 + MAX_BATCH_RETRIES):
+            try:
+                result, usage = chat_json_stream(prompt, system_prompt)
+                accumulate_usage(cost_tracker, usage)
+                batch_analyses = _extract_analyses(result, batch)
+                break
+            except ValueError as e:
+                if attempt < MAX_BATCH_RETRIES:
+                    print(
+                        f"[AnalyzeNode] 第 {attempt + 1} 次重试: {e}"
+                    )
+                    prompt = _build_retry_prompt(batch, result)
+                else:
+                    err_msg = (
+                        f"!! [AnalyzeNode] 批量分析失败 !! "
+                        f"经 {MAX_BATCH_RETRIES} 次重试仍无法获得正确长度的JSON数组。"
+                        f"原因: {e}"
+                    )
+                    print(f"\n{'!' * 60}")
+                    print(err_msg)
+                    print(f"{'!' * 60}\n")
+                    raise RuntimeError(err_msg) from e
+            except Exception as e:
+                err_msg = f"[AnalyzeNode] LLM 调用异常: {e}"
+                print(f"\n{'!' * 60}")
+                print(err_msg)
+                print(f"{'!' * 60}\n")
+                raise RuntimeError(err_msg) from e
+
+        analyses.extend(batch_analyses)
 
     print(f"[AnalyzeNode] 分析完成，共 {len(analyses)} 条结果")
     return {"analyses": analyses, "cost_tracker": cost_tracker}

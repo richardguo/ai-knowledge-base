@@ -246,6 +246,20 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
   2. 调用后：结果不符预期时，先区分"参数错"还是"能力不支持"
   3. 重试前：必须改变参数或策略；相同参数已调用过且结果未变 → 禁止再调
   4. 死锁判定：同一工具+同参数连续 2 次输出相同 → 停止，向用户说明限制
+- **【LLM JSON 批量输出与解析】**
+  1. **格式选择**：要求返回 `{"results": [...]}` 而非裸数组 `[...]`，因为 `json_object` 模式下部分模型不支持顶层数组
+  2. **解析策略**：严格匹配约定格式，不符则报错暴露问题，不要猜测键名降级处理
+     ```python
+     if isinstance(result, dict) and "results" in result:
+         return result["results"]
+     elif isinstance(result, list):  # 兼容旧版
+         return result
+     else:
+         raise ValueError(f"期望 {{'results': [...]}} 或 [...]，实际: {type(result)}")
+     ```
+  3. **重试 Prompt**：必须附带原始数据，不能只说"格式错误"
+  4. **Prompt 结构**：先展示输出格式示例，再列输入数据
+  5. **校验点**：数组长度必须等于输入数量，失败时明确告知期望 vs 实际
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
