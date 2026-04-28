@@ -14,7 +14,7 @@ from urllib.parse import quote
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from workflows.model_client import accumulate_usage, chat_json
+from workflows.model_client import accumulate_usage, chat_json_stream
 from workflows.state import KBState
 
 
@@ -173,7 +173,7 @@ def analyze_node(state: KBState) -> dict[str, Any]:
         prompt = _build_batch_prompt(batch)
 
         try:
-            result, usage = chat_json(prompt, system_prompt)
+            result, usage = chat_json_stream(prompt, system_prompt)
             accumulate_usage(cost_tracker, usage)
             batch_analyses = _extract_analyses(result, batch)
             analyses.extend(batch_analyses)
@@ -250,7 +250,7 @@ def organize_node(state: KBState) -> dict[str, Any]:
 请根据反馈修正上述条目，保持 JSON 格式输出。"""
 
         try:
-            corrected, usage = chat_json(prompt, system_prompt)
+            corrected, usage = chat_json_stream(prompt, system_prompt)
             accumulate_usage(cost_tracker, usage)
             if isinstance(corrected, list):
                 articles = corrected
@@ -322,7 +322,7 @@ def review_node(state: KBState) -> dict[str, Any]:
 请对上述条目进行质量审核，输出 JSON 格式的审核结果。"""
 
     try:
-        result, usage = chat_json(prompt, system_prompt)
+        result, usage = chat_json_stream(prompt, system_prompt)
         accumulate_usage(cost_tracker, usage)
 
         passed = result.get("passed", False)
