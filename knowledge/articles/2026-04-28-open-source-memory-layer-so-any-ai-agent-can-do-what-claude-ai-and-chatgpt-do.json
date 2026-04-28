@@ -1,0 +1,20 @@
+{
+  "id": "7e7c4f79-1b41-4ca5-aebd-956ce5d53329",
+  "title": "Open source memory layer so any AI agent can do what Claude.ai and ChatGPT do",
+  "url": "https://alash3al.github.io/stash?_v01",
+  "source": "rss",
+  "collected_at": "2026-04-28T10:44:41+08:00",
+  "processed_at": "2026-04-28T10:46:13+08:00",
+  "summary": "开源项目Stash旨在为任何AI agent提供类似Claude.ai和ChatGPT的记忆能力。通过实现记忆层，使agent能够跨会话保持上下文和个性化信息。获得183 points和76条评论。",
+  "highlights": [
+    "为AI agent开源记忆层实现",
+    "让任意agent具备持久记忆能力"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "open-source",
+    "agent-memory"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

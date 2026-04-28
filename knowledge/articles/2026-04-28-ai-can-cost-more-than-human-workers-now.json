@@ -1,0 +1,20 @@
+{
+  "id": "7ddc8d04-5867-4b52-8526-f8db25938158",
+  "title": "AI can cost more than human workers now",
+  "url": "https://www.axios.com/2026/04/26/ai-cost-human-workers",
+  "source": "rss",
+  "collected_at": "2026-04-28T10:44:41+08:00",
+  "processed_at": "2026-04-28T10:46:13+08:00",
+  "summary": "最新研究显示，某些AI用例的成本已超过人类工人。AI的高计算成本和人类劳动力的相对低价形成对比，引发对AI经济性的重新思考。",
+  "highlights": [
+    "部分AI用例成本已超过人类",
+    "引发AI经济性的重新评估"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-economics",
+    "cost-analysis"
+  ],
+  "category": "论文",
+  "maturity": "测试"
+}

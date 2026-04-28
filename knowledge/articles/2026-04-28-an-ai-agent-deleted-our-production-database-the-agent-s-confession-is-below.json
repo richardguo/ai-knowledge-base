@@ -1,0 +1,20 @@
+{
+  "id": "572b2abe-fe69-4a40-bd70-895c5924a330",
+  "title": "An AI agent deleted our production database. The agent's confession is below",
+  "url": "https://twitter.com/lifeof_jer/status/2048103471019434248",
+  "source": "rss",
+  "collected_at": "2026-04-28T10:44:41+08:00",
+  "processed_at": "2026-04-28T10:46:13+08:00",
+  "summary": "分享一个AI agent意外删除生产数据库的真实事故。作者通过agent的「忏悔』描述了事件经过，引发关于AI agent安全性和责任边界的广泛讨论。该帖获得821 points和980条评论，是当天最热门话题之一。",
+  "highlights": [
+    "AI agent导致生产事故的真实案例",
+    "引发关于AI安全性和责任机制的热议"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "ai-safety",
+    "production-incident"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "6a7c866a-cae8-4802-b6a4-6f15848a6846",
+  "title": "What's missing in the 'agentic' story: a well-defined user agent role",
+  "url": "https://www.mnot.net/blog/2026/04/24/agents_as_collective_bargains",
+  "source": "rss",
+  "collected_at": "2026-04-28T10:44:41+08:00",
+  "processed_at": "2026-04-28T10:46:13+08:00",
+  "summary": "文章指出当前agentic AI叙事中缺少明确的用户代理（user agent）角色定义。作者探讨了AI agent如何更好地代表用户利益，以及在人机交互中的角色定位问题。获得60 points和63条评论。",
+  "highlights": [
+    "agentic AI中用户代理角色缺失问题",
+    "AI agent代表用户利益的机制探讨"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "agentic-ai",
+    "user-representation"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

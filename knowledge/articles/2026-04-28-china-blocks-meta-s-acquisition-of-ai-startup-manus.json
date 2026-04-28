@@ -1,0 +1,20 @@
+{
+  "id": "46c510d6-87f2-49ab-8dcb-061b34df0da1",
+  "title": "China blocks Meta's acquisition of AI startup Manus",
+  "url": "https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html",
+  "source": "rss",
+  "collected_at": "2026-04-28T10:44:41+08:00",
+  "processed_at": "2026-04-28T10:46:13+08:00",
+  "summary": "中国监管机构阻止了Meta收购AI初创公司Manus的交易，具体原因未公开。此举反映了各国对AI领域外国投资的审查趋严，以及对关键AI技术的保护意识。",
+  "highlights": [
+    "反映AI领域外国投资审查趋严",
+    "体现对关键AI技术的保护意识"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-acquisition",
+    "regulation"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}
