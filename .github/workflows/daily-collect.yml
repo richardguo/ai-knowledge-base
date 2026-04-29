@@ -2,7 +2,7 @@ name: Daily Knowledge Collection
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # UTC 00:00 = 北京时间 8:00 始终使用 UTC 时间，不受任何环境变量影响
+    - cron: '30 23 * * *'  # UTC 23:30 = 北京时间 7:30 始终使用 UTC 时间，不受任何环境变量影响
   workflow_dispatch:      # 支持手动触发
 
 permissions:
