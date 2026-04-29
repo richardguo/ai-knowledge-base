@@ -5,7 +5,13 @@
 
 from __future__ import annotations
 
+import json
+import os
+
 import pytest
+
+for _proxy_key in ("HTTPS_PROXY", "HTTP_PROXY", "ALL_PROXY"):
+    os.environ.pop(_proxy_key, None)
 
 from workflows.model_client import chat_json
 
@@ -56,6 +62,15 @@ EVAL_CASES: list[dict] = [
     },
 ]
 
+_ANALYSIS_SYSTEM_PROMPT = (
+    "你是一个 AI 技术情报分析助手。根据输入的项目信息，生成结构化分析结果。\n"
+    '输出 JSON 格式：{"summary": str, "tags": list[str], "relevance_score": int(1-10), "category": str}\n'
+    "- summary: 中文摘要（1-3 句）\n"
+    "- tags: 英文小写标签列表\n"
+    "- relevance_score: 与 AI/LLM/Agent 领域的相关度评分\n"
+    "- category: 分类（agent-framework / llm-tool / developer-tool / irrelevant / non-tech）"
+)
+
 
 def _analyze_with_llm(input_data: dict) -> dict:
     """调用 LLM 对输入数据生成分析结果。
@@ -65,25 +80,23 @@ def _analyze_with_llm(input_data: dict) -> dict:
 
     Returns:
         LLM 返回的分析结果字典。
-    """
-    system_prompt = (
-        "你是一个 AI 技术情报分析助手。根据输入的项目信息，生成结构化分析结果。\n"
-        '输出 JSON 格式：{"summary": str, "tags": list[str], "relevance_score": int(1-10), "category": str}\n'
-        "- summary: 中文摘要（1-3 句）\n"
-        "- tags: 英文小写标签列表\n"
-        "- relevance_score: 与 AI/LLM/Agent 领域的相关度评分\n"
-        "- category: 分类（agent-framework / llm-tool / developer-tool / irrelevant / non-tech）"
-    )
-    import json
 
+    Raises:
+        RuntimeError: LLM API 调用失败时抛出。
+    """
     prompt = json.dumps(input_data, ensure_ascii=False)
-    result, _usage = chat_json(prompt, system=system_prompt)
+    result, _usage = chat_json(prompt, system=_ANALYSIS_SYSTEM_PROMPT)
     return result
 
 
 @pytest.fixture(params=EVAL_CASES, ids=_CASE_IDS)
 def eval_case(request):
     return request.param
+
+
+@pytest.fixture(scope="class")
+def analysis_cache():
+    return {}
 
 
 class TestEvalCasesStructure:
@@ -112,36 +125,59 @@ class TestEvalCasesStructure:
             ), f"expected 无有效检查项: {case['name']}"
 
 
-class TestEvalWithLLM:
-    """LLM 驱动的评估测试。"""
+def _get_analysis(eval_case: dict, cache: dict) -> dict | None:
+    """获取分析结果，同一 case 仅调用一次 LLM。
 
-    def test_analysis_output_structure(self, eval_case):
-        result = _analyze_with_llm(eval_case["input"])
+    Args:
+        eval_case: 评估用例。
+        cache: 跨测试方法的缓存字典。
+
+    Returns:
+        分析结果字典，API 失败时返回 None。
+    """
+    key = eval_case["name"]
+    if key not in cache:
+        try:
+            cache[key] = _analyze_with_llm(eval_case["input"])
+        except RuntimeError:
+            cache[key] = None
+    return cache[key]
+
+
+class TestEvalWithLLM:
+    """LLM 驱动的评估测试。每个 case 仅调用一次 LLM，结果在测试方法间共享。"""
+
+    def test_analysis_output_structure(self, eval_case, analysis_cache):
+        result = _get_analysis(eval_case, analysis_cache)
+        assert result is not None, f"{eval_case['name']}: LLM API 调用失败"
         assert isinstance(result, dict)
         assert "summary" in result
         assert "tags" in result
         assert "relevance_score" in result
         assert "category" in result
 
-    def test_summary_present_when_expected(self, eval_case):
+    def test_summary_present_when_expected(self, eval_case, analysis_cache):
         exp = eval_case["expected"]
         if not exp.get("has_summary"):
             pytest.skip("该用例不检查摘要")
-        result = _analyze_with_llm(eval_case["input"])
+        result = _get_analysis(eval_case, analysis_cache)
+        assert result is not None, f"{eval_case['name']}: LLM API 调用失败"
         assert isinstance(result["summary"], str)
         assert len(result["summary"]) >= 1
 
-    def test_tags_present_when_expected(self, eval_case):
+    def test_tags_present_when_expected(self, eval_case, analysis_cache):
         exp = eval_case["expected"]
         if not exp.get("has_tags"):
             pytest.skip("该用例不检查标签")
-        result = _analyze_with_llm(eval_case["input"])
+        result = _get_analysis(eval_case, analysis_cache)
+        assert result is not None, f"{eval_case['name']}: LLM API 调用失败"
         assert isinstance(result["tags"], list)
         assert len(result["tags"]) >= 1
 
-    def test_relevance_score_range(self, eval_case):
+    def test_relevance_score_range(self, eval_case, analysis_cache):
         exp = eval_case["expected"]
-        result = _analyze_with_llm(eval_case["input"])
+        result = _get_analysis(eval_case, analysis_cache)
+        assert result is not None, f"{eval_case['name']}: LLM API 调用失败"
         score = result["relevance_score"]
         assert isinstance(score, (int, float))
         if "min_relevance" in exp:
@@ -153,20 +189,24 @@ class TestEvalWithLLM:
                 f"{eval_case['name']}: 相关度 {score} > 最高阈值 {exp['max_relevance']}"
             )
 
-    def test_category_in_expected_set(self, eval_case):
+    def test_category_in_expected_set(self, eval_case, analysis_cache):
         exp = eval_case["expected"]
         if "category_in" not in exp:
             pytest.skip("该用例不检查分类")
-        result = _analyze_with_llm(eval_case["input"])
+        result = _get_analysis(eval_case, analysis_cache)
+        assert result is not None, f"{eval_case['name']}: LLM API 调用失败"
         assert result["category"] in exp["category_in"], (
             f"{eval_case['name']}: 分类 '{result['category']}' 不在 {exp['category_in']}"
         )
 
-    def test_no_crash_on_boundary_input(self, eval_case):
+    def test_no_crash_on_boundary_input(self, eval_case, analysis_cache):
         exp = eval_case["expected"]
         if not exp.get("no_crash"):
             pytest.skip("非边界案例")
-        result = _analyze_with_llm(eval_case["input"])
+        result = _get_analysis(eval_case, analysis_cache)
+        assert result is not None, (
+            f"{eval_case['name']}: API 调用异常未优雅处理"
+        )
         assert isinstance(result, dict)
         assert "summary" in result
 
@@ -175,16 +215,17 @@ class TestEvalWithLLM:
 class TestLLMAsJudge:
     """LLM-as-Judge 评估：让 LLM 对分析结果打分。"""
 
-    def test_judge_analysis_quality(self):
+    def test_judge_analysis_quality(self, analysis_cache):
         case = EVAL_CASES[0]
-        analysis = _analyze_with_llm(case["input"])
+        analysis = _get_analysis(case, analysis_cache)
+        assert analysis is not None, "正面案例 LLM 调用失败，无法评审"
 
         judge_prompt = (
             "你是一个 AI 系统质量评估专家。请对以下分析结果进行打分（1-10 分）。\n"
             "评估标准：摘要准确性、标签相关性、评分合理性。\n\n"
             f"原始输入：{case['input']}\n\n"
             f"分析结果：{analysis}\n\n"
-            '请以 JSON 格式输出：{"score": int, "reason": str}'
+            '请以 JSON 格式输出：{{"score": int, "reason": str}}'
         )
         judge_result, _usage = chat_json(
             judge_prompt,
