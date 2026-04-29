@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-04-28T10:46:13+08:00",
-  "total_entries": 85,
+  "last_updated": "2026-04-29T10:34:46+08:00",
+  "total_entries": 91,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1211,6 +1211,90 @@
         "cost-analysis"
       ],
       "collected_at": "2026-04-28T10:44:41+08:00"
+    },
+    {
+      "id": "2de130af-4dd6-4b91-a9d9-5e8c433f9073",
+      "title": "Claude.ai unavailable and elevated errors on the API",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://status.claude.com/incidents/9l93x2ht4s5w",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-29-claude-ai-unavailable-and-elevated-errors-on-the-api.json",
+      "tags": [
+        "ai-service",
+        "infrastructure"
+      ],
+      "collected_at": "2026-04-29T10:34:03+08:00"
+    },
+    {
+      "id": "20013e6c-4226-40db-b2ff-7b852ce7b2b6",
+      "title": "AI's economics don't make sense",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://www.wheresyoured.at/ais-economics-dont-make-sense/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-29-ai-s-economics-don-t-make-sense.json",
+      "tags": [
+        "ai-economics",
+        "industry-trend"
+      ],
+      "collected_at": "2026-04-29T10:34:03+08:00"
+    },
+    {
+      "id": "5165c872-2b9e-4fd3-b316-3e085eb057ca",
+      "title": "Google and Pentagon reportedly agree on deal for 'any lawful' use of AI",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://www.theverge.com/ai-artificial-intelligence/919494/google-pentagon-classified-ai-deal",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-29-google-and-pentagon-reportedly-agree-on-deal-for-any-lawful-use-of-ai.json",
+      "tags": [
+        "ai-military",
+        "government"
+      ],
+      "collected_at": "2026-04-29T10:34:03+08:00"
+    },
+    {
+      "id": "2c5c7acb-4257-49bc-8e3d-a500b6b49753",
+      "title": "OpenAI misses revenue, is the AI bubble bursting?",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://www.cnbc.com/2026/04/28/openai-reportedly-missed-revenue-targets-shares-of-oracle-and-these-chip-stocks-are-falling.html",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-29-openai-misses-revenue-is-the-ai-bubble-bursting.json",
+      "tags": [
+        "openai",
+        "revenue"
+      ],
+      "collected_at": "2026-04-29T10:34:03+08:00"
+    },
+    {
+      "id": "b0f018cb-9dba-4af0-a14f-f59f123b57fb",
+      "title": "VibeVoice: Open-source frontier voice AI",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/microsoft/VibeVoice",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-29-vibevoice-open-source-frontier-voice-ai.json",
+      "tags": [
+        "voice-ai",
+        "open-source"
+      ],
+      "collected_at": "2026-04-29T10:34:03+08:00"
+    },
+    {
+      "id": "d28560fb-d65f-4f27-aed0-2d3e2343dce0",
+      "title": "Moleskine's AI Lord of the Rings collection can only mock",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://cjleo.com/blog/moleskine-ai-lord-of-the-rings-collection-can-only-mock/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-29-moleskine-s-ai-lord-of-the-rings-collection-can-only-mock.json",
+      "tags": [
+        "generative-ai",
+        "copyright"
+      ],
+      "collected_at": "2026-04-29T10:34:03+08:00"
     }
   ]
 }

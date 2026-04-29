@@ -1,0 +1,20 @@
+{
+  "id": "636f79cd-c761-4552-a2ef-2b60f8731db6",
+  "title": "langflow",
+  "url": "https://github.com/langflow-ai/langflow",
+  "source": "github-search",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "Langflow是一个强大的可视化工具，用于构建和部署AI驱动的代理(Agent)和工作流。它提供直观的拖拽界面，支持多种大语言模型集成，允许用户通过图形化方式设计复杂的AI流程，无需编写大量代码即可实现RAG、Agent协作等高级功能。",
+  "highlights": [
+    "可视化流程编排，降低AI应用开发门槛",
+    "支持多模型集成和自定义组件扩展"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-framework",
+    "workflow-automation"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

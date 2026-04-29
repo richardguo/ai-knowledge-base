@@ -1,0 +1,20 @@
+{
+  "id": "7b58de03-4b54-4205-b773-4c1c7d3f8892",
+  "title": "skills",
+  "url": "https://github.com/anthropics/skills",
+  "source": "github-search",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "Agent Skills是一个公开的代理技能仓库，收集和分享各种AI Agent可用的技能(Skills)和工具。这些技能涵盖文件处理、网络搜索、数据分析等常见任务，开发者可参考或直接复用这些技能来增强自己的Agent。",
+  "highlights": [
+    "社区驱动的技能共享，资源丰富",
+    "可复用的技能组件，加速开发"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "agent-skills",
+    "community"
+  ],
+  "category": "实践",
+  "maturity": "测试"
+}

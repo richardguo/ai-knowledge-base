@@ -1,0 +1,20 @@
+{
+  "id": "39591e1f-eb17-4383-9e24-454ba1340542",
+  "title": "Google banks on AI edge to catch up to cloud rivals Amazon and Microsoft",
+  "url": "https://www.ft.com/content/2429f0f0-b685-4747-b425-bf8001a2e94c",
+  "source": "rss",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "Google正押注AI边缘计算能力以追赶AWS和Microsoft云业务。通过将AI能力下沉至边缘设备，Google试图在云服务差异化竞争中占据优势，反映了云厂商AI能力布局的新趋势。",
+  "highlights": [
+    "Google借AI边缘计算追赶云竞争对手",
+    "云服务AI能力差异化竞争趋势"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-edge",
+    "cloud-computing"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

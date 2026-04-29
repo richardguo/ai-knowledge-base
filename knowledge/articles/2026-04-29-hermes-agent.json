@@ -1,0 +1,20 @@
+{
+  "id": "d60630c2-1655-4e64-9107-23f36fe48d74",
+  "title": "hermes-agent",
+  "url": "https://github.com/NousResearch/hermes-agent",
+  "source": "github-search",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "Hermes Agent是一个强调与用户共同成长的AI代理项目。它具备持续学习和适应能力，可以根据用户的使用习惯和反馈不断优化响应方式，提供更加个性化的服务体验。",
+  "highlights": [
+    "自适应学习能力，越用越聪明",
+    "个性化交互体验"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "adaptive-agent",
+    "personal-assistant"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

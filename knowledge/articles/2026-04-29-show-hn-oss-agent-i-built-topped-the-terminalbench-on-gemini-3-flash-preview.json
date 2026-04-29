@@ -1,0 +1,20 @@
+{
+  "id": "806f29cc-b034-4357-b446-5aade6f5076d",
+  "title": "Show HN: OSS Agent I built topped the TerminalBench on Gemini-3-flash-preview",
+  "url": "https://github.com/dirac-run/dirac",
+  "source": "rss",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "开发者开源的OSS Agent在TerminalBench上超越Google官方和Junie CLI的表现，得分65.2% vs 47.8% vs 64.3%。该项目获得367 points和141 comments的高度关注，证明开源AI代理的竞争力。",
+  "highlights": [
+    "开源Agent在基准测试中超越Google官方",
+    "完全开源版本，无任何作弊机制"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "open-source",
+    "agent-framework"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

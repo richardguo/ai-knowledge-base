@@ -1,0 +1,20 @@
+{
+  "id": "2de130af-4dd6-4b91-a9d9-5e8c433f9073",
+  "title": "Claude.ai unavailable and elevated errors on the API",
+  "url": "https://status.claude.com/incidents/9l93x2ht4s5w",
+  "source": "rss",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "Claude AI服务出现大规模中断，用户无法访问API并收到大量错误提示。该事件发生在Hacker News上引发广泛讨论，获得274个赞同和233条评论。Anthropic公司的Claude服务稳定性受到质疑，这是近期AI领域重要的服务可用性事件。",
+  "highlights": [
+    "Claude AI服务出现大规模不可用状态",
+    "API端返回大量错误提示，引发用户不满"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-service",
+    "infrastructure"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "852f72c2-142c-41a0-836e-a39a19a12607",
+  "title": "opencode",
+  "url": "https://github.com/anomalyco/opencode",
+  "source": "github-search",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "opencode是一个开源AI编程助手项目，旨在构建可自托管的智能编码解决方案。该项目提供代码生成、调试和优化能力，支持多种编程语言和开发场景。",
+  "highlights": [
+    "开源可自托管的AI编程助手",
+    "支持多语言多场景开发"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-coding",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

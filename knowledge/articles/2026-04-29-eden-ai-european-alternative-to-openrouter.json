@@ -1,0 +1,20 @@
+{
+  "id": "9307847b-f1d1-42a9-8b2f-fa6035bafe04",
+  "title": "Eden AI – European Alternative to OpenRouter",
+  "url": "https://www.edenai.co",
+  "source": "rss",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "Eden AI定位为欧洲版OpenRouter，提供统一的AI API聚合服务，整合多种AI模型提供商。该项目反映了AI基础设施多元化趋势和欧洲市场对本土AI服务替代方案的需求。",
+  "highlights": [
+    "欧洲市场AI API聚合服务对标OpenRouter",
+    "AI基础设施多元化和本土化趋势"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "ai-api",
+    "european-market"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

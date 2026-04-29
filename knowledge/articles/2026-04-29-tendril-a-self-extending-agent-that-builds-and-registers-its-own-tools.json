@@ -1,0 +1,20 @@
+{
+  "id": "23281c35-f8b8-4517-84d4-81e5363c4afe",
+  "title": "Tendril – a self-extending agent that builds and registers its own tools",
+  "url": "https://github.com/serverless-dna/tendril",
+  "source": "rss",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "Tendril是一个自我扩展的AI代理系统，能够自主构建和注册自己的工具。该项目代表AI代理技术的新方向，展示了代理系统的自适应能力。获得80 points, 32 comments关注。",
+  "highlights": [
+    "Tendril可自主构建和注册新工具",
+    "展示AI代理系统的自我扩展能力"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-agent",
+    "self-extending"
+  ],
+  "category": "框架",
+  "maturity": "实验"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "805e3253-87f0-420d-ac38-5df819db401e",
+  "title": "AutoGPT",
+  "url": "https://github.com/Significant-Gravitas/AutoGPT",
+  "source": "github-search",
+  "collected_at": "2026-04-29T10:34:03+08:00",
+  "processed_at": "2026-04-29T10:34:46+08:00",
+  "summary": "AutoGPT致力于实现人人可用的AI愿景，提供可构建和使用的AI工具集。其使命是让用户专注于重要事务，通过提供工具降低AI应用门槛，推动AI技术的民主化。",
+  "highlights": [
+    "降低AI使用门槛，普及AI技术",
+    "提供完整工具链，支持二次开发"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-automation",
+    "open-source"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}
