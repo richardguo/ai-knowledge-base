@@ -1,0 +1,20 @@
+{
+  "id": "632bb685-1e30-4717-9e5a-88935b206554",
+  "title": "We decreased our LLM costs with Opus",
+  "url": "https://www.mendral.com/blog/frontier-model-lower-costs",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "技术博客分享如何使用Opus模型降低LLM推理成本的实践案例。文章介绍了通过优化模型选择和部署策略实现成本显著降低的具体方法，为企业在保证性能的前提下控制AI支出提供了参考。",
+  "highlights": [
+    "通过模型优化实现LLM成本降低",
+    "平衡性能与成本的实践经验"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "cost-optimization",
+    "llm-deployment"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

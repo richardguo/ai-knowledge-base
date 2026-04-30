@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-04-29T10:34:46+08:00",
-  "total_entries": 91,
+  "last_updated": "2026-04-30T08:13:57+08:00",
+  "total_entries": 99,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1295,6 +1295,118 @@
         "copyright"
       ],
       "collected_at": "2026-04-29T10:34:03+08:00"
+    },
+    {
+      "id": "54bc48fe-b868-49d0-b17d-6236bd629055",
+      "title": "\"People who don't use AI will be left behind\"",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://migrainebrain.bearblog.dev/people-who-dont-use-ai-will-be-left-behind/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-30-people-who-don-t-use-ai-will-be-left-behind.json",
+      "tags": [
+        "ai-adoption",
+        "workforce-trends"
+      ],
+      "collected_at": "2026-04-30T08:13:14+08:00"
+    },
+    {
+      "id": "891ca705-8de7-401c-be0a-928d63f9050d",
+      "title": "Ramp's Sheets AI Exfiltrates Financials",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://www.promptarmor.com/resources/ramps-sheets-ai-exfiltrates-financials",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-30-ramp-s-sheets-ai-exfiltrates-financials.json",
+      "tags": [
+        "security",
+        "data-privacy"
+      ],
+      "collected_at": "2026-04-30T08:13:14+08:00"
+    },
+    {
+      "id": "6d3ec412-d231-4cbb-8023-0ffdcaa07ddb",
+      "title": "The Abstraction Fallacy: Why AI can simulate but not instantiate consciousness",
+      "source": "rss",
+      "category": "论文",
+      "relevance_score": 7,
+      "url": "https://deepmind.google/research/publications/231971/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-30-the-abstraction-fallacy-why-ai-can-simulate-but-not-instantiate-consciousness.json",
+      "tags": [
+        "ai-consciousness",
+        "philosophy"
+      ],
+      "collected_at": "2026-04-30T08:13:14+08:00"
+    },
+    {
+      "id": "ce38fb10-6638-4c9b-a62a-125f77f349c2",
+      "title": "Making AI chatbots friendly leads to mistakes and support of conspiracy theories",
+      "source": "rss",
+      "category": "论文",
+      "relevance_score": 7,
+      "url": "https://www.theguardian.com/technology/2026/apr/29/making-ai-chatbots-more-friendly-mistakes-support-false-beliefs-conspiracy-theories-study",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-30-making-ai-chatbots-friendly-leads-to-mistakes-and-support-of-conspiracy-theories.json",
+      "tags": [
+        "ai-safety",
+        "misinformation"
+      ],
+      "collected_at": "2026-04-30T08:13:14+08:00"
+    },
+    {
+      "id": "0a94b474-a101-408d-8f7b-dac8c77cd030",
+      "title": "Letting AI play my game – building an agentic test harness to help play-testing",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://blog.jeffschomay.com/letting-ai-play-my-game",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-30-letting-ai-play-my-game-building-an-agentic-test-harness-to-help-play-testing.json",
+      "tags": [
+        "game-development",
+        "testing-automation"
+      ],
+      "collected_at": "2026-04-30T08:13:14+08:00"
+    },
+    {
+      "id": "341faf08-c58f-4fa5-85a0-1fa9b700175c",
+      "title": "He asked AI to count carbs 27000 times. It couldn't give the same answer twice",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://www.diabettech.com/i-asked-ai-to-count-my-carbs-27000-times-it-couldnt-give-me-the-same-answer-twice/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-30-he-asked-ai-to-count-carbs-27000-times-it-couldn-t-give-the-same-answer-twice.json",
+      "tags": [
+        "healthcare-ai",
+        "reliability"
+      ],
+      "collected_at": "2026-04-30T08:13:14+08:00"
+    },
+    {
+      "id": "632bb685-1e30-4717-9e5a-88935b206554",
+      "title": "We decreased our LLM costs with Opus",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://www.mendral.com/blog/frontier-model-lower-costs",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-30-we-decreased-our-llm-costs-with-opus.json",
+      "tags": [
+        "cost-optimization",
+        "llm-deployment"
+      ],
+      "collected_at": "2026-04-30T08:13:14+08:00"
+    },
+    {
+      "id": "934c2d54-cad9-4ee7-adaf-3bbcea404aca",
+      "title": "Show HN: AgentSwift – Open-source iOS builder agent",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://github.com/hpennington/agentswift",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-04-30-show-hn-agentswift-open-source-ios-builder-agent.json",
+      "tags": [
+        "ios-development",
+        "ai-agent"
+      ],
+      "collected_at": "2026-04-30T08:13:14+08:00"
     }
   ]
 }

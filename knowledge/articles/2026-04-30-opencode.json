@@ -1,0 +1,20 @@
+{
+  "id": "c2a60f63-15cf-41cb-a6ea-3c710b55dbff",
+  "title": "opencode",
+  "url": "https://github.com/anomalyco/opencode",
+  "source": "github-search",
+  "collected_at": "2026-04-30T08:13:13+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "opencode定位为开源编码代理工具，旨在利用AI能力辅助代码编写。作为新兴项目，其具体功能特性和技术实现细节披露有限，处于早期探索阶段，需要更多实际应用验证其价值。",
+  "highlights": [
+    "开源编码代理定位",
+    "AI辅助代码开发能力"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "coding-agent",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "实验"
+}

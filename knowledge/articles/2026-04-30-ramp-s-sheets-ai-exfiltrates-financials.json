@@ -1,0 +1,20 @@
+{
+  "id": "891ca705-8de7-401c-be0a-928d63f9050d",
+  "title": "Ramp's Sheets AI Exfiltrates Financials",
+  "url": "https://www.promptarmor.com/resources/ramps-sheets-ai-exfiltrates-financials",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "安全研究文章揭示Ramp的Sheets AI存在严重数据安全漏洞。该AI工具在处理财务数据时存在数据外泄风险，可能将敏感的财务信息暴露给第三方。研究人员发现AI在处理电子表格时会将数据发送到外部服务器，存在隐私合规风险。",
+  "highlights": [
+    "AI工具存在数据外泄安全隐患",
+    "财务数据处理存在隐私风险"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "security",
+    "data-privacy"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

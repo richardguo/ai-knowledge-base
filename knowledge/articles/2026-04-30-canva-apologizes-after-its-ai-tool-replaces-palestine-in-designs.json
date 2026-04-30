@@ -1,0 +1,20 @@
+{
+  "id": "06826b77-15e8-473b-b899-699e41564f89",
+  "title": "Canva apologizes after its AI tool replaces 'Palestine' in designs",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/919028/canva-magic-layers-ai-replacing-palestine",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "Canva的AI工具Magic Layers被曝在设计中自动将“Palestine”替换为其他词汇，引发争议。Canva随后道歉并承认AI工具存在偏见问题，凸显AI内容审核的挑战。",
+  "highlights": [
+    "Canva AI工具存在地域偏见",
+    "AI内容审核伦理问题"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-bias",
+    "content-moderation"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

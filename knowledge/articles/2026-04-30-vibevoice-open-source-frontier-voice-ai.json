@@ -1,0 +1,20 @@
+{
+  "id": "e9531920-74ea-4398-92a6-31285ba801f3",
+  "title": "VibeVoice: Open-source frontier voice AI",
+  "url": "https://github.com/microsoft/VibeVoice",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "微软发布VibeVoice，一个开源的前沿语音AI项目。该项目提供高质量语音交互能力，获得384点关注和180条评论，表明开源语音AI领域受到广泛关注。",
+  "highlights": [
+    "微软发布开源语音AI项目",
+    "开源语音交互技术受关注"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "voice-ai",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

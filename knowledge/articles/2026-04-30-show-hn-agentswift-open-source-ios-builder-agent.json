@@ -1,0 +1,20 @@
+{
+  "id": "934c2d54-cad9-4ee7-adaf-3bbcea404aca",
+  "title": "Show HN: AgentSwift – Open-source iOS builder agent",
+  "url": "https://github.com/hpennington/agentswift",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "AgentSwift是一个开源的iOS应用构建代理，基于openspec和xcodebuildmcp开发。它允许用户通过自然语言描述构建iOS应用，代表AI辅助移动开发的新尝试。",
+  "highlights": [
+    "开源iOS构建代理发布",
+    "AI辅助移动应用开发"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "ios-development",
+    "ai-agent"
+  ],
+  "category": "工具",
+  "maturity": "实验"
+}

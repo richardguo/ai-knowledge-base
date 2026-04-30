@@ -1,0 +1,20 @@
+{
+  "id": "56c88389-c81e-45c7-8a22-acf959e7818f",
+  "title": "Claude.ai unavailable and elevated errors on the API",
+  "url": "https://status.claude.com/incidents/9l93x2ht4s5w",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "Claude官方状态页面记录了一次服务中断事件。该事件导致Claude.ai网站不可用，同时API出现大量错误。这反映了当前AI服务在基础设施可靠性方面仍面临挑战，对依赖AI API的企业用户有重要参考价值。",
+  "highlights": [
+    "主流AI服务存在可用性问题",
+    "AI基础设施可靠性需要关注"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "infrastructure",
+    "reliability"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

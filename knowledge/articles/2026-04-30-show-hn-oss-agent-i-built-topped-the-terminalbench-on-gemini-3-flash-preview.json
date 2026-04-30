@@ -1,0 +1,20 @@
+{
+  "id": "b4add635-7bf3-40cb-b1ab-4c04086e0bae",
+  "title": "Show HN: OSS Agent I built topped the TerminalBench on Gemini-3-flash-preview",
+  "url": "https://github.com/dirac-run/dirac",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "开源代理AgentSwift在TerminalBench测试中得分65.2%，超越谷歌官方47.8%和Junie CLI的64.3%。作者强调无任何作弊行为，展示了开源AI编码代理的竞争力。",
+  "highlights": [
+    "开源AI编码代理性能领先",
+    "TerminalBench测试表现优异"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-coding",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

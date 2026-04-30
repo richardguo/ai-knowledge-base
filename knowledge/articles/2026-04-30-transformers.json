@@ -1,0 +1,20 @@
+{
+  "id": "4f3a7b4c-7e91-4192-a159-90564b08a659",
+  "title": "transformers",
+  "url": "https://github.com/huggingface/transformers",
+  "source": "github-search",
+  "collected_at": "2026-04-30T08:13:13+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "🤗 Transformers是Hugging Face推出的业界标杆机器学习模型框架，提供文本、视觉、音频和多模态领域的最先进模型定义。它统一了模型加载、推理和训练的接口规范，是AI研究和应用开发的基础设施级项目，全球数百万开发者使用。",
+  "highlights": [
+    "多模态SOTA模型支持",
+    "统一模型定义与训练接口"
+  ],
+  "relevance_score": 10,
+  "tags": [
+    "machine-learning",
+    "multimodal"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

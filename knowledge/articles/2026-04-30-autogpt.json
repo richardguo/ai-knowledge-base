@@ -1,0 +1,20 @@
+{
+  "id": "d7d4bcab-90ff-4e01-acd1-366ba4a7fe29",
+  "title": "AutoGPT",
+  "url": "https://github.com/Significant-Gravitas/AutoGPT",
+  "source": "github-search",
+  "collected_at": "2026-04-30T08:13:13+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "AutoGPT是一个具有里程碑意义的开源AI代理项目，将GPT能力推向自动化极限。它能够自主分解复杂任务、递归调用AI完成子目标，实现完全自动化的AI工作流程。项目开源特性使开发者可深度定制，推动了AI Agent技术的普及和发展。",
+  "highlights": [
+    "自主任务分解与执行能力",
+    "完全开源可定制，推动AI民主化"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "ai-automation",
+    "agent-framework"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

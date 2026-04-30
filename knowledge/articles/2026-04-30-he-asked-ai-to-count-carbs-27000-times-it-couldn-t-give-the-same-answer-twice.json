@@ -1,0 +1,20 @@
+{
+  "id": "341faf08-c58f-4fa5-85a0-1fa9b700175c",
+  "title": "He asked AI to count carbs 27000 times. It couldn't give the same answer twice",
+  "url": "https://www.diabettech.com/i-asked-ai-to-count-my-carbs-27000-times-it-couldnt-give-me-the-same-answer-twice/",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "糖尿病技术博客作者进行了一项极端测试，让AI重复计算同一食物的碳水化合物27000次，结果AI从未给出相同答案两次。这个实验揭示了当前LLM在需要精确性的医疗健康领域存在严重的非确定性问题和可靠性风险。",
+  "highlights": [
+    "LLM存在严重的非确定性问题",
+    "医疗健康场景需要高可靠性AI"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "healthcare-ai",
+    "reliability"
+  ],
+  "category": "实践",
+  "maturity": "测试"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "2bdc3e4c-e111-42b6-a599-9475fc7671b2",
+  "title": "open-webui",
+  "url": "https://github.com/open-webui/open-webui",
+  "source": "github-search",
+  "collected_at": "2026-04-30T08:13:13+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "Open WebUI是一个功能丰富的开源Web界面，专门为本地大模型部署设计。支持Ollama、OpenAI API等多种后端，提供直观的聊天界面、模型管理、Prompt配置等功能。支持Docker部署，可本地运行保护隐私，适合个人开发者和企业内网部署使用。",
+  "highlights": [
+    "支持多种LLM后端和本地部署",
+    "开箱即用的Web界面和模型管理"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "web-interface",
+    "local-deployment"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

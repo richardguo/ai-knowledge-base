@@ -1,0 +1,20 @@
+{
+  "id": "6d3ec412-d231-4cbb-8023-0ffdcaa07ddb",
+  "title": "The Abstraction Fallacy: Why AI can simulate but not instantiate consciousness",
+  "url": "https://deepmind.google/research/publications/231971/",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "DeepMind发布的学术论文探讨AI是否能真正拥有意识。作者提出「抽象谬误」概念，认为当前AI虽然能模拟意识行为但无法真正实例化意识。论文从哲学和计算角度分析AI与意识的本质区别，探讨强人工智能的可能性边界。",
+  "highlights": [
+    "AI只能模拟意识而非真正拥有",
+    "提出抽象谬误概念探讨AI意识边界"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-consciousness",
+    "philosophy"
+  ],
+  "category": "论文",
+  "maturity": "实验"
+}

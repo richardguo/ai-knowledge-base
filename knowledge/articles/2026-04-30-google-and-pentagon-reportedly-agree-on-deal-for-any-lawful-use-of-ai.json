@@ -1,0 +1,20 @@
+{
+  "id": "d8ca904b-a147-4d25-839c-d6a78ceb8eaa",
+  "title": "Google and Pentagon reportedly agree on deal for 'any lawful' use of AI",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/919494/google-pentagon-classified-ai-deal",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "谷歌与五角大楼达成AI协议，允许美军将AI技术用于“任何合法”目的。此举延续了谷歌与国防部的合作关系，涉及AI在国防军事领域的应用，再次引发关于AI伦理和军事化的激烈争议。",
+  "highlights": [
+    "谷歌与五角大楼达成AI合作协议",
+    "AI军事化应用引发伦理争议"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-ethics",
+    "defense-ai"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

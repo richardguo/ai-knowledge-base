@@ -1,0 +1,20 @@
+{
+  "id": "c097f1e3-cd28-478c-9df1-fe34f6bd16f3",
+  "title": "OpenAI misses revenue, is the AI bubble bursting?",
+  "url": "https://www.cnbc.com/2026/04/28/openai-reportedly-missed-revenue-targets-shares-of-oracle-and-these-chip-stocks-are-falling.html",
+  "source": "rss",
+  "collected_at": "2026-04-30T08:13:14+08:00",
+  "processed_at": "2026-04-30T08:13:57+08:00",
+  "summary": "OpenAI未能达到预期收入目标，引发市场对AI行业是否存在泡沫的讨论。甲骨文等AI芯片股下跌，反映投资者对AI商业化前景的担忧，AI行业面临增长压力。",
+  "highlights": [
+    "OpenAI收入未达预期",
+    "AI行业泡沫争议再起"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "openai",
+    "ai-bubble"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}
