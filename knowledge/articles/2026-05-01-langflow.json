@@ -1,0 +1,20 @@
+{
+  "id": "1dec0d2d-0b78-4fcd-a7b9-6401c656fd18",
+  "title": "langflow",
+  "url": "https://github.com/langflow-ai/langflow",
+  "source": "github-search",
+  "collected_at": "2026-05-01T08:11:56+08:00",
+  "processed_at": "2026-05-01T08:12:48+08:00",
+  "summary": "Langflow是一个强大的低代码可视化工具，专门用于构建和部署AI代理及工作流。它提供直观的拖拽式图形界面，让用户无需编写代码即可设计复杂的多代理系统。该平台支持与多种大语言模型无缝集成，具备实时预览、状态管理和一键部署等功能。其模块化架构使开发者能够快速组合不同的组件来创建自定义的AI工作流程，大大降低了AI应用开发的门槛。",
+  "highlights": [
+    "低代码可视化工作流设计，降低AI开发门槛",
+    "支持多模型集成和模块化组件编排"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "low-code",
+    "agent-framework"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

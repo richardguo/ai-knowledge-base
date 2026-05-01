@@ -1,0 +1,20 @@
+{
+  "id": "cfe4536c-eb42-4524-a1af-dc41a1d3a60b",
+  "title": "ComfyUI",
+  "url": "https://github.com/Comfy-Org/ComfyUI",
+  "source": "github-search",
+  "collected_at": "2026-05-01T08:11:56+08:00",
+  "processed_at": "2026-05-01T08:12:48+08:00",
+  "summary": "ComfyUI是目前最强大和模块化的扩散模型GUI工具，采用图形化节点界面设计。它允许用户通过连接不同的节点来创建复杂的图像生成工作流，支持模型混合、自定义工作流和实时预览。该平台拥有丰富的社区工作流和模型资源，为AI艺术创作提供了高度灵活的解决方案，是生成式AI在创意领域的重要工具。",
+  "highlights": [
+    "模块化节点界面，可自定义复杂生成工作流",
+    "丰富的社区资源和实时预览功能"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "diffusion-models",
+    "creative-tools"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

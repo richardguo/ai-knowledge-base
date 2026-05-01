@@ -1,0 +1,20 @@
+{
+  "id": "d929720f-38f7-427c-a46b-8dc9cfef1dd8",
+  "title": "system-prompts-and-models-of-ai-tools",
+  "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+  "source": "github-search",
+  "collected_at": "2026-05-01T08:11:56+08:00",
+  "processed_at": "2026-05-01T08:12:48+08:00",
+  "summary": "该仓库收集了当前主流AI编程工具和Agent的系统提示词，涵盖Augment Code、Claude Code、Cursor、Windsurf、Devin AI等数十款工具。这些系统提示词揭示了各工具的指令设计模式和行为逻辑，对于理解AI辅助编程的工作原理、设计自己的AI Agent以及优化提示词工程具有重要参考价值。同时也包含部分开源工具的内部工具定义和模型信息。",
+  "highlights": [
+    "汇集30+主流AI编程工具的系统提示词",
+    "揭示AI Agent指令设计模式和内部工具架构"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "prompt-engineering",
+    "developer-tools"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

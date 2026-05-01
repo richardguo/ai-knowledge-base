@@ -1,0 +1,20 @@
+{
+  "id": "a16f4369-fc87-46a8-866a-124d3c05b1fd",
+  "title": "opencode",
+  "url": "https://github.com/anomalyco/opencode",
+  "source": "github-search",
+  "collected_at": "2026-05-01T08:11:56+08:00",
+  "processed_at": "2026-05-01T08:12:48+08:00",
+  "summary": "opencode是一个开源的AI编码代理项目，旨在为开发者提供自动化代码编写能力。作为开源社区的编码代理解决方案，它允许用户自行部署和定制AI代码生成功能。对于希望构建私有化AI编码助手的团队和个人开发者来说，是一个值得关注的基础选项。",
+  "highlights": [
+    "完全开源，可自行部署",
+    "支持定制化AI代码生成"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "coding-agent",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

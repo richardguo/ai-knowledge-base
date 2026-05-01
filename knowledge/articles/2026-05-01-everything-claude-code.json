@@ -1,0 +1,20 @@
+{
+  "id": "667cf4ae-cca8-4864-bfd0-9e9b9d7632f2",
+  "title": "everything-claude-code",
+  "url": "https://github.com/affaan-m/everything-claude-code",
+  "source": "github-search",
+  "collected_at": "2026-05-01T08:11:56+08:00",
+  "processed_at": "2026-05-01T08:12:48+08:00",
+  "summary": "everything-claude-code是一个针对Claude Code、Codex、Opencode、Cursor等AI编码代理的性能优化系统。该项目提供技能优化、本能机制、内存管理、安全增强和研究优先的开发模式，旨在最大化AI编码代理的工作效率和输出质量。对于深度使用AI编码工具的开发者具有重要价值。",
+  "highlights": [
+    "针对主流AI编码代理的专项优化",
+    "涵盖安全、内存、研究等多维度优化"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "performance-optimization",
+    "ai-coding"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

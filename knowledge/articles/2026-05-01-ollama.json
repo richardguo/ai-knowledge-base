@@ -1,0 +1,20 @@
+{
+  "id": "5c702a7e-3e34-4992-8d7d-3a40ca085909",
+  "title": "ollama",
+  "url": "https://github.com/ollama/ollama",
+  "source": "github-search",
+  "collected_at": "2026-05-01T08:11:56+08:00",
+  "processed_at": "2026-05-01T08:12:48+08:00",
+  "summary": "ollama是一个让用户能够在本地轻松运行大语言模型的工具，支持Kimi-K2.5、GLM-5、MiniMax、DeepSeek、Qwen、Gemma等多种主流模型。该项目极大降低了本地部署LLM的门槛，用户无需深入了解技术细节即可在个人设备上运行强大的AI模型，是本地AI应用的重要基础设施。",
+  "highlights": [
+    "一键本地部署，无需复杂配置",
+    "支持多种主流开源大模型"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "local-llm",
+    "model-deployment"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}
