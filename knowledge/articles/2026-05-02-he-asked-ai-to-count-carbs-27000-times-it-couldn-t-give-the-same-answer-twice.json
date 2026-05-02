@@ -1,0 +1,20 @@
+{
+  "id": "412c2279-9523-4e36-9403-b0213499eec1",
+  "title": "He asked AI to count carbs 27000 times. It couldn't give the same answer twice",
+  "url": "https://www.diabettech.com/i-asked-ai-to-count-my-carbs-27000-times-it-couldnt-give-me-the-same-answer-twice/",
+  "source": "rss",
+  "collected_at": "2026-05-02T08:10:46+08:00",
+  "processed_at": "2026-05-02T08:11:38+08:00",
+  "summary": "作者让AI重复计算同一食物的碳水化合物27000次，每次结果都不同。这一极端测试揭示了AI（特别是大语言模型）在数值计算方面的一致性问题，对需要精确结果的医疗健康应用具有重要警示意义。",
+  "highlights": [
+    "实验揭示AI数值计算缺乏一致性",
+    "AI在医疗健康等精确场景应用存在风险"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "ai-reliability",
+    "healthcare-ai"
+  ],
+  "category": "实践",
+  "maturity": "实验"
+}

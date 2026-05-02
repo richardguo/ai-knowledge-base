@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-01T08:12:48+08:00",
-  "total_entries": 99,
+  "last_updated": "2026-05-02T08:11:38+08:00",
+  "total_entries": 110,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1407,6 +1407,160 @@
         "ai-agent"
       ],
       "collected_at": "2026-04-30T08:13:14+08:00"
+    },
+    {
+      "id": "f85d7073-f00b-4064-869b-b59dbcf8225b",
+      "title": "Show HN: AI CAD Harness",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://fusion.adam.new/install",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-show-hn-ai-cad-harness.json",
+      "tags": [
+        "cad-automation",
+        "ai-integration"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "9d8a7198-56e3-4b16-8d22-3e214d79b4e3",
+      "title": "Spotify adds 'Verified' badges to distinguish human artists from AI",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://www.bbc.com/news/articles/c5yerr4m1yno",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-spotify-adds-verified-badges-to-distinguish-human-artists-from-ai.json",
+      "tags": [
+        "music-industry",
+        "content-authentication"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "8112cdc7-4937-457a-990a-cca94c011223",
+      "title": "Uber torches 2026 AI budget on Claude Code in four months",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://www.briefs.co/news/uber-torches-entire-2026-ai-budget-on-claude-code-in-four-months/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-uber-torches-2026-ai-budget-on-claude-code-in-four-months.json",
+      "tags": [
+        "enterprise-ai",
+        "code-generation"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "7e68450c-4c54-499a-b463-1420a3c1e90d",
+      "title": "Our agent found a bug with WireGuard in Google Kubernetes Engine",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://lovable.dev/blog/hunting-networking-bugs-in-kubernetes",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-our-agent-found-a-bug-with-wireguard-in-google-kubernetes-engine.json",
+      "tags": [
+        "security",
+        "kubernetes"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "16b910ab-e0bb-4ae3-821e-dd095d30b484",
+      "title": "Show HN: Pu.sh – a full coding-agent harness in 400 lines of shell",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://pu.dev/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-show-hn-pu-sh-a-full-coding-agent-harness-in-400-lines-of-shell.json",
+      "tags": [
+        "coding-agent",
+        "shell-scripting"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "2b170ea4-0c36-43f2-891b-a9e46fb3843b",
+      "title": "Shai-Hulud Themed Malware Found in the PyTorch Lightning AI Training Library",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://semgrep.dev/blog/2026/malicious-dependency-in-pytorch-lightning-used-for-ai-training/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-shai-hulud-themed-malware-found-in-the-pytorch-lightning-ai-training-library.json",
+      "tags": [
+        "security",
+        "supply-chain"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "abaaa5b5-7b09-44b6-b850-8be8ca16a3bd",
+      "title": "The Zig project's rationale for their anti-AI contribution policy",
+      "source": "rss",
+      "category": "论文",
+      "relevance_score": 7,
+      "url": "https://simonwillison.net/2026/Apr/30/zig-anti-ai/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-the-zig-project-s-rationale-for-their-anti-ai-contribution-policy.json",
+      "tags": [
+        "open-source",
+        "ai-ethics"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "76a6aa1e-534f-44bd-9770-abc7dd0482fb",
+      "title": "Claude.ai and API unavailable [fixed]",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://status.claude.com/incidents/2gf1jpyty350",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-claude-ai-and-api-unavailable-fixed.json",
+      "tags": [
+        "ai-service",
+        "reliability"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "6b6b0720-e67a-4809-bdc6-59abd2912304",
+      "title": "Mike: open-source legal AI",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://mikeoss.com/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-mike-open-source-legal-ai.json",
+      "tags": [
+        "legal-ai",
+        "open-source"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "d8e08ffd-8e52-467b-90b4-1874d59cbd3f",
+      "title": "Your CEO is suffering from AI psychosis",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://handyai.substack.com/p/your-ceo-is-suffering-from-ai-psychosis",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-your-ceo-is-suffering-from-ai-psychosis.json",
+      "tags": [
+        "ai-adoption",
+        "business-strategy"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "374da121-d9d9-49c0-b5ea-bfd2b319ef17",
+      "title": "Why AI companies want you to be afraid of them",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://www.bbc.com/future/article/20260428-ai-companies-want-you-to-be-afraid-of-them",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-02-why-ai-companies-want-you-to-be-afraid-of-them.json",
+      "tags": [
+        "ai-industry",
+        "media-analysis"
+      ],
+      "collected_at": "2026-05-02T08:10:46+08:00"
     }
   ]
 }

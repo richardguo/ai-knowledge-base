@@ -1,0 +1,20 @@
+{
+  "id": "76a6aa1e-534f-44bd-9770-abc7dd0482fb",
+  "title": "Claude.ai and API unavailable [fixed]",
+  "url": "https://status.claude.com/incidents/2gf1jpyty350",
+  "source": "rss",
+  "collected_at": "2026-05-02T08:10:46+08:00",
+  "processed_at": "2026-05-02T08:11:38+08:00",
+  "summary": "Claude.ai及其API服务此前出现不可用状况，目前问题已修复并恢复正常。该事件引发开发者社区关注，反映了AI服务在可靠性方面仍面临挑战。作为主流AI助手之一，Claude的短暂宕机提醒开发者需要考虑服务可用性保障和降级策略。",
+  "highlights": [
+    "Claude.ai及API服务已恢复正常运行",
+    "该事件凸显AI服务可靠性对开发者的重要性"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "ai-service",
+    "reliability"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

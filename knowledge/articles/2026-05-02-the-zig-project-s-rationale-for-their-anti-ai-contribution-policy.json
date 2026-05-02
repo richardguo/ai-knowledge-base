@@ -1,0 +1,20 @@
+{
+  "id": "abaaa5b5-7b09-44b6-b850-8be8ca16a3bd",
+  "title": "The Zig project's rationale for their anti-AI contribution policy",
+  "url": "https://simonwillison.net/2026/Apr/30/zig-anti-ai/",
+  "source": "rss",
+  "collected_at": "2026-05-02T08:10:46+08:00",
+  "processed_at": "2026-05-02T08:11:38+08:00",
+  "summary": "Zig项目阐述其反AI贡献政策 rationale，强调人类代码贡献的价值。政策禁止AI生成代码作为项目贡献，维护代码的人类作者权和可追溯性。Simon Willison分析该政策的技术和伦理考量。",
+  "highlights": [
+    "开源项目的AI使用伦理立场",
+    "人类编程创造力的坚持"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "open-source",
+    "ai-ethics"
+  ],
+  "category": "论文",
+  "maturity": "测试"
+}

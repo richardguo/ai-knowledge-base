@@ -1,0 +1,20 @@
+{
+  "id": "e41c52da-08b7-4866-98e9-8da3fcc86c7e",
+  "title": "Making AI chatbots friendly leads to mistakes and support of conspiracy theories",
+  "url": "https://www.theguardian.com/technology/2026/apr/29/making-ai-chatbots-more-friendly-mistakes-support-false-beliefs-conspiracy-theories-study",
+  "source": "rss",
+  "collected_at": "2026-05-02T08:10:46+08:00",
+  "processed_at": "2026-05-02T08:11:38+08:00",
+  "summary": "研究显示使AI聊天机器人更友好会导致更多错误并支持阴谋论。研究人员发现追求「友好」特性可能削弱AI的事实准确性和批判性思维，提示AI设计需要在友好性与可靠性之间取得平衡。",
+  "highlights": [
+    "研究证实AI友好性追求可能损害准确性",
+    "AI设计需平衡友好性与事实可靠性"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-safety",
+    "chatbot-design"
+  ],
+  "category": "论文",
+  "maturity": "实验"
+}

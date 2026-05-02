@@ -1,0 +1,20 @@
+{
+  "id": "16b910ab-e0bb-4ae3-821e-dd095d30b484",
+  "title": "Show HN: Pu.sh – a full coding-agent harness in 400 lines of shell",
+  "url": "https://pu.dev/",
+  "source": "rss",
+  "collected_at": "2026-05-02T08:10:46+08:00",
+  "processed_at": "2026-05-02T08:11:38+08:00",
+  "summary": "Pu.sh是一个仅400行Shell脚本实现的完整编码代理工具，支持Anthropic和OpenAI模型。包含7个工具(bash/read/write/edit/grep/find/ls)、REPL、自动压缩、检查点恢复等功能。严格限制无新依赖、sub-500 LOC，实现真正便携性。",
+  "highlights": [
+    "极简代码实现复杂AI代理",
+    "纯Shell环境下的便携式AI工具"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "coding-agent",
+    "shell-scripting"
+  ],
+  "category": "工具",
+  "maturity": "实验"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "6fa7c27a-2d3d-4122-a00b-c59945dd03a1",
+  "title": "Letting AI play my game – building an agentic test harness to help play-testing",
+  "url": "https://blog.jeffschomay.com/letting-ai-play-my-game",
+  "source": "rss",
+  "collected_at": "2026-05-02T08:10:46+08:00",
+  "processed_at": "2026-05-02T08:11:38+08:00",
+  "summary": "开发者分享使用AI代理（agent）进行游戏测试的经验。通过构建AI测试工具，可以自动化执行游戏测试流程，提高测试效率。文章展示了AI在游戏开发中的实际应用场景。",
+  "highlights": [
+    "展示使用AI代理进行自动化游戏测试",
+    "AI在游戏开发测试中的实际应用案例"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-agents",
+    "game-development"
+  ],
+  "category": "实践",
+  "maturity": "测试"
+}
