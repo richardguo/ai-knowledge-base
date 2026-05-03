@@ -1,0 +1,20 @@
+{
+  "id": "3aab6031-8f66-4c69-9e1e-c80c7d6def57",
+  "title": "The Zig project's rationale for their anti-AI contribution policy",
+  "url": "https://simonwillison.net/2026/Apr/30/zig-anti-ai/",
+  "source": "rss",
+  "collected_at": "2026-05-03T08:05:51+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "Zig编程语言项目发布了反AI贡献政策，明确禁止使用AI生成的代码贡献。该政策基于对代码质量和许可风险的考虑，引发了开源社区关于AI辅助编程的广泛讨论。",
+  "highlights": [
+    "Zig项目明确禁止AI生成代码贡献",
+    "开源项目对AI辅助编程的政策立场"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "open-source",
+    "ai-policy"
+  ],
+  "category": "论文",
+  "maturity": "生产"
+}

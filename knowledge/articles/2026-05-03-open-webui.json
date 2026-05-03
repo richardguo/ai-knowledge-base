@@ -1,0 +1,20 @@
+{
+  "id": "1d8a91d1-8591-481e-9f4e-12e02a30e48b",
+  "title": "open-webui",
+  "url": "https://github.com/open-webui/open-webui",
+  "source": "github-search",
+  "collected_at": "2026-05-03T08:05:50+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "Open WebUI是一个功能完善的开源Web界面，专门为本地LLM部署设计。它支持Ollama、OpenAI API以及多种其他模型后端，提供直观的聊天界面、模型管理、Prompt模板等功能。用户可以通过Docker快速部署个人AI界面，在本地安全地与各种LLM交互。",
+  "highlights": [
+    "支持多种模型后端",
+    "Docker一键部署，易于使用"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "web-interface",
+    "llm-gateway"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

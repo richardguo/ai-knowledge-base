@@ -1,0 +1,20 @@
+{
+  "id": "7da758b2-f8dd-481d-8884-93927794a2a6",
+  "title": "Mike: open-source legal AI",
+  "url": "https://mikeoss.com/",
+  "source": "rss",
+  "collected_at": "2026-05-03T08:05:51+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "Mike是一个开源法律AI助手，专门用于法律领域的文档分析和问答。该项目展示了AI在专业垂直领域的应用潜力，支持法律文档处理和案例分析。",
+  "highlights": [
+    "开源法律领域AI助手",
+    "法律文档智能分析能力"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "legal-ai",
+    "vertical-ai"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

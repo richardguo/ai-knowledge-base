@@ -1,0 +1,20 @@
+{
+  "id": "600c03b3-6088-4707-bb26-a5408dcae49d",
+  "title": "The agent harness belongs outside the sandbox",
+  "url": "https://www.mendral.com/blog/agent-harness-belongs-outside-sandbox",
+  "source": "rss",
+  "collected_at": "2026-05-03T08:05:51+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "文章探讨了AI代理工具架（agent harness）的正确部署位置，认为其应置于沙箱外部而非内部。作者从架构角度分析了这种设计的优势，可能涉及安全性、可见性或资源访问等方面。该观点对构建企业级AI代理系统具有参考价值。",
+  "highlights": [
+    "提出agent harness架构部署的最佳实践",
+    "强调沙箱内外部署的权衡考量"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "architecture"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

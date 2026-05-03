@@ -1,0 +1,20 @@
+{
+  "id": "b71e4892-976d-48e9-8904-85a8a231b737",
+  "title": "AI uses less water than the public thinks",
+  "url": "https://californiawaterblog.com/2026/04/26/ai-water-use-distractions-and-lessons-for-california/",
+  "source": "rss",
+  "collected_at": "2026-05-03T08:05:51+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "文章指出公众对AI用水量的认知存在误解，实际上AI消耗的水资源比人们想象的少。作者分析了数据中心用水问题，提供了更客观的视角，可能涉及冷却需求、水资源管理等技术细节。",
+  "highlights": [
+    "揭示AI实际用水量与公众认知的差距",
+    "数据分析中心的资源消耗真相"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "ai-sustainability",
+    "infrastructure"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

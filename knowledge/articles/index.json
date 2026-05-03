@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-02T08:11:38+08:00",
-  "total_entries": 110,
+  "last_updated": "2026-05-03T08:09:01+08:00",
+  "total_entries": 116,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1561,6 +1561,90 @@
         "media-analysis"
       ],
       "collected_at": "2026-05-02T08:10:46+08:00"
+    },
+    {
+      "id": "600c03b3-6088-4707-bb26-a5408dcae49d",
+      "title": "The agent harness belongs outside the sandbox",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://www.mendral.com/blog/agent-harness-belongs-outside-sandbox",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-03-the-agent-harness-belongs-outside-the-sandbox.json",
+      "tags": [
+        "agent-framework",
+        "architecture"
+      ],
+      "collected_at": "2026-05-03T08:05:51+08:00"
+    },
+    {
+      "id": "899f7132-3c69-446c-b72a-deafdf340d85",
+      "title": "AI Self-preferencing in Algorithmic Hiring: Empirical Evidence and Insights",
+      "source": "rss",
+      "category": "论文",
+      "relevance_score": 8,
+      "url": "https://arxiv.org/abs/2509.00462",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-03-ai-self-preferencing-in-algorithmic-hiring-empirical-evidence-and-insights.json",
+      "tags": [
+        "ai-ethics",
+        "hiring"
+      ],
+      "collected_at": "2026-05-03T08:05:51+08:00"
+    },
+    {
+      "id": "2beaf453-388d-46bb-ba5c-c587307bbf82",
+      "title": "Open Design: Use Your Coding Agent as a Design Engine",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://github.com/nexu-io/open-design",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-03-open-design-use-your-coding-agent-as-a-design-engine.json",
+      "tags": [
+        "design-automation",
+        "open-source"
+      ],
+      "collected_at": "2026-05-03T08:05:51+08:00"
+    },
+    {
+      "id": "562586c2-a5ee-45e1-aa2c-8eaae253ea43",
+      "title": "Show HN: Mljar Studio – local AI data analyst that saves analysis as notebooks",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://mljar.com/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-03-show-hn-mljar-studio-local-ai-data-analyst-that-saves-analysis-as-notebooks.json",
+      "tags": [
+        "data-analysis",
+        "local-ai"
+      ],
+      "collected_at": "2026-05-03T08:05:51+08:00"
+    },
+    {
+      "id": "be3e98e6-a837-4b0c-ab55-e320b327d654",
+      "title": "Show HN: Agent-desktop – Native desktop automation CLI for AI agents",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/lahfir/agent-desktop",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-03-show-hn-agent-desktop-native-desktop-automation-cli-for-ai-agents.json",
+      "tags": [
+        "desktop-automation",
+        "agent-tools"
+      ],
+      "collected_at": "2026-05-03T08:05:51+08:00"
+    },
+    {
+      "id": "b71e4892-976d-48e9-8904-85a8a231b737",
+      "title": "AI uses less water than the public thinks",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://californiawaterblog.com/2026/04/26/ai-water-use-distractions-and-lessons-for-california/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-03-ai-uses-less-water-than-the-public-thinks.json",
+      "tags": [
+        "ai-sustainability",
+        "infrastructure"
+      ],
+      "collected_at": "2026-05-03T08:05:51+08:00"
     }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "id": "87de42e9-053e-42cb-996e-f21ac8c8ebef",
+  "title": "Claude.ai and API unavailable [fixed]",
+  "url": "https://status.claude.com/incidents/2gf1jpyty350",
+  "source": "rss",
+  "collected_at": "2026-05-03T08:05:51+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "Anthropic的Claude.ai服务及API出现大规模不可用情况。官方状态页面已确认问题并发布修复公告。这是近期AI服务提供商较为严重的一次服务中断事件。",
+  "highlights": [
+    "Claude.ai及API服务中断事件",
+    "AI服务提供商可靠性问题"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "infrastructure",
+    "service-outage"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

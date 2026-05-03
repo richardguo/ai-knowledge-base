@@ -1,0 +1,20 @@
+{
+  "id": "4b6e3af2-3a3c-4932-8e32-6aec43dd13ed",
+  "title": "Our agent found a bug with WireGuard in Google Kubernetes Engine",
+  "url": "https://lovable.dev/blog/hunting-networking-bugs-in-kubernetes",
+  "source": "rss",
+  "collected_at": "2026-05-03T08:05:51+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "本文介绍了在Google Kubernetes Engine中发现的一个WireGuard网络bug。开发者详细描述了问题排查过程，涉及Kubernetes集群中的网络配置问题。该bug影响了GKE上的容器网络通信，需要开发者注意并等待官方修复。",
+  "highlights": [
+    "GKE环境中WireGuard的具体网络问题",
+    "Kubernetes容器网络通信故障排查"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "kubernetes",
+    "wireguard"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

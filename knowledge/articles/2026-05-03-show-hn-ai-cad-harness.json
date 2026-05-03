@@ -1,0 +1,20 @@
+{
+  "id": "b7e8b86c-e178-441f-b847-1d7aeafa55f2",
+  "title": "Show HN: AI CAD Harness",
+  "url": "https://fusion.adam.new/install",
+  "source": "rss",
+  "collected_at": "2026-05-03T08:05:51+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "Adam是一个AI CAD工具集成架，直接集成到Onshape和Fusion CAD软件中。它能读取现有零件、理解特征树并进行代理式编辑。团队认为CAD as code是正确的抽象，使用FeatureScript和Python。已开放早期文本转CAD工作为开源。",
+  "highlights": [
+    "CAD软件内的AI代理式编辑",
+    "支持Onshape和Fusion集成"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "cad-automation",
+    "ai-integration"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "562586c2-a5ee-45e1-aa2c-8eaae253ea43",
+  "title": "Show HN: Mljar Studio – local AI data analyst that saves analysis as notebooks",
+  "url": "https://mljar.com/",
+  "source": "rss",
+  "collected_at": "2026-05-03T08:05:51+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "MLJAR Studio是一款本地AI数据分析桌面应用，将自然语言转换为Python代码并在本地执行，整个对话过程会自动保存为可复现的Jupyter笔记本。支持多种数据源和数据库连接，一次性付费$199。",
+  "highlights": [
+    "自然语言驱动的本地数据分析",
+    "对话自动保存为可复现笔记本"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "data-analysis",
+    "local-ai"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "2d87434d-60de-4c7b-8bce-8ec2bb99fa71",
+  "title": "dify",
+  "url": "https://github.com/langgenius/dify",
+  "source": "github-search",
+  "collected_at": "2026-05-03T08:05:50+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "Dify是一个生产就绪的LLM应用开发平台，提供从设计到部署的完整工作流。它支持代理(Agent)和工作流(Workflow)两种模式，内置RAG管道、模型管理、监控等功能。该平台强调开箱即用的生产级特性，帮助开发者快速构建和运营AI应用，是企业构建自有AI能力基础设施的优秀选择。",
+  "highlights": [
+    "完整的LLM应用开发工具链",
+    "生产级特性开箱即用"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "llm-platform",
+    "workflow-automation"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "d210c8c3-256b-4e20-aeac-924d8f66b857",
+  "title": "Uber torches 2026 AI budget on Claude Code in four months",
+  "url": "https://www.briefs.co/news/uber-torches-entire-2026-ai-budget-on-claude-code-in-four-months/",
+  "source": "rss",
+  "collected_at": "2026-05-03T08:05:51+08:00",
+  "processed_at": "2026-05-03T08:09:01+08:00",
+  "summary": "报道称Uber在四个月内将2026年全部AI预算投入Claude Code，引发关于企业AI支出策略的讨论。该新闻反映了AI开发成本高昂的现实，以及企业在大规模AI应用上面临的预算挑战。",
+  "highlights": [
+    "企业AI预算消耗案例分析",
+    "Claude Code在企业级应用中的采用"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "enterprise-ai",
+    "cost-optimization"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}
