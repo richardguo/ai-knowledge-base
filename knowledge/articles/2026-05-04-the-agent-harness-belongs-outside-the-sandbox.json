@@ -1,0 +1,20 @@
+{
+  "id": "1365adcf-4353-43cb-a852-00e6ea311fcc",
+  "title": "The agent harness belongs outside the sandbox",
+  "url": "https://www.mendral.com/blog/agent-harness-belongs-outside-sandbox",
+  "source": "rss",
+  "collected_at": "2026-05-04T08:09:01+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "文章提出一个关于AI代理架构的重要观点：agent harness(代理控制框架)应该放在沙箱(sandbox)外部，而不是内部。作者从安全角度论证了这一架构设计的必要性，认为这样可以更好地控制AI代理的行为边界。该文章获得164高分和111条评论，是技术架构层面的深度讨论。",
+  "highlights": [
+    "提出agent harness应置于沙箱外的安全架构观点",
+    "从安全角度论证AI代理的边界控制方案"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-architecture",
+    "security"
+  ],
+  "category": "论文",
+  "maturity": "测试"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "52eb83e2-2e09-49e2-bd60-ac7e44aca22f",
+  "title": "Show HN: Agent-desktop – Native desktop automation CLI for AI agents",
+  "url": "https://github.com/lahfir/agent-desktop",
+  "source": "rss",
+  "collected_at": "2026-05-04T08:09:01+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "agent-desktop是一个跨平台的桌面自动化CLI工具，通过操作系统无障碍API（macOS Accessibility/Windows UI Automation/Linux AT-SPI）获取结构化UI信息，替代传统的截图+像素坐标方案。单个约15MB的Rust二进制文件提供53个命令，支持JSON输出。创新采用渐进式骨架遍历解决上下文过大的问题，首次返回深度为3的浅层树，根据需要逐步深入。",
+  "highlights": [
+    "利用系统无障碍API替代截图，实现更稳定的桌面自动化",
+    "渐进式骨架遍历解决大型应用上下文过大的问题"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "desktop-automation",
+    "accessibility-api"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

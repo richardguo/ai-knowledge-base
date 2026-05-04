@@ -1,0 +1,20 @@
+{
+  "id": "c5718ae7-b808-4576-9ff4-21c8f8784863",
+  "title": "Show HN: Filling PDF forms with AI using client-side tool calling",
+  "url": "https://copilot.simplepdf.com/?share=a7d00ad073c75a75d493228e6ff7b11eb3f2d945b6175913e87898ec96ca8076&amp;form=w9&amp;lang=en",
+  "source": "rss",
+  "collected_at": "2026-05-04T08:09:01+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "SimplePDF Copilot是一个基于浏览器的AI PDF助手，采用客户端工具调用架构实现隐私保护。PDF解析、渲染、字段检测全程在浏览器端完成，AI模型仅接收必要文本信息。默认使用DeepSeek V4 Flash，支持BYOK和本地部署。核心创新在于通过iframe postMessage实现LLM与浏览器端工具的交互，可执行填充字段、添加字段、删除页面等操作。主要面向对隐私要求严格的医疗客户。",
+  "highlights": [
+    "全程客户端处理，PDF不离浏览器，隐私保护性强",
+    "通过postMessage实现LLM与浏览器端的工具调用交互"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "pdf-processing",
+    "client-side-ai"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

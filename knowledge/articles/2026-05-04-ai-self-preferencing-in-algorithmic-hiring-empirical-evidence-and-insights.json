@@ -1,0 +1,20 @@
+{
+  "id": "cf57b717-ee4b-4db6-b132-dd06c0482e02",
+  "title": "AI Self-preferencing in Algorithmic Hiring: Empirical Evidence and Insights",
+  "url": "https://arxiv.org/abs/2509.00462",
+  "source": "rss",
+  "collected_at": "2026-05-04T08:09:01+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "这是一篇关于算法招聘中AI自我偏好(Self-preferencing)的实证研究论文，来自arXiv。研究通过实际数据分析了AI招聘系统是否存在对自家产品或相关方案的偏好，为AI公平性研究提供了重要证据。该论文获得327分(当天最高)和177条评论，是本周最热门的研究话题。",
+  "highlights": [
+    "提供算法招聘中AI偏见的实证证据",
+    "研究AI自我偏好的系统性分析"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "ai-bias",
+    "hiring-algorithm"
+  ],
+  "category": "论文",
+  "maturity": "生产"
+}

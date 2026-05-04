@@ -1,0 +1,20 @@
+{
+  "id": "8ed5bb06-3cbd-429f-8be8-2d1222b9a6e6",
+  "title": "Our agent found a bug with WireGuard in Google Kubernetes Engine",
+  "url": "https://lovable.dev/blog/hunting-networking-bugs-in-kubernetes",
+  "source": "rss",
+  "collected_at": "2026-05-04T08:09:01+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "技术团队报告在Google Kubernetes Engine中使用WireGuard时发现的一个bug。AI代理在排查Kubernetes网络问题时发现了这个底层网络配置问题，体现了AI代理在复杂系统调试中的价值。",
+  "highlights": [
+    "AI代理发现GKE中WireGuard网络bug",
+    "展示AI在复杂系统调试中的应用"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "kubernetes",
+    "wireguard"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "c9d2450a-44c0-4f02-91e5-e5ba71059aff",
+  "title": "Show HN: Loopsy, a way for terminals and AI agents on different machines to talk",
+  "url": "https://github.com/leox255/loopsy",
+  "source": "rss",
+  "collected_at": "2026-05-04T08:09:01+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "Loopsy实现不同机器上的终端和AI代理之间的通信。初始用于本地网络文件传输和命令执行，后扩展支持远程继续Claude会话（通过Cloudflare Worker连接本地机器）。支持跨设备资源利用和远程开发场景。",
+  "highlights": [
+    "跨设备终端和AI代理通信",
+    "支持远程继续AI会话"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "distributed-systems",
+    "remote-access"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

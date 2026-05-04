@@ -1,0 +1,20 @@
+{
+  "id": "42e9267b-4901-4395-b44c-9293e16822ea",
+  "title": "Open Design: Use Your Coding Agent as a Design Engine",
+  "url": "https://github.com/nexu-io/open-design",
+  "source": "rss",
+  "collected_at": "2026-05-04T08:09:01+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "Open Design是一个开源项目，探索将AI编码代理用作设计引擎的可能性。项目旨在利用AI的理解和生成能力，辅助完成设计工作流程，为AI辅助设计提供了新的开源实现思路。获得216分和91条评论，是AI设计工具领域的创新实践。",
+  "highlights": [
+    "开源AI设计引擎，利用编码代理辅助设计",
+    "探索AI在设计工作流中的创新应用"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-design",
+    "open-source"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

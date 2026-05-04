@@ -1,0 +1,20 @@
+{
+  "id": "b1d2246a-7190-44ec-aab4-9222c09697eb",
+  "title": "everything-claude-code",
+  "url": "https://github.com/affaan-m/everything-claude-code",
+  "source": "github-search",
+  "collected_at": "2026-05-04T08:09:00+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "Everything-Claude-Code是一个针对Claude Code、Codex、Opencode、Cursor等AI编程助手的性能优化系统。该系统整合了技能（Skills）、本能（Instincts）、记忆（Memory）、安全（Security）和研究优先开发等模块，旨在全面提升AI编码助手的执行效率、可靠性和安全性。对于依赖AI辅助编程的开发者来说，这是一个重要的效率提升工具。",
+  "highlights": [
+    "多助手支持：兼容主流AI编程工具",
+    "全面优化：涵盖性能、安全、记忆等多维度"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "performance-optimization",
+    "ai-coding"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

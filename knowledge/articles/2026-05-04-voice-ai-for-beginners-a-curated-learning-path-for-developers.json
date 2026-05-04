@@ -1,0 +1,20 @@
+{
+  "id": "b6071b4b-1b84-40be-928c-71514d549c19",
+  "title": "Voice-AI-for-Beginners – A curated learning path for developers",
+  "url": "https://github.com/mahimairaja/voiceai",
+  "source": "rss",
+  "collected_at": "2026-05-04T08:09:01+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "Voice-AI-for-Beginners为开发者提供了一条系统化的语音AI学习路径，涵盖语音识别、语音合成、对话系统等核心技术。该项目收集了优质的学习资源，帮助开发者从零开始掌握语音AI技术。项目获得82分但仅有4条评论，主要作为学习资源库价值较高。",
+  "highlights": [
+    "为开发者提供系统化的语音AI学习路线",
+    "涵盖语音识别、合成、对话系统等核心技术"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "voice-ai",
+    "learning-resource"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

@@ -1,0 +1,1001 @@
+2026-05-04T08:09:52+0800 [INFO] 开始质量评分
+2026-05-04T08:09:52+0800 [DEBUG] [1/499] 2026-04-21-ai-agents-for-beginners.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [DEBUG] [2/499] 2026-04-21-autogpt.json: 等级 A, 分数 95/100
+2026-05-04T08:09:52+0800 [DEBUG] [3/499] 2026-04-21-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [4/499] 2026-04-21-claude-context.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [5/499] 2026-04-21-comfyui.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [6/499] 2026-04-21-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [7/499] 2026-04-21-everything-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [8/499] 2026-04-21-finceptterminal.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [9/499] 2026-04-21-firecrawl.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [10/499] 2026-04-21-generative-ai-for-beginners.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [11/499] 2026-04-21-javaguide.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [12/499] 2026-04-21-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [13/499] 2026-04-21-langflow.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [14/499] 2026-04-21-n8n.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [15/499] 2026-04-21-ollama.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [16/499] 2026-04-21-open-webui.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [17/499] 2026-04-21-openclaw.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [18/499] 2026-04-21-opencode.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [19/499] 2026-04-21-prompts-chat.json: 等级 A, 分数 93/100
+2026-05-04T08:09:52+0800 [DEBUG] [20/499] 2026-04-21-skills.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [21/499] 2026-04-21-superpowers.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [DEBUG] [22/499] 2026-04-21-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [23/499] 2026-04-21-thunderbolt.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [24/499] 2026-04-21-transformers.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [25/499] 2026-04-21-trendradar.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [DEBUG] [26/499] 2026-04-22-ai-agents-for-beginners.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [27/499] 2026-04-22-ai-guide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [28/499] 2026-04-22-archon.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [29/499] 2026-04-22-autogpt.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [30/499] 2026-04-22-browser-harness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [31/499] 2026-04-22-claude-context.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [32/499] 2026-04-22-deepagents.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [33/499] 2026-04-22-deer-flow.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [34/499] 2026-04-22-everything-claude-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [35/499] 2026-04-22-finceptterminal.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [36/499] 2026-04-22-goclaw.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [37/499] 2026-04-22-harness.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [38/499] 2026-04-22-hive.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [DEBUG] [39/499] 2026-04-22-impeccable.json: 等级 B, 分数 72/100
+2026-05-04T08:09:52+0800 [DEBUG] [40/499] 2026-04-22-lobehub.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [DEBUG] [41/499] 2026-04-22-nexent.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [42/499] 2026-04-22-oh-my-openagent.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [43/499] 2026-04-22-oh-my-pi.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [44/499] 2026-04-22-openclaw.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [45/499] 2026-04-22-openharness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [46/499] 2026-04-22-osaurus.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [47/499] 2026-04-22-parlant.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [48/499] 2026-04-22-ragflow.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [49/499] 2026-04-22-thunderbolt.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [50/499] 2026-04-22-trellis.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [DEBUG] [51/499] 2026-04-22-trendradar.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [52/499] 2026-04-22-yuxi.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [53/499] 2026-04-23-a-roblox-cheat-and-one-ai-tool-brought-down-vercel-s-platform.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [54/499] 2026-04-23-ai-guide.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [55/499] 2026-04-23-ai-resistance-some-recent-anti-ai-stuff-that-s-worth-discussing.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [56/499] 2026-04-23-anker-made-its-own-chip-to-bring-ai-to-all-its-products.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [57/499] 2026-04-23-archon.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [58/499] 2026-04-23-autogpt.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [59/499] 2026-04-23-bring-your-agent-to-teams.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [60/499] 2026-04-23-browser-harness.json: 等级 A, 分数 89/100
+2026-05-04T08:09:52+0800 [DEBUG] [61/499] 2026-04-23-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [62/499] 2026-04-23-claude-context.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [63/499] 2026-04-23-comfyui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [64/499] 2026-04-23-crabtrap-an-llm-as-a-judge-http-proxy-to-secure-agents-in-production.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [65/499] 2026-04-23-deepagents.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [DEBUG] [66/499] 2026-04-23-deer-flow.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [67/499] 2026-04-23-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [68/499] 2026-04-23-everything-claude-code.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [69/499] 2026-04-23-finceptterminal.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [70/499] 2026-04-23-firecrawl.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [71/499] 2026-04-23-generative-ai-for-beginners.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [72/499] 2026-04-23-goclaw.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [73/499] 2026-04-23-harness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [74/499] 2026-04-23-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [75/499] 2026-04-23-hive.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [76/499] 2026-04-23-impeccable.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [77/499] 2026-04-23-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [78/499] 2026-04-23-kernel-code-removals-driven-by-llm-created-security-reports.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [79/499] 2026-04-23-kuri-zig-based-agent-browser-alternative.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [80/499] 2026-04-23-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [81/499] 2026-04-23-langflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [82/499] 2026-04-23-langfuse.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [83/499] 2026-04-23-lobehub.json: 等级 A, 分数 89/100
+2026-05-04T08:09:52+0800 [DEBUG] [84/499] 2026-04-23-meta-employees-are-up-in-arms-over-a-mandatory-program-to-train-ai-on-their.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [85/499] 2026-04-23-meta-to-start-capturing-employee-mouse-movement-keystrokes-for-ai-training-data.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [86/499] 2026-04-23-meta-to-start-capturing-employee-mouse-movements-keystrokes-for-ai-training.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [87/499] 2026-04-23-n8n.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [88/499] 2026-04-23-nexent.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [89/499] 2026-04-23-oh-my-openagent.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [90/499] 2026-04-23-oh-my-pi.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [91/499] 2026-04-23-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [92/499] 2026-04-23-open-webui.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [93/499] 2026-04-23-openclaw.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [94/499] 2026-04-23-opencode.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [95/499] 2026-04-23-openharness.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [96/499] 2026-04-23-openmetadata.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [97/499] 2026-04-23-osaurus.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [98/499] 2026-04-23-parlant.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [99/499] 2026-04-23-peter-thiel-is-building-a-parallel-justice-system-powered-by-ai.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [100/499] 2026-04-23-pixelle-video.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [101/499] 2026-04-23-prompts-chat.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [102/499] 2026-04-23-ragflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [103/499] 2026-04-23-scammer-used-an-ai-generated-maga-girl-to-grift-men.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [104/499] 2026-04-23-scoring-show-hn-submissions-for-ai-design-patterns.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [105/499] 2026-04-23-shannon.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [106/499] 2026-04-23-show-hn-broccoli-one-shot-coding-agent-on-the-cloud.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [107/499] 2026-04-23-show-hn-gomodel-an-open-source-ai-gateway-in-go.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [DEBUG] [108/499] 2026-04-23-skills.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [109/499] 2026-04-23-startups-brag-they-spend-more-money-on-ai-than-human-employees.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [110/499] 2026-04-23-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [111/499] 2026-04-23-tell-hn-i-m-sick-of-ai-everything.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [112/499] 2026-04-23-top-maga-influencer-revealed-to-be-ai.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [113/499] 2026-04-23-transformers.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [114/499] 2026-04-23-trellis.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [115/499] 2026-04-23-trendradar.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [DEBUG] [116/499] 2026-04-23-worldmonitor.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [117/499] 2026-04-23-yuxi.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [DEBUG] [118/499] 2026-04-24-andrej-karpathy-skills.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [119/499] 2026-04-24-anker-made-its-own-chip-to-bring-ai-to-all-its-products.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [120/499] 2026-04-24-ansible.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [121/499] 2026-04-24-autogpt.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [122/499] 2026-04-24-awesome-llm-apps.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [123/499] 2026-04-24-awesome-mcp-servers.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [124/499] 2026-04-24-bring-your-agent-to-teams.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [DEBUG] [125/499] 2026-04-24-browser-use.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [126/499] 2026-04-24-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [127/499] 2026-04-24-claude-mem.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [128/499] 2026-04-24-codex.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [129/499] 2026-04-24-comfyui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [130/499] 2026-04-24-crabtrap-an-llm-as-a-judge-http-proxy-to-secure-agents-in-production.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [131/499] 2026-04-24-daytona.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [132/499] 2026-04-24-deep-live-cam.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [133/499] 2026-04-24-dify.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [134/499] 2026-04-24-everything-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [135/499] 2026-04-24-firecrawl.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [136/499] 2026-04-24-gemini-cli.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [137/499] 2026-04-24-generative-ai-for-beginners.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [138/499] 2026-04-24-hermes-agent.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [139/499] 2026-04-24-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [140/499] 2026-04-24-kernel-code-removals-driven-by-llm-created-security-reports.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [141/499] 2026-04-24-kuri-zig-based-agent-browser-alternative.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [142/499] 2026-04-24-langchain.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [DEBUG] [143/499] 2026-04-24-langflow.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [DEBUG] [144/499] 2026-04-24-less-human-ai-agents-please.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [145/499] 2026-04-24-llama-cpp.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [146/499] 2026-04-24-llamafactory.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [DEBUG] [147/499] 2026-04-24-lobehub.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [148/499] 2026-04-24-meshcore-development-team-splits-over-trademark-dispute-and-ai-generated-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [149/499] 2026-04-24-meta-employees-are-up-in-arms-over-a-mandatory-program-to-train-ai-on-their.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [150/499] 2026-04-24-meta-to-start-capturing-employee-mouse-movement-keystrokes-for-ai-training-data.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [151/499] 2026-04-24-meta-to-start-capturing-employee-mouse-movements-keystrokes-for-ai-training.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [152/499] 2026-04-24-n8n.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [153/499] 2026-04-24-netdata.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [154/499] 2026-04-24-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [155/499] 2026-04-24-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [156/499] 2026-04-24-openclaw.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [157/499] 2026-04-24-opencode.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [158/499] 2026-04-24-openhands.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [159/499] 2026-04-24-our-newsroom-ai-policy.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [160/499] 2026-04-24-paddleocr.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [161/499] 2026-04-24-prompts-chat.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [162/499] 2026-04-24-ragflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [163/499] 2026-04-24-scammer-used-an-ai-generated-maga-girl-to-grift-men.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [164/499] 2026-04-24-scoring-show-hn-submissions-for-ai-design-patterns.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [165/499] 2026-04-24-show-hn-agent-vault-open-source-credential-proxy-and-vault-for-agents.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [166/499] 2026-04-24-show-hn-broccoli-one-shot-coding-agent-on-the-cloud.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [167/499] 2026-04-24-show-hn-gomodel-an-open-source-ai-gateway-in-go.json: 等级 A, 分数 89/100
+2026-05-04T08:09:52+0800 [DEBUG] [168/499] 2026-04-24-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [169/499] 2026-04-24-spec-kit.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [170/499] 2026-04-24-startups-brag-they-spend-more-money-on-ai-than-human-employees.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [171/499] 2026-04-24-supabase.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [172/499] 2026-04-24-superpowers.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [173/499] 2026-04-24-top-maga-influencer-revealed-to-be-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [174/499] 2026-04-24-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [175/499] 2026-04-24-vllm.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [176/499] 2026-04-25-andrej-karpathy-skills.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [177/499] 2026-04-25-anker-made-its-own-chip-to-bring-ai-to-all-its-products.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [178/499] 2026-04-25-ansible.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [179/499] 2026-04-25-appflowy.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [180/499] 2026-04-25-autogpt.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [181/499] 2026-04-25-awesome-llm-apps.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [182/499] 2026-04-25-awesome-mcp-servers.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [183/499] 2026-04-25-bring-your-agent-to-teams.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [184/499] 2026-04-25-browser-use.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [185/499] 2026-04-25-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [186/499] 2026-04-25-codex.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [187/499] 2026-04-25-comfyui.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [188/499] 2026-04-25-daytona.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [189/499] 2026-04-25-deep-live-cam.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [190/499] 2026-04-25-dify.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [191/499] 2026-04-25-do-you-want-the-us-to-win-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [192/499] 2026-04-25-everything-claude-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [193/499] 2026-04-25-firecrawl.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [DEBUG] [194/499] 2026-04-25-gemini-cli.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [195/499] 2026-04-25-generative-ai-for-beginners.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [196/499] 2026-04-25-hear-your-agent-suffer-through-your-code.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [197/499] 2026-04-25-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [198/499] 2026-04-25-javaguide.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [199/499] 2026-04-25-kernel-code-removals-driven-by-llm-created-security-reports.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [200/499] 2026-04-25-kuri-zig-based-agent-browser-alternative.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [201/499] 2026-04-25-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [202/499] 2026-04-25-langflow.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [203/499] 2026-04-25-llama-cpp.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [204/499] 2026-04-25-llamafactory.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [205/499] 2026-04-25-lobehub.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [206/499] 2026-04-25-meshcore-development-team-splits-over-trademark-dispute-and-ai-generated-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [207/499] 2026-04-25-meta-employees-are-up-in-arms-over-a-mandatory-program-to-train-ai-on-their.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [208/499] 2026-04-25-meta-to-start-capturing-employee-mouse-movements-keystrokes-for-ai-training.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [209/499] 2026-04-25-n8n.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [210/499] 2026-04-25-netdata.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [211/499] 2026-04-25-ollama.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [DEBUG] [212/499] 2026-04-25-open-webui.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [213/499] 2026-04-25-openclaw.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [214/499] 2026-04-25-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [215/499] 2026-04-25-openhands.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [216/499] 2026-04-25-our-newsroom-ai-policy.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [217/499] 2026-04-25-paddleocr.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [218/499] 2026-04-25-prompts-chat.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [219/499] 2026-04-25-ragflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [220/499] 2026-04-25-scoring-show-hn-submissions-for-ai-design-patterns.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [221/499] 2026-04-25-show-hn-agent-vault-open-source-credential-proxy-and-vault-for-agents.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [222/499] 2026-04-25-show-hn-atomic-local-first-ai-augmented-personal-knowledge-base.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [223/499] 2026-04-25-show-hn-broccoli-one-shot-coding-agent-on-the-cloud.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [224/499] 2026-04-25-show-hn-browser-harness-gives-llm-freedom-to-complete-any-browser-task.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [225/499] 2026-04-25-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [226/499] 2026-04-25-south-korea-police-arrest-man-for-posting-ai-photo-of-runaway-wolf.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [227/499] 2026-04-25-startups-brag-they-spend-more-money-on-ai-than-human-employees.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [228/499] 2026-04-25-supabase.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [229/499] 2026-04-25-superpowers.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [230/499] 2026-04-25-tesla-discloses-2b-ai-hardware-company-acquisition-in-filing.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [231/499] 2026-04-25-top-maga-influencer-revealed-to-be-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [232/499] 2026-04-25-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [233/499] 2026-04-25-vllm.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [234/499] 2026-04-27-agentic-ai-systems-violate-the-implicit-assumptions-of-database-design.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [235/499] 2026-04-27-ai-might-be-lying-to-your-boss.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [236/499] 2026-04-27-ai-should-elevate-your-thinking-not-replace-it.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [237/499] 2026-04-27-an-ai-agent-deleted-our-production-database-the-agent-s-confession-is-below.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [DEBUG] [238/499] 2026-04-27-autogpt.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [239/499] 2026-04-27-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [240/499] 2026-04-27-comfyui.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [241/499] 2026-04-27-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [242/499] 2026-04-27-do-you-want-the-us-to-win-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [243/499] 2026-04-27-eden-ai-european-alternative-to-openrouter.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [244/499] 2026-04-27-everything-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [245/499] 2026-04-27-firecrawl.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [DEBUG] [246/499] 2026-04-27-generative-ai-for-beginners.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [247/499] 2026-04-27-google-banks-on-ai-edge-to-catch-up-to-cloud-rivals-amazon-and-microsoft.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [248/499] 2026-04-27-have-you-tried-clean-architecture-as-foundation-for-your-ai-project.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [249/499] 2026-04-27-hear-your-agent-suffer-through-your-code.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [250/499] 2026-04-27-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [251/499] 2026-04-27-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [252/499] 2026-04-27-lambda-calculus-benchmark-for-ai.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [253/499] 2026-04-27-langchain.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [DEBUG] [254/499] 2026-04-27-langflow.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [255/499] 2026-04-27-n8n.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [256/499] 2026-04-27-ollama.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [257/499] 2026-04-27-open-source-memory-layer-so-any-ai-agent-can-do-what-claude-ai-and-chatgpt-do.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [258/499] 2026-04-27-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [259/499] 2026-04-27-openclaw.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [260/499] 2026-04-27-opencode.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [DEBUG] [261/499] 2026-04-27-prompts-chat.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [DEBUG] [262/499] 2026-04-27-show-hn-a-karpathy-style-llm-wiki-your-agents-maintain-markdown-and-git.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [263/499] 2026-04-27-show-hn-ai-memory-with-biological-decay-52-recall.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [264/499] 2026-04-27-show-hn-atomic-local-first-ai-augmented-personal-knowledge-base.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [265/499] 2026-04-27-show-hn-browser-harness-gives-llm-freedom-to-complete-any-browser-task.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [266/499] 2026-04-27-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [267/499] 2026-04-27-superpowers.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [268/499] 2026-04-27-tesla-discloses-2b-ai-hardware-company-acquisition-in-filing.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [269/499] 2026-04-27-the-ai-industry-is-discovering-that-the-public-hates-it.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [270/499] 2026-04-27-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [271/499] 2026-04-27-what-s-missing-in-the-agentic-story-a-well-defined-user-agent-role.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [272/499] 2026-04-28-4tb-of-voice-samples-just-stolen-from-40k-ai-contractors-at-mercor.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [273/499] 2026-04-28-ai-can-cost-more-than-human-workers-now.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [274/499] 2026-04-28-ai-might-be-lying-to-your-boss.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [275/499] 2026-04-28-ai-should-elevate-your-thinking-not-replace-it.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [276/499] 2026-04-28-an-ai-agent-deleted-our-production-database-the-agent-s-confession-is-below.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [277/499] 2026-04-28-autogpt.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [278/499] 2026-04-28-canva-apologizes-after-its-ai-tool-replaces-palestine-in-designs.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [279/499] 2026-04-28-china-blocks-meta-s-acquisition-of-ai-startup-manus.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [280/499] 2026-04-28-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [281/499] 2026-04-28-comfyui.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [282/499] 2026-04-28-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [283/499] 2026-04-28-eden-ai-european-alternative-to-openrouter.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [284/499] 2026-04-28-everything-claude-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [285/499] 2026-04-28-firecrawl.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [286/499] 2026-04-28-generative-ai-for-beginners.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [287/499] 2026-04-28-google-banks-on-ai-edge-to-catch-up-to-cloud-rivals-amazon-and-microsoft.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [288/499] 2026-04-28-javaguide.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [289/499] 2026-04-28-lambda-calculus-benchmark-for-ai.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [290/499] 2026-04-28-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [291/499] 2026-04-28-langflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [292/499] 2026-04-28-mistral-built-a-14b-ai-empire-by-not-being-american.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [293/499] 2026-04-28-n8n.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [294/499] 2026-04-28-ollama.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [295/499] 2026-04-28-open-source-memory-layer-so-any-ai-agent-can-do-what-claude-ai-and-chatgpt-do.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [296/499] 2026-04-28-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [297/499] 2026-04-28-openclaw.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [298/499] 2026-04-28-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [299/499] 2026-04-28-prompts-chat.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [300/499] 2026-04-28-show-hn-a-karpathy-style-llm-wiki-your-agents-maintain-markdown-and-git.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [301/499] 2026-04-28-show-hn-ai-memory-with-biological-decay-52-recall.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [302/499] 2026-04-28-show-hn-oss-agent-i-built-topped-the-terminalbench-on-gemini-3-flash-preview.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [DEBUG] [303/499] 2026-04-28-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [304/499] 2026-04-28-superpowers.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [305/499] 2026-04-28-tendril-a-self-extending-agent-that-builds-and-registers-its-own-tools.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [306/499] 2026-04-28-the-ai-industry-is-discovering-that-the-public-hates-it.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [307/499] 2026-04-28-transformers.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [DEBUG] [308/499] 2026-04-28-what-s-missing-in-the-agentic-story-a-well-defined-user-agent-role.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [309/499] 2026-04-29-4tb-of-voice-samples-just-stolen-from-40k-ai-contractors-at-mercor.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [310/499] 2026-04-29-ai-can-cost-more-than-human-workers-now.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [311/499] 2026-04-29-ai-s-economics-don-t-make-sense.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [312/499] 2026-04-29-ai-should-elevate-your-thinking-not-replace-it.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [313/499] 2026-04-29-an-ai-agent-deleted-our-production-database-the-agent-s-confession-is-below.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [314/499] 2026-04-29-autogpt.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [DEBUG] [315/499] 2026-04-29-canva-apologizes-after-its-ai-tool-replaces-palestine-in-designs.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [316/499] 2026-04-29-china-blocks-meta-s-acquisition-of-ai-startup-manus.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [317/499] 2026-04-29-claude-ai-unavailable-and-elevated-errors-on-the-api.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [318/499] 2026-04-29-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [319/499] 2026-04-29-comfyui.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [320/499] 2026-04-29-dify.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [321/499] 2026-04-29-eden-ai-european-alternative-to-openrouter.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [322/499] 2026-04-29-everything-claude-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [323/499] 2026-04-29-firecrawl.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [324/499] 2026-04-29-generative-ai-for-beginners.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [325/499] 2026-04-29-google-and-pentagon-reportedly-agree-on-deal-for-any-lawful-use-of-ai.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [326/499] 2026-04-29-google-banks-on-ai-edge-to-catch-up-to-cloud-rivals-amazon-and-microsoft.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [327/499] 2026-04-29-hermes-agent.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [328/499] 2026-04-29-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [329/499] 2026-04-29-langchain.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [330/499] 2026-04-29-langflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [331/499] 2026-04-29-mistral-built-a-14b-ai-empire-by-not-being-american.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [332/499] 2026-04-29-moleskine-s-ai-lord-of-the-rings-collection-can-only-mock.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [333/499] 2026-04-29-n8n.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [334/499] 2026-04-29-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [335/499] 2026-04-29-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [336/499] 2026-04-29-openai-misses-revenue-is-the-ai-bubble-bursting.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [337/499] 2026-04-29-openclaw.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [338/499] 2026-04-29-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [339/499] 2026-04-29-prompts-chat.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [340/499] 2026-04-29-show-hn-ai-memory-with-biological-decay-52-recall.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [341/499] 2026-04-29-show-hn-oss-agent-i-built-topped-the-terminalbench-on-gemini-3-flash-preview.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [342/499] 2026-04-29-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [343/499] 2026-04-29-superpowers.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [344/499] 2026-04-29-tendril-a-self-extending-agent-that-builds-and-registers-its-own-tools.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [345/499] 2026-04-29-the-ai-industry-is-discovering-that-the-public-hates-it.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [346/499] 2026-04-29-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [347/499] 2026-04-29-vibevoice-open-source-frontier-voice-ai.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [DEBUG] [348/499] 2026-04-30-4tb-of-voice-samples-just-stolen-from-40k-ai-contractors-at-mercor.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [349/499] 2026-04-30-ai-s-economics-don-t-make-sense.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [350/499] 2026-04-30-autogpt.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [351/499] 2026-04-30-canva-apologizes-after-its-ai-tool-replaces-palestine-in-designs.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [352/499] 2026-04-30-china-blocks-meta-s-acquisition-of-ai-startup-manus.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [353/499] 2026-04-30-claude-ai-unavailable-and-elevated-errors-on-the-api.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [354/499] 2026-04-30-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [355/499] 2026-04-30-comfyui.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [356/499] 2026-04-30-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [DEBUG] [357/499] 2026-04-30-everything-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [358/499] 2026-04-30-firecrawl.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [359/499] 2026-04-30-generative-ai-for-beginners.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [360/499] 2026-04-30-google-and-pentagon-reportedly-agree-on-deal-for-any-lawful-use-of-ai.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [361/499] 2026-04-30-he-asked-ai-to-count-carbs-27000-times-it-couldn-t-give-the-same-answer-twice.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [362/499] 2026-04-30-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [363/499] 2026-04-30-javaguide.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [364/499] 2026-04-30-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [365/499] 2026-04-30-langflow.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [DEBUG] [366/499] 2026-04-30-letting-ai-play-my-game-building-an-agentic-test-harness-to-help-play-testing.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [367/499] 2026-04-30-making-ai-chatbots-friendly-leads-to-mistakes-and-support-of-conspiracy-theories.json: 等级 B, 分数 70/100
+2026-05-04T08:09:52+0800 [DEBUG] [368/499] 2026-04-30-mistral-built-a-14b-ai-empire-by-not-being-american.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [369/499] 2026-04-30-n8n.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [370/499] 2026-04-30-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [371/499] 2026-04-30-open-webui.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [372/499] 2026-04-30-openai-misses-revenue-is-the-ai-bubble-bursting.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [373/499] 2026-04-30-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [374/499] 2026-04-30-people-who-don-t-use-ai-will-be-left-behind.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [375/499] 2026-04-30-prompts-chat.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [376/499] 2026-04-30-ramp-s-sheets-ai-exfiltrates-financials.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [377/499] 2026-04-30-show-hn-agentswift-open-source-ios-builder-agent.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [378/499] 2026-04-30-show-hn-oss-agent-i-built-topped-the-terminalbench-on-gemini-3-flash-preview.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [379/499] 2026-04-30-superpowers.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [380/499] 2026-04-30-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [381/499] 2026-04-30-tendril-a-self-extending-agent-that-builds-and-registers-its-own-tools.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [382/499] 2026-04-30-the-abstraction-fallacy-why-ai-can-simulate-but-not-instantiate-consciousness.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [383/499] 2026-04-30-transformers.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [384/499] 2026-04-30-vibevoice-open-source-frontier-voice-ai.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [DEBUG] [385/499] 2026-04-30-we-decreased-our-llm-costs-with-opus.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [386/499] 2026-05-01-autogpt.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [387/499] 2026-05-01-awesome-llm-apps.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [388/499] 2026-05-01-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [389/499] 2026-05-01-comfyui.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [390/499] 2026-05-01-dify.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [391/499] 2026-05-01-everything-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [392/499] 2026-05-01-firecrawl.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [393/499] 2026-05-01-generative-ai-for-beginners.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [394/499] 2026-05-01-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [395/499] 2026-05-01-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [396/499] 2026-05-01-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [397/499] 2026-05-01-langflow.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [398/499] 2026-05-01-n8n.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [399/499] 2026-05-01-ollama.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [400/499] 2026-05-01-opencode.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [401/499] 2026-05-01-superpowers.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [402/499] 2026-05-01-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [403/499] 2026-05-01-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [404/499] 2026-05-02-autogpt.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [405/499] 2026-05-02-claude-ai-and-api-unavailable-fixed.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [406/499] 2026-05-02-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [407/499] 2026-05-02-comfyui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [408/499] 2026-05-02-dify.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [DEBUG] [409/499] 2026-05-02-everything-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [410/499] 2026-05-02-firecrawl.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [411/499] 2026-05-02-he-asked-ai-to-count-carbs-27000-times-it-couldn-t-give-the-same-answer-twice.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [412/499] 2026-05-02-hermes-agent.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [DEBUG] [413/499] 2026-05-02-javaguide.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [DEBUG] [414/499] 2026-05-02-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [415/499] 2026-05-02-langflow.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [416/499] 2026-05-02-letting-ai-play-my-game-building-an-agentic-test-harness-to-help-play-testing.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [417/499] 2026-05-02-making-ai-chatbots-friendly-leads-to-mistakes-and-support-of-conspiracy-theories.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [418/499] 2026-05-02-mike-open-source-legal-ai.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [419/499] 2026-05-02-n8n.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [420/499] 2026-05-02-ollama.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [421/499] 2026-05-02-open-webui.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [422/499] 2026-05-02-opencode.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [423/499] 2026-05-02-our-agent-found-a-bug-with-wireguard-in-google-kubernetes-engine.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [424/499] 2026-05-02-people-who-don-t-use-ai-will-be-left-behind.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [425/499] 2026-05-02-prompts-chat.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [426/499] 2026-05-02-ramp-s-sheets-ai-exfiltrates-financials.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [427/499] 2026-05-02-shai-hulud-themed-malware-found-in-the-pytorch-lightning-ai-training-library.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [428/499] 2026-05-02-show-hn-ai-cad-harness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [429/499] 2026-05-02-show-hn-pu-sh-a-full-coding-agent-harness-in-400-lines-of-shell.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [430/499] 2026-05-02-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [DEBUG] [431/499] 2026-05-02-spotify-adds-verified-badges-to-distinguish-human-artists-from-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [432/499] 2026-05-02-superpowers.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [433/499] 2026-05-02-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [434/499] 2026-05-02-the-abstraction-fallacy-why-ai-can-simulate-but-not-instantiate-consciousness.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [435/499] 2026-05-02-the-zig-project-s-rationale-for-their-anti-ai-contribution-policy.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [436/499] 2026-05-02-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [DEBUG] [437/499] 2026-05-02-uber-torches-2026-ai-budget-on-claude-code-in-four-months.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [438/499] 2026-05-02-why-ai-companies-want-you-to-be-afraid-of-them.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [439/499] 2026-05-02-your-ceo-is-suffering-from-ai-psychosis.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [440/499] 2026-05-03-ai-self-preferencing-in-algorithmic-hiring-empirical-evidence-and-insights.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [441/499] 2026-05-03-ai-uses-less-water-than-the-public-thinks.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [442/499] 2026-05-03-claude-ai-and-api-unavailable-fixed.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [443/499] 2026-05-03-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [444/499] 2026-05-03-comfyui.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [445/499] 2026-05-03-dify.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [446/499] 2026-05-03-firecrawl.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [447/499] 2026-05-03-langchain.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [DEBUG] [448/499] 2026-05-03-langflow.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [449/499] 2026-05-03-mike-open-source-legal-ai.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [450/499] 2026-05-03-open-design-use-your-coding-agent-as-a-design-engine.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [451/499] 2026-05-03-open-webui.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [DEBUG] [452/499] 2026-05-03-our-agent-found-a-bug-with-wireguard-in-google-kubernetes-engine.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [453/499] 2026-05-03-shai-hulud-themed-malware-found-in-the-pytorch-lightning-ai-training-library.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [454/499] 2026-05-03-show-hn-agent-desktop-native-desktop-automation-cli-for-ai-agents.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [455/499] 2026-05-03-show-hn-ai-cad-harness.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [456/499] 2026-05-03-show-hn-mljar-studio-local-ai-data-analyst-that-saves-analysis-as-notebooks.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [457/499] 2026-05-03-show-hn-pu-sh-a-full-coding-agent-harness-in-400-lines-of-shell.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [458/499] 2026-05-03-spotify-adds-verified-badges-to-distinguish-human-artists-from-ai.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [459/499] 2026-05-03-system-prompts-and-models-of-ai-tools.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [460/499] 2026-05-03-the-agent-harness-belongs-outside-the-sandbox.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [461/499] 2026-05-03-the-zig-project-s-rationale-for-their-anti-ai-contribution-policy.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [462/499] 2026-05-03-uber-torches-2026-ai-budget-on-claude-code-in-four-months.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [463/499] 2026-05-04-ai-intimacy-and-the-data-you-never-meant-to-share.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [464/499] 2026-05-04-ai-self-preferencing-in-algorithmic-hiring-empirical-evidence-and-insights.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [465/499] 2026-05-04-autogpt.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [466/499] 2026-05-04-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [467/499] 2026-05-04-comfyui.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [468/499] 2026-05-04-deepclaude-claude-code-agent-loop-with-deepseek-v4-pro-17x-cheaper.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [DEBUG] [469/499] 2026-05-04-dify.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [470/499] 2026-05-04-everything-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [471/499] 2026-05-04-firecrawl.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [472/499] 2026-05-04-hermes-agent.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [DEBUG] [473/499] 2026-05-04-javaguide.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [474/499] 2026-05-04-langchain.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [DEBUG] [475/499] 2026-05-04-langflow.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [DEBUG] [476/499] 2026-05-04-n8n.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [477/499] 2026-05-04-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [478/499] 2026-05-04-open-design-use-your-coding-agent-as-a-design-engine.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [479/499] 2026-05-04-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [480/499] 2026-05-04-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [481/499] 2026-05-04-our-agent-found-a-bug-with-wireguard-in-google-kubernetes-engine.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [482/499] 2026-05-04-prompts-chat.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [483/499] 2026-05-04-show-hn-agent-desktop-native-desktop-automation-cli-for-ai-agents.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [484/499] 2026-05-04-show-hn-ai-cad-harness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [485/499] 2026-05-04-show-hn-filling-pdf-forms-with-ai-using-client-side-tool-calling.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [486/499] 2026-05-04-show-hn-loopsy-a-way-for-terminals-and-ai-agents-on-different-machines-to-talk.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [DEBUG] [487/499] 2026-05-04-show-hn-mljar-studio-local-ai-data-analyst-that-saves-analysis-as-notebooks.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [488/499] 2026-05-04-show-hn-pu-sh-a-full-coding-agent-harness-in-400-lines-of-shell.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [DEBUG] [489/499] 2026-05-04-skills.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [DEBUG] [490/499] 2026-05-04-specsmaxxing-on-overcoming-ai-psychosis-and-why-i-write-specs-in-yaml.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [DEBUG] [491/499] 2026-05-04-spotify-adds-verified-badges-to-distinguish-human-artists-from-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [492/499] 2026-05-04-superpowers.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [493/499] 2026-05-04-system-prompts-and-models-of-ai-tools.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [DEBUG] [494/499] 2026-05-04-the-agent-harness-belongs-outside-the-sandbox.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [DEBUG] [495/499] 2026-05-04-the-claude-delusion-richard-dawkins-believes-his-ai-chatbot-is-conscious.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [496/499] 2026-05-04-the-oscars-just-banned-ai-from-winning-acting-and-writing-awards.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [497/499] 2026-05-04-transformers.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [DEBUG] [498/499] 2026-05-04-uber-torches-2026-ai-budget-on-claude-code-in-four-months.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [DEBUG] [499/499] 2026-05-04-voice-ai-for-beginners-a-curated-learning-path-for-developers.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-ai-agents-for-beginners.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-autogpt.json: 等级 A, 分数 95/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-claude-context.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-comfyui.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-everything-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-finceptterminal.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-firecrawl.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-generative-ai-for-beginners.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-javaguide.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-langflow.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-n8n.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-ollama.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-open-webui.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-openclaw.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-opencode.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-prompts-chat.json: 等级 A, 分数 93/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-skills.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-superpowers.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-thunderbolt.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-transformers.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-21-trendradar.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-ai-agents-for-beginners.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-ai-guide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-archon.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-autogpt.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-browser-harness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-claude-context.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-deepagents.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-deer-flow.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-everything-claude-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-finceptterminal.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-goclaw.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-harness.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-hive.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-impeccable.json: 等级 B, 分数 72/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-lobehub.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-nexent.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-oh-my-openagent.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-oh-my-pi.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-openclaw.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-openharness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-osaurus.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-parlant.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-ragflow.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-thunderbolt.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-trellis.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-trendradar.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-22-yuxi.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-a-roblox-cheat-and-one-ai-tool-brought-down-vercel-s-platform.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-ai-guide.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-ai-resistance-some-recent-anti-ai-stuff-that-s-worth-discussing.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-anker-made-its-own-chip-to-bring-ai-to-all-its-products.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-archon.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-autogpt.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-bring-your-agent-to-teams.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-browser-harness.json: 等级 A, 分数 89/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-claude-context.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-comfyui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-crabtrap-an-llm-as-a-judge-http-proxy-to-secure-agents-in-production.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-deepagents.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-deer-flow.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-everything-claude-code.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-finceptterminal.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-firecrawl.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-generative-ai-for-beginners.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-goclaw.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-harness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-hive.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-impeccable.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-kernel-code-removals-driven-by-llm-created-security-reports.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-kuri-zig-based-agent-browser-alternative.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-langflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-langfuse.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-lobehub.json: 等级 A, 分数 89/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-meta-employees-are-up-in-arms-over-a-mandatory-program-to-train-ai-on-their.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-meta-to-start-capturing-employee-mouse-movement-keystrokes-for-ai-training-data.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-meta-to-start-capturing-employee-mouse-movements-keystrokes-for-ai-training.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-n8n.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-nexent.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-oh-my-openagent.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-oh-my-pi.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-open-webui.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-openclaw.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-opencode.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-openharness.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-openmetadata.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-osaurus.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-parlant.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-peter-thiel-is-building-a-parallel-justice-system-powered-by-ai.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-pixelle-video.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-prompts-chat.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-ragflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-scammer-used-an-ai-generated-maga-girl-to-grift-men.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-scoring-show-hn-submissions-for-ai-design-patterns.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-shannon.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-show-hn-broccoli-one-shot-coding-agent-on-the-cloud.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-show-hn-gomodel-an-open-source-ai-gateway-in-go.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-skills.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-startups-brag-they-spend-more-money-on-ai-than-human-employees.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-tell-hn-i-m-sick-of-ai-everything.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-top-maga-influencer-revealed-to-be-ai.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-transformers.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-trellis.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-trendradar.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-worldmonitor.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-23-yuxi.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-andrej-karpathy-skills.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-anker-made-its-own-chip-to-bring-ai-to-all-its-products.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-ansible.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-autogpt.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-awesome-llm-apps.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-awesome-mcp-servers.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-bring-your-agent-to-teams.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-browser-use.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-claude-mem.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-codex.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-comfyui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-crabtrap-an-llm-as-a-judge-http-proxy-to-secure-agents-in-production.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-daytona.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-deep-live-cam.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-dify.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-everything-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-firecrawl.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-gemini-cli.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-generative-ai-for-beginners.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-hermes-agent.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-kernel-code-removals-driven-by-llm-created-security-reports.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-kuri-zig-based-agent-browser-alternative.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-langchain.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-langflow.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-less-human-ai-agents-please.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-llama-cpp.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-llamafactory.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-lobehub.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-meshcore-development-team-splits-over-trademark-dispute-and-ai-generated-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-meta-employees-are-up-in-arms-over-a-mandatory-program-to-train-ai-on-their.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-meta-to-start-capturing-employee-mouse-movement-keystrokes-for-ai-training-data.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-meta-to-start-capturing-employee-mouse-movements-keystrokes-for-ai-training.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-n8n.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-netdata.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-openclaw.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-opencode.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-openhands.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-our-newsroom-ai-policy.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-paddleocr.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-prompts-chat.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-ragflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-scammer-used-an-ai-generated-maga-girl-to-grift-men.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-scoring-show-hn-submissions-for-ai-design-patterns.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-show-hn-agent-vault-open-source-credential-proxy-and-vault-for-agents.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-show-hn-broccoli-one-shot-coding-agent-on-the-cloud.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-show-hn-gomodel-an-open-source-ai-gateway-in-go.json: 等级 A, 分数 89/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-spec-kit.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-startups-brag-they-spend-more-money-on-ai-than-human-employees.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-supabase.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-superpowers.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-top-maga-influencer-revealed-to-be-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-24-vllm.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-andrej-karpathy-skills.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-anker-made-its-own-chip-to-bring-ai-to-all-its-products.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-ansible.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-appflowy.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-autogpt.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-awesome-llm-apps.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-awesome-mcp-servers.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-bring-your-agent-to-teams.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-browser-use.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-codex.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-comfyui.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-daytona.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-deep-live-cam.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-dify.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-do-you-want-the-us-to-win-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-everything-claude-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-firecrawl.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-gemini-cli.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-generative-ai-for-beginners.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-hear-your-agent-suffer-through-your-code.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-javaguide.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-kernel-code-removals-driven-by-llm-created-security-reports.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-kuri-zig-based-agent-browser-alternative.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-langflow.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-llama-cpp.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-llamafactory.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-lobehub.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-meshcore-development-team-splits-over-trademark-dispute-and-ai-generated-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-meta-employees-are-up-in-arms-over-a-mandatory-program-to-train-ai-on-their.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-meta-to-start-capturing-employee-mouse-movements-keystrokes-for-ai-training.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-n8n.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-netdata.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-ollama.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-open-webui.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-openclaw.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-openhands.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-our-newsroom-ai-policy.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-paddleocr.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-prompts-chat.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-ragflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-scoring-show-hn-submissions-for-ai-design-patterns.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-show-hn-agent-vault-open-source-credential-proxy-and-vault-for-agents.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-show-hn-atomic-local-first-ai-augmented-personal-knowledge-base.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-show-hn-broccoli-one-shot-coding-agent-on-the-cloud.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-show-hn-browser-harness-gives-llm-freedom-to-complete-any-browser-task.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-south-korea-police-arrest-man-for-posting-ai-photo-of-runaway-wolf.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-startups-brag-they-spend-more-money-on-ai-than-human-employees.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-supabase.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-superpowers.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-tesla-discloses-2b-ai-hardware-company-acquisition-in-filing.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-top-maga-influencer-revealed-to-be-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-25-vllm.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-agentic-ai-systems-violate-the-implicit-assumptions-of-database-design.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-ai-might-be-lying-to-your-boss.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-ai-should-elevate-your-thinking-not-replace-it.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-an-ai-agent-deleted-our-production-database-the-agent-s-confession-is-below.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-autogpt.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-comfyui.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-do-you-want-the-us-to-win-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-eden-ai-european-alternative-to-openrouter.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-everything-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-firecrawl.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-generative-ai-for-beginners.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-google-banks-on-ai-edge-to-catch-up-to-cloud-rivals-amazon-and-microsoft.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-have-you-tried-clean-architecture-as-foundation-for-your-ai-project.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-hear-your-agent-suffer-through-your-code.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-lambda-calculus-benchmark-for-ai.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-langchain.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-langflow.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-n8n.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-ollama.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-open-source-memory-layer-so-any-ai-agent-can-do-what-claude-ai-and-chatgpt-do.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-openclaw.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-opencode.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-prompts-chat.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-show-hn-a-karpathy-style-llm-wiki-your-agents-maintain-markdown-and-git.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-show-hn-ai-memory-with-biological-decay-52-recall.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-show-hn-atomic-local-first-ai-augmented-personal-knowledge-base.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-show-hn-browser-harness-gives-llm-freedom-to-complete-any-browser-task.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-superpowers.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-tesla-discloses-2b-ai-hardware-company-acquisition-in-filing.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-the-ai-industry-is-discovering-that-the-public-hates-it.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-27-what-s-missing-in-the-agentic-story-a-well-defined-user-agent-role.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-4tb-of-voice-samples-just-stolen-from-40k-ai-contractors-at-mercor.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-ai-can-cost-more-than-human-workers-now.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-ai-might-be-lying-to-your-boss.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-ai-should-elevate-your-thinking-not-replace-it.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-an-ai-agent-deleted-our-production-database-the-agent-s-confession-is-below.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-autogpt.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-canva-apologizes-after-its-ai-tool-replaces-palestine-in-designs.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-china-blocks-meta-s-acquisition-of-ai-startup-manus.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-comfyui.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-eden-ai-european-alternative-to-openrouter.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-everything-claude-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-firecrawl.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-generative-ai-for-beginners.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-google-banks-on-ai-edge-to-catch-up-to-cloud-rivals-amazon-and-microsoft.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-javaguide.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-lambda-calculus-benchmark-for-ai.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-langflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-mistral-built-a-14b-ai-empire-by-not-being-american.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-n8n.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-ollama.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-open-source-memory-layer-so-any-ai-agent-can-do-what-claude-ai-and-chatgpt-do.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-openclaw.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-prompts-chat.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-show-hn-a-karpathy-style-llm-wiki-your-agents-maintain-markdown-and-git.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-show-hn-ai-memory-with-biological-decay-52-recall.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-show-hn-oss-agent-i-built-topped-the-terminalbench-on-gemini-3-flash-preview.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-superpowers.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-tendril-a-self-extending-agent-that-builds-and-registers-its-own-tools.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-the-ai-industry-is-discovering-that-the-public-hates-it.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-transformers.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-28-what-s-missing-in-the-agentic-story-a-well-defined-user-agent-role.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-4tb-of-voice-samples-just-stolen-from-40k-ai-contractors-at-mercor.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-ai-can-cost-more-than-human-workers-now.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-ai-s-economics-don-t-make-sense.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-ai-should-elevate-your-thinking-not-replace-it.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-an-ai-agent-deleted-our-production-database-the-agent-s-confession-is-below.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-autogpt.json: 等级 A, 分数 83/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-canva-apologizes-after-its-ai-tool-replaces-palestine-in-designs.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-china-blocks-meta-s-acquisition-of-ai-startup-manus.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-claude-ai-unavailable-and-elevated-errors-on-the-api.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-comfyui.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-dify.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-eden-ai-european-alternative-to-openrouter.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-everything-claude-code.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-firecrawl.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-generative-ai-for-beginners.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-google-and-pentagon-reportedly-agree-on-deal-for-any-lawful-use-of-ai.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-google-banks-on-ai-edge-to-catch-up-to-cloud-rivals-amazon-and-microsoft.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-hermes-agent.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-langchain.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-langflow.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-mistral-built-a-14b-ai-empire-by-not-being-american.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-moleskine-s-ai-lord-of-the-rings-collection-can-only-mock.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-n8n.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-openai-misses-revenue-is-the-ai-bubble-bursting.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-openclaw.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-prompts-chat.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-show-hn-ai-memory-with-biological-decay-52-recall.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-show-hn-oss-agent-i-built-topped-the-terminalbench-on-gemini-3-flash-preview.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-superpowers.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-tendril-a-self-extending-agent-that-builds-and-registers-its-own-tools.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-the-ai-industry-is-discovering-that-the-public-hates-it.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-29-vibevoice-open-source-frontier-voice-ai.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-4tb-of-voice-samples-just-stolen-from-40k-ai-contractors-at-mercor.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-ai-s-economics-don-t-make-sense.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-autogpt.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-canva-apologizes-after-its-ai-tool-replaces-palestine-in-designs.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-china-blocks-meta-s-acquisition-of-ai-startup-manus.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-claude-ai-unavailable-and-elevated-errors-on-the-api.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-comfyui.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-dify.json: 等级 A, 分数 88/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-everything-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-firecrawl.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-generative-ai-for-beginners.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-google-and-pentagon-reportedly-agree-on-deal-for-any-lawful-use-of-ai.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-he-asked-ai-to-count-carbs-27000-times-it-couldn-t-give-the-same-answer-twice.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-javaguide.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-langflow.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-letting-ai-play-my-game-building-an-agentic-test-harness-to-help-play-testing.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-making-ai-chatbots-friendly-leads-to-mistakes-and-support-of-conspiracy-theories.json: 等级 B, 分数 70/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-mistral-built-a-14b-ai-empire-by-not-being-american.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-n8n.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-open-webui.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-openai-misses-revenue-is-the-ai-bubble-bursting.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-people-who-don-t-use-ai-will-be-left-behind.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-prompts-chat.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-ramp-s-sheets-ai-exfiltrates-financials.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-show-hn-agentswift-open-source-ios-builder-agent.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-show-hn-oss-agent-i-built-topped-the-terminalbench-on-gemini-3-flash-preview.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-superpowers.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-tendril-a-self-extending-agent-that-builds-and-registers-its-own-tools.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-the-abstraction-fallacy-why-ai-can-simulate-but-not-instantiate-consciousness.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-transformers.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-vibevoice-open-source-frontier-voice-ai.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-04-30-we-decreased-our-llm-costs-with-opus.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-autogpt.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-awesome-llm-apps.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-comfyui.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-dify.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-everything-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-firecrawl.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-generative-ai-for-beginners.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-hermes-agent.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-javaguide.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-langflow.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-n8n.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-ollama.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-opencode.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-superpowers.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-01-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-autogpt.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-claude-ai-and-api-unavailable-fixed.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-comfyui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-dify.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-everything-claude-code.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-firecrawl.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-he-asked-ai-to-count-carbs-27000-times-it-couldn-t-give-the-same-answer-twice.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-hermes-agent.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-javaguide.json: 等级 A, 分数 81/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-langchain.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-langflow.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-letting-ai-play-my-game-building-an-agentic-test-harness-to-help-play-testing.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-making-ai-chatbots-friendly-leads-to-mistakes-and-support-of-conspiracy-theories.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-mike-open-source-legal-ai.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-n8n.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-ollama.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-open-webui.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-opencode.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-our-agent-found-a-bug-with-wireguard-in-google-kubernetes-engine.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-people-who-don-t-use-ai-will-be-left-behind.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-prompts-chat.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-ramp-s-sheets-ai-exfiltrates-financials.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-shai-hulud-themed-malware-found-in-the-pytorch-lightning-ai-training-library.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-show-hn-ai-cad-harness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-show-hn-pu-sh-a-full-coding-agent-harness-in-400-lines-of-shell.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-skills.json: 等级 B, 分数 77/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-spotify-adds-verified-badges-to-distinguish-human-artists-from-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-superpowers.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-system-prompts-and-models-of-ai-tools.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-the-abstraction-fallacy-why-ai-can-simulate-but-not-instantiate-consciousness.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-the-zig-project-s-rationale-for-their-anti-ai-contribution-policy.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-transformers.json: 等级 A, 分数 91/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-uber-torches-2026-ai-budget-on-claude-code-in-four-months.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-why-ai-companies-want-you-to-be-afraid-of-them.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-02-your-ceo-is-suffering-from-ai-psychosis.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-ai-self-preferencing-in-algorithmic-hiring-empirical-evidence-and-insights.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-ai-uses-less-water-than-the-public-thinks.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-claude-ai-and-api-unavailable-fixed.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-claude-code.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-comfyui.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-dify.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-firecrawl.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-langchain.json: 等级 A, 分数 90/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-langflow.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-mike-open-source-legal-ai.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-open-design-use-your-coding-agent-as-a-design-engine.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-open-webui.json: 等级 A, 分数 86/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-our-agent-found-a-bug-with-wireguard-in-google-kubernetes-engine.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-shai-hulud-themed-malware-found-in-the-pytorch-lightning-ai-training-library.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-show-hn-agent-desktop-native-desktop-automation-cli-for-ai-agents.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-show-hn-ai-cad-harness.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-show-hn-mljar-studio-local-ai-data-analyst-that-saves-analysis-as-notebooks.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-show-hn-pu-sh-a-full-coding-agent-harness-in-400-lines-of-shell.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-spotify-adds-verified-badges-to-distinguish-human-artists-from-ai.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-system-prompts-and-models-of-ai-tools.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-the-agent-harness-belongs-outside-the-sandbox.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-the-zig-project-s-rationale-for-their-anti-ai-contribution-policy.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-03-uber-torches-2026-ai-budget-on-claude-code-in-four-months.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-ai-intimacy-and-the-data-you-never-meant-to-share.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-ai-self-preferencing-in-algorithmic-hiring-empirical-evidence-and-insights.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-autogpt.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-comfyui.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-deepclaude-claude-code-agent-loop-with-deepseek-v4-pro-17x-cheaper.json: 等级 A, 分数 87/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-dify.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-everything-claude-code.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-firecrawl.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-hermes-agent.json: 等级 B, 分数 79/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-javaguide.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-langchain.json: 等级 A, 分数 92/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-langflow.json: 等级 A, 分数 85/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-n8n.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-ollama.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-open-design-use-your-coding-agent-as-a-design-engine.json: 等级 A, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-open-webui.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-opencode.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-our-agent-found-a-bug-with-wireguard-in-google-kubernetes-engine.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-prompts-chat.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-show-hn-agent-desktop-native-desktop-automation-cli-for-ai-agents.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-show-hn-ai-cad-harness.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-show-hn-filling-pdf-forms-with-ai-using-client-side-tool-calling.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-show-hn-loopsy-a-way-for-terminals-and-ai-agents-on-different-machines-to-talk.json: 等级 B, 分数 75/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-show-hn-mljar-studio-local-ai-data-analyst-that-saves-analysis-as-notebooks.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-show-hn-pu-sh-a-full-coding-agent-harness-in-400-lines-of-shell.json: 等级 A, 分数 82/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-skills.json: 等级 B, 分数 80/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-specsmaxxing-on-overcoming-ai-psychosis-and-why-i-write-specs-in-yaml.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-spotify-adds-verified-badges-to-distinguish-human-artists-from-ai.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-superpowers.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-system-prompts-and-models-of-ai-tools.json: 等级 B, 分数 78/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-the-agent-harness-belongs-outside-the-sandbox.json: 等级 A, 分数 84/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-the-claude-delusion-richard-dawkins-believes-his-ai-chatbot-is-conscious.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-the-oscars-just-banned-ai-from-winning-acting-and-writing-awards.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-transformers.json: 等级 A, 分数 94/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-uber-torches-2026-ai-budget-on-claude-code-in-four-months.json: 等级 B, 分数 73/100
+2026-05-04T08:09:52+0800 [INFO] knowledge/articles/2026-05-04-voice-ai-for-beginners-a-curated-learning-path-for-developers.json: 等级 B, 分数 76/100
+2026-05-04T08:09:52+0800 [INFO] 汇总: A=278, B=221, C=0, 共 499 个文件
+2026-05-04T08:09:52+0800 [INFO] 质量检查通过

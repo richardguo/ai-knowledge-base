@@ -1,0 +1,20 @@
+{
+  "id": "ea4574f2-a67d-4de0-ab74-1215f7d0357a",
+  "title": "DeepClaude – Claude Code agent loop with DeepSeek V4 Pro, 17x cheaper",
+  "url": "https://github.com/aattaran/deepclaude",
+  "source": "rss",
+  "collected_at": "2026-05-04T08:09:01+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "DeepClaude是一个开源项目，将Claude Code与DeepSeek V4 Pro模型结合，通过agent loop机制实现AI编程代理功能。项目声称成本仅为Claude Code原生方案的1/17（约17倍便宜），为开发者提供了一个低成本的AI代码生成和执行方案。该项目在Hacker News上获得101个赞同和44条评论，表明社区对此类低成本AI编程工具有较高关注度。",
+  "highlights": [
+    "将Claude Code与DeepSeek V4 Pro集成，实现17倍成本降低",
+    "开源项目，支持agent循环执行代码任务"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-framework",
+    "cost-optimization"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

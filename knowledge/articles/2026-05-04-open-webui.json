@@ -1,0 +1,20 @@
+{
+  "id": "0fe7b5c9-b680-4dad-9861-1d46e665b7cb",
+  "title": "open-webui",
+  "url": "https://github.com/open-webui/open-webui",
+  "source": "github-search",
+  "collected_at": "2026-05-04T08:09:00+08:00",
+  "processed_at": "2026-05-04T08:09:52+08:00",
+  "summary": "Open WebUI是一个用户友好的AI界面框架，支持Ollama、OpenAI API等多种后端。提供Web界面、API服务、模型管理等功能，可自托管部署，是搭建私有AI服务的理想选择。",
+  "highlights": [
+    "支持多种LLM后端，灵活部署",
+    "开源自托管，保护数据隐私"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ui",
+    "llm-interface"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

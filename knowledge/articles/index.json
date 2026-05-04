@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-03T08:09:01+08:00",
-  "total_entries": 116,
+  "last_updated": "2026-05-04T08:09:52+08:00",
+  "total_entries": 124,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1645,6 +1645,118 @@
         "infrastructure"
       ],
       "collected_at": "2026-05-03T08:05:51+08:00"
+    },
+    {
+      "id": "ea4574f2-a67d-4de0-ab74-1215f7d0357a",
+      "title": "DeepClaude – Claude Code agent loop with DeepSeek V4 Pro, 17x cheaper",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/aattaran/deepclaude",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-04-deepclaude-claude-code-agent-loop-with-deepseek-v4-pro-17x-cheaper.json",
+      "tags": [
+        "agent-framework",
+        "cost-optimization"
+      ],
+      "collected_at": "2026-05-04T08:09:01+08:00"
+    },
+    {
+      "id": "61237353-738a-4e7c-bc11-5c7d99cd9186",
+      "title": "The Oscars just banned AI from winning acting and writing awards",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://gizmodo.com/the-oscars-just-banned-ai-from-winning-acting-and-writing-awards-2000753740",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-04-the-oscars-just-banned-ai-from-winning-acting-and-writing-awards.json",
+      "tags": [
+        "ai-ethics",
+        "policy"
+      ],
+      "collected_at": "2026-05-04T08:09:01+08:00"
+    },
+    {
+      "id": "90943709-6e9e-4492-a2ac-01d7f87b1d08",
+      "title": "Specsmaxxing – On overcoming AI psychosis, and why I write specs in YAML",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://acai.sh/blog/specsmaxxing",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-04-specsmaxxing-on-overcoming-ai-psychosis-and-why-i-write-specs-in-yaml.json",
+      "tags": [
+        "ai-psychology",
+        "specification"
+      ],
+      "collected_at": "2026-05-04T08:09:01+08:00"
+    },
+    {
+      "id": "b475c327-8515-4502-8178-26c78c8ee194",
+      "title": "AI, Intimacy, and the Data You Never Meant to Share",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://fshot.org/techzone/the-algorithm-knows.php",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-04-ai-intimacy-and-the-data-you-never-meant-to-share.json",
+      "tags": [
+        "privacy",
+        "ai-ethics"
+      ],
+      "collected_at": "2026-05-04T08:09:01+08:00"
+    },
+    {
+      "id": "35857e2b-ebcc-48b5-9bbf-7d7af4d67248",
+      "title": "The Claude Delusion: Richard Dawkins believes his AI chatbot is conscious",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://www.dailygrail.com/2026/05/the-claude-delusion-richard-dawkins-believes-his-female-ai-chatbot-is-conscious/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-04-the-claude-delusion-richard-dawkins-believes-his-ai-chatbot-is-conscious.json",
+      "tags": [
+        "ai-consciousness",
+        "philosophy"
+      ],
+      "collected_at": "2026-05-04T08:09:01+08:00"
+    },
+    {
+      "id": "b6071b4b-1b84-40be-928c-71514d549c19",
+      "title": "Voice-AI-for-Beginners – A curated learning path for developers",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://github.com/mahimairaja/voiceai",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-04-voice-ai-for-beginners-a-curated-learning-path-for-developers.json",
+      "tags": [
+        "voice-ai",
+        "learning-resource"
+      ],
+      "collected_at": "2026-05-04T08:09:01+08:00"
+    },
+    {
+      "id": "c5718ae7-b808-4576-9ff4-21c8f8784863",
+      "title": "Show HN: Filling PDF forms with AI using client-side tool calling",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://copilot.simplepdf.com/?share=a7d00ad073c75a75d493228e6ff7b11eb3f2d945b6175913e87898ec96ca8076&amp;form=w9&amp;lang=en",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-04-show-hn-filling-pdf-forms-with-ai-using-client-side-tool-calling.json",
+      "tags": [
+        "pdf-processing",
+        "client-side-ai"
+      ],
+      "collected_at": "2026-05-04T08:09:01+08:00"
+    },
+    {
+      "id": "c9d2450a-44c0-4f02-91e5-e5ba71059aff",
+      "title": "Show HN: Loopsy, a way for terminals and AI agents on different machines to talk",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://github.com/leox255/loopsy",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-04-show-hn-loopsy-a-way-for-terminals-and-ai-agents-on-different-machines-to-talk.json",
+      "tags": [
+        "distributed-systems",
+        "remote-access"
+      ],
+      "collected_at": "2026-05-04T08:09:01+08:00"
     }
   ]
 }
