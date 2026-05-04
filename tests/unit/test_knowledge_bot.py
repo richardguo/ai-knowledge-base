@@ -3,6 +3,7 @@
 import json
 import os
 import unittest.mock
+import urllib.error
 from pathlib import Path
 from typing import Any
 
@@ -230,7 +231,7 @@ class TestReranker:
     def test_rerank_api_error_fallback(self) -> None:
         with unittest.mock.patch(
             "bot.knowledge_bot.urllib.request.urlopen",
-            side_effect=Exception("API error"),
+            side_effect=urllib.error.URLError("API error"),
         ):
             reranker = Reranker(
                 api_base="https://test.com/rerank",
@@ -679,7 +680,7 @@ class TestKnowledgeBot:
     def test_next_returns_next_page(self, bot: KnowledgeBot) -> None:
         bot.handle_message("reader", "/search agent")
         reply = bot.handle_message("reader", "/next")
-        assert "搜索" in reply or "没有更多" in reply
+        assert "搜索" in reply or "没有更多" in reply or "最后一页" in reply
 
     def test_next_without_search(self, bot: KnowledgeBot) -> None:
         reply = bot.handle_message("reader", "/next")

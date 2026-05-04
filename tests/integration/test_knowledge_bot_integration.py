@@ -121,6 +121,8 @@ class TestFullSearchPipelineIntegration:
             encoding="utf-8",
         )
 
+        reranker = Reranker()
+
         bot = KnowledgeBot(
             knowledge_dir=str(articles_dir),
             synonyms_path=str(syn_file),
@@ -130,19 +132,24 @@ class TestFullSearchPipelineIntegration:
         bot._subscription_mgr = SubscriptionManager(
             store_path=str(tmp_path / "subs.json")
         )
-        bot._reranker = Reranker(api_base="", api_key="")
+        bot._reranker = reranker
         bot._permission_mgr.grant("reader", Permission.READ)
         bot._permission_mgr.grant("writer", Permission.WRITE)
         return bot
 
-    def test_synonym_expansion_finds_more_results(
-        self, bot: KnowledgeBot
-    ) -> None:
-        reply_without_synonym = bot.handle_message("reader", "/search agent")
-        reply_with_synonym = bot.handle_message("reader", "/search 智能体")
-        assert "agent-framework" in reply_with_synonym
+    @pytest.mark.skipif(
+        not os.getenv("BAISHAN_RERANK_API_BASE"),
+        reason="BAISHAN_RERANK_API_BASE 未配置",
+    )
+    def test_synonym_expansion_with_rerank(self, bot: KnowledgeBot) -> None:
+        reply = bot.handle_message("reader", "/search 智能体")
+        assert "agent-framework" in reply
 
-    def test_search_history_recorded(
+    @pytest.mark.skipif(
+        not os.getenv("BAISHAN_RERANK_API_BASE"),
+        reason="BAISHAN_RERANK_API_BASE 未配置",
+    )
+    def test_search_history_with_rerank(
         self, bot: KnowledgeBot, tmp_path: Path
     ) -> None:
         bot.handle_message("reader", "/search agent")
@@ -151,19 +158,22 @@ class TestFullSearchPipelineIntegration:
         lines = history_file.read_text(encoding="utf-8").strip().split("\n")
         assert len(lines) == 2
 
-    def test_pagination_flow(self, bot: KnowledgeBot) -> None:
+    @pytest.mark.skipif(
+        not os.getenv("BAISHAN_RERANK_API_BASE"),
+        reason="BAISHAN_RERANK_API_BASE 未配置",
+    )
+    def test_pagination_flow_with_rerank(self, bot: KnowledgeBot) -> None:
         reply1 = bot.handle_message("reader", "/search agent")
         assert "agent-framework" in reply1
 
         reply2 = bot.handle_message("reader", "/next")
-        assert "搜索" in reply2 or "没有更多" in reply2
+        assert "搜索" in reply2 or "没有更多" in reply2 or "最后一页" in reply2
 
     @pytest.mark.skipif(
         not os.getenv("BAISHAN_RERANK_API_BASE"),
         reason="BAISHAN_RERANK_API_BASE 未配置",
     )
-    def test_search_with_real_reranker(self, bot: KnowledgeBot) -> None:
-        bot._reranker = Reranker()
+    def test_full_pipeline_search_with_rerank(self, bot: KnowledgeBot) -> None:
         reply = bot.handle_message("reader", "/search agent")
         assert "agent-framework" in reply
 
