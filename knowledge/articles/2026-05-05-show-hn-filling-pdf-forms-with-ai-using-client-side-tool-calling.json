@@ -1,0 +1,20 @@
+{
+  "id": "cb66263c-e312-415a-9840-e7489278b0bf",
+  "title": "Show HN: Filling PDF forms with AI using client-side tool calling",
+  "url": "https://copilot.simplepdf.com/?share=a7d00ad073c75a75d493228e6ff7b11eb3f2d945b6175913e87898ec96ca8076&amp;form=w9&amp;lang=en",
+  "source": "rss",
+  "collected_at": "2026-05-05T08:13:07+08:00",
+  "processed_at": "2026-05-05T08:13:56+08:00",
+  "summary": "SimplePDF Copilot利用客户端工具调用技术实现AI填写PDF表单。PDF文件全程在浏览器内处理，文本提取后发送给用户指定的LLM，支持本地部署或云端API。AI不仅能读取PDF，还能执行添加/删除字段、填写表单、聚焦特定区域等操作。",
+  "highlights": [
+    "客户端工具调用实现PDF交互操作",
+    "隐私优先：PDF数据不离开浏览器"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "pdf-ai",
+    "client-side-ai"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

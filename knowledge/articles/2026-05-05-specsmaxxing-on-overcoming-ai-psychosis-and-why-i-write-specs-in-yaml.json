@@ -1,0 +1,21 @@
+{
+  "id": "8ada2070-0221-4c27-aefc-1ea0c7b25cd7",
+  "title": "Specsmaxxing – On overcoming AI psychosis, and why I write specs in YAML",
+  "url": "https://acai.sh/blog/specsmaxxing",
+  "source": "rss",
+  "collected_at": "2026-05-05T08:13:07+08:00",
+  "processed_at": "2026-05-05T08:13:56+08:00",
+  "summary": "作者分享了使用YAML编写技术规范来应对AI项目复杂性的经验，提出「规范最大化」理念。文章探讨了AI开发中的认知偏差问题，强调通过结构化文档减少AI幻觉和项目失控风险。",
+  "highlights": [
+    "YAML规范在AI项目中的实践",
+    "AI心理模型与规范设计思路"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "specification",
+    "yaml",
+    "ai-psychology"
+  ],
+  "category": "实践",
+  "maturity": "测试"
+}

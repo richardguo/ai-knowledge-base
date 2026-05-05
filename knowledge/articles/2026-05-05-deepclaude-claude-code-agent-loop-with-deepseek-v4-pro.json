@@ -1,0 +1,21 @@
+{
+  "id": "7b19176a-ce95-4c64-ade5-d84d5ef5eb1b",
+  "title": "DeepClaude – Claude Code agent loop with DeepSeek V4 Pro",
+  "url": "https://github.com/aattaran/deepclaude",
+  "source": "rss",
+  "collected_at": "2026-05-05T08:13:07+08:00",
+  "processed_at": "2026-05-05T08:13:56+08:00",
+  "summary": "开源项目DeepClaude将Claude Code与DeepSeek V4 Pro进行整合，实现Agent循环推理能力。项目提供了完整的代码示例和架构设计，展示了如何利用多模型协作提升Agent任务处理能力，在Hacker News引发热烈讨论。",
+  "highlights": [
+    "Claude+DeepSeek双模型协作实现",
+    "开源Agent循环框架"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-loop",
+    "open-source",
+    "model-integration"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

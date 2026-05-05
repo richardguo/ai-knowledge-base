@@ -1,0 +1,20 @@
+{
+  "id": "b932bc68-d30c-41b2-aaa0-8fe02629e02a",
+  "title": "AI Self-preferencing in Algorithmic Hiring: Empirical Evidence and Insights",
+  "url": "https://arxiv.org/abs/2509.00462",
+  "source": "rss",
+  "collected_at": "2026-05-05T08:13:07+08:00",
+  "processed_at": "2026-05-05T08:13:56+08:00",
+  "summary": "本文研究AI招聘算法中的自我偏好问题，通过实证分析发现算法系统性地偏向使用AI工具的候选人。研究基于大规模招聘数据，发现使用AI辅助的申请者在简历筛选阶段获得显著优势，但这种优势主要来自算法识别而非真实能力差异。文章揭示了算法偏见的隐蔽性，并提出透明度与审计建议。",
+  "highlights": [
+    "首次系统量化AI招聘中的自我偏好现象",
+    "揭示算法对AI工具使用者的系统性偏向"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "algorithmic-bias",
+    "hiring-ai"
+  ],
+  "category": "论文",
+  "maturity": "测试"
+}

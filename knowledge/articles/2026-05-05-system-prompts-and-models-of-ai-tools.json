@@ -1,0 +1,20 @@
+{
+  "id": "43257ec8-5be7-4e43-8d28-fa762c377f42",
+  "title": "system-prompts-and-models-of-ai-tools",
+  "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+  "source": "github-search",
+  "collected_at": "2026-05-05T08:13:07+08:00",
+  "processed_at": "2026-05-05T08:13:56+08:00",
+  "summary": "该仓库收集了主流AI编程辅助工具的系统提示词和内部模型信息，包括Cursor、Claude Code、Devin AI、VSCode Agent等数十款工具。可用于研究AI编码助手的最佳实践、设计思路和提示工程技巧。",
+  "highlights": [
+    "涵盖数十款主流AI编程工具",
+    "系统提示词和模型信息完整"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "system-prompts",
+    "ai-tools"
+  ],
+  "category": "实践",
+  "maturity": "测试"
+}

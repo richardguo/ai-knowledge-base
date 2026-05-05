@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-04T08:09:52+08:00",
-  "total_entries": 124,
+  "last_updated": "2026-05-05T08:13:56+08:00",
+  "total_entries": 127,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1757,6 +1757,49 @@
         "remote-access"
       ],
       "collected_at": "2026-05-04T08:09:01+08:00"
+    },
+    {
+      "id": "29dde4ba-8d9f-4238-9e55-3d5a0f9671f8",
+      "title": "Agent Skills",
+      "source": "rss",
+      "category": "框架",
+      "relevance_score": 7,
+      "url": "https://addyosmani.com/blog/agent-skills/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-05-agent-skills.json",
+      "tags": [
+        "agent-framework",
+        "prompt-engineering"
+      ],
+      "collected_at": "2026-05-05T08:13:07+08:00"
+    },
+    {
+      "id": "80f049fc-e34a-4062-a96d-27b862783701",
+      "title": "How OpenAI delivers low-latency voice AI at scale",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 9,
+      "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-05-how-openai-delivers-low-latency-voice-ai-at-scale.json",
+      "tags": [
+        "voice-ai",
+        "low-latency",
+        "infrastructure"
+      ],
+      "collected_at": "2026-05-05T08:13:07+08:00"
+    },
+    {
+      "id": "ce74cb9c-7f3f-4b4d-994f-1207cbced89b",
+      "title": "OpenAI, Google, and Microsoft Back Bill to Fund 'AI Literacy' in Schools",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://www.404media.co/literacy-in-future-technologies-artificial-intelligence-act-adam-schiff-mike-rounds/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-05-openai-google-and-microsoft-back-bill-to-fund-ai-literacy-in-schools.json",
+      "tags": [
+        "ai-literacy",
+        "education-policy"
+      ],
+      "collected_at": "2026-05-05T08:13:07+08:00"
     }
   ]
 }

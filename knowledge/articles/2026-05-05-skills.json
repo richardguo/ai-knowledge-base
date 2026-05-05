@@ -1,0 +1,20 @@
+{
+  "id": "0ab1897c-f971-4ac3-958f-5509fa1299eb",
+  "title": "skills",
+  "url": "https://github.com/anthropics/skills",
+  "source": "github-search",
+  "collected_at": "2026-05-05T08:13:07+08:00",
+  "processed_at": "2026-05-05T08:13:56+08:00",
+  "summary": "Agent Skills是一个公开的代理技能库，收集和分享各种AI代理的实用技能和最佳实践。开发者可以贡献和获取预构建的代理能力，加速AI应用的开发进程。",
+  "highlights": [
+    "社区驱动的技能共享",
+    "丰富的预置代理能力"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-skills",
+    "library"
+  ],
+  "category": "实践",
+  "maturity": "测试"
+}

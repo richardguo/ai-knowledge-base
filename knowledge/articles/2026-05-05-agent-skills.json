@@ -1,0 +1,20 @@
+{
+  "id": "29dde4ba-8d9f-4238-9e55-3d5a0f9671f8",
+  "title": "Agent Skills",
+  "url": "https://addyosmani.com/blog/agent-skills/",
+  "source": "rss",
+  "collected_at": "2026-05-05T08:13:07+08:00",
+  "processed_at": "2026-05-05T08:13:56+08:00",
+  "summary": "本文探讨了Agent技能的定义与构建方法，涵盖提示工程、工具使用、记忆机制等核心能力。作者结合实际案例，展示了如何让AI代理更好地完成复杂任务。内容偏向概念性介绍，适合对Agent技术感兴趣的开发者了解基础架构。",
+  "highlights": [
+    "系统梳理Agent核心能力组件",
+    "提供实用的技能构建思路"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "prompt-engineering"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

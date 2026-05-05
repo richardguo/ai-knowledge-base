@@ -1,0 +1,21 @@
+{
+  "id": "3a251f92-0d75-47e4-b033-c40b0dc19372",
+  "title": "The agent harness belongs outside the sandbox",
+  "url": "https://www.mendral.com/blog/agent-harness-belongs-outside-sandbox",
+  "source": "rss",
+  "collected_at": "2026-05-05T08:13:07+08:00",
+  "processed_at": "2026-05-05T08:13:56+08:00",
+  "summary": "文章提出Agent框架应将控制 harness 置于沙箱外部的核心观点，作者认为这种架构设计能更好平衡安全性与功能性。通过将Agent核心逻辑与隔离环境分离，可实现更灵活的任务执行与更安全的数据管控。",
+  "highlights": [
+    "Agent架构设计新思路",
+    "安全与功能的平衡方案"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-architecture",
+    "sandbox",
+    "security"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}
