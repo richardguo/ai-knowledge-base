@@ -1,0 +1,20 @@
+{
+  "id": "8a2b36ce-a0a4-4370-aed8-3f9fae9a4243",
+  "title": "The agent harness belongs outside the sandbox",
+  "url": "https://www.mendral.com/blog/agent-harness-belongs-outside-sandbox",
+  "source": "rss",
+  "collected_at": "2026-05-06T08:10:49+08:00",
+  "processed_at": "2026-05-06T08:11:31+08:00",
+  "summary": "本文提出将AI Agent的控制系统（harness）置于沙箱外部的架构设计理念。作者认为这种架构能更好地控制AI行为、降低安全风险，并便于监控和调试，是AI Agent安全部署的重要实践。",
+  "highlights": [
+    "提出Agent控制系统的外部化架构",
+    "强调AI安全部署的最佳实践"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-architecture",
+    "security"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

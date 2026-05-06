@@ -1,0 +1,20 @@
+{
+  "id": "30f96d6f-e6d7-489a-a2af-613a01b71304",
+  "title": "AI didn't delete your database, you did",
+  "url": "https://idiallo.com/blog/ai-didnt-delete-your-database-you-did",
+  "source": "rss",
+  "collected_at": "2026-05-06T08:10:49+08:00",
+  "processed_at": "2026-05-06T08:11:31+08:00",
+  "summary": "文章指出所谓\"AI导致数据丢失\"往往是人为失误所致，而非AI本身的问题。作者通过多个实际案例说明，当数据库被删除或损坏时，责任通常在于配置错误、权限管理不当或人为操作失误，而非AI系统的自主行为。这为AI责任讨论提供了务实视角。",
+  "highlights": [
+    "澄清AI误删数据的常见误解",
+    "强调人为因素是数据丢失的主因"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "data-safety",
+    "human-error"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

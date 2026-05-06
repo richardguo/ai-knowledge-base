@@ -1,0 +1,20 @@
+{
+  "id": "642b5236-6d9f-4c79-ab39-84169761df64",
+  "title": "Three Inverse Laws of AI",
+  "url": "https://susam.net/inverse-laws-of-robotics.html",
+  "source": "rss",
+  "collected_at": "2026-05-06T08:10:49+08:00",
+  "processed_at": "2026-05-06T08:11:31+08:00",
+  "summary": "本文提出机器人学三定律的逆定律，探讨AI系统与人类交互中的责任归属问题。作者认为传统的机器人三定律过于理想化，在实际AI应用中应考虑反向责任机制，即AI行为的后果应由部署者和使用者承担，而非AI本身。这一观点对当前AI责任界定具有哲学指导意义。",
+  "highlights": [
+    "提出AI责任逆定律，强调人类主体责任",
+    "对机器人三定律进行批判性反思和重构"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "ai-philosophy",
+    "responsibility"
+  ],
+  "category": "论文",
+  "maturity": "实验"
+}

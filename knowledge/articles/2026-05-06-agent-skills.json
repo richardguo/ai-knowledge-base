@@ -1,0 +1,20 @@
+{
+  "id": "4179e3ae-143c-4862-99ba-7045eef8d1cb",
+  "title": "Agent Skills",
+  "url": "https://addyosmani.com/blog/agent-skills/",
+  "source": "rss",
+  "collected_at": "2026-05-06T08:10:49+08:00",
+  "processed_at": "2026-05-06T08:11:31+08:00",
+  "summary": "文章系统介绍AI Agent的核心技能组合，包括任务规划、工具调用、内存管理和多步骤推理能力。作者探讨了构建可靠Agent系统的最佳实践，以及当前技术面临的主要挑战。对Agent开发有实践指导意义。",
+  "highlights": [
+    "AI Agent核心技能全面解析",
+    "构建可靠Agent系统的最佳实践"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-agent",
+    "system-design"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

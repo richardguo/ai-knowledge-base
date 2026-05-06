@@ -1,0 +1,20 @@
+{
+  "id": "77d3ff3f-cc8f-4617-af37-b48d6a219c3f",
+  "title": "When everyone has AI and the company still learns nothing",
+  "url": "https://www.robert-glaser.de/when-everyone-has-ai-and-the-company-still-learns-nothing/",
+  "source": "rss",
+  "collected_at": "2026-05-06T08:10:49+08:00",
+  "processed_at": "2026-05-06T08:11:31+08:00",
+  "summary": "文章探讨企业即使全员配备AI工具，仍可能无法有效学习和改进的现象。作者指出关键在于组织流程、文化和知识管理，而非工具本身。企业需要建立有效的反馈机制和数据驱动决策流程，否则AI只是表面文章，无法产生实际价值。",
+  "highlights": [
+    "指出AI工具与组织学习的脱节",
+    "强调流程和文化在AI应用中的重要性"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "enterprise-ai",
+    "organizational-learning"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

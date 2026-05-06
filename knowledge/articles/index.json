@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-05T08:13:56+08:00",
-  "total_entries": 127,
+  "last_updated": "2026-05-06T08:11:31+08:00",
+  "total_entries": 132,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1800,6 +1800,76 @@
         "education-policy"
       ],
       "collected_at": "2026-05-05T08:13:07+08:00"
+    },
+    {
+      "id": "642b5236-6d9f-4c79-ab39-84169761df64",
+      "title": "Three Inverse Laws of AI",
+      "source": "rss",
+      "category": "论文",
+      "relevance_score": 6,
+      "url": "https://susam.net/inverse-laws-of-robotics.html",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-06-three-inverse-laws-of-ai.json",
+      "tags": [
+        "ai-philosophy",
+        "responsibility"
+      ],
+      "collected_at": "2026-05-06T08:10:49+08:00"
+    },
+    {
+      "id": "30f96d6f-e6d7-489a-a2af-613a01b71304",
+      "title": "AI didn't delete your database, you did",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://idiallo.com/blog/ai-didnt-delete-your-database-you-did",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-06-ai-didn-t-delete-your-database-you-did.json",
+      "tags": [
+        "data-safety",
+        "human-error"
+      ],
+      "collected_at": "2026-05-06T08:10:49+08:00"
+    },
+    {
+      "id": "77d3ff3f-cc8f-4617-af37-b48d6a219c3f",
+      "title": "When everyone has AI and the company still learns nothing",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://www.robert-glaser.de/when-everyone-has-ai-and-the-company-still-learns-nothing/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-06-when-everyone-has-ai-and-the-company-still-learns-nothing.json",
+      "tags": [
+        "enterprise-ai",
+        "organizational-learning"
+      ],
+      "collected_at": "2026-05-06T08:10:49+08:00"
+    },
+    {
+      "id": "4720450e-75ce-49e3-a039-dff6e4e82a3a",
+      "title": "Google Chrome silently installs a 4 GB AI model on your device without consent",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 8,
+      "url": "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-06-google-chrome-silently-installs-a-4-gb-ai-model-on-your-device-without-consent.json",
+      "tags": [
+        "privacy",
+        "browser-ai"
+      ],
+      "collected_at": "2026-05-06T08:10:49+08:00"
+    },
+    {
+      "id": "24ff8203-bc81-4870-b468-4e1b959eb319",
+      "title": "Train Your Own LLM from Scratch",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 8,
+      "url": "https://github.com/angelos-p/llm-from-scratch",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-06-train-your-own-llm-from-scratch.json",
+      "tags": [
+        "llm-training",
+        "open-source"
+      ],
+      "collected_at": "2026-05-06T08:10:49+08:00"
     }
   ]
 }

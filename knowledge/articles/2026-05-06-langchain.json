@@ -1,0 +1,20 @@
+{
+  "id": "0f889ec9-7a19-4e99-aa1d-944ef951b12e",
+  "title": "langchain",
+  "url": "https://github.com/langchain-ai/langchain",
+  "source": "github-search",
+  "collected_at": "2026-05-06T08:10:49+08:00",
+  "processed_at": "2026-05-06T08:11:31+08:00",
+  "summary": "Langchain是领先的代理工程框架，现已提供TypeScript版本。它为开发者提供构建AI代理所需的抽象层和工具集，包括提示词管理、链式调用、内存管理和工具集成等核心组件。TypeScript版本让前端开发者也能轻松构建AI应用，是现代AI应用开发的基础设施。",
+  "highlights": [
+    "TypeScript原生支持，前端开发者友好",
+    "完整的代理开发框架，抽象层次清晰"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-framework",
+    "typescript"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}
