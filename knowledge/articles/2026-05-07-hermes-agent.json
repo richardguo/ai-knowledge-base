@@ -1,0 +1,20 @@
+{
+  "id": "c00c0890-49b5-4537-a2a6-ceb3a70c6819",
+  "title": "hermes-agent",
+  "url": "https://github.com/NousResearch/hermes-agent",
+  "source": "github-search",
+  "collected_at": "2026-05-07T08:09:27+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "Hermes-agent被描述为「与你一起成长的代理」，定位为可自适应的AI代理框架。它强调代理能力的渐进式提升，可能包含学习机制或可扩展的能力模块。目前信息有限，属于新兴的代理开发项目。",
+  "highlights": [
+    "强调代理的自适应成长能力",
+    "可扩展的能力模块设计"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "agent-framework",
+    "ai-assistant"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

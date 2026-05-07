@@ -1,0 +1,20 @@
+{
+  "id": "225152a0-119f-4e3b-aa84-225a205115c4",
+  "title": "Train Your Own LLM from Scratch",
+  "url": "https://github.com/angelos-p/llm-from-scratch",
+  "source": "rss",
+  "collected_at": "2026-05-07T08:09:28+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "本文介绍如何从零开始训练自己的大型语言模型，作者提供了完整的GitHub代码仓库。内容涵盖数据准备、模型架构设计、训练流程等核心环节，适合对LLM底层原理感兴趣的开发者和研究人员。代码基于PyTorch实现，提供了详细的注释和教程文档。",
+  "highlights": [
+    "提供完整的从零训练LLM开源实现",
+    "涵盖数据准备、模型架构、训练流程全流程"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "llm-training",
+    "machine-learning"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

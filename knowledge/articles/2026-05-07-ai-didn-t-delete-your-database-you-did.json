@@ -1,0 +1,20 @@
+{
+  "id": "16615669-d34f-4d9c-98d1-6ef673eeabaa",
+  "title": "AI didn't delete your database, you did",
+  "url": "https://idiallo.com/blog/ai-didnt-delete-your-database-you-did",
+  "source": "rss",
+  "collected_at": "2026-05-07T08:09:28+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "文章指出所谓AI导致数据删除事故往往是人为失误，AI只是执行工具。强调在数据库管理中，人类应承担最终责任，AI本身不具备恶意或疏忽能力，事故根源在于操作流程和权限管理。",
+  "highlights": [
+    "AI是工具，事故根源在人为失误",
+    "强调人类在系统管理中的最终责任"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-ethics",
+    "database"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

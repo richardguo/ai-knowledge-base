@@ -1,0 +1,20 @@
+{
+  "id": "09a2b6e7-809a-4c4f-9b33-1653f7002bfe",
+  "title": "Wiki Builder: Skill to Build LLM Knowledge Bases",
+  "url": "https://academy.dair.ai/blog/wiki-builder-claude-code-plugin",
+  "source": "rss",
+  "collected_at": "2026-05-07T08:09:28+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "Wiki Builder是Claude Code的插件工具，帮助用户快速构建基于LLM的知识库系统。该工具简化了知识提取、索引和查询流程，适合企业构建内部知识管理系统。",
+  "highlights": [
+    "Claude Code知识库构建插件",
+    "简化LLM知识库开发流程"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "knowledge-base",
+    "claude-code"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

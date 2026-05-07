@@ -1,0 +1,20 @@
+{
+  "id": "981a672c-f39c-408a-a070-c3254015c3b3",
+  "title": "Agent Skills",
+  "url": "https://addyosmani.com/blog/agent-skills/",
+  "source": "rss",
+  "collected_at": "2026-05-07T08:09:28+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "本文系统总结了构建AI Agent所需的核心技能，包括提示工程、工具使用、记忆管理、规划分解等关键能力。作者addyosmani是Google Chrome团队知名工程师，文章结合实际案例详细阐述了如何提升Agent的可靠性和实用性。",
+  "highlights": [
+    "系统梳理Agent核心技能体系",
+    "涵盖提示工程、工具使用、记忆管理等关键能力"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "agent-framework",
+    "prompt-engineering"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

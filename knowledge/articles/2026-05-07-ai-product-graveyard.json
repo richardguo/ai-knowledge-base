@@ -1,0 +1,20 @@
+{
+  "id": "be0d3390-739e-4010-a830-9bfed32a4b81",
+  "title": "AI Product Graveyard",
+  "url": "https://tooldirectory.ai/ai-graveyard",
+  "source": "rss",
+  "collected_at": "2026-05-07T08:09:28+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "AI产品墓地收录了大量失败的AI项目和产品，分析其失败原因包括：技术不成熟、需求不明确、商业模式不可持续等。为AI创业者提供宝贵的失败案例参考，帮助避免常见陷阱。",
+  "highlights": [
+    "汇总AI产品失败案例",
+    "提供创业失败教训"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "ai-business",
+    "startup"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

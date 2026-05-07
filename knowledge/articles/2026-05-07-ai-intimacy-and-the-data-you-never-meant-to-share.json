@@ -1,0 +1,20 @@
+{
+  "id": "14bf3902-3293-400b-80bd-98657226bcea",
+  "title": "AI, Intimacy, and the Data You Never Meant to Share",
+  "url": "https://fshot.org/techzone/the-algorithm-knows.php",
+  "source": "rss",
+  "collected_at": "2026-05-07T08:09:28+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "本文探讨AI与用户亲密关系中的数据隐私问题，分析了AI伴侣应用可能收集的敏感数据类型，警示用户注意与AI交互时可能无意间分享的隐私信息。",
+  "highlights": [
+    "揭示AI伴侣应用的数据隐私风险",
+    "分析用户与AI交互中的隐私泄露问题"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "privacy",
+    "ai-safety"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

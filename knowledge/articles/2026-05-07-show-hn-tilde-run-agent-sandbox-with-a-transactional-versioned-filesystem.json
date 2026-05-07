@@ -1,0 +1,20 @@
+{
+  "id": "c24bb836-41ee-4fba-af59-d5afbdd2eaaa",
+  "title": "Show HN: Tilde.run – Agent sandbox with a transactional, versioned filesystem",
+  "url": "https://tilde.run/",
+  "source": "rss",
+  "collected_at": "2026-05-07T08:09:28+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "Tilde.run是一个面向AI Agent的沙盒环境，核心特性是提供事务性版本化文件系统。该工具允许开发者在隔离环境中测试和运行Agent，支持文件系统操作的原子性、事务回滚和版本历史追踪。对于构建可靠、可复现的Agent工作流具有重要价值。",
+  "highlights": [
+    "提供事务性文件系统，支持原子操作和回滚",
+    "版本化文件系统，可追踪和恢复任意状态"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent-framework",
+    "sandbox"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "b192cb78-ce1c-482a-9b9e-5c037b2fa04a",
+  "title": "awesome-llm-apps",
+  "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+  "source": "github-search",
+  "collected_at": "2026-05-07T08:09:27+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "Awesome-llm-apps是一个精选集合，收录了100多个可实际运行的AI代理和RAG应用。这些应用涵盖多种场景，用户可以直接克隆、定制和部署，是学习和快速原型开发的宝贵资源。",
+  "highlights": [
+    "收录100+可运行AI应用示例",
+    "可直接克隆部署的完整项目"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "llm-applications",
+    "reference-collection"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-06T08:11:31+08:00",
-  "total_entries": 132,
+  "last_updated": "2026-05-07T08:10:23+08:00",
+  "total_entries": 138,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1870,6 +1870,90 @@
         "open-source"
       ],
       "collected_at": "2026-05-06T08:10:49+08:00"
+    },
+    {
+      "id": "c24bb836-41ee-4fba-af59-d5afbdd2eaaa",
+      "title": "Show HN: Tilde.run – Agent sandbox with a transactional, versioned filesystem",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://tilde.run/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-07-show-hn-tilde-run-agent-sandbox-with-a-transactional-versioned-filesystem.json",
+      "tags": [
+        "agent-framework",
+        "sandbox"
+      ],
+      "collected_at": "2026-05-07T08:09:28+08:00"
+    },
+    {
+      "id": "9d9c56cc-48e4-4a15-a119-45f8438312e2",
+      "title": "FFmpeg developer calls out OxideAV for AI license laundering of his code",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://github.com/OxideAV/oxideav-magicyuv/issues/3",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-07-ffmpeg-developer-calls-out-oxideav-for-ai-license-laundering-of-his-code.json",
+      "tags": [
+        "open-source",
+        "licensing"
+      ],
+      "collected_at": "2026-05-07T08:09:28+08:00"
+    },
+    {
+      "id": "6c9a1899-035a-47e3-9670-39007dad0882",
+      "title": "Telus Uses AI to Alter Call-Agent Accents",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://letsdatascience.com/news/telus-uses-ai-to-alter-call-agent-accents-a3868f63",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-07-telus-uses-ai-to-alter-call-agent-accents.json",
+      "tags": [
+        "ai-application",
+        "workplace"
+      ],
+      "collected_at": "2026-05-07T08:09:28+08:00"
+    },
+    {
+      "id": "1ff38af2-0c1c-48a7-b2fa-cce3516fb805",
+      "title": "SubQ: a sub-quadratic LLM with 12M-token context",
+      "source": "rss",
+      "category": "论文",
+      "relevance_score": 8,
+      "url": "https://subq.ai/introducing-subq",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-07-subq-a-sub-quadratic-llm-with-12m-token-context.json",
+      "tags": [
+        "llm",
+        "large-context"
+      ],
+      "collected_at": "2026-05-07T08:09:28+08:00"
+    },
+    {
+      "id": "be0d3390-739e-4010-a830-9bfed32a4b81",
+      "title": "AI Product Graveyard",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://tooldirectory.ai/ai-graveyard",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-07-ai-product-graveyard.json",
+      "tags": [
+        "ai-business",
+        "startup"
+      ],
+      "collected_at": "2026-05-07T08:09:28+08:00"
+    },
+    {
+      "id": "09a2b6e7-809a-4c4f-9b33-1653f7002bfe",
+      "title": "Wiki Builder: Skill to Build LLM Knowledge Bases",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://academy.dair.ai/blog/wiki-builder-claude-code-plugin",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-07-wiki-builder-skill-to-build-llm-knowledge-bases.json",
+      "tags": [
+        "knowledge-base",
+        "claude-code"
+      ],
+      "collected_at": "2026-05-07T08:09:28+08:00"
     }
   ]
 }

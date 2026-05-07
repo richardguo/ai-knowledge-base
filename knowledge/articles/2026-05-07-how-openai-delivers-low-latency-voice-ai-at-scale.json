@@ -1,0 +1,20 @@
+{
+  "id": "fc573907-70a1-4742-acb2-0e86de8d09b2",
+  "title": "How OpenAI delivers low-latency voice AI at scale",
+  "url": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
+  "source": "rss",
+  "collected_at": "2026-05-07T08:09:28+08:00",
+  "processed_at": "2026-05-07T08:10:23+08:00",
+  "summary": "OpenAI技术博客详细披露了其低延迟语音AI的架构设计。内容涉及WebRTC集成、模型推理优化、分布式系统架构等核心技术点，展示了如何在保证质量的前提下实现大规模低延迟语音交互服务。",
+  "highlights": [
+    "披露OpenAI语音AI低延迟架构设计",
+    "涵盖WebRTC、推理优化、分布式系统等核心技术"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "voice-ai",
+    "system-design"
+  ],
+  "category": "论文",
+  "maturity": "生产"
+}
