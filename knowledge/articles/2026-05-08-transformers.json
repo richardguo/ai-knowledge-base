@@ -1,0 +1,20 @@
+{
+  "id": "71e18a71-6f5c-4851-8d0a-533894935a91",
+  "title": "transformers",
+  "url": "https://github.com/huggingface/transformers",
+  "source": "github-search",
+  "collected_at": "2026-05-08T08:12:38+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "🤗 Transformers是Hugging Face推出的业界领先机器学习模型定义框架，支持文本、视觉、音频和多模态模型。该框架提供了最前沿的模型实现，既支持推理也支持训练，是NLP和AI领域最重要的开源库之一，被广泛应用于学术研究和工业生产。",
+  "highlights": [
+    "多模态模型支持，行业标准",
+    "推理训练一体化，生态完善"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "machine-learning",
+    "multimodal"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

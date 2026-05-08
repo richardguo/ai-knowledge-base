@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-07T08:10:23+08:00",
-  "total_entries": 138,
+  "last_updated": "2026-05-08T08:13:24+08:00",
+  "total_entries": 145,
   "entries": [
     {
       "id": "e6b97865-588b-4cb9-af13-fe85d104ae43",
@@ -1954,6 +1954,104 @@
         "claude-code"
       ],
       "collected_at": "2026-05-07T08:09:28+08:00"
+    },
+    {
+      "id": "80becff6-01ec-4ee0-b9eb-ed54ad2da13e",
+      "title": "AI slop is killing online communities",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 7,
+      "url": "https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-08-ai-slop-is-killing-online-communities.json",
+      "tags": [
+        "ai-content",
+        "online-communities"
+      ],
+      "collected_at": "2026-05-08T08:12:41+08:00"
+    },
+    {
+      "id": "6dd018f1-b3a5-4bce-a68c-553abe89b95a",
+      "title": "Principles for agent-native CLIs",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://twitter.com/trevin/status/2051316002730991795",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-08-principles-for-agent-native-clis.json",
+      "tags": [
+        "agent",
+        "cli"
+      ],
+      "collected_at": "2026-05-08T08:12:41+08:00"
+    },
+    {
+      "id": "d2858efa-af48-4203-8fd3-5988e52937ad",
+      "title": "Motherboard sales 'collapse' amid unprecedented shortages fueled by AI",
+      "source": "rss",
+      "category": "实践",
+      "relevance_score": 6,
+      "url": "https://www.tomshardware.com/pc-components/motherboards/motherboard-sales-collapse-by-more-than-25-percent-as-chipmakers-strangle-enthusiast-pc-market-to-build-more-ai-chips-asus-projected-to-sell-5-million-fewer-boards-in-2025-gigabyte-msi-and-asrock-also-expected-to-see-reduced-sales-numbers",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-08-motherboard-sales-collapse-amid-unprecedented-shortages-fueled-by-ai.json",
+      "tags": [
+        "hardware",
+        "supply-chain"
+      ],
+      "collected_at": "2026-05-08T08:12:41+08:00"
+    },
+    {
+      "id": "d4abaa5c-c3bc-4090-87c7-1b61d5146655",
+      "title": "AlphaEvolve: Gemini-powered coding agent scaling impact across fields",
+      "source": "rss",
+      "category": "论文",
+      "relevance_score": 8,
+      "url": "https://deepmind.google/blog/alphaevolve-impact/",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-08-alphaevolve-gemini-powered-coding-agent-scaling-impact-across-fields.json",
+      "tags": [
+        "coding-agent",
+        "research"
+      ],
+      "collected_at": "2026-05-08T08:12:41+08:00"
+    },
+    {
+      "id": "0729301a-0384-44eb-8b4e-edaabb7f5eac",
+      "title": "Agent-harness-kit scaffolding for multi-agent workflows (MCP, provider-agnostic)",
+      "source": "rss",
+      "category": "框架",
+      "relevance_score": 8,
+      "url": "https://ahk.cardor.dev",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-08-agent-harness-kit-scaffolding-for-multi-agent-workflows-mcp-provider-agnostic.json",
+      "tags": [
+        "multi-agent",
+        "workflow"
+      ],
+      "collected_at": "2026-05-08T08:12:41+08:00"
+    },
+    {
+      "id": "77c99aff-9096-4580-8e43-9a184849bde2",
+      "title": "Making LLM Training Faster with Unsloth and NVIDIA",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 7,
+      "url": "https://unsloth.ai/blog/nvidia-collab",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-08-making-llm-training-faster-with-unsloth-and-nvidia.json",
+      "tags": [
+        "llm-training",
+        "optimization"
+      ],
+      "collected_at": "2026-05-08T08:12:41+08:00"
+    },
+    {
+      "id": "d9ede11c-fceb-48b9-8442-bb7c4b3daf1b",
+      "title": "Show HN: Agent-skills-eval – Test whether Agent Skills improve outputs",
+      "source": "rss",
+      "category": "工具",
+      "relevance_score": 6,
+      "url": "https://github.com/darkrishabh/agent-skills-eval",
+      "file_path": "/home/runner/work/ai-knowledge-base/ai-knowledge-base/knowledge/articles/2026-05-08-show-hn-agent-skills-eval-test-whether-agent-skills-improve-outputs.json",
+      "tags": [
+        "agent",
+        "evaluation"
+      ],
+      "collected_at": "2026-05-08T08:12:41+08:00"
     }
   ]
 }

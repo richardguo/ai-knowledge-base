@@ -1,0 +1,20 @@
+{
+  "id": "d9ede11c-fceb-48b9-8442-bb7c4b3daf1b",
+  "title": "Show HN: Agent-skills-eval – Test whether Agent Skills improve outputs",
+  "url": "https://github.com/darkrishabh/agent-skills-eval",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "Agent-skills-eval是一个开源工具，用于测试Agent技能是否真正提升了输出质量。该工具提供标准化的评估框架，帮助开发者量化Agent能力改进的效果，是Agent开发调试的有力助手。",
+  "highlights": [
+    "量化评估Agent技能对输出质量的影响",
+    "提供标准化的Agent能力测试框架"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "agent",
+    "evaluation"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

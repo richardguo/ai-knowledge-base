@@ -1,0 +1,20 @@
+{
+  "id": "0729301a-0384-44eb-8b4e-edaabb7f5eac",
+  "title": "Agent-harness-kit scaffolding for multi-agent workflows (MCP, provider-agnostic)",
+  "url": "https://ahk.cardor.dev",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "Agent-harness-kit(AHK)是一个用于构建多Agent工作流的脚手架框架，支持MCP协议且provider-agnostic。该工具帮助开发者快速搭建复杂的多Agent系统，提供标准化的组件和工作流编排能力。",
+  "highlights": [
+    "支持MCP协议的多Agent工作流框架",
+    "provider-agnostic设计，兼容多种LLM提供商"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "multi-agent",
+    "workflow"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

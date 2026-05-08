@@ -1,0 +1,20 @@
+{
+  "id": "51895f79-5ee8-47c0-81aa-259f00d22a3b",
+  "title": "SubQ: a sub-quadratic LLM with 12M-token context",
+  "url": "https://subq.ai/introducing-subq",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "SubQ是一个具有1200万token上下文的次二次方LLM，声称在长上下文处理上实现突破。该项目旨在解决传统LLM在处理超长文本时的计算效率问题，为大模型上下文扩展提供了新思路。",
+  "highlights": [
+    "1200万token超长上下文",
+    "次二次方复杂度优化"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "llm",
+    "long-context"
+  ],
+  "category": "工具",
+  "maturity": "实验"
+}

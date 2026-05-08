@@ -1,0 +1,20 @@
+{
+  "id": "8e359b27-1f62-42f2-a43a-64ba88e1cfc2",
+  "title": "Agent Skills",
+  "url": "https://addyosmani.com/blog/agent-skills/",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "文章系统介绍Agent技能的概念和实现方法，探讨AI代理在自动化任务中的应用。作者从技术角度分析了代理系统的设计原则和最佳实践，对开发者具有重要参考价值。",
+  "highlights": [
+    "AI代理系统设计",
+    "自动化任务实现方法"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "agent",
+    "automation"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

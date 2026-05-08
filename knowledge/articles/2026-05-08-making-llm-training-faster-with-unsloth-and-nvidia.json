@@ -1,0 +1,20 @@
+{
+  "id": "77c99aff-9096-4580-8e43-9a184849bde2",
+  "title": "Making LLM Training Faster with Unsloth and NVIDIA",
+  "url": "https://unsloth.ai/blog/nvidia-collab",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "Unsloth与NVIDIA合作，通过优化技术显著加速LLM训练过程。文章介绍了具体的优化方法和性能提升数据，为开发者提供更高效的LLM训练方案，特别适合需要自定义训练模型的场景。",
+  "highlights": [
+    "Unsloth与NVIDIA合作优化LLM训练速度",
+    "提供显著的训练性能提升"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "llm-training",
+    "optimization"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

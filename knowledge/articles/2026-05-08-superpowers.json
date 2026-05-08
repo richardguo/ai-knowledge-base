@@ -1,0 +1,20 @@
+{
+  "id": "e506ef31-a09b-4c8c-99f9-f952b07b58e1",
+  "title": "superpowers",
+  "url": "https://github.com/obra/superpowers",
+  "source": "github-search",
+  "collected_at": "2026-05-08T08:12:38+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "superpowers是一个代理技能框架和软件开发方法论项目，旨在提供一套可工作的agentic技能框架。该项目将AI代理能力与软件开发最佳实践相结合，帮助开发者构建更智能的AI应用系统。强调方法论的有效性，是AI代理工程领域的实践探索。",
+  "highlights": [
+    "代理技能框架设计",
+    "软件开发方法论结合"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "agent-framework",
+    "development-methodology"
+  ],
+  "category": "框架",
+  "maturity": "测试"
+}

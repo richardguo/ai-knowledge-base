@@ -1,0 +1,20 @@
+{
+  "id": "4cc9b6b6-1b30-4ff2-b136-c5666cf0f24b",
+  "title": "open-webui",
+  "url": "https://github.com/open-webui/open-webui",
+  "source": "github-search",
+  "collected_at": "2026-05-08T08:12:38+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "Open WebUI是一个用户友好的本地AI界面框架，支持Ollama、OpenAI API等多种后端。它提供类似ChatGPT的Web界面，可在本地部署运行，保护隐私的同时享受便捷的AI交互体验，支持扩展插件。",
+  "highlights": [
+    "本地部署的隐私友好的AI界面",
+    "多后端支持和插件扩展能力"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "ai-interface",
+    "local-deployment"
+  ],
+  "category": "工具",
+  "maturity": "生产"
+}

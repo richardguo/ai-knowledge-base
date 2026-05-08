@@ -1,0 +1,20 @@
+{
+  "id": "80becff6-01ec-4ee0-b9eb-ed54ad2da13e",
+  "title": "AI slop is killing online communities",
+  "url": "https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "文章探讨了AI生成内容（AI slop）对在线社区的负面影响。随着生成式AI的普及，大量低质量AI内容涌入Reddit、Twitter等社区，导致讨论质量下降、用户参与度降低、社区氛围恶化。作者认为需要社区共同努力抵制AI内容污染，保持人类创作的真实性和价值。",
+  "highlights": [
+    "AI生成的低质量内容正在污染在线社区环境",
+    "社区需要采取措施保护人类创作和真实讨论"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-content",
+    "online-communities"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

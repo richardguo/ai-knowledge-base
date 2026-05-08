@@ -1,0 +1,20 @@
+{
+  "id": "07918164-d90a-4564-9ef0-a462b05a45b7",
+  "title": "Telus Uses AI to Alter Call-Agent Accents",
+  "url": "https://letsdatascience.com/news/telus-uses-ai-to-alter-call-agent-accents-a3868f63",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "加拿大电信公司Telus使用AI技术实时改变海外客服人员的口音，以符合客户期望。此举引发关于AI技术干预人类身份、文化真实性以及职场伦理的广泛争议。",
+  "highlights": [
+    "AI被用于改变客服人员口音引发伦理争议",
+    "技术干预人类身份特征引发社会讨论"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "ai-application",
+    "ethics"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

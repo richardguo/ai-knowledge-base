@@ -1,0 +1,20 @@
+{
+  "id": "d40724d2-a25c-4af1-91fa-e9d86109a70a",
+  "title": "AI didn't delete your database, you did",
+  "url": "https://idiallo.com/blog/ai-didnt-delete-your-database-you-did",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "文章指出所谓AI删除数据库的说法往往是人类操作失误导致，而非AI本身的问题。作者通过实际案例强调了在AI应用中人因错误的重要性，呼吁理性看待AI的责任边界。该文获得541 points和301条评论。",
+  "highlights": [
+    "AI责任边界的理性分析",
+    "人因错误在AI事故中的核心作用"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "ai-safety",
+    "devops"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

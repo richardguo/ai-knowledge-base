@@ -1,0 +1,20 @@
+{
+  "id": "a18a18ed-8f1f-4a32-ad7b-15072bdd5711",
+  "title": "FFmpeg developer calls out OxideAV for AI license laundering of his code",
+  "url": "https://github.com/OxideAV/oxideav-magicyuv/issues/3",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "FFmpeg开发者公开指控OxideAV公司使用其开源代码进行AI训练，但未遵守开源许可证要求。这引发了关于开源代码被AI公司滥用的伦理讨论，强调AI训练需要尊重开源许可协议。",
+  "highlights": [
+    "开源代码用于AI训练存在许可证争议",
+    "AI公司使用开源代码需遵守许可协议"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "open-source",
+    "ai-ethics"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}

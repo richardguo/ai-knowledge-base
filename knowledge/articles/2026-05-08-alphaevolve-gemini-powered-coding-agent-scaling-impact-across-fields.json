@@ -1,0 +1,20 @@
+{
+  "id": "d4abaa5c-c3bc-4090-87c7-1b61d5146655",
+  "title": "AlphaEvolve: Gemini-powered coding agent scaling impact across fields",
+  "url": "https://deepmind.google/blog/alphaevolve-impact/",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "Google DeepMind发布AlphaEvolve，利用Gemini大模型作为编码Agent来发现新算法和数学定理。该系统已成功优化矩阵乘法等核心算法，并在多个科学领域产生实际影响，展现了AI辅助科学发现的潜力。",
+  "highlights": [
+    "AlphaEvolve利用Gemini发现新算法和数学定理",
+    "AI编码Agent在多个科学领域取得实际突破"
+  ],
+  "relevance_score": 8,
+  "tags": [
+    "coding-agent",
+    "research"
+  ],
+  "category": "论文",
+  "maturity": "实验"
+}

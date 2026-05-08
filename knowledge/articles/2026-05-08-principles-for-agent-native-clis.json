@@ -1,0 +1,20 @@
+{
+  "id": "6dd018f1-b3a5-4bce-a68c-553abe89b95a",
+  "title": "Principles for agent-native CLIs",
+  "url": "https://twitter.com/trevin/status/2051316002730991795",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "文章提出Agent原生CLI的设计原则，强调CLI应该为AI Agent优化，而非仅为人类用户设计。内容包括Agent与CLI交互的最佳实践、错误处理、状态管理等方面，旨在提升Agent操作命令行工具的效率和可靠性。",
+  "highlights": [
+    "CLI设计需要考虑AI Agent的交互需求",
+    "提出Agent原生CLI的核心设计原则"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "agent",
+    "cli"
+  ],
+  "category": "工具",
+  "maturity": "测试"
+}

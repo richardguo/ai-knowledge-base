@@ -1,0 +1,20 @@
+{
+  "id": "d2858efa-af48-4203-8fd3-5988e52937ad",
+  "title": "Motherboard sales 'collapse' amid unprecedented shortages fueled by AI",
+  "url": "https://www.tomshardware.com/pc-components/motherboards/motherboard-sales-collapse-by-more-than-25-percent-as-chipmakers-strangle-enthusiast-pc-market-to-build-more-ai-chips-asus-projected-to-sell-5-million-fewer-boards-in-2025-gigabyte-msi-and-asrock-also-expected-to-see-reduced-sales-numbers",
+  "source": "rss",
+  "collected_at": "2026-05-08T08:12:41+08:00",
+  "processed_at": "2026-05-08T08:13:24+08:00",
+  "summary": "报道指出由于AI芯片需求激增导致严重短缺，主板销售同比下降超过25%。芯片制造商将产能转向AI芯片生产，挤压了传统PC硬件供应。华硕预计2025年将少卖500万片主板技嘉、微星、ASRock等厂商也将面临销量下滑。",
+  "highlights": [
+    "AI芯片短缺导致主板市场萎缩超25%",
+    "芯片厂商优先生产AI芯片导致传统PC硬件供应紧张"
+  ],
+  "relevance_score": 6,
+  "tags": [
+    "hardware",
+    "supply-chain"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}
