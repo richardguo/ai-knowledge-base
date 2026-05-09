@@ -1,0 +1,20 @@
+{
+  "id": "c0bed6f2-8407-4a27-ad53-87495ea36d09",
+  "title": "langchain",
+  "url": "https://github.com/langchain-ai/langchain",
+  "source": "github-search",
+  "collected_at": "2026-05-09T09:14:46+08:00",
+  "processed_at": "2026-05-09T09:16:11+08:00",
+  "summary": "LangChain是AI开发领域最具影响力的框架之一，提供构建LLM应用的标准化方法论和丰富组件库。其TypeScript版本让前端开发者也能轻松构建AI应用，极大推动了AI原生应用的普及和发展。",
+  "highlights": [
+    "AI应用开发标准框架，生态成熟完善",
+    "TypeScript支持拓宽开发者覆盖面"
+  ],
+  "relevance_score": 9,
+  "tags": [
+    "llm-framework",
+    "developer-tool"
+  ],
+  "category": "框架",
+  "maturity": "生产"
+}

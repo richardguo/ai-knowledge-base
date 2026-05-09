@@ -1,0 +1,20 @@
+{
+  "id": "1790a348-d177-45d6-b4de-c186cc53360e",
+  "title": "system-prompts-and-models-of-ai-tools",
+  "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+  "source": "github-search",
+  "collected_at": "2026-05-09T09:14:46+08:00",
+  "processed_at": "2026-05-09T09:16:11+08:00",
+  "summary": "该仓库收集整理了当前主流AI编程辅助工具的系统提示词和内部工具信息，包括Cursor、Claude Code、Devin、Windsurf等知名产品的Prompt模板，是研究AI工具提示工程的重要参考资料，对开发者优化AI交互有较高价值。",
+  "highlights": [
+    "收录主流AI编程工具的系统提示词",
+    "提供提示工程研究和实践的参考素材"
+  ],
+  "relevance_score": 7,
+  "tags": [
+    "prompt-engineering",
+    "ai-tools"
+  ],
+  "category": "实践",
+  "maturity": "生产"
+}
